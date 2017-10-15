@@ -9,7 +9,10 @@
 #define RUNLFFSOLVER_H_
 
 #include <string>
+#include <vector>
 #include <iostream>
+
+#include "./../model/RuntimeValue.h"
 #include "SolverParameter.h"
 
 
@@ -34,6 +37,18 @@ public:
 	 * LFF Solver 打印所有实验的结果，包括各种参数的均值、最大、最小值等等
 	 * */
 	static void printTotalResult(string resultInfo);
+
+	/*
+	 * 获取runtime value的运行时刻值的信息
+	 * */
+	static string getRuntimeValueInfo(vector< vector<RuntimeValue*> > verificationVec);
+
+
+	/*
+	 * 部分使用图动态申请内存的析构出处理
+	 * 把之前获取的运行时刻值的信息处理掉
+	 * */
+	static bool makeClean(vector< vector<RuntimeValue*> > verificationVec);
 
 };
 #endif /* RUNLFFSOLVER_H_ */

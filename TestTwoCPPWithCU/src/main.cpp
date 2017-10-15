@@ -27,7 +27,7 @@ int main()
 
 	//testForDeviceVectorAdd();
 
-	//mainFotPoint();
+	mainFotPoint();
 
 	mainForSort();
 

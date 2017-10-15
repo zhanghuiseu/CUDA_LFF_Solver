@@ -16825,3 +16825,1053 @@ make: Nothing to be done for 'all'.
 20:58:39 **** Incremental Build of configuration Debug for project LFF Solver ****
 make all 
 make: Nothing to be done for 'all'.
+12:20:51 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+12:37:37 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:39:29: error: ‘>>’ should be ‘> >’ within a nested template argument list
+  static vector<vector<string>> getConstraintInfo()
+                             ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh: In static member function ‘static std::vector<std::vector<std::__cxx11::basic_string<char> > > ConstraintParameter::getConstraintInfo()’:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:41:23: error: ‘>>’ should be ‘> >’ within a nested template argument list
+   vector<vector<string>> res;
+                       ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:49:3: error: expected ‘;’ before ‘two’
+   two.push_back(one);
+   ^
+In file included from ../src/solver/runLFFSolver.cpp:18:0:
+../src/solver/./../model/MathFunction.h: At global scope:
+../src/solver/./../model/MathFunction.h:256:45: error: ‘>>’ should be ‘> >’ within a nested template argument list
+  static string toString(vector<vector<string>> constraints)
+                                             ^
+../src/solver/./../model/MathFunction.h: In static member function ‘static std::__cxx11::string MathFunction::toString(std::vector<std::vector<std::__cxx11::basic_string<char> > >)’:
+../src/solver/./../model/MathFunction.h:262:20: error: invalid operands of types ‘const char [5]’ and ‘const char [3]’ to binary ‘operator+’
+    one += " && " + "( " + constraints[0][i] + " )";
+                    ^
+../src/solver/./../model/MathFunction.h:271:21: error: invalid operands of types ‘const char [5]’ and ‘const char [3]’ to binary ‘operator+’
+     tmp += " && " + "( " + constraints[i][j] + " )";
+                     ^
+../src/solver/./../model/MathFunction.h:273:21: error: invalid operands of types ‘const char [5]’ and ‘const char [3]’ to binary ‘operator+’
+    res += " || " +  "( " + tmp + " )";
+                     ^
+make: *** [src/solver/runLFFSolver.o] Error 1
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+12:38:03 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:39:29: error: ‘>>’ should be ‘> >’ within a nested template argument list
+  static vector<vector<string>> getConstraintInfo()
+                             ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh: In static member function ‘static std::vector<std::vector<std::__cxx11::basic_string<char> > > ConstraintParameter::getConstraintInfo()’:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:41:23: error: ‘>>’ should be ‘> >’ within a nested template argument list
+   vector<vector<string>> res;
+                       ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:49:3: error: expected ‘;’ before ‘two’
+   two.push_back(one);
+   ^
+In file included from ../src/solver/runLFFSolver.cpp:18:0:
+../src/solver/./../model/MathFunction.h: At global scope:
+../src/solver/./../model/MathFunction.h:256:45: error: ‘>>’ should be ‘> >’ within a nested template argument list
+  static string toString(vector<vector<string>> constraints)
+                                             ^
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+12:38:23 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:39:29: error: ‘>>’ should be ‘> >’ within a nested template argument list
+  static vector<vector<string>> getConstraintInfo()
+                             ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh: In static member function ‘static std::vector<std::vector<std::__cxx11::basic_string<char> > > ConstraintParameter::getConstraintInfo()’:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:41:23: error: ‘>>’ should be ‘> >’ within a nested template argument list
+   vector<vector<string>> res;
+                       ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:49:3: error: expected ‘;’ before ‘two’
+   two.push_back(one);
+   ^
+In file included from ../src/solver/runLFFSolver.cpp:18:0:
+../src/solver/./../model/MathFunction.h: At global scope:
+../src/solver/./../model/MathFunction.h:257:45: error: ‘>>’ should be ‘> >’ within a nested template argument list
+  static string toString(vector<vector<string>> constraints)
+                                             ^
+make: *** [src/solver/runLFFSolver.o] Error 1
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+12:38:41 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:39:29: error: ‘>>’ should be ‘> >’ within a nested template argument list
+  static vector<vector<string>> getConstraintInfo()
+                             ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh: In static member function ‘static std::vector<std::vector<std::__cxx11::basic_string<char> > > ConstraintParameter::getConstraintInfo()’:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:41:23: error: ‘>>’ should be ‘> >’ within a nested template argument list
+   vector<vector<string>> res;
+                       ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:49:3: error: expected ‘;’ before ‘two’
+   two.push_back(one);
+   ^
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+12:38:53 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh: In static member function ‘static std::vector<std::vector<std::__cxx11::basic_string<char> > > ConstraintParameter::getConstraintInfo()’:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:49:3: error: expected ‘;’ before ‘two’
+   two.push_back(one);
+   ^
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+12:39:01 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh: In static member function ‘static std::vector<std::vector<std::__cxx11::basic_string<char> > > ConstraintParameter::getConstraintInfo()’:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:49:20: error: no matching function for call to ‘std::vector<std::__cxx11::basic_string<char> >::push_back(std::vector<std::__cxx11::basic_string<char> >&)’
+   two.push_back(one);
+                    ^
+In file included from /usr/include/c++/5/vector:64:0,
+                 from ../src/solver/./../ConstraintParser/ConstraintParameter.cuh:12,
+                 from ../src/solver/SolverParameter.h:14,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+/usr/include/c++/5/bits/stl_vector.h:913:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; std::vector<_Tp, _Alloc>::value_type = std::__cxx11::basic_string<char>]
+       push_back(const value_type& __x)
+       ^
+/usr/include/c++/5/bits/stl_vector.h:913:7: note:   no known conversion for argument 1 from ‘std::vector<std::__cxx11::basic_string<char> >’ to ‘const value_type& {aka const std::__cxx11::basic_string<char>&}’
+make: *** [src/solver/runLFFSolver.o] Error 1
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+12:39:08 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh: In static member function ‘static std::vector<std::vector<std::__cxx11::basic_string<char> > > ConstraintParameter::getConstraintInfo()’:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:49:20: error: no matching function for call to ‘std::vector<std::__cxx11::basic_string<char> >::push_back(std::vector<std::__cxx11::basic_string<char> >&)’
+   two.push_back(two);
+                    ^
+In file included from /usr/include/c++/5/vector:64:0,
+                 from ../src/solver/./../ConstraintParser/ConstraintParameter.cuh:12,
+                 from ../src/solver/SolverParameter.h:14,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+/usr/include/c++/5/bits/stl_vector.h:913:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; std::vector<_Tp, _Alloc>::value_type = std::__cxx11::basic_string<char>]
+       push_back(const value_type& __x)
+       ^
+/usr/include/c++/5/bits/stl_vector.h:913:7: note:   no known conversion for argument 1 from ‘std::vector<std::__cxx11::basic_string<char> >’ to ‘const value_type& {aka const std::__cxx11::basic_string<char>&}’
+make: *** [src/solver/runLFFSolver.o] Error 1
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+12:39:29 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+12:41:40 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+../src/solver/runLFFSolver.cpp: In static member function ‘static void runLFFSolver::run()’:
+../src/solver/runLFFSolver.cpp:31:49: error: ‘getConstraintInfo’ is not a member of ‘SolverParameter’
+  string constraintInfo = MathFunction::toString(SolverParameter::getConstraintInfo());
+                                                 ^
+make: *** [src/solver/runLFFSolver.o] Error 1
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+12:42:03 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+12:42:48 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+12:45:10 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+12:45:46 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+12:48:37 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/runLFFSolver.cpp:18:0:
+../src/solver/./../model/MathFunction.h: In static member function ‘static std::__cxx11::string MathFunction::toString(std::vector<std::__cxx11::basic_string<char> >, int)’:
+../src/solver/./../model/MathFunction.h:259:46: error: invalid operands of types ‘const char*’ and ‘const char [3]’ to binary ‘operator+’
+   string res  = "( " + constraints[row][0] + " )";
+                                              ^
+../src/solver/./../model/MathFunction.h:262:44: error: invalid operands of types ‘const char*’ and ‘const char [3]’ to binary ‘operator+’
+    res += " && ( " + constraints[row][i] + " )";
+                                            ^
+../src/solver/./../model/MathFunction.h: In static member function ‘static std::__cxx11::string MathFunction::toString(std::vector<std::vector<std::__cxx11::basic_string<char> > >)’:
+../src/solver/./../model/MathFunction.h:272:3: error: expected ‘,’ or ‘;’ before ‘res’
+   res += "( " + one + " )";
+   ^
+../src/solver/./../model/MathFunction.h:276:4: error: expected ‘,’ or ‘;’ before ‘res’
+    res += " || ( " + tmp + " )";
+    ^
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+12:48:53 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/runLFFSolver.cpp:18:0:
+../src/solver/./../model/MathFunction.h: In static member function ‘static std::__cxx11::string MathFunction::toString(std::vector<std::__cxx11::basic_string<char> >, int)’:
+../src/solver/./../model/MathFunction.h:259:46: error: invalid operands of types ‘const char*’ and ‘const char [3]’ to binary ‘operator+’
+   string res  = "( " + constraints[row][0] + " )";
+                                              ^
+../src/solver/./../model/MathFunction.h:262:44: error: invalid operands of types ‘const char*’ and ‘const char [3]’ to binary ‘operator+’
+    res += " && ( " + constraints[row][i] + " )";
+                                            ^
+../src/solver/./../model/MathFunction.h: In static member function ‘static std::__cxx11::string MathFunction::toString(std::vector<std::vector<std::__cxx11::basic_string<char> > >)’:
+../src/solver/./../model/MathFunction.h:276:4: error: expected ‘,’ or ‘;’ before ‘res’
+    res += " || ( " + tmp + " )";
+    ^
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+12:49:04 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/runLFFSolver.cpp:18:0:
+../src/solver/./../model/MathFunction.h: In static member function ‘static std::__cxx11::string MathFunction::toString(std::vector<std::__cxx11::basic_string<char> >, int)’:
+../src/solver/./../model/MathFunction.h:259:46: error: invalid operands of types ‘const char*’ and ‘const char [3]’ to binary ‘operator+’
+   string res  = "( " + constraints[row][0] + " )";
+                                              ^
+../src/solver/./../model/MathFunction.h:262:44: error: invalid operands of types ‘const char*’ and ‘const char [3]’ to binary ‘operator+’
+    res += " && ( " + constraints[row][i] + " )";
+                                            ^
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+12:49:53 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/runLFFSolver.cpp:18:0:
+../src/solver/./../model/MathFunction.h: In static member function ‘static std::__cxx11::string MathFunction::toString(std::vector<std::__cxx11::basic_string<char> >, int)’:
+../src/solver/./../model/MathFunction.h:259:46: error: invalid operands of types ‘const char*’ and ‘const char [3]’ to binary ‘operator+’
+   string res  = "( " + constraints[row][0] + " )";
+                                              ^
+../src/solver/./../model/MathFunction.h:262:44: error: invalid operands of types ‘const char*’ and ‘const char [3]’ to binary ‘operator+’
+    res += " && ( " + constraints[row][i] + " )";
+                                            ^
+make: *** [src/solver/runLFFSolver.o] Error 1
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+12:50:40 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+12:50:46 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+12:51:15 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+13:01:03 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:38:43: error: redeclaration of ‘std::__cxx11::string ConstraintParameter::constraintName [3]’
+  static string constraintName[NUM_OF_PARAM];
+                                           ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:29:16: note: previous declaration ‘std::__cxx11::string ConstraintParameter::constraintName’
+  static string constraintName;
+                ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:63:56: error: conflicting declaration ‘std::__cxx11::string ConstraintParameter::constraintName [3]’
+ string ConstraintParameter::constraintName[NUM_OF_PARAM] = {"x","y","z"};
+                                                        ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:60:8: note: previous declaration as ‘std::__cxx11::string ConstraintParameter::constraintName’
+ string ConstraintParameter::constraintName = "benchmark01:atr ";
+        ^
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+13:02:18 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:38:43: error: redeclaration of ‘std::__cxx11::string ConstraintParameter::constraintName [3]’
+  static string constraintName[NUM_OF_PARAM];
+                                           ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:29:16: note: previous declaration ‘std::__cxx11::string ConstraintParameter::constraintName’
+  static string constraintName;
+                ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:63:56: error: conflicting declaration ‘std::__cxx11::string ConstraintParameter::constraintName [3]’
+ string ConstraintParameter::constraintName[NUM_OF_PARAM] = {"x","y","z"};
+                                                        ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:60:8: note: previous declaration as ‘std::__cxx11::string ConstraintParameter::constraintName’
+ string ConstraintParameter::constraintName = "benchmark01";
+        ^
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+13:03:29 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+13:06:54 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+13:09:17 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+13:11:18 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+13:21:12 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:70:3: error: stray ‘\357’ in program
+   bool isCovered = (9 > x*x) ? true ： false ;
+   ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:70:3: error: stray ‘\274’ in program
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:70:3: error: stray ‘\232’ in program
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh: In member function ‘ResultTest* ConstraintParameter::getConstraint00(double, double, double)’:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:70:41: error: expected ‘:’ before ‘false’
+   bool isCovered = (9 > x*x) ? true ： false ;
+                                         ^
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+13:21:31 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+13:26:31 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:06:22 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: *** No rule to make target '../src/solver/./../ConstraintParser/ResultTest.h', needed by 'src/solver/runLFFSolver.o'.  Stop.
+14:06:36 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: *** No rule to make target '../src/solver/./../ConstraintParser/ResultTest.h', needed by 'src/solver/runLFFSolver.o'.  Stop.
+14:07:09 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: *** No rule to make target '../src/solver/./../ConstraintParser/ResultTest.h', needed by 'src/solver/runLFFSolver.o'.  Stop.
+14:08:41 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: *** No rule to make target '../src/solver/./../ConstraintParser/ResultTest.h', needed by 'src/solver/runLFFSolver.o'.  Stop.
+14:09:08 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: *** No rule to make target '../src/solver/./../ConstraintParser/ResultTest.h', needed by 'src/solver/runLFFSolver.o'.  Stop.
+14:09:20 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/ATG.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/ATG.d" "../src/solver/ATG.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/ATG.o" "../src/solver/ATG.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/ATG.cpp
+ 
+Building file: ../src/solver/PCATG.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/PCATG.d" "../src/solver/PCATG.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/PCATG.o" "../src/solver/PCATG.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/PCATG.cpp
+ 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building file: ../src/main/main.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/main" -M -o "src/main/main.d" "../src/main/main.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/main/main.o" "../src/main/main.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/main/main.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:11:50 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+14:14:13 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:33:22 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:36:55 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:39:08 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+../src/solver/runLFFSolver.cpp:19:48: fatal error: ./../ConstraintParser/RuntimeValue.j: No such file or directory
+compilation terminated.
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+14:39:14 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:42:00 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from ../src/solver/SolverParameter.h:14:0,
+                 from ../src/solver/runLFFSolver.h:13,
+                 from ../src/solver/runLFFSolver.cpp:14:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh: In static member function ‘static std::vector<std::vector<RuntimeValue*> > ConstraintParameter::getCoveredInfo(double*)’:
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:70:67: error: cannot call member function ‘RuntimeValue* ConstraintParameter::getConstraintValue00(double, double, double)’ without object
+   RuntimeValue* tmp = getConstraintValue00(nums[0],nums[1],nums[2]);
+                                                                   ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:72:53: error: cannot call member function ‘RuntimeValue* ConstraintParameter::getConstraintValue01(double, double, double)’ without object
+   tmp = getConstraintValue01(nums[0],nums[1],nums[2]);
+                                                     ^
+../src/solver/./../ConstraintParser/ConstraintParameter.cuh:77:53: error: cannot call member function ‘RuntimeValue* ConstraintParameter::getConstraintValue10(double, double, double)’ without object
+   tmp = getConstraintValue10(nums[0],nums[1],nums[2]);
+                                                     ^
+make: *** [src/solver/runLFFSolver.o] Error 1
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+14:43:16 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:48:09 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building file: ../src/main/main.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/main" -M -o "src/main/main.d" "../src/main/main.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/main/main.o" "../src/main/main.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/main/main.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+./src/solver/runLFFSolver.o: In function `runLFFSolver::run()':
+/home/zy/Cuda_Workspace/LFF Solver/Debug/../src/solver/runLFFSolver.cpp:90: undefined reference to `runLFFSolver::getRuntimeValueInfo[abi:cxx11](std::vector<std::vector<RuntimeValue*, std::allocator<RuntimeValue*> >, std::allocator<std::vector<RuntimeValue*, std::allocator<RuntimeValue*> > > >)'
+collect2: error: ld returned 1 exit status
+makefile:60: recipe for target 'LFF Solver' failed
+make: *** [LFF Solver] Error 1
+14:48:21 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:57:28 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:58:06 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:58:57 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+14:59:26 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:00:02 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:00:14 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:06:51 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building file: ../src/main/main.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/main" -M -o "src/main/main.d" "../src/main/main.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/main/main.o" "../src/main/main.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/main/main.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:12:19 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:14:25 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+../src/solver/runLFFSolver.cpp: In static member function ‘static void runLFFSolver::run()’:
+../src/solver/runLFFSolver.cpp:43:2: error: ‘resultOne’ was not declared in this scope
+  resultOne += "**************** The Constraints Is As Following ****************\n";
+  ^
+make: *** [src/solver/runLFFSolver.o] Error 1
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+15:14:52 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+../src/solver/runLFFSolver.cpp:43:2: error: stray ‘\357’ in program
+  resultInfo += "**************** The Constraints Is As Following ****************\n"；
+  ^
+../src/solver/runLFFSolver.cpp:43:2: error: stray ‘\274’ in program
+../src/solver/runLFFSolver.cpp:43:2: error: stray ‘\233’ in program
+../src/solver/runLFFSolver.cpp: In static member function ‘static void runLFFSolver::run()’:
+../src/solver/runLFFSolver.cpp:44:2: error: expected ‘;’ before ‘resultInfo’
+  resultInfo += constraintInfo + "\n";
+  ^
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+make: *** [src/solver/runLFFSolver.o] Error 1
+15:15:00 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:15:30 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:15:41 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:16:06 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:17:07 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:17:25 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:19:27 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:20:50 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: *** No rule to make target '../src/solver/./../ConstraintParser/RuntimeValue.h', needed by 'src/solver/runLFFSolver.o'.  Stop.
+15:21:21 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: *** No rule to make target '../src/solver/./../ConstraintParser/RuntimeValue.h', needed by 'src/solver/runLFFSolver.o'.  Stop.
+15:21:35 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: *** No rule to make target '../src/solver/./../ConstraintParser/RuntimeValue.h', needed by 'src/solver/runLFFSolver.o'.  Stop.
+15:21:48 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/ATG.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/ATG.d" "../src/solver/ATG.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/ATG.o" "../src/solver/ATG.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/ATG.cpp
+ 
+Building file: ../src/solver/PCATG.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/PCATG.d" "../src/solver/PCATG.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/PCATG.o" "../src/solver/PCATG.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/PCATG.cpp
+ 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+In file included from ../src/solver/runLFFSolver.cpp:14:0:
+../src/solver/runLFFSolver.h:15:48: fatal error: ./../ConstraintParser/RuntimeValue.h: No such file or directory
+src/solver/subdir.mk:24: recipe for target 'src/solver/runLFFSolver.o' failed
+compilation terminated.
+make: *** [src/solver/runLFFSolver.o] Error 1
+15:21:59 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building file: ../src/main/main.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/main" -M -o "src/main/main.d" "../src/main/main.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/main/main.o" "../src/main/main.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/main/main.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+15:22:04 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+15:28:46 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+15:30:49 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+15:31:43 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+15:39:43 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+16:04:55 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+16:05:02 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+16:05:03 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+16:05:22 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+17:18:28 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+17:20:41 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+make: Nothing to be done for 'all'.
+20:24:07 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
+20:24:28 **** Incremental Build of configuration Debug for project LFF Solver ****
+make all 
+Building file: ../src/main/main.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/main" -M -o "src/main/main.d" "../src/main/main.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/main/main.o" "../src/main/main.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/main/main.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 

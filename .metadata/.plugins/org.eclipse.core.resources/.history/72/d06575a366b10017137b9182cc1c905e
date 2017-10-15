@@ -1,0 +1,26 @@
+/*
+ * ResultTest.h
+ *
+ *  Created on: Oct 15, 2017
+ *      Author: zy
+ */
+
+#ifndef RESULTTEST_H_
+#define RESULTTEST_H_
+
+class ResultTest
+{
+public：
+	ResultTest(double x,double y)
+	{
+		this
+	}
+
+	double x;
+	double y;
+};
+
+
+
+
+#endif /* RESULTTEST_H_ */

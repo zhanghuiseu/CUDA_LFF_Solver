@@ -1,6 +1,17 @@
-20:58:39 **** Incremental Build of configuration Debug for project LFF Solver ****
+20:24:28 **** Incremental Build of configuration Debug for project LFF Solver ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/main/main.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/main" -M -o "src/main/main.d" "../src/main/main.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/main/main.o" "../src/main/main.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/main/main.cpp
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/runLFFSolver.o  ./src/main/main.o   
+Finished building target: LFF Solver
+ 
 
-20:58:39 Build Finished (took 60ms)
+20:24:28 Build Finished (took 209ms)
 

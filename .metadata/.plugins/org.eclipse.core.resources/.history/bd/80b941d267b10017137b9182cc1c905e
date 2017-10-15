@@ -1,0 +1,27 @@
+/*
+ * ResultTest.h
+ *
+ *  Created on: Oct 15, 2017
+ *      Author: zy
+ */
+
+#ifndef RESULTTEST_H_
+#define RESULTTEST_H_
+
+/*
+ * 这个类主要是使用CPU验证LFF Solver求解的结果的正确性
+ * */
+class ResultTest
+{
+public:
+	ResultTest(double value, double isCovered)
+	{
+		this->value = x;
+		this->isCovered = y;
+	}
+
+	double value;
+	double isCovered;
+};
+
+#endif /* RESULTTEST_H_ */

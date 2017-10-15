@@ -1,0 +1,17 @@
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0, 0, 0 ] 
+Best Covered is: 0%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*x < 9  RuntimeValue:  9  isCovered： true
+x*y < 0  RuntimeValue:  0  isCovered： false
+析取范式的合取子式 1 : 
+ y>=z   RuntimeValue:  0  isCovered： false
+
+SolverParameter::totalTime[5] = 0
+SolverParameter::algorithmTime[5] = 0
+SolverParameter::FunctionTime[5] = 0
+SolverParameter::totalFrequency[5] = 0
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LFF Solver/src/ConstraintParser/ResultTest.h&apos; to &apos;RuntimeValue.h&apos;" description="Rename resource &apos;ResultTest.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/ConstraintParser/ResultTest.h" name="RuntimeValue.h" stamp="1508047555305" updateReferences="true"/>
+</session>

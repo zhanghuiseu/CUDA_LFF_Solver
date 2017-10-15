@@ -11,7 +11,7 @@
 	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
 		<item value="424" key="DIALOG_WIDTH"/>
 		<item value="213" key="DIALOG_Y_ORIGIN"/>
-		<item value="521" key="DIALOG_HEIGHT"/>
+		<item value="549" key="DIALOG_HEIGHT"/>
 		<item value="919" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>

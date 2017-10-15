@@ -108,9 +108,17 @@ src/solver/runLFFSolver.o : ../src/solver/runLFFSolver.cpp \
     /usr/include/c++/5/bits/fstream.tcc \
     /usr/include/c++/5/ctime \
     ../src/solver/runLFFSolver.h \
+    /usr/include/c++/5/vector \
+    /usr/include/c++/5/bits/stl_construct.h \
+    /usr/include/c++/5/bits/stl_uninitialized.h \
+    /usr/include/c++/5/bits/stl_vector.h \
+    /usr/include/c++/5/bits/stl_bvector.h \
+    /usr/include/c++/5/bits/vector.tcc \
+    ../src/solver/./../model/RuntimeValue.h \
     ../src/solver/SolverParameter.h \
     /usr/include/c++/5/limits \
     ../src/solver/./../ConstraintParser/ConstraintParameter.cuh \
+    ../src/solver/./../ConstraintParser/./../model/RuntimeValue.h \
     ../src/solver/ATG.h \
     ../src/solver/PCATG.h \
     ../src/solver/./../model/MathFunction.h \

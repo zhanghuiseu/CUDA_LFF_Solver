@@ -12,6 +12,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <vector>
 
 using namespace std;
 
@@ -250,6 +251,31 @@ public:
 			res = "true";
 		else
 			res = "false";
+		return res;
+	}
+
+	static string toString(vector<string> constraints)
+	{
+		string res  = "( " + constraints[0] + " )";
+		for(int i=1;i<constraints.size();i++)
+		{
+			res += " && ( " + constraints[i] + " )";
+		}
+		return res;
+	}
+
+	static string toString(vector< vector<string> > constraints)
+	{
+		string res = "";
+		string one = toString(constraints[0]);
+
+		res += "( " + one + " )";
+		for(int i=1;i<constraints.size();i++)
+		{
+			string tmp = toString(constraints[i]);
+			res += " || ( " + tmp + " )";
+		}
+
 		return res;
 	}
 
