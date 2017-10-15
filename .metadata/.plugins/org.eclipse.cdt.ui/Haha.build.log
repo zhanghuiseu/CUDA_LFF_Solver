@@ -1,0 +1,12 @@
+18:58:55 **** Incremental Build of configuration Debug for project Haha ****
+make all 
+Building file: ../src/Haha.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src" -M -o "src/Haha.d" "../src/Haha.cu"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=false -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/Haha.o" "../src/Haha.cu"
+ptxas fatal   : Unresolved extern function 'cudaDeviceSynchronize'
+make: *** [src/Haha.o] Error 255
+src/subdir.mk:18: recipe for target 'src/Haha.o' failed
+
+18:58:57 Build Finished (took 2s.615ms)
+

@@ -1,0 +1,28 @@
+14:19:29 **** Incremental Build of configuration Debug for project TestCUDA ****
+make all 
+Building file: ../src/MatrixMult.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src" -M -o "src/MatrixMult.d" "../src/MatrixMult.cu"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=false -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/MatrixMult.o" "../src/MatrixMult.cu"
+Finished building: ../src/MatrixMult.cu
+ 
+Building file: ../src/helloword.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src" -M -o "src/helloword.d" "../src/helloword.cu"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=false -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/helloword.o" "../src/helloword.cu"
+Finished building: ../src/helloword.cu
+ 
+Building file: ../src/kernel.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src" -M -o "src/kernel.d" "../src/kernel.cu"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=false -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/kernel.o" "../src/kernel.cu"
+Finished building: ../src/kernel.cu
+ 
+Building target: TestCUDA
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=false -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "TestCUDA"  ./src/MatrixMult.o ./src/helloword.o ./src/kernel.o   
+Finished building target: TestCUDA
+ 
+
+14:19:31 Build Finished (took 2s.516ms)
+

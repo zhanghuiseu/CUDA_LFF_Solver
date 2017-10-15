@@ -1,0 +1,82 @@
+#include <thrust/device_vector.h>
+#include <thrust/copy.h>
+#include <vector>
+#include <list>
+#include <stdio.h>
+#include <cstdlib>
+#include <ctime>
+
+#include "hello.cuh"
+#include "Point.h"
+
+#include <thrust/host_vector.h>
+#include <thrust/copy.h>
+#include <thrust/fill.h>
+#include <thrust/sequence.h>
+using namespace std;
+
+__global__ void kernel_Constraint(double x,double y,double* res)
+{
+	*res=sin(x)*cos(y)-3.14;
+}
+
+__global__ void kernel_PointMult(Point* p, Point* res,const int SIZE)
+{
+	int i = threadIdx.x + blockIdx.x*blockDim.x;
+	while (i < SIZE)
+	{
+		if(i>=1)
+		{
+			double x1=p[i-1].x;
+			double y1=p[i-1].y;
+
+			double x2=p[i].x;
+			double y2=p[i].y;
+
+			res[i-1].x = (y2-y1)/(x2-x1);
+			res[i-1].y = (y1 - res[i-1].x * x1);
+			kernel_Constraint
+		}
+		i += gridDim.x * blockDim.x;
+	}
+}
+
+
+
+int mainFotPoint()
+{
+	cout<<endl<<"FFFFFFFFFFF  PPPPOINT    "<<endl;
+	const int SIZE=100;
+    srand(time(0));
+
+	vector<Point> stlVec;
+	for(int i=0;i<SIZE;i++)
+	{
+		Point one=Point(rand()%100,rand()%100);
+		stlVec.push_back(one);
+	}
+
+	thrust::device_vector<Point> array_device(stlVec.begin(),stlVec.end());
+	thrust::device_vector<Point> res_device(array_device.begin(),array_device.end()-1);
+
+    cout<<array_device.size()<<"     "<<res_device.size()<<endl;
+
+    Point* raw_pointer = thrust::raw_pointer_cast(&array_device[0]);
+    Point* res_pointer = thrust::raw_pointer_cast(&res_device[0]);
+
+    kernel_PointMult<<<32,128>>>(raw_pointer,res_pointer,array_device.size());
+
+
+	thrust::host_vector<Point> array_host = array_device;
+    for(int i=0;i<array_host.size();i++)
+    	cout<<" ( "<<array_host[i].x<<" , "<<array_host[i].y<<") , ";
+    cout<<endl;
+
+    thrust::host_vector<Point> res_host = res_device;
+    for(int i=0;i<res_host.size();i++)
+    	cout<<" ( "<<res_host[i].x<<" , "<<res_host[i].y<<") , ";
+     cout<<endl;
+
+
+	return 1;
+}

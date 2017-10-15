@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;LFF Solver/src/model/IntervalDouble&apos; to &apos;IntervalDouble.cuh&apos;" description="Rename resource &apos;IntervalDouble&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/model/IntervalDouble" name="IntervalDouble.cuh" stamp="1507947141903" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;LFF Solver/LFFSolverFinalResult&apos; to &apos;FinalResult&apos;" description="Rename resource &apos;LFFSolverFinalResult&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="LFFSolverFinalResult" name="FinalResult" stamp="1507979160964" updateReferences="true"/>
+</session>

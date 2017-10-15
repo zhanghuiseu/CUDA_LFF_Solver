@@ -1,0 +1,3 @@
+==6020== NVPROF is profiling process 6020, command: /home/zy/Cuda_Workspace/TestTwoCPPWithCU/Debug/TestTwoCPPWithCU
+==6020== Warning: Some profiling data are not recorded. Make sure cudaProfilerStop() or cuProfilerStop() is called before application exit to flush profile data.
+==6020== Generated result file: /home/zy/Cuda_Workspace/.metadata/.plugins/com.nvidia.viper/launch/0/api_6020.log

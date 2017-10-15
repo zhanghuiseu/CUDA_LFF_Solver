@@ -1,0 +1,40 @@
+/*
+ * ConstraintParameter.cuh
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+
+#ifndef CONSTRAINTPARAMETER_CUH_
+#define CONSTRAINTPARAMETER_CUH_
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+/*
+ * 这个类是经过约束依赖分析分析
+ * */
+class ConstraintParameter
+{
+public:
+	/*
+	 * 约束的名字信息
+	 * */
+	static string constraintName;
+
+	/*
+	 * 约束的名字信息
+	 * */
+	static string constraintName;
+
+	/*
+	 * 目标约束的参数数量
+	 * */
+	static const int NUM_OF_PARAM = 3;
+
+};
+
+string ConstraintParameter::constraintName = "benchmark01:atr ";
+
+#endif /* CONSTRAINTPARAMETER_CUH_ */

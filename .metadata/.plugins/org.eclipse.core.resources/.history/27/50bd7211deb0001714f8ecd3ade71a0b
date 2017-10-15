@@ -1,0 +1,40 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+
+#ifndef SOLVERPARAMETER_H_
+#define SOLVERPARAMETER_H_
+
+#include <iostream>
+#include <string>
+#include "./../solver/runLFFSolver.h"
+
+#include <limits>
+
+using namespace std;
+
+int main()
+{
+	cout<<"LFF Solver Begin:  "<<endl;
+
+	//runLFFSolver::run();
+
+int a=numeric_limits<int>::max ;
+
+	cout<<numeric_limits<int>::max <<endl;
+	cout<<numeric_limits<int>::min <<endl;
+
+	cout<<numeric_limits<double>::max <<endl;
+	cout<<numeric_limits<double>::min <<endl;
+
+
+	cout<<"LFF Solver Game Over!!!"<<endl;
+}
+
+#endif
+
+
+
