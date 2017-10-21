@@ -1,4 +1,4 @@
-14:19:29 **** Incremental Build of configuration Debug for project TestCUDA ****
+17:46:13 **** Build of configuration Debug for project TestCUDA ****
 make all 
 Building file: ../src/MatrixMult.cu
 Invoking: NVCC Compiler
@@ -24,5 +24,5 @@ Invoking: NVCC Linker
 Finished building target: TestCUDA
  
 
-14:19:31 Build Finished (took 2s.516ms)
+17:46:19 Build Finished (took 5s.926ms)
 

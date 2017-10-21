@@ -6,16 +6,19 @@
 CPP_SRCS += \
 ../src/solver/ATG.cpp \
 ../src/solver/PCATG.cpp \
+../src/solver/SolverParameter.cpp \
 ../src/solver/runLFFSolver.cpp 
 
 OBJS += \
 ./src/solver/ATG.o \
 ./src/solver/PCATG.o \
+./src/solver/SolverParameter.o \
 ./src/solver/runLFFSolver.o 
 
 CPP_DEPS += \
 ./src/solver/ATG.d \
 ./src/solver/PCATG.d \
+./src/solver/SolverParameter.d \
 ./src/solver/runLFFSolver.d 
 
 

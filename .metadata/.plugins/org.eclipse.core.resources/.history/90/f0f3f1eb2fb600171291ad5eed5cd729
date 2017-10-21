@@ -1,0 +1,18 @@
+/*
+ * SearchTask.h
+ *
+ *  Created on: Oct 21, 2017
+ *      Author: zy
+ */
+
+#ifndef SEARCHTASK_H_
+#define SEARCHTASK_H_
+
+class SearchTask
+{
+public:
+
+
+};
+
+#endif /* SEARCHTASK_H_ */

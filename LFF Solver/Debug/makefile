@@ -10,7 +10,9 @@ RM := rm -rf
 -include sources.mk
 -include subdir.mk
 -include src/solver/subdir.mk
+-include src/model/subdir.mk
 -include src/main/subdir.mk
+-include src/ConstraintParser/subdir.mk
 
 OS_SUFFIX := $(subst Linux,linux,$(subst Darwin/x86_64,darwin,$(shell uname -s)/$(shell uname -m)))
 

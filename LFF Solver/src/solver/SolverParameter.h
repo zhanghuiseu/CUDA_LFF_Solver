@@ -29,13 +29,15 @@ public:
 
 	/**
 	 * 结束一次查找前，预测出的参数个数的上限(100,200,400) --- T
+	 * 默认是 50
 	 */
-	static const int MAX_NUM_OF_PREDICT_PARAM = 50;
+	static  int MAX_NUM_OF_PREDICT_PARAM ;
 
 	/**
 	 * 预测的轮数上限(1,2,4) --- N
+	 * 默认是 5
 	 */
-	static const int MAX_NUM_OF_GENERATE_CYCLE =5;
+	static  int MAX_NUM_OF_GENERATE_CYCLE;
 
 	/**
 	 * 生成预测值的小区间大小(2,5,10)) --- I
@@ -51,7 +53,8 @@ public:
 	static int Cala_Strategy;
 
 	/**
-	 *  ATG实验过程重复执行次数
+	 *  ATG实验过程重复执行次数，
+	 *  默认是 7
 	 */
     static const int countOfRepeation = 7;
 
@@ -110,6 +113,7 @@ public:
 	/**
 	 * 用户定制的输入参数值
 	 */
+	static const bool IS_CUSTOMIZED = false;
 	static double CUSTOMIZED_PARAMS[ConstraintParameter::NUM_OF_PARAM] ;
 
 	/**
@@ -135,43 +139,6 @@ public:
 	static const int ADJUST_GRANULARITY_INTEGER = 1;
 	static double ZeroToleranceDegree  ;
 
-	/**
-	 * 当前搜素变量的下标
-	 */
-	static int currentSearchParamIndex;
 };
-
-
-/*
- *  使用这样的结构来获取各个类型的最大值和最小值
-    cout<<(numeric_limits<int>::max)() <<endl;
-	cout<<(numeric_limits<int>::min)() <<endl;
-	cout<<(numeric_limits<double>::max)() <<endl;
-	cout<<(numeric_limits<double>::min)() <<endl;
- * */
-
-/*
- * 静态变量必须类外初始化
- * */
-double* SolverParameter::finalParams = NULL;
-double SolverParameter::finalCovered = 0;
-double SolverParameter::function_time = 0;
-int SolverParameter::function_frequency = 0;
-int SolverParameter::SEARCH_STRATEGY = 0;
-int SolverParameter::Cala_Strategy = 0;
-double SolverParameter::START_POINT = 0;
-double SolverParameter::MAX_STEP = 5;
-int SolverParameter::currentSearchParamIndex = 0;
-
-//注意这个参数的初始化有点特殊，这里使用到了函数指针
-double SolverParameter::ZeroToleranceDegree = (numeric_limits<double>::min)() ;
-
-
-double SolverParameter::totalTime[countOfRepeation] = {0.0};
-int SolverParameter::totalFrequency[countOfRepeation] = {0};
-double SolverParameter::algorithmTime[countOfRepeation] = {0.0};
-int SolverParameter::coveredRatio[countOfRepeation] = {0};
-bool SolverParameter::findResult[countOfRepeation] = {0};
-double SolverParameter::CUSTOMIZED_PARAMS[ConstraintParameter::NUM_OF_PARAM] ={0};
 
 #endif /* SOLVERPARAMETER_H_ */

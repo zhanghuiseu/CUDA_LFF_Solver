@@ -104,4 +104,7 @@ src/main/main.o : ../src/main/main.cpp \
     /usr/include/c++/5/bits/stl_bvector.h \
     /usr/include/c++/5/bits/vector.tcc \
     ../src/main/./../solver/./../model/RuntimeValue.h \
-    ../src/main/./../solver/SolverParameter.h
+    ../src/main/./../solver/SolverParameter.h \
+    /usr/include/c++/5/limits \
+    ../src/main/./../solver/./../ConstraintParser/ConstraintParameter.cuh \
+    ../src/main/./../solver/./../ConstraintParser/./../model/RuntimeValue.h

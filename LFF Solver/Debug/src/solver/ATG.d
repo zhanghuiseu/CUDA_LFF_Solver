@@ -1,7 +1,5 @@
 src/solver/ATG.o : ../src/solver/ATG.cpp \
     /usr/include/stdc-predef.h \
-    ../src/solver/ATG.h \
-    ../src/solver/PCATG.h \
     /usr/include/c++/5/iostream \
     /usr/include/x86_64-linux-gnu/c++/5/bits/c++config.h \
     /usr/include/x86_64-linux-gnu/c++/5/bits/os_defines.h \
@@ -97,4 +95,32 @@ src/solver/ATG.o : ../src/solver/ATG.cpp \
     /usr/include/c++/5/bits/basic_ios.tcc \
     /usr/include/c++/5/bits/ostream.tcc \
     /usr/include/c++/5/istream \
-    /usr/include/c++/5/bits/istream.tcc
+    /usr/include/c++/5/bits/istream.tcc \
+    /usr/include/c++/5/cmath \
+    /usr/include/math.h \
+    /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+    /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+    /usr/include/x86_64-linux-gnu/bits/huge_val.h \
+    /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
+    /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
+    /usr/include/x86_64-linux-gnu/bits/inf.h \
+    /usr/include/x86_64-linux-gnu/bits/nan.h \
+    /usr/include/x86_64-linux-gnu/bits/mathdef.h \
+    /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+    ../src/solver/ATG.h \
+    ../src/solver/PCATG.h \
+    ../src/solver/./../model/SearchTask.h \
+    ../src/solver/./../model/./../solver/SolverParameter.h \
+    /usr/include/c++/5/limits \
+    ../src/solver/./../model/./../solver/./../ConstraintParser/ConstraintParameter.cuh \
+    /usr/include/c++/5/vector \
+    /usr/include/c++/5/bits/stl_construct.h \
+    /usr/include/c++/5/bits/stl_uninitialized.h \
+    /usr/include/c++/5/bits/stl_vector.h \
+    /usr/include/c++/5/bits/stl_bvector.h \
+    /usr/include/c++/5/bits/vector.tcc \
+    ../src/solver/./../model/./../solver/./../ConstraintParser/./../model/RuntimeValue.h \
+    ../src/solver/./../model/./../ConstraintParser/ConstraintParameter.cuh \
+    ../src/solver/SolverParameter.h \
+    ../src/solver/ConstantValue.h \
+    ../src/solver/./../ConstraintParser/ConstraintParameter.cuh

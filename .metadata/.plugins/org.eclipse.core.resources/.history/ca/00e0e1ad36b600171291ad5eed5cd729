@@ -1,0 +1,49 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+
+
+
+#include <iostream>
+#include "./../solver/runLFFSolver.h"
+
+
+using namespace std;
+
+class Point
+{
+public :
+	int x;
+	double y;
+
+	Point()
+	{
+		cout<<"Point()"<<endl;
+	}
+	Point(int a,double b):x(a),y(b)
+	{
+		cout <<"Point(int a,double b) "<<endl;
+	}
+	~Point()
+	{
+		cout<<"x=="<<x<<" y=="<<y<<" IS OUT"<<endl;
+	}
+};
+
+int main()
+{
+
+	Point* list=new Point[10];
+
+
+
+	cout<<"LFF Solver Begin:  "<<endl;
+
+	//runLFFSolver::run();
+
+	cout<<"LFF Solver Game Over!!!"<<endl;
+}
+

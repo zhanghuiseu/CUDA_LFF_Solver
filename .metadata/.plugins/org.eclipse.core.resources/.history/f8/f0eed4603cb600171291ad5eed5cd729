@@ -1,0 +1,94 @@
+/*
+ * ATG.cpp
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+
+
+#include <iostream>
+#include <string>
+
+#include "ATG.h"
+#include "PCATG.h"
+#include "SolverParameter.h"
+#include "ConstantValue.h"
+#include "./../ConstraintParser/ConstraintParameter.cuh"
+
+using namespace std;
+
+
+	/*
+	 *  下面是使用到的ATG类的static的初始化部分参数
+	 * */
+
+	/**
+	 * 当前搜素变量的下标
+	 */
+	int ATG::currentSearchParamIndex = 0;
+
+	/**
+	 * 存储每一轮的种子搜索点(对每一个变量的搜索都可得到下一轮的种子搜索点）
+	 */
+	SearchTask* ATG::seeds = NULL;
+	SearchTask* ATG::nextSeeds = NULL;
+
+	/**
+	 * 存储第一轮中以随机值开始搜索的每一个变量方向上最优点的覆盖节点数
+	 */
+	int ATG::NumOfCoveredNodes[ConstraintParameter::NUM_OF_PARAM] ={0};
+
+	/**
+	 * 当前输入向量
+	 */
+	double ATG::parameters[ConstraintParameter::NUM_OF_PARAM] ={0};
+
+
+	/*
+	 * 策略的设置函数
+	 * */
+	void ATG::setStrategy()
+	{
+		SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 10;
+		SolverParameter::MAX_NUM_OF_GENERATE_CYCLE = ConstraintParameter::NUM_OF_PARAM;
+
+		if(ConstraintParameter::NUM_OF_PARAM >=5)   //zy   >6
+		{
+			SolverParameter::SEARCH_STRATEGY = ConstantValue::SEARCH_STRATEGY_ONE_BY_ONE;
+			SolverParameter::Cala_Strategy = ConstantValue::SEARCH_STRATEGY_ONE_BY_ONE;
+		}
+		else
+		{
+			SolverParameter::SEARCH_STRATEGY = ConstantValue::SEARCH_STRATEGY_ALL;
+			SolverParameter::Cala_Strategy = ConstantValue::SEARCH_STRATEGY_ALL;
+		}
+	}
+
+	/*
+	 * LFF Solver 测试用例生成
+	 * 这个函数主要是多变量和单变量策略调度模块
+	 * */
+	int ATG::generateTestDataForSolver()
+	{
+		this->setStrategy();
+
+		return 1;
+	}
+
+	/*
+	 * 这个函数函数是多变量交叉搜索的实现
+	 * */
+	int ATG::generateTestDataForSolverByAll()
+	{
+		this->pcatg.generateTestDataForSolver();
+	}
+
+	/*
+	 * 这个函数是单变量一次搜索的实现
+	 * */
+	int ATG::generateTestDataForSolverByOneByOne()
+	{
+		this->pcatg.generateTestDataForSolver();
+	}
+
+

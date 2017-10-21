@@ -1,0 +1,29 @@
+/*
+ * ATG.cpp
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+
+#include <iostream>
+#include <string>
+
+#include "ATG.h"
+#include "PCATG.h"
+
+
+using namespace std;
+
+
+int ATG::generateTestDataForSolver()
+{
+	SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 10;
+	SolverParameter::MAX_NUM_OF_GENERATE_CYCLE = ;
+
+
+	this->pcatg.generateTestDataForSolver();
+
+	return 1;
+}
+
+

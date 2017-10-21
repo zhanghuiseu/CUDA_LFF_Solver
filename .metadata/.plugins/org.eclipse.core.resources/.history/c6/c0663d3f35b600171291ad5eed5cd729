@@ -1,0 +1,43 @@
+/*
+ * ATG.h
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+
+#ifndef ATG_H_
+#define ATG_H_
+#include "PCATG.h"
+
+class ATG
+{
+public:
+	ATG()
+	{
+		this->pcatg = PCATG();
+	}
+	~ATG()
+	{
+
+	}
+
+	/*
+	 * LFF Solver 测试用例生成
+	 * 这个函数主要是多变量和单变量策略调度模块
+	 * */
+	int generateTestDataForSolver();
+
+	/*
+	 * 策略的设置函数
+	 * */
+	void setStrategy();
+
+private:
+	PCATG pcatg;
+
+
+};
+
+
+
+#endif /* ATG_H_ */

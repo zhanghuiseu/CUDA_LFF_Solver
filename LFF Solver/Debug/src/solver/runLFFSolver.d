@@ -121,6 +121,9 @@ src/solver/runLFFSolver.o : ../src/solver/runLFFSolver.cpp \
     ../src/solver/./../ConstraintParser/./../model/RuntimeValue.h \
     ../src/solver/ATG.h \
     ../src/solver/PCATG.h \
+    ../src/solver/./../model/SearchTask.h \
+    ../src/solver/./../model/./../solver/SolverParameter.h \
+    ../src/solver/./../model/./../ConstraintParser/ConstraintParameter.cuh \
     ../src/solver/./../model/MathFunction.h \
     /usr/include/c++/5/cmath \
     /usr/include/math.h \

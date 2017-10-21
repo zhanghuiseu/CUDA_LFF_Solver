@@ -1,0 +1,43 @@
+/*
+ * SearchTask.h
+ *
+ *  Created on: Oct 21, 2017
+ *      Author: zy
+ */
+
+#ifndef SEARCHTASK_H_
+#define SEARCHTASK_H_
+
+class SearchTask
+{
+public:
+
+	/*
+	 * 搜索变量的下标
+	 * */
+	int searchIndex;
+
+	/*
+	 * 出事的程序输入数据
+	 * */
+    double* initInputs;
+
+    /*
+     * 当前任务的优先级
+     * */
+    double priority;
+
+		/**
+		 * 任务优先级
+		 */
+		private final double priority;
+
+		/**
+		 * 搜索变量下标已经更迭的次数
+		 */
+		private final int changeTime;
+
+
+};
+
+#endif /* SEARCHTASK_H_ */

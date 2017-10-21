@@ -1,0 +1,16 @@
+/*
+ * ConstantValue.h
+ *
+ *  Created on: Oct 21, 2017
+ *      Author: zy
+ */
+
+#ifndef CONSTANTVALUE_H_
+#define CONSTANTVALUE_H_
+
+class ConstantValue
+{
+
+
+};
+#endif /* CONSTANTVALUE_H_ */

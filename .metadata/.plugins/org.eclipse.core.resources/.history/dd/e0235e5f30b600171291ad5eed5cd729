@@ -1,0 +1,40 @@
+/*
+ * SearchTask.h
+ *
+ *  Created on: Oct 21, 2017
+ *      Author: zy
+ */
+
+#ifndef SEARCHTASK_H_
+#define SEARCHTASK_H_
+
+#include "./../solver/SolverParameter.h"
+
+class SearchTask
+{
+public:
+
+	/*
+	 * 搜索变量的下标
+	 * */
+	int searchIndex;
+
+	/*
+	 * 出事的程序输入数据
+	 * */
+    double* initInputs;
+
+    /*
+     * 当前任务的优先级
+     * */
+    double priority;
+
+    /*
+	 * 搜索变量下标已经更迭的次数
+	 */
+    int changeTime;
+
+
+};
+
+#endif /* SEARCHTASK_H_ */

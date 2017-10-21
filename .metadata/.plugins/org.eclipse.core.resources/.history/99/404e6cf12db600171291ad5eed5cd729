@@ -1,0 +1,39 @@
+/*
+ * ATG.cpp
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+
+
+#include <iostream>
+#include <string>
+
+#include "ATG.h"
+#include "PCATG.h"
+#include "SolverParameter.h"
+#include "./../ConstraintParser/ConstraintParameter.cuh"
+
+using namespace std;
+
+/*
+ * 策略的设置函数
+ * */
+void ATG::setStrategy()
+{
+	SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 10;
+	SolverParameter::MAX_NUM_OF_GENERATE_CYCLE = ConstraintParameter::NUM_OF_PARAM;
+}
+
+int ATG::generateTestDataForSolver()
+{
+	this->setStrategy();
+
+	this->pcatg.generateTestDataForSolver();
+
+	return 1;
+}
+
+
+
+

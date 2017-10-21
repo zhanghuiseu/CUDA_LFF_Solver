@@ -10,8 +10,8 @@ x*y < 0  RuntimeValue:  0  isCovered： false
 析取范式的合取子式 1 : 
  y>=z   RuntimeValue:  0  isCovered： false
 
-SolverParameter::totalTime[4] = 0
-SolverParameter::algorithmTime[4] = 0
+SolverParameter::totalTime[4] = 1e-06
+SolverParameter::algorithmTime[4] = 1e-06
 SolverParameter::FunctionTime[4] = 0
 SolverParameter::totalFrequency[4] = 0
 

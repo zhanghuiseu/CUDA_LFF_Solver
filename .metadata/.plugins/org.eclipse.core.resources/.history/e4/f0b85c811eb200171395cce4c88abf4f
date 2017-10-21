@@ -1,0 +1,19 @@
+/*
+ * PCATG.cpp
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+
+#include <iostream>
+
+#include "PCATG.h"
+
+using namespace std;
+
+int PCATG::generateTestDataForSolver()
+{
+	return 1;
+}
+
+

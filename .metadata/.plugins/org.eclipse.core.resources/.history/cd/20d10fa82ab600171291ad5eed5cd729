@@ -1,0 +1,40 @@
+/*
+ * ATG.cpp
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+#include "SolverParameter.h"
+#ifndef SOLVERPARAMETER_H_
+#define SOLVERPARAMETER_H_
+
+#include <iostream>
+#include <string>
+
+#include "ATG.h"
+#include "PCATG.h"
+
+
+#include "./../ConstraintParser/ConstraintParameter.cuh"
+#include "./../model/MathFunction.h"
+#include "./../model/RuntimeValue.h"
+
+using namespace std;
+
+
+int ATG::generateTestDataForSolver()
+{
+	int i= SolverParameter::MAX_NUM_OF_PREDICT_PARAM;
+	//SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 10;
+	//SolverParameter::MAX_NUM_OF_GENERATE_CYCLE = 11;//ConstraintParameter::NUM_OF_PARAM;
+
+
+	this->pcatg.generateTestDataForSolver();
+
+	return 1;
+}
+
+
+#endif
+
+
