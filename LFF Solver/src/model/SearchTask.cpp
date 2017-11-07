@@ -1,99 +1,124 @@
-/*
- * SearchTask.cpp
- *
- *  Created on: Oct 21, 2017
- *      Author: zy
- */
+	/*
+	 * SearchTask.cpp
+	 *
+	 *  Created on: Oct 21, 2017
+	 *      Author: zy
+	 */
 
-#include <iostream>
+	#include <iostream>
 
-#include "SearchTask.h"
-#include "./../solver/SolverParameter.h"
-#include "./../ConstraintParser/ConstraintParameter.cuh"
+	#include "SearchTask.h"
+	#include "./../solver/SolverParameter.h"
+	#include "./../ConstraintParser/ConstraintParameter.cuh"
 
-using namespace std;
+	using namespace std;
 
 
-/*
- * 默认的构造函数
- * */
-SearchTask::SearchTask()
-{
-	this->ArraySize = ConstraintParameter::NUM_OF_PARAM;
-	this->initInputs = new double[this->ArraySize];
-	for(int i = 0; i < this->ArraySize; i++)
-		this->initInputs[i] = 0;
+	/*
+	 * 默认的构造函数
+	 * */
+	SearchTask::SearchTask()
+	{
+		this->ArraySize = ConstraintParameter::NUM_OF_PARAM;
+		this->initInputs = new double[this->ArraySize];
+		for(int i = 0; i < this->ArraySize; i++)
+			this->initInputs[i] = 0;
 
-	this->priority = 0;
-	this->searchIndex = 0;
-	this->changeTime = 0;
-}
+		this->priority = 0;
+		this->searchIndex = 0;
+		this->changeTime = 0;
+		this->needSearch = true;
+	}
 
-/*
- * 默认的构造函数，建议使用这个构造函数，这里选择的深度复制
- * */
-SearchTask::SearchTask(double* init,double pri,int index,int change)
-{
-	this->ArraySize = ConstraintParameter::NUM_OF_PARAM;
+	/*
+	 * 默认的构造函数，建议使用这个构造函数，这里选择的深度复制
+	 * */
+	SearchTask::SearchTask(double* init,double pri,int index,int change,bool needSearch)
+	{
+		this->ArraySize = ConstraintParameter::NUM_OF_PARAM;
 
-	this->initInputs = new double[this->ArraySize];
-	for(int i = 0; i < this->ArraySize; i++)
-		this->initInputs[i] = init[i];
+		this->initInputs = new double[this->ArraySize];
+		for(int i = 0; i < this->ArraySize; i++)
+			this->initInputs[i] = init[i];
 
-	this->priority = pri;
-	this->searchIndex = index;
-	this->changeTime = change;
-}
+		this->priority = pri;
+		this->searchIndex = index;
+		this->changeTime = change;
+		this->needSearch = needSearch;
+	}
 
-/*
- * 析构函数
- * */
-SearchTask::~SearchTask()
-{
-	delete [] this->initInputs;
-}
+	/*
+	 * 这个类似复制构造函数，就是做一次当前任务的所有的信息的深度复制
+	 * 注意这里不负责needSearch的赋值
+	 * */
+	void SearchTask::copyAll(double* init,double pri,int index,int change)
+	{
+		for(int i = 0; i < this->ArraySize; i++)
+			this->initInputs[i] = init[i];
 
-/*
- * 所有的set和get函数，注意这里我们使用double*动态的申请空间
- * */
-void SearchTask::setInitInputs(double* init)
-{
-	for(int i = 0; i < this->ArraySize; i++)
-		this->initInputs[i] = init[i];
-}
-double* SearchTask::getInitInputs()
-{
-	return this->initInputs;
-}
+		this->priority = pri;
+		this->searchIndex = index;
+		this->changeTime = change;
+	}
 
-void SearchTask::setSearchIndex(int index)
-{
-	this->searchIndex = index;
-}
+	/*
+	 * 析构函数
+	 * */
+	SearchTask::~SearchTask()
+	{
+		delete [] this->initInputs;
+	}
 
-int SearchTask::getSearchIndex()
-{
-	return this->searchIndex;
-}
+	/*
+	 * 所有的set和get函数，注意这里我们使用double*动态的申请空间
+	 * */
+	void SearchTask::setInitInputs(double* init)
+	{
+		for(int i = 0; i < this->ArraySize; i++)
+			this->initInputs[i] = init[i];
+	}
+	double* SearchTask::getInitInputs()
+	{
+		return this->initInputs;
+	}
 
-void SearchTask::setPriority(double pri)
-{
-	this->priority = pri;
-}
+	void SearchTask::setSearchIndex(int index)
+	{
+		this->searchIndex = index;
+	}
 
-double SearchTask::getPriority()
-{
-	return this->priority;
-}
+	int SearchTask::getSearchIndex()
+	{
+		return this->searchIndex;
+	}
 
-void SearchTask::setChangeTime(int change)
-{
-	this->changeTime = change;
-}
+	void SearchTask::setPriority(double pri)
+	{
+		this->priority = pri;
+	}
 
-int SearchTask::getChangeTime()
-{
-	return this->changeTime;
-}
+	double SearchTask::getPriority()
+	{
+		return this->priority;
+	}
 
+	void SearchTask::setChangeTime(int change)
+	{
+		this->changeTime = change;
+	}
+
+	int SearchTask::getChangeTime()
+	{
+		return this->changeTime;
+	}
+
+	void SearchTask::setNeedSearch(bool needSearch)
+	{
+		this->needSearch = needSearch;
+	}
+
+	bool SearchTask::getNeedSearch()
+	{
+		return this->needSearch;
+	}
 

@@ -47,6 +47,18 @@ public:
 	static bool constraintDependencyRela[NUM_OF_PARAM];
 
 	/*
+	 * 所有的约束的数量
+	 * */
+	static const int Num_Of_Constraints = 3;
+
+	/*
+	 * 所有的约束的比较运算符的类型信息
+	 * */
+	static int cinstraintCompType[Num_Of_Constraints];
+
+
+
+	/*
 	 * 这个函数是用来获取约束的信息
 	 * */
 	static vector< vector<string> > getConstraintInfo();
@@ -56,9 +68,9 @@ public:
 	 * 下面是最后在CPU对求出的可行解向量做验证的函数，
 	 * 主要就是计算每一个简单子约束的运行时刻值，以及每一个简单自约束的满足情况
 	 * */
-	static RuntimeValue* getConstraintValue00(double x,double y,double z);
-	static RuntimeValue* getConstraintValue01(double x,double y,double z);
-	static RuntimeValue* getConstraintValue10(double x,double y,double z);
+	static RuntimeValue* getConstraintValue_0_0(double x,double y,double z);
+	static RuntimeValue* getConstraintValue_0_1(double x,double y,double z);
+	static RuntimeValue* getConstraintValue_0_2(double x,double y,double z);
 };
 
 #endif /* CONSTRAINTPARAMETER_CUH_ */

@@ -96,6 +96,28 @@ src/solver/PCATG.o : ../src/solver/PCATG.cpp \
     /usr/include/c++/5/bits/ostream.tcc \
     /usr/include/c++/5/istream \
     /usr/include/c++/5/bits/istream.tcc \
+    /usr/include/stdlib.h \
+    /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+    /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+    /usr/include/x86_64-linux-gnu/sys/types.h \
+    /usr/include/x86_64-linux-gnu/sys/select.h \
+    /usr/include/x86_64-linux-gnu/bits/select.h \
+    /usr/include/x86_64-linux-gnu/bits/sigset.h \
+    /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+    /usr/include/alloca.h \
+    /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+    /usr/include/c++/5/ctime \
+    /usr/include/c++/5/cmath \
+    /usr/include/math.h \
+    /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+    /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+    /usr/include/x86_64-linux-gnu/bits/huge_val.h \
+    /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
+    /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
+    /usr/include/x86_64-linux-gnu/bits/inf.h \
+    /usr/include/x86_64-linux-gnu/bits/nan.h \
+    /usr/include/x86_64-linux-gnu/bits/mathdef.h \
+    /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
     ../src/solver/ATG.h \
     ../src/solver/PCATG.h \
     ../src/solver/./../model/SearchTask.h \
@@ -109,4 +131,43 @@ src/solver/PCATG.o : ../src/solver/PCATG.cpp \
     /usr/include/c++/5/bits/stl_bvector.h \
     /usr/include/c++/5/bits/vector.tcc \
     ../src/solver/./../model/./../solver/./../ConstraintParser/./../model/RuntimeValue.h \
-    ../src/solver/./../model/./../ConstraintParser/ConstraintParameter.cuh
+    ../src/solver/./../model/./../ConstraintParser/ConstraintParameter.cuh \
+    ../src/solver/ConstantValue.h \
+    ../src/solver/./../cuda/ParallelATG.cuh \
+    ../src/solver/./../cuda/./../ConstraintParser/ConstraintParameter.cuh \
+    ../src/solver/./../cuda/./../model/CoodinateDouble.cuh \
+    ../src/solver/./../cuda/./../model/CoodinateFloat.cuh \
+    ../src/solver/./../cuda/./../model/IntervalDouble.cuh \
+    ../src/solver/./../cuda/./../model/IntervalFloat.cuh \
+    ../src/solver/./../cuda/./../model/PriorityDouble.cuh \
+    ../src/solver/./../cuda/./../model/PriorityFloat.cuh \
+    ../src/solver/./../cuda/./../model/FullCoveredInfo.cuh \
+    ../src/solver/./../cuda/./../solver/ATG.h \
+    ../src/solver/./../cuda/./../solver/PCATG.h \
+    ../src/solver/./../cuda/HardwareStrategy.cuh \
+    /usr/local/cuda-8.0/bin/..//include/cuda_runtime.h \
+    /usr/local/cuda-8.0/bin/..//include/host_config.h \
+    /usr/local/cuda-8.0/bin/..//include/builtin_types.h \
+    /usr/local/cuda-8.0/bin/..//include/device_types.h \
+    /usr/local/cuda-8.0/bin/..//include/host_defines.h \
+    /usr/local/cuda-8.0/bin/..//include/driver_types.h \
+    /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h \
+    /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/syslimits.h \
+    /usr/include/limits.h \
+    /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+    /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+    /usr/include/linux/limits.h \
+    /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+    /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+    /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+    /usr/local/cuda-8.0/bin/..//include/surface_types.h \
+    /usr/local/cuda-8.0/bin/..//include/texture_types.h \
+    /usr/local/cuda-8.0/bin/..//include/vector_types.h \
+    /usr/local/cuda-8.0/bin/..//include/library_types.h \
+    /usr/local/cuda-8.0/bin/..//include/channel_descriptor.h \
+    /usr/local/cuda-8.0/bin/..//include/cuda_runtime_api.h \
+    /usr/local/cuda-8.0/bin/..//include/cuda_device_runtime_api.h \
+    /usr/local/cuda-8.0/bin/..//include/driver_functions.h \
+    /usr/local/cuda-8.0/bin/..//include/vector_functions.h \
+    /usr/local/cuda-8.0/bin/..//include/vector_functions.hpp \
+    /usr/local/cuda-8.0/bin/..//include/device_launch_parameters.h

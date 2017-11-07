@@ -1,0 +1,63 @@
+/*
+ * PCATG.h
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+
+#ifndef PCATG_H_
+#define PCATG_H_
+
+#include <iostream>
+#include <random>
+#include <ctime>
+
+using namespace std;
+
+class PCATG
+{
+public:
+	PCATG()
+	{
+
+	}
+	~PCATG()
+	{
+
+	}
+
+	int generateTestDataForSolver(int paramIndex, double* seed, int round,
+			int nextRoundSeedIndex, int max_num_of_predict_param);
+
+	/*
+	 * 生成初始搜索点，一共有两种可能情况：
+	 * 1）给定的起始搜索点
+	 * 2）未给定，直接随机生成起初点
+	 * */
+	void initialParameter(double*& initParams);
+
+	/**
+	 * 将第paramIndex个参数设为随机值
+	 * @param paramIndex
+	 * @param leftBoundary
+	 * @param rightBoundary
+	 * @param mode
+	 * @INTERVAL_BOTH_OPEN：在(leftBoundary, rightBoundary)内产生随机值
+	 * @INTERVAL_RIGHT_OPEN：在[leftBoundary, rightBoundary)内产生随机值
+	 * @INTERVAL_LEFT_OPEN：在(leftBoundary, rightBoundary]内产生随机值
+	 * @INTERVAL_BOTH_CLOSED：在[leftBoundary, rightBoundary]内产生随机值
+	 */
+	void setRandom(int paramIndex, double value, int mode);
+
+public:
+	static const int MIN_RANDOW = 0;
+	static const int MAX_RANDOW = 0;
+	static default_random_engine e(time(0));
+
+
+};
+
+
+
+
+#endif /* PCATG_H_ */

@@ -1,0 +1,33 @@
+/*
+ * PCATG.h
+ *
+ *  Created on: Oct 14, 2017
+ *      Author: zy
+ */
+
+#ifndef PCATG_H_
+#define PCATG_H_
+
+class PCATG
+{
+public:
+	PCATG()
+	{
+
+	}
+	~PCATG()
+	{
+
+	}
+
+	int generateTestDataForSolver(int paramIndex, double* seed, int round,
+			int nextRoundSeedIndex, int max_num_of_predict_param);
+
+	void initialParameter(double*& initParams);
+
+};
+
+
+
+
+#endif /* PCATG_H_ */

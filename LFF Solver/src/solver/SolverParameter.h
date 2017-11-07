@@ -56,7 +56,7 @@ public:
 	 *  ATG实验过程重复执行次数，
 	 *  默认是 7
 	 */
-    static const int countOfRepeation = 7;
+    static const int countOfRepeation = 1;
 
 	/**
 	 * 目标程序执行的总时间

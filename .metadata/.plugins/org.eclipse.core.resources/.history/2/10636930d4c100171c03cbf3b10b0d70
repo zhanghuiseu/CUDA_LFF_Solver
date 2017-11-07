@@ -1,0 +1,63 @@
+/*
+ * ParallelATG.cuh
+ *
+ *  Created on: Nov 4, 2017
+ *      Author: zy
+ */
+
+#ifndef PARALLELATG_CUH_
+#define PARALLELATG_CUH_
+
+	#include <iostream>
+
+	#include "./../ConstraintParser/ConstraintParameter.cuh"
+	#include "./../model/CoodinateDouble.cuh"
+	#include "./../model/CoodinateFloat.cuh"
+	#include "./../model/IntervalDouble.cuh"
+	#include "./../model/IntervalFloat.cuh"
+	#include "./../model/PriorityDouble.cuh"
+	#include "./../model/PriorityFloat.cuh"
+    #include "./../solver/ATG.h"
+	#include "./../solver/PCATG.h"
+	#include "HardwareStrategy.cuh"
+
+	#include "cuda_runtime.h"
+	#include "device_launch_parameters.h"
+
+	using namespace std;
+
+class ParallelATG
+{
+public:
+	/*
+	 * 这个是设计好的随机取点的范围长度,就是在某一个点周围的[i-len/2,i+len/2]这个区间作为起始区间去做搜索
+	 * */
+	static const int RandomLengthInt = 4;
+	static const int StepInt = 1;
+	static const int RandomLengthFloat = 4;
+	static const int StepDouble = 1;
+
+public:
+	/*
+	 * 这个是CUDA并行化的入口
+	 * */
+	static int generateTestDataForSolver(const int MaxTryParamSize);
+
+	/*
+	 * 完成第一步的初始化，初始化的思想是在给出的当前的搜索的起点周围扩展，分为下面两种情况
+	 * 1）对于整形int： 直接[i-RandomLengthInt/2,i+RandomLengthInt/2]做扩展，step一般为1
+	 * 2）对于浮点型float：直接[i-RandomLengthFloat/2,i+RandomLengthFloat/2]做扩展，step一般为1
+	 * */
+	static void initRandomMatrix(CoodinateDouble (*initMat)[RandomLengthInt],int row,int col);
+
+
+
+	/*
+	 * 打印函数
+	 * */
+	static void printRandomMat(CoodinateDouble (*initMat)[RandomLengthInt],int row,int col);
+
+
+};
+
+#endif /* PARALLELATG_CUH_ */

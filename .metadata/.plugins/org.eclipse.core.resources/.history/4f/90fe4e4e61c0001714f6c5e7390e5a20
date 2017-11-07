@@ -1,0 +1,42 @@
+/*
+ * PriorityDouble.cuh
+ *
+ *  Created on: Nov 3, 2017
+ *      Author: zy
+ */
+
+#ifndef PRIORITYDOUBLE_CUH_
+#define PRIORITYDOUBLE_CUH_
+
+/*
+ * 这个类主要保存的是每一个
+ * */
+class PriorityDouble
+{
+public:
+	double priority;
+	bool isFullCovered;
+
+	void setPriority(double priority)
+	{
+		this->priority = priority;
+	}
+
+	double getProority()
+	{
+		return this->priority;
+	}
+
+	void setIsFullCovered(bool is)
+	{
+		this->isFullCovered = is;
+	}
+
+	bool getIsFullCovered()
+	{
+		return this->isFullCovered;
+	}
+
+};
+
+#endif /* PRIORITYDOUBLE_CUH_ */

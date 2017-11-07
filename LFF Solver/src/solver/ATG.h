@@ -22,7 +22,6 @@ public:
 	{
 
 	}
-
 	/*
 	 * LFF Solver 测试用例生成
 	 * 这个函数主要是多变量和单变量策略调度模块
@@ -44,7 +43,15 @@ public:
 	 * */
 	void setStrategy();
 
-private:
+	/*
+	 * 下面是seed和nextseed的内存申请和释放
+	 * */
+	void mallocForSeed(const int SIZE);
+	void mallocForNextSeed(const int SIZE);
+	void freeForSeed(const int SIZE);
+	void freeForNextSeed(const int SIZE);
+
+public:
 	PCATG pcatg;
 
 	/**
@@ -55,8 +62,8 @@ private:
 	/**
 	 * 存储每一轮的种子搜索点(对每一个变量的搜索都可得到下一轮的种子搜索点）
 	 */
-	static SearchTask* seeds;
-	static SearchTask* nextSeeds;
+	static SearchTask** seeds;
+	static SearchTask** nextSeeds;
 
 	/**
 	 * 上一变量方向上搜索的最优解

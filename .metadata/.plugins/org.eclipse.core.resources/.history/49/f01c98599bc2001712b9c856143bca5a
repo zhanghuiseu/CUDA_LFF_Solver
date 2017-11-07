@@ -1,0 +1,20 @@
+/*
+ * IsFullCovered.cuh
+ *
+ *  Created on: Nov 6, 2017
+ *      Author: zy
+ */
+
+#ifndef ISFULLCOVERED_CUH_
+#define ISFULLCOVERED_CUH_
+
+
+class IsFullCovered
+{
+public:
+	bool isCovered;
+
+
+};
+
+#endif /* ISFULLCOVERED_CUH_ */

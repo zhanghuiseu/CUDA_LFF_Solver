@@ -1,9 +1,0 @@
-----------------------------run3----------------------------
-Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0, 0, 0 ] 
-Best Covered is: 0%
-SolverParameter::totalTime[3] = 1e-06
-SolverParameter::algorithmTime[3] = 1e-06
-SolverParameter::FunctionTime[3] = 0
-SolverParameter::totalFrequency[3] = 0
-

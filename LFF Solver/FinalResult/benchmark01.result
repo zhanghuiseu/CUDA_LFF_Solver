@@ -1,134 +1,31 @@
 **************** The Constraints Is As Following ****************
-( ( x*x < 9 ) && ( x*y < 0 ) ) || ( (  y>=z  ) )
+( ( 9 > x*y*z ) && ( z > x*y ) && (  y > z  ) )
 
-----------------------------run1----------------------------
+----------------------------run0----------------------------
 Coverage Result Is As Following:
 Yes!!!!!   Find Covered Input: [ 0, 0, 0 ] 
 Best Covered is: 0%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-x*x < 9  RuntimeValue:  9  isCovered： true
-x*y < 0  RuntimeValue:  0  isCovered： false
-析取范式的合取子式 1 : 
- y>=z   RuntimeValue:  0  isCovered： false
+9 > x*y*z  RuntimeValue:  9  isCovered： true
+z > x*y  RuntimeValue:  0  isCovered： false
+ y > z   RuntimeValue:  0  isCovered： false
 
-SolverParameter::totalTime[1] = 1e-06
-SolverParameter::algorithmTime[1] = 1e-06
-SolverParameter::FunctionTime[1] = 0
-SolverParameter::totalFrequency[1] = 0
-
-----------------------------run2----------------------------
-Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0, 0, 0 ] 
-Best Covered is: 0%
-
-析取范式以及运行结果如下： 
-析取范式的合取子式 0 : 
-x*x < 9  RuntimeValue:  9  isCovered： true
-x*y < 0  RuntimeValue:  0  isCovered： false
-析取范式的合取子式 1 : 
- y>=z   RuntimeValue:  0  isCovered： false
-
-SolverParameter::totalTime[2] = 1e-06
-SolverParameter::algorithmTime[2] = 1e-06
-SolverParameter::FunctionTime[2] = 0
-SolverParameter::totalFrequency[2] = 0
-
-----------------------------run3----------------------------
-Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0, 0, 0 ] 
-Best Covered is: 0%
-
-析取范式以及运行结果如下： 
-析取范式的合取子式 0 : 
-x*x < 9  RuntimeValue:  9  isCovered： true
-x*y < 0  RuntimeValue:  0  isCovered： false
-析取范式的合取子式 1 : 
- y>=z   RuntimeValue:  0  isCovered： false
-
-SolverParameter::totalTime[3] = 1e-06
-SolverParameter::algorithmTime[3] = 1e-06
-SolverParameter::FunctionTime[3] = 0
-SolverParameter::totalFrequency[3] = 0
-
-----------------------------run4----------------------------
-Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0, 0, 0 ] 
-Best Covered is: 0%
-
-析取范式以及运行结果如下： 
-析取范式的合取子式 0 : 
-x*x < 9  RuntimeValue:  9  isCovered： true
-x*y < 0  RuntimeValue:  0  isCovered： false
-析取范式的合取子式 1 : 
- y>=z   RuntimeValue:  0  isCovered： false
-
-SolverParameter::totalTime[4] = 1e-06
-SolverParameter::algorithmTime[4] = 1e-06
-SolverParameter::FunctionTime[4] = 0
-SolverParameter::totalFrequency[4] = 0
-
-----------------------------run5----------------------------
-Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0, 0, 0 ] 
-Best Covered is: 0%
-
-析取范式以及运行结果如下： 
-析取范式的合取子式 0 : 
-x*x < 9  RuntimeValue:  9  isCovered： true
-x*y < 0  RuntimeValue:  0  isCovered： false
-析取范式的合取子式 1 : 
- y>=z   RuntimeValue:  0  isCovered： false
-
-SolverParameter::totalTime[5] = 1e-06
-SolverParameter::algorithmTime[5] = 1e-06
-SolverParameter::FunctionTime[5] = 0
-SolverParameter::totalFrequency[5] = 0
-
-----------------------------run6----------------------------
-Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0, 0, 0 ] 
-Best Covered is: 0%
-
-析取范式以及运行结果如下： 
-析取范式的合取子式 0 : 
-x*x < 9  RuntimeValue:  9  isCovered： true
-x*y < 0  RuntimeValue:  0  isCovered： false
-析取范式的合取子式 1 : 
- y>=z   RuntimeValue:  0  isCovered： false
-
-SolverParameter::totalTime[6] = 1e-06
-SolverParameter::algorithmTime[6] = 1e-06
-SolverParameter::FunctionTime[6] = 0
-SolverParameter::totalFrequency[6] = 0
-
-----------------------------run7----------------------------
-Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0, 0, 0 ] 
-Best Covered is: 0%
-
-析取范式以及运行结果如下： 
-析取范式的合取子式 0 : 
-x*x < 9  RuntimeValue:  9  isCovered： true
-x*y < 0  RuntimeValue:  0  isCovered： false
-析取范式的合取子式 1 : 
- y>=z   RuntimeValue:  0  isCovered： false
-
-SolverParameter::totalTime[7] = 1e-06
-SolverParameter::algorithmTime[7] = 1e-06
-SolverParameter::FunctionTime[7] = 0
-SolverParameter::totalFrequency[7] = 0
+SolverParameter::totalTime[0] = 0.166646
+SolverParameter::algorithmTime[0] = 0.166646
+SolverParameter::FunctionTime[0] = 0
+SolverParameter::totalFrequency[0] = 0
 
 ----------------------------statistical result----------------------------
-Average Time:	1e-06
-Best Time:	1e-06
-Worst Time:	1e-06
+Average Time:	0.166646
+Best Time:	0.166646
+Worst Time:	0.166646
 Average Frequency:	0
-Coverage Result:	[ true, true, true, true, true, true, true ] 
+Coverage Result:	[ true ] 
 Parameter Setting: 
 MAX_NUM_OF_PREDICT_PARAM = 10
-MAX_NUM_OF_GENERATE_CYCLE = 3
+MAX_NUM_OF_GENERATE_CYCLE = 1
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
 

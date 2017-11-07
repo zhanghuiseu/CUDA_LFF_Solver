@@ -25,6 +25,9 @@
 	 * */
 	void runLFFSolver::run()
 	{
+		//给随机生成数设定seed
+		srand(time(0));
+
 		//为最终的解向量申请空间
 		SolverParameter::finalParams = new double[ConstraintParameter::NUM_OF_PARAM];
 
@@ -80,7 +83,7 @@
 			SolverParameter::totalFrequency[indexOfRun-1] = SolverParameter::function_frequency;
 			SolverParameter::findResult[indexOfRun-1] = isCovered;
 
-			string indexStr = MathFunction::toString(indexOfRun);
+			string indexStr = MathFunction::toString(indexOfRun-1);
 			resultOne += "----------------------------run" + indexStr + "----------------------------\n";
 			resultOne += "Coverage Result Is As Following:\n";
 

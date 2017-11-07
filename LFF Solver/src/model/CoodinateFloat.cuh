@@ -19,6 +19,7 @@ public:
 
 	float x;
 	float y;
+	bool isCovered;
 
 	/*
 	 * 默认构造函数，不过可能没用
@@ -27,6 +28,7 @@ public:
 	{
 		this->x = 0.0f;
 		this->y = 0.0f;
+		this->isCovered = false;
 	}
 
 	void setX(double x)
@@ -49,6 +51,15 @@ public:
 		return this->y;
 	}
 
+	void setIsCovered(bool isCovered)
+	{
+		this->isCovered = isCovered;
+	}
+
+	bool getIsCovered()
+	{
+		return this->isCovered;
+	}
 };
 
 

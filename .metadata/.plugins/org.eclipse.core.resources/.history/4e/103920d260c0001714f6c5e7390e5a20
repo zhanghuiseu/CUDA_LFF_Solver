@@ -1,0 +1,21 @@
+/*
+ * PriorityDouble.cuh
+ *
+ *  Created on: Nov 3, 2017
+ *      Author: zy
+ */
+
+#ifndef PRIORITYDOUBLE_CUH_
+#define PRIORITYDOUBLE_CUH_
+
+class PriorityDouble
+{
+public:
+	double priority;
+	bool isFullCovered;
+
+	void setPriority(double priority)
+
+};
+
+#endif /* PRIORITYDOUBLE_CUH_ */

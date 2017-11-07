@@ -11,6 +11,24 @@
 class ConstantValue
 {
 public:
+
+	/*
+	 * 这个是定义> ， >= ，<  ， <=等4中情况，
+	 * 在这里我们不区分上述的四种情况
+	 * */
+	static const int GreatEqualOrEqual = 1;
+
+	/*
+	 * 这个是定义等于==的情况
+	 * */
+	static const int Equal = 0;
+
+
+	/*
+	 * 这个是定义不等于！=的情况
+	 * */
+	static const int NotEqual = -1;
+
 	/**
 	 * 分支节点
 	 */
@@ -61,6 +79,18 @@ public:
 	 * 变量搜索方式为按变量下标顺序搜索
 	 */
 	static const int SEARCH_STRATEGY_ONE_BY_ONE = 1;
+
+
+	/*
+	 * 约束的变量类型，使用bool变量表示，1表示浮点数，0表示整形
+	 * 浮点数表示类型
+	 * */
+	static const bool FloatType = true;
+
+	/*
+	 * 整形表示类型
+	 * */
+	static const bool IntType = false;
 
 };
 #endif /* CONSTANTVALUE_H_ */

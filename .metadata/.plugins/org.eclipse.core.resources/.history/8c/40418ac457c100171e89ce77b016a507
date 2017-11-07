@@ -1,0 +1,32 @@
+	/*
+	 * main.cpp
+	 *
+	 *  Created on: Oct 14, 2017
+	 *      Author: zy
+	 */
+
+
+
+	#include <iostream>
+	#include "./../solver/runLFFSolver.h"
+
+	using namespace std;
+
+#include "./../cuda/HardwareStrategy.cuh"
+
+	int main()
+	{
+
+		Block res = HardwareStrategy::getHardwareStrategy(1000);
+		cout<<res.NumOfThreads<<"    "<<res.ThreadPreBlock<<endl;
+
+
+		cout<<"LFF Solver Begin:  "<<endl;
+
+		runLFFSolver::run();
+
+		cout<<"LFF Solver Game Over!!!"<<endl;
+
+	}
+
+

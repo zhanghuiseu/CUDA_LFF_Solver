@@ -1,0 +1,42 @@
+	/*
+	 * main.cpp
+	 *
+	 *  Created on: Oct 14, 2017
+	 *      Author: zy
+	 */
+
+
+
+	#include <iostream>
+	#include "./../solver/runLFFSolver.h"
+
+	using namespace std;
+
+	class Test
+	{
+	public:
+		double a;
+		int b;
+		Test()
+		{
+			a=0;
+			b=1;
+		}
+	};
+	int main()
+	{
+
+		Test** t=new Test*[10];
+		for(int i=0;i<10;i++)
+			t[i]=new Test();
+
+
+		cout<<"LFF Solver Begin:  "<<endl;
+
+		//runLFFSolver::run();
+
+		cout<<"LFF Solver Game Over!!!"<<endl;
+
+	}
+
+

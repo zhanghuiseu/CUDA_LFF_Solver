@@ -1,0 +1,45 @@
+		/*
+		 * CudaInstrument.cuh
+		 *
+		 *  Created on: Oct 15, 2017
+		 *      Author: zy
+		 */
+
+		#ifndef CUDAINSTRUMENT_CUH_
+		#define CUDAINSTRUMENT_CUH_
+
+		#include "ConstraintParameter.cuh"
+		#include "./../model/RuntimeValue.h"
+
+		#include "cuda_runtime.h"
+		#include "device_launch_parameters.h"
+
+		/*
+		 * 注意这里计算有两部的计算优化：
+		 * 1）在计算运行时刻值的时候，顺便把子约束满足情况计算了
+		 * 2）计算子约束的满足情况的时候没有使用if等判断分支结构，
+		 *    同时使用到已经计算好的运行时刻值去减少复杂的浮点数计算过程
+		 * */
+		__device__ void getConstraint00(double x,double y,double z,RuntimeValue* res)
+		{
+			res->value = 9 - x*x;
+			res->isCovered = (res->value > 0) * true;
+			return ;
+		}
+
+		__device__ void getConstraint01(double x,double y,double z,RuntimeValue* res)
+		{
+			res->value = 0 - x*y;
+			res->isCovered = (res->value > 0) * true;
+			return ;
+		}
+
+		__device__ void getConstraint10(double x,double y,double z,RuntimeValue* res)
+		{
+			res->value =  y - z;
+			res->isCovered = ( res->value > 0) * true;
+			return ;
+		}
+		__global__ void
+
+		#endif /* CUDAINSTRUMENT_CUH_ */

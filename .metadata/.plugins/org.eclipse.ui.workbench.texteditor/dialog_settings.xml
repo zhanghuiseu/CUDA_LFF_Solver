@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="830" key="DIALOG_WIDTH"/>
-		<item value="333" key="DIALOG_Y_ORIGIN"/>
-		<item value="440" key="DIALOG_HEIGHT"/>
-		<item value="509" key="DIALOG_X_ORIGIN"/>
+		<item value="810" key="DIALOG_WIDTH"/>
+		<item value="100" key="DIALOG_Y_ORIGIN"/>
+		<item value="476" key="DIALOG_HEIGHT"/>
+		<item value="1004" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,22 +13,26 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="ver" key="selection"/>
+		<item value="testMergeFunction()" key="selection"/>
 		<list key="findhistory">
-			<item value="ver"/>
-			<item value="ResultTest"/>
-			<item value="boolean"/>
-			<item value="function_time"/>
-			<item value="NEED_REFINED_SEARCH"/>
-			<item value="PREDICT_BOUNDARY"/>
-			<item value="START_POINT"/>
-			<item value="stringstream"/>
+			<item value="testMergeFunction()"/>
+			<item value="************  NOT EQUAL *********"/>
+			<item value="res.NumOfBlock"/>
+			<item value="dev_all"/>
+			<item value="calaMatCol"/>
+			<item value="IsFullCovered"/>
+			<item value="IsFull"/>
+			<item value="calaMatRow"/>
 		</list>
 		<list key="replacehistory">
-			<item value="RuntimeValue"/>
-			<item value=";"/>
-			<item value=""/>
-			<item value="double"/>
+			<item value="dev_predictArray"/>
+			<item value="SIZE"/>
+			<item value="calaMatCol"/>
+			<item value="const int calaMatCol"/>
+			<item value="2*col"/>
+			<item value="1*col"/>
+			<item value="0*col"/>
+			<item value="dev_parameter"/>
 		</list>
 	</section>
 </section>

@@ -1,0 +1,74 @@
+	/*
+	 * main.cpp
+	 *
+	 *  Created on: Oct 14, 2017
+	 *      Author: zy
+	 */
+
+
+
+	#include <iostream>
+	#include "./../solver/runLFFSolver.h"
+
+ #include "./../solver/PCATG.h"
+
+	using namespace std;
+
+	int main()
+	{
+
+		cout<<"LFF Solver Begin:  "<<endl;
+
+		runLFFSolver::run();
+
+		cout<<"LFF Solver Game Over!!!"<<endl;
+
+
+	}
+
+	void testRandom()
+	{
+		const int SIZE = 1000000;
+			vector<int> count(10,0);
+			vector<double> r(SIZE,0);
+			for(int i=0;i<SIZE;i++)
+			{
+				r[i] = PCATG::random();
+			}
+
+			for(int i=0;i<SIZE;i++)
+			{
+				if(r[i]<=0.1)
+					count[0]++;
+
+				else if(r[i]<=0.2)
+					count[1]++;
+
+				else if(r[i]<=0.3)
+					count[2]++;
+
+				else if(r[i]<=0.4)
+					count[3]++;
+
+				else if(r[i]<=0.5)
+					count[4]++;
+
+				else if(r[i]<=0.6)
+					count[5]++;
+
+				else if(r[i]<=0.7)
+					count[6]++;
+
+				else if(r[i]<=0.8)
+					count[7]++;
+
+				else if(r[i]<=0.9)
+					count[8]++;
+				else
+					count[9]++;
+			}
+
+			for(int i=0;i<10;i++)
+				cout<<count[i]<<"   ";
+			cout<<endl;
+	}

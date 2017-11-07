@@ -26,8 +26,14 @@ public:
 
 	/*
 	 * 默认的构造函数，建议使用这个构造函数，这里选择的深度复制
+	 * 注意这里不负责needSearch的赋值
 	 * */
-	SearchTask(double* init,double pri,int index,int change);
+	SearchTask(double* init,double pri,int index,int change,bool needSearch);
+
+	/*
+	 * 这个类似复制构造函数，就是做一次当前任务的所有的信息的深度复制
+	 * */
+	void copyAll(double* init,double pri,int index,int change);
 
 	/*
 	 * 析构函数
@@ -45,6 +51,8 @@ public:
 	double getPriority();
 	void setChangeTime(int change);
 	int getChangeTime();
+	void setNeedSearch(bool needSearch);
+	bool getNeedSearch();
 
 	/*
 	 * 搜索变量的下标
@@ -71,6 +79,10 @@ public:
 	 */
     int changeTime;
 
+    /*
+	 * 根据复合约束的以来信息来确定是否要搜素
+	 */
+    bool needSearch;
 };
 
 #endif /* SEARCHTASK_H_ */
