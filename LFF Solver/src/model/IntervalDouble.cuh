@@ -20,6 +20,7 @@ public:
 
 	double left;
 	double right;
+	bool hasIntervel;
 
 	/*
 	 * 默认构造函数，不过可能没用
@@ -28,6 +29,7 @@ public:
 	{
 		this->left = 0;
 		this->right = 0;
+		this->hasIntervel = true;
 	}
 
 	void setIntervalDouble(double left,double right)

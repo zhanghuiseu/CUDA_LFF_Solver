@@ -191,11 +191,9 @@ src/cuda/ExcuteConstraint.o : ../src/cuda/ExcuteConstraint.cu \
     /usr/include/c++/5/bits/vector.tcc \
     ../src/cuda/./../ConstraintParser/./../model/RuntimeValue.h \
     ../src/cuda/./../model/CoodinateDouble.cuh \
-    ../src/cuda/./../model/CoodinateFloat.cuh \
     ../src/cuda/./../model/IntervalDouble.cuh \
-    ../src/cuda/./../model/IntervalFloat.cuh \
     ../src/cuda/./../model/PriorityDouble.cuh \
-    ../src/cuda/./../model/PriorityFloat.cuh \
+    ../src/cuda/./../model/PredictValue.cuh \
     ../src/cuda/./../solver/ATG.h \
     ../src/cuda/./../solver/PCATG.h \
     /usr/include/c++/5/ctime \

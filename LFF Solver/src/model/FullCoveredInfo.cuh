@@ -16,6 +16,8 @@
  *  FullCoveredInfo主要包含以下两方面的信息：
  *  1）一个析取范式是否在一个解向量下是否被全覆盖
  *  2）他的index是什么，这个在寻找解向量的时候使用到
+ *  3) isVaild 是表示当前的解向量是否是有效的，也即只要不是Nan或Inf就是有效的，默认是有效的
+ *  4）vaildNum是为了使用规约求和来统计当前预测向量的所有的vaild的向量
  * */
 class FullCoveredInfo
 {
@@ -23,10 +25,16 @@ public:
 	bool isCovered;
 	int index;
 
+	bool isVaild;
+	int vaildNum;
+
+
 	FullCoveredInfo()
 	{
 		this->isCovered =false;
+		this->isVaild = true;
 		this->index = -1;
+		this->vaildNum = this->isVaild;
 	}
 
 	void setIsCovered(bool isCovered)

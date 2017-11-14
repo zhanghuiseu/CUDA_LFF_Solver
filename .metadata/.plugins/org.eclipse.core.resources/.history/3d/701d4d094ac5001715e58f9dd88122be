@@ -1,0 +1,20 @@
+/*
+ * Limit.cpp
+ *
+ *  Created on: Nov 9, 2017
+ *      Author: zy
+ */
+
+
+#include <iostream>
+#include <climits>
+#include "Limit.h"
+
+using namespace std;
+
+double Limit::DoubleMin = numeric_limits<double>::min();
+double Limit:: = numeric_limits<double>::max();
+float  Limit::FloatMin = numeric_limits<float>::min();
+float  Limit::FloatMax = numeric_limits<float>::max();
+
+

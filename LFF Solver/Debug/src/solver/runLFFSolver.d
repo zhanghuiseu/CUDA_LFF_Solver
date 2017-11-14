@@ -147,4 +147,30 @@ src/solver/runLFFSolver.o : ../src/solver/runLFFSolver.cpp \
     /usr/include/x86_64-linux-gnu/bits/mathdef.h \
     /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
     /usr/include/c++/5/sstream \
-    /usr/include/c++/5/bits/sstream.tcc
+    /usr/include/c++/5/bits/sstream.tcc \
+    ../src/solver/./../ErrorHandle/ErrorHandle.cuh \
+    /usr/local/cuda-8.0/bin/..//include/cuda_runtime.h \
+    /usr/local/cuda-8.0/bin/..//include/host_config.h \
+    /usr/local/cuda-8.0/bin/..//include/builtin_types.h \
+    /usr/local/cuda-8.0/bin/..//include/device_types.h \
+    /usr/local/cuda-8.0/bin/..//include/host_defines.h \
+    /usr/local/cuda-8.0/bin/..//include/driver_types.h \
+    /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h \
+    /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/syslimits.h \
+    /usr/include/limits.h \
+    /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+    /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+    /usr/include/linux/limits.h \
+    /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+    /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+    /usr/local/cuda-8.0/bin/..//include/surface_types.h \
+    /usr/local/cuda-8.0/bin/..//include/texture_types.h \
+    /usr/local/cuda-8.0/bin/..//include/vector_types.h \
+    /usr/local/cuda-8.0/bin/..//include/library_types.h \
+    /usr/local/cuda-8.0/bin/..//include/channel_descriptor.h \
+    /usr/local/cuda-8.0/bin/..//include/cuda_runtime_api.h \
+    /usr/local/cuda-8.0/bin/..//include/cuda_device_runtime_api.h \
+    /usr/local/cuda-8.0/bin/..//include/driver_functions.h \
+    /usr/local/cuda-8.0/bin/..//include/vector_functions.h \
+    /usr/local/cuda-8.0/bin/..//include/vector_functions.hpp \
+    /usr/local/cuda-8.0/bin/..//include/device_launch_parameters.h

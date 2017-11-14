@@ -29,7 +29,7 @@ public:
 	/*
 	 * 每一个搜索方向的计算，也就是CUDA并行计算模块
 	 * */
-	int generateTestDataForSolver(int paramIndex, double* seed, int round,
+	bool generateTestDataForSolver(int paramIndex, double* seed, int round,
 			int nextRoundSeedIndex, int max_num_of_predict_param);
 
 	/*

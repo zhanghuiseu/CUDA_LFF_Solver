@@ -17,6 +17,10 @@
 	#include "./../ConstraintParser/ConstraintParameter.cuh"
 	#include "./../model/MathFunction.h"
 	#include "./../model/RuntimeValue.h"
+	#include "./../ErrorHandle/ErrorHandle.cuh"
+
+	#include "cuda_runtime.h"
+	#include "device_launch_parameters.h"
 
 	using namespace std;
 
@@ -25,6 +29,10 @@
 	 * */
 	void runLFFSolver::run()
 	{
+		//选择当前的显卡
+		cudaError_t cudaStatus = cudaSetDevice(0);
+		ErrorHandle::dealError(cudaStatus,"cudaError_t cudaStatus = cudaSetDevice(0);");
+
 		//给随机生成数设定seed
 		srand(time(0));
 
@@ -59,12 +67,9 @@
 			//参数重置
 			SolverParameter::reset();
 
-			//开始计算求解模块
-			int res = -1;
-
 			//获取当前的时间
 			start = clock();
-			res = atg.generateTestDataForSolver();
+			bool isCovered = atg.generateTestDataForSolver();
 			finish = clock();
 
 			/*解
@@ -73,7 +78,6 @@
 			 * */
 			double totalTime = (double)(finish - start) / CLOCKS_PER_SEC;
 			double algorTime = (double)(finish - start - SolverParameter::function_time) / CLOCKS_PER_SEC;
-			bool isCovered = res > -1 ? true : false;
 
 			/*
 			 * 下面是记录相关参数

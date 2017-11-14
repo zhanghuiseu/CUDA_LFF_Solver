@@ -4,14 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CU_SRCS += \
+../src/cuda/CLF.cu \
 ../src/cuda/ExcuteConstraint.cu \
 ../src/cuda/ParallelATG.cu 
 
 CU_DEPS += \
+./src/cuda/CLF.d \
 ./src/cuda/ExcuteConstraint.d \
 ./src/cuda/ParallelATG.d 
 
 OBJS += \
+./src/cuda/CLF.o \
 ./src/cuda/ExcuteConstraint.o \
 ./src/cuda/ParallelATG.o 
 

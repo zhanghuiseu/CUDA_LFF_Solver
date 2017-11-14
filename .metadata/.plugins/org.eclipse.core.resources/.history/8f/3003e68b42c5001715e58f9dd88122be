@@ -1,0 +1,41 @@
+/*
+ * Classification.cuh
+ *
+ *  Created on: Nov 9, 2017
+ *      Author: zy
+ */
+
+#ifndef CLASSIFICATION_CUH_
+#define CLASSIFICATION_CUH_
+
+
+class Classification
+{
+public:
+	double zero;
+	bool case0;
+	bool case1;
+	bool case2;
+	bool case3;
+	bool case4;
+	bool case5;
+	bool hasIntervel;
+
+	Classification()
+	{
+		this->zero = 0.0;
+		this->hasIntervel = true;
+		this->case0 = false;
+		this->case1 = false;
+		this->case2 = false;
+		this->case3 = false;
+		this->case4 = false;
+		this->case5 = false;
+	}
+
+
+};
+
+
+
+#endif /* CLASSIFICATION_CUH_ */

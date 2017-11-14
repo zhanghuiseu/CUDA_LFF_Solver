@@ -79,7 +79,7 @@
 	 * LFF Solver 测试用例生成
 	 * 这个函数主要是多变量和单变量策略调度模块
 	 * */
-	int ATG::generateTestDataForSolver()
+	bool ATG::generateTestDataForSolver()
 	{
 		/*
 		 * 计算之前要注意策略的初始化
@@ -87,7 +87,7 @@
 		this->setStrategy();
 
 		//下面就是根据不同的策略完成不同的计算
-		int isCovered = -1;
+		bool isCovered = false;
 		if(SolverParameter::SEARCH_STRATEGY == ConstantValue::SEARCH_STRATEGY_ALL)
 			isCovered = this->generateTestDataForSolverByAll();
 		else
@@ -98,14 +98,14 @@
 	/*
 	 * 这个函数函数是多变量交叉搜索的实现
 	 * */
-	int ATG::generateTestDataForSolverByAll()
+	bool ATG::generateTestDataForSolverByAll()
 	{
 		int num_of_param = ConstraintParameter::NUM_OF_PARAM;
 		int max_num_of_predict_param = SolverParameter::MAX_NUM_OF_PREDICT_PARAM;
-		int isCovered = -1;
+		bool isCovered = false;
 		int round = 0;
 
-		while(round < SolverParameter::MAX_NUM_OF_GENERATE_CYCLE && isCovered<=-1)
+		while(round < SolverParameter::MAX_NUM_OF_GENERATE_CYCLE && isCovered==false)
 		{
 		    int paramIndex = 0;
 		    //第一轮，以随机值与指定值开始搜索
@@ -120,7 +120,7 @@
 
 			    paramIndex = 0;
 		        // 对所有参数执行ATG
-		        while(paramIndex < ConstraintParameter::NUM_OF_PARAM && isCovered <= -1)
+		        while(paramIndex < ConstraintParameter::NUM_OF_PARAM && isCovered==false)
 		        {
 		        	//基于复杂约束依赖分析的搜索空间递减工作,然后标记下一个节点的needSearch
 		        	if(ConstraintParameter::constraintDependencyRela[paramIndex] == true)
@@ -129,7 +129,7 @@
 		        		ATG::seeds[paramIndex]->setNeedSearch(false);
 
 		        	//这个if属于用户定制的数据的处理程序
-		        	if(isCovered == -1 && SolverParameter::IS_CUSTOMIZED)
+		        	if(isCovered == false && SolverParameter::IS_CUSTOMIZED)
 		        	{
 			            double* initParams = new double[num_of_param];
 				    	for (int i=0; i<num_of_param; i++)
@@ -147,7 +147,7 @@
 						    	continue;
 						    }
 
-						    if (isCovered > -1)
+						    if (isCovered)
 						    	 break;
 					    }
 				    	delete [] initParams;
@@ -160,7 +160,6 @@
 		    	/*
 		    	 * 其余轮，以上一轮生成的最优点开始搜索
 		    	 * */
-
 			    //计算本轮生成的种子数
 			    int seedsNum = (int) (num_of_param * pow((num_of_param - 1), round - 1));
 			    int nextRoundSeedsNum = seedsNum * (num_of_param - 1);
@@ -169,10 +168,10 @@
 
 			    int seedIndex = 0;
 			    int nextRoundSeedIndex = 0;
-			    while(seedIndex < seedsNum && isCovered <= -1)
+			    while(seedIndex < seedsNum && isCovered==false)
 			    {
 			    	paramIndex = 0;
-			    	while(paramIndex < num_of_param && isCovered <= -1)
+			    	while(paramIndex < num_of_param && isCovered==false)
 			    	{
 					    if(paramIndex != seeds[seedIndex]->getSearchIndex())
 					    {
@@ -202,12 +201,21 @@
 		int seedsNum = (int) (num_of_param * pow((num_of_param - 1), round - 1));
 		this->freeForSeed(seedsNum);
 		ATG::seeds = ATG::nextSeeds = NULL;
+
+		/*
+		 * 设置最终的参数，这个分为两种情况
+		 *  1）找到解，那么这就是找到的解向量
+		 *  2）没找到，那么这就是找到的覆盖度最高的向量
+		 * */
+		for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
+			SolverParameter::finalParams[i] = ATG::parameters[i];
+		return isCovered;
 	}
 
 	/*
 	 * 这个函数是单变量一次搜索的实现
 	 * */
-	int ATG::generateTestDataForSolverByOneByOne()
+	bool ATG::generateTestDataForSolverByOneByOne()
 	{
 		int num_of_param = ConstraintParameter::NUM_OF_PARAM;
 		int isCovered = -1;
@@ -217,12 +225,12 @@
 
 		//下面是单变量依次搜索
 		int round = 0;
-	    while(round < SolverParameter::MAX_NUM_OF_GENERATE_CYCLE && isCovered <= -1)
+	    while(round < SolverParameter::MAX_NUM_OF_GENERATE_CYCLE && isCovered==false)
 	    {
             // 对所有参数执行ATG
 		    double* seed = NULL;
 		    int paramIndex = 0;
-            while(paramIndex < num_of_param && isCovered <= -1)
+            while(paramIndex < num_of_param && isCovered==false)
             {
             	if(round ==0 && paramIndex == 0)
         	    	seed = NULL;
@@ -243,6 +251,11 @@
 	    //最后的内存的析构处理
 	    delete [] ATG::seedArray;
 
+		if(isCovered)
+		{
+			for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
+						SolverParameter::finalParams[i] = ATG::parameters[i];
+		}
 		return isCovered;
 	}
 

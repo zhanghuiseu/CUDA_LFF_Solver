@@ -1,0 +1,26 @@
+	/*
+	 * Limit.h
+	 *
+	 *  Created on: Nov 9, 2017
+	 *      Author: zy
+	 */
+
+	#ifndef LIMIT_H_
+	#define LIMIT_H_
+
+
+	#include <iostream>
+	#include <climits>
+
+	using namespace std;
+
+	class Limit
+	{
+	public:
+			static const double DoubleMin = numeric_limits<double>::min();
+			static const double DoubleMax = numeric_limits<double>::max();
+			static const float  FloatMin = numeric_limits<float>::min();
+			static const float  FloatMax = numeric_limits<float>::max();
+	}
+
+	#endif /* LIMIT_H_ */

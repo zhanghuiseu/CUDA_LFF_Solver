@@ -8,6 +8,11 @@
 #ifndef CONSTANTVALUE_H_
 #define CONSTANTVALUE_H_
 
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
 class ConstantValue
 {
 public:
@@ -16,7 +21,7 @@ public:
 	 * 这个是定义> ， >= ，<  ， <=等4中情况，
 	 * 在这里我们不区分上述的四种情况
 	 * */
-	static const int GreatEqualOrEqual = 1;
+	static const int GreatOrGreatEqual = 1;
 
 	/*
 	 * 这个是定义等于==的情况
@@ -91,6 +96,5 @@ public:
 	 * 整形表示类型
 	 * */
 	static const bool IntType = false;
-
 };
 #endif /* CONSTANTVALUE_H_ */

@@ -5,6 +5,7 @@
 		 *      Author: zy
 		 */
 		#include "SolverParameter.h"
+		#include <cmath>
 
 		/*
 		 *  使用这样的结构来获取各个类型的最大值和最小值
@@ -19,7 +20,7 @@
 		 * */
 		double* SolverParameter::finalParams = NULL;
 		double SolverParameter::finalCovered = 0;
-		int SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 50;
+		int SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 10;
 		int SolverParameter::MAX_NUM_OF_GENERATE_CYCLE = 5;
 		double SolverParameter::function_time = 0;
 		int SolverParameter::function_frequency = 0;

@@ -23,14 +23,21 @@
 	/*
 	 * 每一个搜索方向的计算，也就是CUDA并行计算模块
 	 * */
-	int PCATG::generateTestDataForSolver(int paramIndex, double* seed, int round,
+	bool PCATG::generateTestDataForSolver(int paramIndex, double* seed, int round,
 			int nextRoundSeedIndex, const int max_num_of_predict_param)
 	{
+		//设置当前的搜索变量方向
 		ATG::currentSearchParamIndex = paramIndex;
+
+		//初始化部分，主要是根据seed来完成ATG::parameter的初始化
 		initialParameter(seed);
 
-		ParallelATG::generateTestDataForSolver(max_num_of_predict_param);
+		//某一方向的初始化
+		bool isCovered = ParallelATG::generateTestDataForSolver(max_num_of_predict_param);
 
+		/*
+		 * 运算完成后的结果返回部分
+		 * */
 		if(round == -1)
 			ATG::seedArray = ATG::parameters;
 		//第一轮，且是以随机值开始搜索
@@ -45,7 +52,8 @@
 
 		cout<<"**********            "<<(paramIndex)<<"     "<<nextRoundSeedIndex<<"   Count: "<<count++<<endl<<endl<<endl;
 
-		return -2;
+		return false;
+		//return isCovered;
 	}
 
 	/*

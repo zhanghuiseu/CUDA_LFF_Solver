@@ -26,17 +26,17 @@ public:
 	 * LFF Solver 测试用例生成
 	 * 这个函数主要是多变量和单变量策略调度模块
 	 * */
-	int generateTestDataForSolver();
+	bool generateTestDataForSolver();
 
 	/*
 	 * 这个函数函数是多变量交叉搜索的实现
 	 * */
-	int generateTestDataForSolverByAll();
+	bool generateTestDataForSolverByAll();
 
 	/*
 	 * 这个函数是单变量一次搜索的实现
 	 * */
-	int generateTestDataForSolverByOneByOne();
+	bool generateTestDataForSolverByOneByOne();
 
 	/*
 	 * 策略的设置函数

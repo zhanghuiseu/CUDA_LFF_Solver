@@ -1,6 +1,20 @@
-21:48:15 **** Incremental Build of configuration Debug for project LFF Solver ****
+18:18:55 **** Incremental Build of configuration Debug for project LFF Solver ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/cuda/ParallelATG.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/cuda" -M -o "src/cuda/ParallelATG.d" "../src/cuda/ParallelATG.cu"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/cuda/ParallelATG.o" "../src/cuda/ParallelATG.cu"
+../src/cuda/ParallelATG.cu(475): warning: variable "calaType" was declared but never referenced
 
-21:48:15 Build Finished (took 59ms)
+../src/cuda/ParallelATG.cu(475): warning: variable "calaType" was declared but never referenced
+
+Finished building: ../src/cuda/ParallelATG.cu
+ 
+Building target: LFF Solver
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/SolverParameter.o ./src/solver/runLFFSolver.o  ./src/model/SearchTask.o  ./src/main/main.o  ./src/cuda/CLF.o ./src/cuda/ExcuteConstraint.o ./src/cuda/ParallelATG.o  ./src/ConstraintParser/ConstraintParameter.o   
+Finished building target: LFF Solver
+ 
+
+18:18:58 Build Finished (took 3s.865ms)
 

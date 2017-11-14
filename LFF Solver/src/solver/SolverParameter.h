@@ -139,6 +139,12 @@ public:
 	static const int ADJUST_GRANULARITY_INTEGER = 1;
 	static double ZeroToleranceDegree  ;
 
+	/*
+	 * 黄金分割点的参数
+	 * (sqrt(5)-1)/(sqrt(5)+1)
+	 * */
+	static const double GoldenPointRatio = 0.381966;
+
 };
 
 #endif /* SOLVERPARAMETER_H_ */

@@ -1,0 +1,18 @@
+	/*
+	 * Limit.cpp
+	 *
+	 *  Created on: Nov 9, 2017
+	 *      Author: zy
+	 */
+
+
+	#include <iostream>
+	#include <climits>
+
+	#include "Limit.h"
+
+	using namespace std;
+
+
+
+

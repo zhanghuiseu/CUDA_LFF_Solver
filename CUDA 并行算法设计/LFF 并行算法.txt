@@ -1,0 +1,226 @@
+下面是最优硬件配置模块,有几个天花板参数需要注意：
+1）可以通过更改块内线程数，每个线程使用的寄存器数和共享存储器数来隐式的控制，从而保证SM之间的任务均衡，已达到硬件的最大化使用率
+2）每一个SM允许的最大的线程数量MaxNumPerSM,那么可以得到每个SM的最大的wrap的数量就是MaxWarpNumPreSM = MaxNumPerSM / WarpSize
+3）首先考虑每一个block的Size：假如过小，那么就意味着更多的block，那么SM很容易达到Warp的限制，假如过大，每一个thread可用的硬件资源就过少，性能就会降低
+4）每一个blcok的size必须是32的倍数，所以建议从128到256（目前我的K620这个参数范围比较合理，要是更好的GPU可以提高到512）
+5）根据总的任务的计算量计算得到的blcok的数量尽量是SM数量的倍数，这样可以利用延迟隐藏，提高NVIDIA的并行化效率
+
+总体思路只这样的：
+首先判断当前的计算量和当前显卡的最大同时并行thread的数量相比
+    1）若小于，blcok的数量多一些，这样可以使用更多的SM去做同样的事情，避免硬件闲置的出现
+	2）若大于，适当调整blcok的size，使满足均衡任务分配
+
+输入：calaSize 
+输出：最优的硬件配置size，主要就是block和thread的size
+balance = NumSM
+paraThread = WarpSize * NumSM
+if calaSize > paraThread
+	MinBlockSize = 128 //可以从128开始考虑
+	MaxBlockSize = 256 //目前的K620可以考虑256作为终点，要是遇到更好的显卡，可以考虑512
+	if calaSize < MinBlockSize
+		MaxBlockSize = MinBlockSize
+		MinBlockSize = 32
+	endif 
+	
+	for i=MinBlockSize,I<=MaxBlockSize , i+=32 
+		tmpBlockSize = calaSize / i;
+		blockNumPreSM = tmpBlockSize / SMNum
+		leftBlock = tmpBlockSize % SMNum
+		if leftBlock < balance
+			balance = leftBlock
+			ThreadSize = i;
+		endif
+	endfor
+else 
+	MinBlockSize = 128 //可以从128开始考虑
+	MaxBlockSize = 256 //目前的K620可以考虑256作为终点，要是遇到更好的显卡，可以考虑512
+	if calaSize < MinBlockSize
+		MaxBlockSize = MinBlockSize
+		MinBlockSize = 32
+	endif 
+	
+	for i=MinBlockSize,I<=MaxBlockSize , i+=32 
+		tmpBlockSize = calaSize / i;
+		blockNumPreSM = tmpBlockSize / SMNum
+		leftBlock = tmpBlockSize % SMNum
+		if leftBlock < balance
+			balance = leftBlock
+			ThreadSize = i;
+		endif
+	endfor
+endif
+BlockSize = calaSize / ThreadSize;
+
+return ThreadSize && BlockSize
+
+
+下面是并行算法计算模块：
+宏定义定义变量
+value 保存的是当前的数组，index表示当前的自变量的下标，这个在一个变量周期内是一个固定的值
+calaMat已经计算过的结果，是一个矩阵，每一行对应着每一个简单子约束，每一列对应这个一个预测的解;
+predictArray为上一轮的预测值，是一个vector数组，
+predictMat是使用predictArray计算过的运行时刻值，和calaMat一样的结构
+N为迭代次数，实验参数
+priority是一个vector数组，表示每一个解向量的优先级，
+solutionIntervel是一个保存解区间的矩阵，每一行对应着每一个简单子约束，每一列代表一个线性拟合的可行解;
+finalIntervel是一个vector数组，表示最终解区间
+zeroArray 表示收集区间扩展和区间细化的数组vector
+
+初始状态：calaMat为null，predictArray为随机值，其余的都是null
+输入值：一个路径约束
+返回值：满足路径覆盖的可行解或者解向量最高的最优解
+
+while i < N
+	启动kernel函数计算，并行计算如下：
+	for thread i  0 to  sizePredict
+		for constraint j in DNF（析取范式）   
+	       使用predictArray[i]计算constraint j 的运行时刻值得到predictMat[j][i]
+		end for
+	end for
+
+	if 存在满足复合约束的向量v
+		break;
+		
+	把predictArray合并到calaArray
+	启动kernel函数计算，并行计算如下：
+	for thread i  0 to  sizeConstraint
+		calaMat[i] = predictMat[i] || calaMat[i] 合并到calaMat[i]
+	end for
+	
+	设置分组的indexCase0...indexCase5，用以保存对应case的下标：
+	启动kernel函数计算，并行计算如下：
+    for constraint i in DNF（析取范式）
+	    for thread j  1 to  sizeCalaMatCol
+	        使用calaMat[i][j-1]和calaMat[i][j]两个拟合点做拟合
+			计算得到分类case i
+			indexCasei添加分类信息i和j（只需要保存一个下标就可以了）
+			
+			/****** 下面是说明代码
+			关于分类也肯定要用到if判断，但是可以转换为计算问题，比如
+			bit0 = (calaMat[i][j-1]>=0 && calaMat[i][j]>=0) * 1;
+			bit1 = (calaMat[i][j-1]<=0 && calaMat[i][j]<=0) * 1;
+			bit2 = (calaMat[i][j-1]>=0 && calaMat[i][j]<=0) * 1;
+			bit3 = (calaMat[i][j-1]<=0 && calaMat[i][j]>=0) * 1;
+			......
+			就是把if的条件语句的判断转换为一个计算编码的问题，
+			硬件的底层就是这么做编码的
+			******/
+		end for
+	end for
+	
+	启动kernel函数计算，并行计算如下：
+	for case 0 to 5 ：
+		for thread j  1 to  sizeIndexCasei：
+			获取待处理元素的下标i和j得到待处理元素calaMat[i][j-1]和calaMat[i][j]
+			按照case i 的处理方式直接处理
+			
+			/***** 下面的是说明代码 
+			为了便于说明，下面写了一段伪代码：
+			if 拟合曲线有解区间
+			    直接计算解区间one
+			else
+			    if 是边界区间
+				   区间细化：预测可行解d；
+				else
+				   区间扩展：计算解区间，预测可行解d
+				end if
+		    end if
+			******/	
+		endfor
+	endfor
+	
+	启动kernel函数计算，并行计算如下：
+    for thread i  0 to  sizeSolutionIntervelCol
+	    for constraint j in DNF（析取范式）
+			left=Max(solutionIntervel[j][i].left,left)
+			right=Min(solutionIntervel[j][i].right,right)
+		end for
+		finalIntervel[i]={left,right}
+	end for
+  
+	启动kernel函数计算，并行计算如下：计算解区间的预测解，//可能要抛弃某些点
+	for thread i  0 to sizeFinalIntervel
+	    根据解区间预测可行解p
+		predictArray[i]=p;
+	end for
+	
+	收集区间细化和区间扩展的预测解
+	启动kernel函数计算，并行计算如下：
+	for constraint j in DNF（析取范式）
+		for thread i  0 to  sizesolutionIntervelCol
+			收集不可解的可行解d（有序）
+			tmp = tmp || d 合并
+		end for
+		zeroArray = zeroArray || tmp
+	end for
+	
+	predictArray = predictArray || zeroArray
+end while
+ 
+if 存在满足复合约束的向量v
+    return v;
+else 
+	设置ThreadPool大小sizeCalaMatCol
+	启动kernel函数计算，并行计算如下：
+	for thread i  0 to  sizeCalaMatCol
+		评估predictArray[i]的解向量优先级为priority[i]
+		sum=0
+		for constraint i in DNF（析取范式）
+			if constraint i 被满足
+				sum = sum + 1；
+			else
+				sum = sum + 1/(1+Abs(predictMat[i][j]))
+			end if
+		end for
+		predictArray[i]=sum;
+	end for
+
+	len=sizeCalaArrayCol/2,step=(sizeCalaArrayCol+1)/2,maxPriority=0
+	while len>=2
+		设置ThreadPool大小len
+		启动kernel函数计算，并行计算如下：
+		for thread i 0 to  len
+			priority[i] = Max(priority[i],priority[i+step]);
+		end for 
+		len=step;
+		step=len/2;
+	end while
+	maxPriority = priority[0]
+endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+下面是做线性拟合时候的代码，不过去掉分支，暂时可以忽略
+	启动kernel函数计算，并行计算如下：
+    for constraint i in DNF（析取范式）
+	    for thread j  1 to  sizeCalaMatCol
+	        使用calaMat[i][j-1]和calaMat[i][j]两个拟合点做拟合
+			if 拟合曲线有解区间
+			    直接计算解区间one
+			else
+			    if 是边界区间
+				   区间细化：预测可行解d；
+				else
+				   区间扩展：计算解区间，预测可行解d
+				end if
+		    end if
+			solutionIntervel[i][j-1]=one
+		end for
+	end for
+
+
+
+
+

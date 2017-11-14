@@ -8,11 +8,9 @@
 
 		#include "./../ConstraintParser/ConstraintParameter.cuh"
 		#include "./../model/CoodinateDouble.cuh"
-		#include "./../model/CoodinateFloat.cuh"
 		#include "./../model/IntervalDouble.cuh"
-		#include "./../model/IntervalFloat.cuh"
 		#include "./../model/PriorityDouble.cuh"
-		#include "./../model/PriorityFloat.cuh"
+		#include "./../model/PredictValue.cuh"
 		#include "./../solver/ATG.h"
 		#include "./../solver/PCATG.h"
 		#include "./../solver/ConstantValue.h"
@@ -21,6 +19,10 @@
 
 		#include "cuda_runtime.h"
 		#include "device_launch_parameters.h"
+		#include "cuda_runtime.h"
+		#include "device_launch_parameters.h"
+		#include "device_functions.hpp"
+		#include "math_functions.h"
 		#include <stdio.h>
 
 		using namespace std;
@@ -41,6 +43,7 @@
 		{
 			res.y = 9 - x*y*z;
 			res.isCovered = (res.y >= 0) * true;
+			res.isValid = isfinite(res.y);
 			return ;
 		}
 
@@ -48,6 +51,7 @@
 		{
 			res.y = z - x*y;
 			res.isCovered = (res.y > 0) * true;
+			res.isValid = isfinite(res.y);
 			return ;
 		}
 
@@ -55,6 +59,7 @@
 		{
 			res.y =  y - z;
 			res.isCovered = ( res.y > 0) * true;
+			res.isValid = isfinite(res.y);
 			return ;
 		}
 
@@ -204,10 +209,16 @@
 			int i = threadIdx.x + blockIdx.x*blockDim.x;
 			while (i < SIZE)
 			{
+				dev_coveredInfo[i].index = i;
 				dev_coveredInfo[i].isCovered = dev_predictArray[i].isCovered
 						                 & dev_predictArray[i+SIZE].isCovered
 						               & dev_predictArray[i+2*SIZE].isCovered;
-				dev_coveredInfo[i].index = i;
+
+				dev_coveredInfo[i].isVaild =  dev_predictArray[i].isValid
+		                               & dev_predictArray[i+SIZE].isValid
+		                             & dev_predictArray[i+2*SIZE].isValid;
+
+				dev_coveredInfo[i].vaildNum = (int)(dev_coveredInfo[i].isVaild);
 				i += gridDim.x * blockDim.x;
 			}
 		}
@@ -319,9 +330,10 @@
 		 * 判断是否有满足复合约束的可行解
 		 * CPU验证模块
 		 * */
-		bool checkisFullCovered(FullCoveredInfo* coveredInfo,FullCoveredInfo* dev_coveredInfo,CoodinateDouble* initArray,
+		bool checkisFullCovered(FullCoveredInfo* dev_coveredInfo,CoodinateDouble* initArray,
 				bool &findSolution,const int row,const int col)
 		{
+			FullCoveredInfo* coveredInfo = new FullCoveredInfo[col];
 			cudaMemcpy(coveredInfo,dev_coveredInfo,col * sizeof(FullCoveredInfo),cudaMemcpyDeviceToHost);
 			for(int i=0;i<col;i++)
 			{
@@ -346,7 +358,7 @@
 					cout<<"FFFUCK  YOU   *************   "<<endl;
 				}
 				bool tmpp = (9-x*y*z >=0) && (z-x*y>0) && (y-z>0);
-				if(coveredInfo[i].isCovered == tmpp)
+				if(coveredInfo[i].isCovered == tmpp )
 				{
 					if(tmpp)
 					{
@@ -374,47 +386,87 @@
 			return ;
 		}
 
+
 		/*
 		 * CUDA归并函数，就是先计算向量的初始地址，然后逐个复制即可
 		 * */
-		__global__ void mergeByCuda(CoodinateDouble* dev_mergeArray,const int mergeArraySize,
+		__global__ void mergeByCuda(FullCoveredInfo* dev_coveredInfo,
+				                    CoodinateDouble* dev_mergeArray,const int mergeArraySize,
+				                    CoodinateDouble* dev_predictArray,const int predictArraySize,const int row)
+		{
+			int index = threadIdx.x + blockIdx.x*blockDim.x;
+			if(index < row)
+			{
+				//计算当前合并的数组的起始位置指针
+				CoodinateDouble* res = dev_mergeArray   +  index * mergeArraySize;
+				CoodinateDouble* b   = dev_predictArray +  index * predictArraySize;
+				int j = 0; // index for b
+				int k = 0; // index for res
+				while(j < predictArraySize)
+				{
+					if(dev_coveredInfo[j].isVaild==true)
+					{
+						copyCoodinateDouble( (res+k) , (b+j) );
+						k = k + 1;
+					}
+					j = j + 1;
+				}
+			}
+		}
+
+
+		/*
+		 * CUDA归并函数，就是先计算向量的初始地址，然后逐个复制即可
+		 * */
+		__global__ void mergeByCuda(FullCoveredInfo* dev_coveredInfo,
+				                    CoodinateDouble* dev_mergeArray,const int mergeArraySize,
 				                    CoodinateDouble* dev_calaArray,const int calaArraySize,
 				                    CoodinateDouble* dev_predictArray,const int predictArraySize,const int row)
 		{
 			int index = threadIdx.x + blockIdx.x*blockDim.x;
 			if(index < row)
 			{
+				//计算当前合并的数组的起始位置指针
 				CoodinateDouble* res = dev_mergeArray   +  index * mergeArraySize;
 				CoodinateDouble* a   = dev_calaArray    +  index * calaArraySize;
 				CoodinateDouble* b   = dev_predictArray +  index * predictArraySize;
 				int i = 0; // index for a
 				int j = 0; // index for b
 				int k = 0; // index for res
-				bool isOver = false;
-				while(isOver == false)
+				while( i < calaArraySize && j < predictArraySize)
 				{
-					if(i == calaArraySize  && j < predictArraySize)
+					if(dev_coveredInfo[j].isVaild==true)
 					{
-						copyCoodinateDouble( (res+k) , (b+j) );
-						j = j + 1;
-						k = k + 1;
-					}else if(i < calaArraySize  && j == predictArraySize)
-					{
-						copyCoodinateDouble( (res+k) , (a+i) );
-						i = i + 1;
-						k = k + 1;
-					}else if( (a+i)->x < (b+j)->x )
-					{
-						copyCoodinateDouble( (res+k) , (a+i) );
-						i = i + 1;
-						k = k + 1;
+						if( (a+i)->x < (b+j)->x )
+						{
+							copyCoodinateDouble( (res+k) , (a+i) );
+							i = i + 1;
+							k = k + 1;
+						}else
+						{
+							copyCoodinateDouble( (res+k) , (b+j) );
+							j = j + 1;
+							k = k + 1;
+						}
 					}else
+						j = j + 1;
+				}
+
+				while(i < calaArraySize)
+				{
+					copyCoodinateDouble( (res+k) , (a+i) );
+					i = i + 1;
+					k = k + 1;
+				}
+
+				while(j < predictArraySize)
+				{
+					if(dev_coveredInfo[j].isVaild==true)
 					{
 						copyCoodinateDouble( (res+k) , (b+j) );
-						j = j + 1;
 						k = k + 1;
 					}
-					isOver = (i == calaArraySize) & (j == predictArraySize);
+					j = j + 1;
 				}
 			}
 		}
@@ -423,14 +475,63 @@
 		/*
 		 * 使用CUDA把dev_calaArray和dev_predictArray合并到dev_mergeArray
 		 * */
-		void merge(CoodinateDouble* dev_mergeArray,const int mergeArraySize,CoodinateDouble* dev_calaArray,const int calaArraySize,
+		void merge(FullCoveredInfo* dev_coveredInfo,CoodinateDouble* dev_mergeArray,const int mergeArraySize,
+				CoodinateDouble* dev_calaArray,const int calaArraySize,
 				CoodinateDouble* dev_predictArray,const int predictArraySize,const int row)
 		{
 			Block res = HardwareStrategy::getHardwareStrategy(row);
-			mergeByCuda<<<res.NumOfBlock , res.ThreadPreBlock>>>(dev_mergeArray, mergeArraySize, dev_calaArray, calaArraySize,
-					dev_predictArray, predictArraySize, row);
+			if(calaArraySize == 0)
+			{
+				mergeByCuda<<<res.NumOfBlock , res.ThreadPreBlock>>>(dev_coveredInfo,dev_mergeArray, mergeArraySize,
+							dev_predictArray, predictArraySize, row);
+			}else
+			{
+				mergeByCuda<<<res.NumOfBlock , res.ThreadPreBlock>>>(dev_coveredInfo,dev_mergeArray, mergeArraySize,
+						    dev_calaArray, calaArraySize,
+							dev_predictArray, predictArraySize, row);
+			}
+
 		}
 
 
+		/*
+		 * 就是区间交运算的计算
+		 * */
+		__global__ void calaFinalIntervel(IntervalDouble* dev_finalIntervel,IntervalDouble* dev_interval,const int calaArraySize)
+		{
+			int i = threadIdx.x + blockIdx.x*blockDim.x;
+			bool condition = (i>=1) & (i<calaArraySize);
+			if(condition)
+			{
+				IntervalDouble* a1 = dev_interval + i;
+				IntervalDouble* a2 = dev_interval + i + calaArraySize * 1;
+				IntervalDouble* a3 = dev_interval + i + calaArraySize * 2;
+
+				double left=a1->left;
+				left = max(left,a2->left);
+				left = max(left,a3->left);
+
+				double right=a1->right;
+				right = min(right,a2->right);
+				right = min(right,a3->right);
+
+				bool hasIntervel = a1->hasIntervel & a2->hasIntervel & a3->hasIntervel;
+				dev_finalIntervel[i].left = left;
+				dev_finalIntervel[i].right = right;
+				dev_finalIntervel[i].hasIntervel = hasIntervel;
+				//printf("(%f , %f ) (%f , %f ) (%f , %f ) Final %d (%f , %f)\n",a1->left,a1->right,a2->left,a2->right,a3->left,a3->right,hasIntervel,left,right);
+			}
+		}
+
+		__global__ void generatePredictMat(CoodinateDouble* dev_predictArray,PredictValue* dev_finalAllPredictValue,const int Size)
+		{
+			int i = threadIdx.x + blockIdx.x*blockDim.x;
+			if( i < Size )
+			{
+				dev_predictArray[i+0*Size].x = dev_finalAllPredictValue[i].value;
+				dev_predictArray[i+1*Size].x = dev_finalAllPredictValue[i].value;
+				dev_predictArray[i+2*Size].x = dev_finalAllPredictValue[i].value;
+			}
+		}
 
 

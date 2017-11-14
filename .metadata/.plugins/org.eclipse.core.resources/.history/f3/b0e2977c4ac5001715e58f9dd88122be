@@ -1,0 +1,24 @@
+/*
+ * Limit.h
+ *
+ *  Created on: Nov 9, 2017
+ *      Author: zy
+ */
+
+#ifndef LIMIT_H_
+#define LIMIT_H_
+
+
+/*
+ * 这个类主要是保存各种可能用到的极值
+ * */
+class Limit
+{
+public:
+		static  double DoubleMin ;
+		static  double DoubleMax ;
+		static  float  FloatMin ;
+		static  float  FloatMax;
+};
+
+#endif /* LIMIT_H_ */

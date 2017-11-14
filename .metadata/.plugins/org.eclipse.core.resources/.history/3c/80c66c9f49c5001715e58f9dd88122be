@@ -1,0 +1,30 @@
+/*
+ * Limit.h
+ *
+ *  Created on: Nov 9, 2017
+ *      Author: zy
+ */
+
+#ifndef LIMIT_H_
+#define LIMIT_H_
+
+
+#include <iostream>
+#include <climits>
+
+using namespace std;
+
+
+/*
+ * 这个类主要是保存各种可能用到的极值
+ * */
+class Limit
+{
+public:
+		double DoubleMin = numeric_limits<double>::min();
+		static  double DoubleMax = numeric_limits<double>::max();
+		static  float  FloatMin = numeric_limits<float>::min();
+		static  float  FloatMax = numeric_limits<float>::max();
+};
+
+#endif /* LIMIT_H_ */

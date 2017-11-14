@@ -136,15 +136,17 @@ src/solver/PCATG.o : ../src/solver/PCATG.cpp \
     ../src/solver/./../cuda/ParallelATG.cuh \
     ../src/solver/./../cuda/./../ConstraintParser/ConstraintParameter.cuh \
     ../src/solver/./../cuda/./../model/CoodinateDouble.cuh \
-    ../src/solver/./../cuda/./../model/CoodinateFloat.cuh \
     ../src/solver/./../cuda/./../model/IntervalDouble.cuh \
-    ../src/solver/./../cuda/./../model/IntervalFloat.cuh \
     ../src/solver/./../cuda/./../model/PriorityDouble.cuh \
-    ../src/solver/./../cuda/./../model/PriorityFloat.cuh \
     ../src/solver/./../cuda/./../model/FullCoveredInfo.cuh \
+    ../src/solver/./../cuda/./../model/Classification.cuh \
+    ../src/solver/./../cuda/./../model/PredictValue.cuh \
     ../src/solver/./../cuda/./../solver/ATG.h \
     ../src/solver/./../cuda/./../solver/PCATG.h \
     ../src/solver/./../cuda/HardwareStrategy.cuh \
+    ../src/solver/./../cuda/CLF.cuh \
+    ../src/solver/./../cuda/./../solver/ConstantValue.h \
+    ../src/solver/./../cuda/./../ErrorHandle/ErrorHandle.cuh \
     /usr/local/cuda-8.0/bin/..//include/cuda_runtime.h \
     /usr/local/cuda-8.0/bin/..//include/host_config.h \
     /usr/local/cuda-8.0/bin/..//include/builtin_types.h \
@@ -170,4 +172,9 @@ src/solver/PCATG.o : ../src/solver/PCATG.cpp \
     /usr/local/cuda-8.0/bin/..//include/driver_functions.h \
     /usr/local/cuda-8.0/bin/..//include/vector_functions.h \
     /usr/local/cuda-8.0/bin/..//include/vector_functions.hpp \
-    /usr/local/cuda-8.0/bin/..//include/device_launch_parameters.h
+    /usr/local/cuda-8.0/bin/..//include/device_launch_parameters.h \
+    ../src/solver/./../cuda/ExcuteConstraint.cuh \
+    /usr/include/libio.h \
+    /usr/include/_G_config.h \
+    /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+    /usr/include/c++/5/climits

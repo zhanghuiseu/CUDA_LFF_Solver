@@ -12,12 +12,10 @@
 
 	#include "./../ConstraintParser/ConstraintParameter.cuh"
 	#include "./../model/CoodinateDouble.cuh"
-	#include "./../model/CoodinateFloat.cuh"
 	#include "./../model/IntervalDouble.cuh"
-	#include "./../model/IntervalFloat.cuh"
 	#include "./../model/PriorityDouble.cuh"
-	#include "./../model/PriorityFloat.cuh"
 	#include "./../model/FullCoveredInfo.cuh"
+	#include "./../model/PredictValue.cuh"
 	#include "./../solver/ATG.h"
 	#include "./../solver/PCATG.h"
 	#include "./../solver/ConstantValue.h"
@@ -79,7 +77,7 @@
 	 * 判断是否有满足复合约束的可行解
 	 * CPU验证模块
 	 * */
-	bool checkisFullCovered(FullCoveredInfo* coveredInfo,FullCoveredInfo* dev_coveredInfo,CoodinateDouble* initArray,
+	bool checkisFullCovered(FullCoveredInfo* dev_coveredInfo,CoodinateDouble* initArray,
 			bool &findSolution,const int row,const int col);
 
 	/*
@@ -90,7 +88,15 @@
 	/*
 	 * CUDA归并函数，就是先计算向量的初始地址，然后逐个复制即可
 	 * */
-	__global__ void mergeByCuda(CoodinateDouble* dev_mergeArray,const int mergeArraySize,
+	__global__ void mergeByCuda(FullCoveredInfo* dev_coveredInfo,
+			                    CoodinateDouble* dev_mergeArray,const int mergeArraySize,
+			                    CoodinateDouble* dev_predictArray,const int predictArraySize,const int row);
+
+	/*
+	 * CUDA归并函数，就是先计算向量的初始地址，然后逐个复制即可
+	 * */
+	__global__ void mergeByCuda(FullCoveredInfo* dev_coveredInfo,
+			                    CoodinateDouble* dev_mergeArray,const int mergeArraySize,
 			                    CoodinateDouble* dev_calaArray,const int calaArraySize,
 			                    CoodinateDouble* dev_predictArray,const int predictArraySize,const int row);
 
@@ -98,8 +104,16 @@
 	/*
 	 * 使用CUDA把dev_calaArray和dev_predictArray合并到dev_mergeArray
 	 * */
-	void merge(CoodinateDouble* dev_mergeArray,const int mergeArraySize,CoodinateDouble* dev_calaArray,const int calaArraySize,
+	void merge(FullCoveredInfo* dev_coveredInfo,CoodinateDouble* dev_mergeArray,const int mergeArraySize,CoodinateDouble* dev_calaArray,const int calaArraySize,
 			CoodinateDouble* dev_predictArray,const int predictArraySize,const int row);
 
+
+	/*
+	 * 就是区间交运算的计算
+	 * */
+	__global__ void calaFinalIntervel(IntervalDouble* dev_finalIntervel,IntervalDouble* dev_interval,const int calaArraySize);
+
+
+	__global__ void generatePredictMat(CoodinateDouble* dev_predictArray,PredictValue* dev_finalAllPredictValue,const int col);
 
 	#endif /* EXCUTECONSTRAINT_CUH_ */

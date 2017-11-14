@@ -1,0 +1,21 @@
+/*
+ * PredictValue.cuh
+ *
+ *  Created on: Nov 11, 2017
+ *      Author: zy
+ */
+
+#ifndef PREDICTVALUE_CUH_
+#define PREDICTVALUE_CUH_
+
+
+class PredictValue
+{
+	public：
+
+	double value;
+	bool isvalid；
+
+}
+
+#endif /* PREDICTVALUE_CUH_ */
