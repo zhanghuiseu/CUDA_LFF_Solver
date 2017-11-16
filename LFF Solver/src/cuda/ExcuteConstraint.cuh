@@ -114,6 +114,16 @@
 	__global__ void calaFinalIntervel(IntervalDouble* dev_finalIntervel,IntervalDouble* dev_interval,const int calaArraySize);
 
 
+	/*
+	 * 根据预测的序列生成predct矩阵
+	 * */
 	__global__ void generatePredictMat(CoodinateDouble* dev_predictArray,PredictValue* dev_finalAllPredictValue,const int col);
+
+
+	/*
+	 * 并行计算所有的预测解向量的优先级
+	 * */
+	__global__ void calaPriority(PriorityDouble* dev_priority,CoodinateDouble* dev_calaArray,const int row,const int Size);
+
 
 	#endif /* EXCUTECONSTRAINT_CUH_ */

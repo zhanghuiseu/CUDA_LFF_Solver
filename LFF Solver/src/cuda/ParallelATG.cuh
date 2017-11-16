@@ -139,6 +139,12 @@
 			PredictValue* dev_lastArray,const int lastSize,PredictValue* dev_now,const int nowSize,const int Size);
 
 
+	/*
+	 * 使用规约并行获取最大的优先级以及对应的当前变量
+	 * */
+	__global__ void getMaxPriority(PriorityDouble* dev_priority,const int step,const int Size);
+
+
 class ParallelATG
 {
 public:
@@ -161,7 +167,7 @@ public:
 	 * 1）对于整形int： 直接[i-RandomLengthInt/2,i+RandomLengthInt/2]做扩展，step一般为1
 	 * 2）对于浮点型float：直接[i-RandomLengthFloat/2,i+RandomLengthFloat/2]做扩展，step一般为1
 	 * */
-	static void initRandomMatrix(CoodinateDouble (*initMat)[RandomLengthInt],int row,int col);
+	static void initRandomMatrix(CoodinateDouble (*initMat)[RandomLengthInt],const int row,const int col);
 
 
 	/*
@@ -236,7 +242,20 @@ public:
 	/*
 	 * 根据预测的可能的解向量（一个一维数组），生成预测矩阵（一个二维矩阵）
 	 * */
-	static void gereratePredictArray(CoodinateDouble* dev_predictArray,const int row ,const int finalAllPredictValueSize,PredictValue* dev_finalAllPredictValue);
+	static void gereratePredictArray(CoodinateDouble* dev_predictArray,const int row ,const int col,PredictValue* dev_finalAllPredictValue);
+
+	/*
+	 * 计算每一个解向量的优先级
+	 * */
+	static void calaPriorityForCalaArray(PriorityDouble* dev_priority,CoodinateDouble* dev_calaArray,
+			const int row,const int calaArraySize);
+
+
+	/*
+	 * 使用规约计算得到优先级最大的值以及对应的当前变量
+	 * */
+	static void calaMaxPriority(PriorityDouble* maxPriority,PriorityDouble* dev_priority,const int calaArraySize);
+
 
 	/*
 	 * 打印函数

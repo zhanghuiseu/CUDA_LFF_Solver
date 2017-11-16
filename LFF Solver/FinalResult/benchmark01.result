@@ -3,30 +3,29 @@
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
-Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -1.32442, -1, -0.876768 ] 
-Best Covered is: 0%
+Yes!!!!!   Find Covered Input: [ -0.132956, 66, -0.792576 ] 
+Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-9 > x*y*z  RuntimeValue:  10.1612  isCovered： true
-z > x*y  RuntimeValue:  -2.20119  isCovered： false
- y > z   RuntimeValue:  -0.123232  isCovered： false
+9 > x*y*z  RuntimeValue:  2.04508  isCovered： true
+z > x*y  RuntimeValue:  7.9825  isCovered： true
+ y > z   RuntimeValue:  66.7926  isCovered： true
 
-SolverParameter::totalTime[0] = 0.553256
-SolverParameter::algorithmTime[0] = 0.553256
+SolverParameter::totalTime[0] = 0.067501
+SolverParameter::algorithmTime[0] = 0.067501
 SolverParameter::FunctionTime[0] = 0
 SolverParameter::totalFrequency[0] = 0
 
 ----------------------------statistical result----------------------------
-Average Time:	0.553256
-Best Time:	0.553256
-Worst Time:	0.553256
+Average Time:	0.067501
+Best Time:	0.067501
+Worst Time:	0.067501
 Average Frequency:	0
-Coverage Result:	[ false ] 
+Coverage Result:	[ true ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 10
-MAX_NUM_OF_GENERATE_CYCLE = 1
+MAX_NUM_OF_PREDICT_PARAM = 200
+MAX_NUM_OF_GENERATE_CYCLE = 3
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
 

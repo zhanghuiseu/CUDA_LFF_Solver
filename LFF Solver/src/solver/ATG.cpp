@@ -29,6 +29,12 @@
 	 */
 	int ATG::currentSearchParamIndex = 0;
 
+
+	/*
+	 * 获取的当前变量的优先级
+	 * */
+	double ATG::currentSearchParamPriotity = 0.0;
+
 	/**
 	 * 存储每一轮的种子搜索点(对每一个变量的搜索都可得到下一轮的种子搜索点）
 	 */
@@ -56,8 +62,8 @@
 	 * */
 	void ATG::setStrategy()
 	{
-		SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 10;
-		SolverParameter::MAX_NUM_OF_GENERATE_CYCLE = 1;
+		SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 200;
+		SolverParameter::MAX_NUM_OF_GENERATE_CYCLE = ConstraintParameter::NUM_OF_PARAM;
 
 		/*
 		 * 对于约束参数数量大于一定数量的时候才使用多变量交叉搜索，
@@ -209,6 +215,7 @@
 		 * */
 		for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
 			SolverParameter::finalParams[i] = ATG::parameters[i];
+		SolverParameter::finalCovered = ATG::currentSearchParamPriotity;
 		return isCovered;
 	}
 

@@ -59,6 +59,11 @@ public:
 	 */
 	static int currentSearchParamIndex;
 
+	/*
+	 * 获取的当前变量的优先级
+	 * */
+	static double currentSearchParamPriotity;
+
 	/**
 	 * 存储每一轮的种子搜索点(对每一个变量的搜索都可得到下一轮的种子搜索点）
 	 */

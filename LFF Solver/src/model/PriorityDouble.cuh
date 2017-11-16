@@ -11,13 +11,13 @@
 /*
  * 这个类主要保存的是每一个解的优先级信息，主要包含两部分信息
  *    1) 优先级的信息，这个是0-1的浮点数
- *    2） 复合约束是否被满足的信息，这个是一个bool类型
+ *    2） 对应优先级的当前向量的值，这里不直接保存index了，可以节约一次拷贝开销
  * */
 class PriorityDouble
 {
 public:
 	double priority;
-	bool isFullCovered;
+	double x;
 
 	/*
 	 * 默认构造函数，不过可能没用
@@ -25,7 +25,17 @@ public:
 	PriorityDouble()
 	{
 		this->priority = 0.0;
-		this->isFullCovered =false;
+		this->x = 0.0;
+	}
+
+	void setX(double x)
+	{
+		this->x = x;
+	}
+
+	double getX()
+	{
+		return this->x;
 	}
 
 	void setPriority(double priority)
@@ -33,19 +43,9 @@ public:
 		this->priority = priority;
 	}
 
-	double getProority()
+	double getPriority()
 	{
 		return this->priority;
-	}
-
-	void setIsFullCovered(bool is)
-	{
-		this->isFullCovered = is;
-	}
-
-	bool getIsFullCovered()
-	{
-		return this->isFullCovered;
 	}
 
 };

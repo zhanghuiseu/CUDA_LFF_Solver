@@ -1,14 +1,11 @@
-18:18:55 **** Incremental Build of configuration Debug for project LFF Solver ****
+20:46:25 **** Incremental Build of configuration Debug for project LFF Solver ****
 make all 
-Building file: ../src/cuda/ParallelATG.cu
+Building file: ../src/solver/ATG.cpp
 Invoking: NVCC Compiler
-/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/cuda" -M -o "src/cuda/ParallelATG.d" "../src/cuda/ParallelATG.cu"
-/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/cuda/ParallelATG.o" "../src/cuda/ParallelATG.cu"
-../src/cuda/ParallelATG.cu(475): warning: variable "calaType" was declared but never referenced
-
-../src/cuda/ParallelATG.cu(475): warning: variable "calaType" was declared but never referenced
-
-Finished building: ../src/cuda/ParallelATG.cu
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/ATG.d" "../src/solver/ATG.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/ATG.o" "../src/solver/ATG.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/ATG.cpp
  
 Building target: LFF Solver
 Invoking: NVCC Linker
@@ -16,5 +13,5 @@ Invoking: NVCC Linker
 Finished building target: LFF Solver
  
 
-18:18:58 Build Finished (took 3s.865ms)
+20:46:26 Build Finished (took 510ms)
 

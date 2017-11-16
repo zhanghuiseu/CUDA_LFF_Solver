@@ -2,31 +2,31 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="757" key="DIALOG_WIDTH"/>
-		<item value="473" key="DIALOG_Y_ORIGIN"/>
-		<item value="608" key="DIALOG_HEIGHT"/>
-		<item value="721" key="DIALOG_X_ORIGIN"/>
+		<item value="201" key="DIALOG_Y_ORIGIN"/>
+		<item value="1098" key="DIALOG_X_ORIGIN"/>
+		<item value="748" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="SolverParameter::finalParams" key="selection"/>
+		<item value="经过区间扩展和区间细化得到的所有的有效的预测解的数量：" key="selection"/>
 		<list key="findhistory">
-			<item value="SolverParameter::finalParams"/>
-			<item value="*****  Find   Solution"/>
-			<item value="LFF Solver Begin:"/>
-			<item value="isCovered &lt;= -1"/>
-			<item value="The Predict Solution FullCovered Info Is As Followin"/>
-			<item value="Exist Case4 &amp;&amp; Case5"/>
-			<item value="*****  Check Over，Res"/>
-			<item value="Exist Case4"/>
+			<item value="经过区间扩展和区间细化得到的所有的有效的预测解的数量："/>
+			<item value="Before:  calaArraySize:"/>
+			<item value="calaFeasibleSolution&lt;&lt;&lt;res.NumOfBlock , res.ThreadPreBlock&gt;&gt;&gt;(dev_coveredInfo , dev_predictArray , col);"/>
+			<item value="ParallelATG::isFullCovered"/>
+			<item value="calaFeasibleSolution&lt;&lt;&lt;res.NumOfBlock , res.ThreadPreBlock&gt;&gt;&gt;(dev_coveredInfo , dev_predictArray , col);&#x0A;"/>
+			<item value="ParallelATG::calaPriorityForCalaArray"/>
+			<item value="calaPriority&lt;&lt;&lt;res.NumOfBlock , res.ThreadPreBlock&gt;&gt;&gt;(dev_priority,dev_calaArray,row,calaArraySize);"/>
+			<item value="The Predict Solution FullCovered Info Is As Following: VaildNum："/>
 		</list>
 		<list key="replacehistory">
-			<item value="isCovered==false"/>
 			<item value=""/>
+			<item value="isCovered==false"/>
 			<item value="sqrt"/>
 			<item value="dev_predictArray"/>
 			<item value="SIZE"/>

@@ -34,6 +34,7 @@
 
 		//某一方向的初始化
 		bool isCovered = ParallelATG::generateTestDataForSolver(max_num_of_predict_param);
+		double pri = ATG::currentSearchParamPriotity;
 
 		/*
 		 * 运算完成后的结果返回部分
@@ -42,18 +43,18 @@
 			ATG::seedArray = ATG::parameters;
 		//第一轮，且是以随机值开始搜索
 		else if(seed==NULL)
-			ATG::seeds[nextRoundSeedIndex]->copyAll(ATG::parameters, 0, paramIndex, round);
+			ATG::seeds[nextRoundSeedIndex]->copyAll(ATG::parameters, pri, paramIndex, round);
 		//第一轮，且是以指定值开始搜索
 		else if (round == 0)
-			ATG::seeds[nextRoundSeedIndex]->copyAll(ATG::parameters, 0, paramIndex, round);
+			ATG::seeds[nextRoundSeedIndex]->copyAll(ATG::parameters, pri, paramIndex, round);
 		//非第一轮
 		else
-			ATG::nextSeeds[nextRoundSeedIndex]->copyAll(ATG::parameters, 0, paramIndex, round);
+			ATG::nextSeeds[nextRoundSeedIndex]->copyAll(ATG::parameters, pri, paramIndex, round);
 
 		cout<<"**********            "<<(paramIndex)<<"     "<<nextRoundSeedIndex<<"   Count: "<<count++<<endl<<endl<<endl;
 
-		return false;
-		//return isCovered;
+		//return false;
+		return isCovered;
 	}
 
 	/*

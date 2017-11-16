@@ -35,7 +35,6 @@
 	#include <thrust/sort.h>
 	#include <thrust/copy.h>
 
-
 	using namespace std;
 
 
@@ -48,10 +47,13 @@
 		double* dev_parameters = NULL;
 		cudaStatus = cudaMalloc((void**)&dev_parameters, ConstraintParameter::NUM_OF_PARAM * sizeof(double));
 		ErrorHandle::dealError(cudaStatus,"cudaMalloc((void**)&dev_parameters, ConstraintParameter::NUM_OF_PARAM * sizeof(double));");
+		//当前变量传输到GPU
 		cudaStatus = cudaMemcpy(dev_parameters,ATG::parameters,ConstraintParameter::NUM_OF_PARAM * sizeof(double),cudaMemcpyHostToDevice);
 		ErrorHandle::dealError(cudaStatus,"cudaMemcpy(dev_parameters,ATG::parameters,ConstraintParameter::NUM_OF_PARAM * sizeof(double),cudaMemcpyHostToDevice);");
 
-		//在当前搜索点的周围随机抽点
+		/*
+		 * 在当前搜索点的周围随机抽点,并完成初始化工作
+		 * */
 		const int row = ConstraintParameter::Num_Of_Constraints;
 		const int col = ParallelATG::RandomLengthInt;
 		CoodinateDouble* predictArray = new CoodinateDouble[row*col];
@@ -62,6 +64,7 @@
 		CoodinateDouble* dev_predictArray = NULL;
 		cudaStatus = cudaMalloc((void**)&dev_predictArray, row * col * sizeof(CoodinateDouble));
 		ErrorHandle::dealError(cudaStatus,"cudaMalloc((void**)&dev_predictArray, row * col * sizeof(CoodinateDouble));");
+		//传输到GPU
 		cudaStatus = cudaMemcpy(dev_predictArray,predictArray,row * col * sizeof(CoodinateDouble),cudaMemcpyHostToDevice);
 		ErrorHandle::dealError(cudaStatus,"cudaMemcpy(dev_predictArray,predictArray,row * col * sizeof(CoodinateDouble),cudaMemcpyHostToDevice);");
 
@@ -78,7 +81,7 @@
 
 		//CPU验证模块
 		bool findSolution = false;
-		bool check=checkisFullCovered(dev_coveredInfo,predictArray,findSolution,row,col);
+		bool check = checkisFullCovered(dev_coveredInfo,predictArray,findSolution,row,col);
         cout<<"*****  Check Over，Res:  "<<boolalpha<<check<<endl;
         cout<<"*****  Find   Solution:  "<<findSolution<<endl;
 
@@ -93,22 +96,30 @@
 		cout<<"The Predict Solution FullCovered Info Is As Following: Index： "<<coveredInfo->index<<endl;
 		cout<<"The Predict Solution FullCovered Info Is As Following: VaildNum： "<<coveredInfo->vaildNum<<endl;
 
+
+
 		//第一次运行结果的初步判断，
 		bool isCoveredTargetPC = false;
-        if(coveredInfo[0].isCovered)
+        if(coveredInfo[0].isCovered == true)
         {
-        	cout<<"**********************    Find Solutions     **********************"<<endl;
+        	cout<<"**********************    Find Solutions First Try     **********************"<<endl;
         	//设置返回结果
         	isCoveredTargetPC = true;
-        	//设置解向量
+        	//设置解向量以及对应优先级
         	ATG::parameters[ATG::currentSearchParamIndex] = predictArray[coveredInfo[0].index].x;
+        	ATG::currentSearchParamPriotity = 1.0;
 
         	//离开之前做一下内存清理
+    		delete [] predictArray;
     		delete coveredInfo;
+    		cudaFree(dev_coveredInfo);
     		cudaFree( dev_predictArray);
     		cudaFree( dev_parameters);
         	return isCoveredTargetPC;
         }
+
+		//第一次申请的存储应该析构掉
+		delete [] predictArray;
 
 		//这个保存的是已经计算过的结果的指针和对应的元素的Size
 		CoodinateDouble* dev_calaArray = NULL;
@@ -124,7 +135,7 @@
          * 尝试的测试点的数量，用于搜索任务的参数上限的判断,
          * */
 		int tryParamNum = col;
-		while(tryParamNum < MaxTryParamSize + 1024 && isCoveredTargetPC == false)
+		while(tryParamNum < MaxTryParamSize && isCoveredTargetPC == false)
 		{
 			cout<<"############  Cala CLFF Loop:  "<<endl;
 			/*
@@ -134,9 +145,12 @@
 			 * 关于清楚运行时刻值的异常值处理，ZY的做法没有做任何的处理
 			 * LFF Solver的做法是这样的，先计算运行时刻值，然后计算所有解的优先级，假如存在解，直接返回，否者的话，挑选合格的解添加到下一轮去做运算
 			 * */
-			dev_calaArray = ParallelATG::mergePredictArrayToCalaArray(dev_coveredInfo,dev_calaArray, calaArraySize, dev_predictArray, predictArraySize,vaildPredictArraySize,row);
+			dev_calaArray = ParallelATG::mergePredictArrayToCalaArray(dev_coveredInfo,dev_calaArray, calaArraySize,
+					dev_predictArray, predictArraySize,vaildPredictArraySize,row);
 			calaArraySize = calaArraySize + vaildPredictArraySize;
+
 			dev_predictArray = NULL;
+			predictArraySize = 0;
 			vaildPredictArraySize = 0;
 
 			/*
@@ -152,6 +166,7 @@
 			IntervalDouble* dev_intervel = NULL;
 			cudaStatus = cudaMalloc((void**)&dev_intervel, row * calaArraySize * sizeof(IntervalDouble));
 			ErrorHandle::dealError(cudaStatus,"cudaMalloc((void**)&dev_intervel, row * calaArraySize * sizeof(IntervalDouble));");
+			//直接根据分类去做拟合
 			ParallelATG::calsCLFF(dev_intervel,dev_classification,dev_calaArray,calaArraySize,row);
 
 			/*
@@ -160,6 +175,7 @@
 			IntervalDouble* dev_finalIntervel = NULL;
 			cudaStatus = cudaMalloc((void**)&dev_finalIntervel, calaArraySize * sizeof(IntervalDouble));
 			ErrorHandle::dealError(cudaStatus,"cudaMalloc((void**)&dev_intersectionIntervel, calaArraySize * sizeof(IntervalDouble));");
+			//并行话的区间交运算
 			ParallelATG::intersectionIntervel(dev_finalIntervel,dev_intervel,calaArraySize);
 
 			/*
@@ -168,7 +184,7 @@
 			PredictValue* dev_PredictValue = NULL;
 			cudaStatus = cudaMalloc((void**)&dev_PredictValue,calaArraySize * sizeof(PredictValue));
 			ErrorHandle::dealError(cudaStatus,"cudaMalloc((void**)&dev_PredictValue,calaArraySize * sizeof(PredictValue));");
-
+			//计算可行解
 			ParallelATG::calaPredictValueFromFinalInterval(dev_PredictValue,dev_finalIntervel,calaArraySize);
 
 			int PredictValueSize = ParallelATG::calaPredictValueSize(dev_PredictValue,calaArraySize);
@@ -181,28 +197,43 @@
 			PredictValue* dev_ZerosValue = NULL;
 			cudaStatus = cudaMalloc((void**)&dev_ZerosValue, row * calaArraySize * sizeof(PredictValue));
 			ErrorHandle::dealError(cudaStatus,"cudaMalloc((void**)&dev_ZerosValue, row * calaArraySize * sizeof(PredictValue));");
+
 			//根据分类信息和点的位置 使用区间细化规则和扩展规则 来计算所有的可能的预测解
 			ParallelATG::collectZeros(dev_ZerosValue,dev_classification,dev_calaArray,calaArraySize,row);
 			//统计所有的零点的预测解的数量,依据的是区间细化规则和扩展规则
 			vector<int> count = ParallelATG::calaValidZeroNum(dev_ZerosValue,calaArraySize,row);
 
+			int sum = 0;
+			for(int gg=0;gg<count.size();gg++)
+				sum+=count[gg];
+			cout<<"Valid Zeros Num: "<<sum<<endl;
+
 			/*
 			 *  根据区间细化和区间扩展的规则，收集所有的valid和预测解
+			 *  finalAllPredictValueSize 其实保存的就是vector<int> count 和 PredictValueSize 所有元素之和
 			 * */
 			int finalAllPredictValueSize = 0;
 			//收集合并零点
-			PredictValue* dev_finalAllPredictValue = ParallelATG::collectValidZero(count,dev_ZerosValue,calaArraySize,row,dev_PredictValue,PredictValueSize,finalAllPredictValueSize);
-			cout<<"经过区间扩展和区间细化得到的有效的预测解的数量： "<<finalAllPredictValueSize<<endl;
-
-			//生成这一轮的预测解
-			dev_predictArray = NULL;
-			cudaStatus = cudaMalloc((void**)&dev_predictArray, row * finalAllPredictValueSize * sizeof(CoodinateDouble));
-			ErrorHandle::dealError(cudaStatus,"cudaMalloc((void**)&dev_predictArray, row * col * sizeof(CoodinateDouble));");
+			PredictValue* dev_finalAllPredictValue = ParallelATG::collectValidZero(count,dev_ZerosValue,calaArraySize,row,
+					dev_PredictValue,PredictValueSize,finalAllPredictValueSize);
+			cout<<"经过区间扩展和区间细化得到的所有的有效的预测解的数量： "<<finalAllPredictValueSize<<endl;
+			if(finalAllPredictValueSize==0)
+			{
+				cout<<"╮(╯▽╰)╭，你得多么的不幸运才会导致"<<calaArraySize
+				<<"个点进过线性拟合，然后做区间细化和扩展的运算竟然预测到0个可行解，真是服了你了"<<endl;
+				break;
+			}
 
 			/*
 			 * 下面是针对预测解的运行时刻值计算，然后找到可行解
 			 * */
 			int col = finalAllPredictValueSize;
+
+			//生成这一轮的预测解
+			dev_predictArray = NULL;
+			cudaStatus = cudaMalloc((void**)&dev_predictArray, row * col * sizeof(CoodinateDouble));
+			ErrorHandle::dealError(cudaStatus,"cudaMalloc((void**)&dev_predictArray, row * col * sizeof(CoodinateDouble));");
+
 			//根据预测的解向量生成预测矩阵
 			ParallelATG::gereratePredictArray(dev_predictArray,row,col,dev_finalAllPredictValue);
 
@@ -210,65 +241,110 @@
 			calaRuntimeValue(ATG::currentSearchParamIndex,dev_predictArray,dev_parameters,row,col);
 
 			//申请覆盖确认的空间
-			FullCoveredInfo* dev_coveredInfo = NULL;
+			cudaFree(dev_coveredInfo);
+			dev_coveredInfo = NULL;
 			cudaStatus = cudaMalloc((void**)&dev_coveredInfo, col * sizeof(FullCoveredInfo));
 			ErrorHandle::dealError(cudaStatus,"cudaMalloc((void**)&dev_coveredInfo, col * sizeof(FullCoveredInfo));");
 
 			//给所有的测试用例生成最终的覆盖结果，用于下面的获取可行解的index
 			ParallelATG::isFullCovered(dev_coveredInfo,dev_predictArray,row,col);
-
-			//CPU验证模块
-/*			bool findSolution = false;
-			bool check=checkisFullCovered(dev_coveredInfo,predictArray,findSolution,row,col);
-	        cout<<"*****  Check Over，Res:  "<<boolalpha<<check<<endl;
-	        cout<<"*****  Find   Solution:  "<<findSolution<<endl;*/
-
+			//获合法解的数量，满足情况等等
 	        ParallelATG::getFullCoveredIndex(coveredInfo,dev_coveredInfo,row,col);
 			cout<<"The Predict Solution FullCovered Info Is As Following: Index： "<<coveredInfo->index<<endl;
 			cout<<"The Predict Solution FullCovered Info Is As Following: VaildNum： "<<coveredInfo->vaildNum<<endl;
 
+			//这个是给在做merge所有元素到calaArray中的参数设置
+			predictArraySize = col;
+			vaildPredictArraySize = coveredInfo->vaildNum;
+
 			//运行结果的初步判断，
-	        if(coveredInfo[0].isCovered)
+	        if(coveredInfo->isCovered==true)
 	        {
+	        	cout<<"**********************    Find Solutions In Loop     **********************"<<endl;
 	        	//设置返回结果
 	        	isCoveredTargetPC = true;
 	        	//设置解向量
 	        	CoodinateDouble* ans=new CoodinateDouble();
-	        	int offset = coveredInfo[0].index;
-	        	cudaStatus = cudaMemcpy(ans,dev_predictArray,offset * sizeof(CoodinateDouble),cudaMemcpyDeviceToHost);
-	        	ErrorHandle::dealError(cudaStatus,"cudaMemcpy(ans,dev_predictArray,offset * sizeof(CoodinateDouble),cudaMemcpyDeviceToHost);");
-	        	ATG::parameters[ATG::currentSearchParamIndex] = ans->x;
+	        	int offset = coveredInfo->index;
+	        	cudaStatus = cudaMemcpy(ans,dev_predictArray+offset, 1 * sizeof(CoodinateDouble),cudaMemcpyDeviceToHost);
+	        	ErrorHandle::dealError(cudaStatus,"cudaMemcpy(ans,dev_predictArray+offset, 1 * sizeof(CoodinateDouble),cudaMemcpyDeviceToHost);");
 
+	        	//设置找到的解向量的值以及当前的优先级
+	        	ATG::parameters[ATG::currentSearchParamIndex] = ans->x;
+	        	ATG::currentSearchParamPriotity = 1.0;
 	        	//离开之前做一下内存清理
 	        	delete ans;
-	    		delete coveredInfo;
-	    		cudaFree( dev_predictArray);
-	    		cudaFree( dev_parameters);
-	        	break;
-	        }else
-	        {
-				tryParamNum += col;
-				cudaFree(dev_classification);
-				cudaFree(dev_intervel);
-				cudaFree(dev_finalIntervel);
-				cudaFree(dev_PredictValue);
-				cudaFree(dev_ZerosValue);
-				cudaFree(dev_finalAllPredictValue);
 	        }
+
+	        tryParamNum += col;
+			cudaFree(dev_classification);
+			cudaFree(dev_intervel);
+			cudaFree(dev_finalIntervel);
+			cudaFree(dev_PredictValue);
+			cudaFree(dev_ZerosValue);
+			cudaFree(dev_finalAllPredictValue);
+		}
+
+		//这个if判断是为了处理参数过小导致calaArray为null的情况
+		if(calaArraySize==0 || dev_calaArray==NULL)
+		{
+			dev_calaArray = dev_predictArray;
+			calaArraySize = predictArraySize;
+		}
+
+		/*
+		 * 如果没有覆盖计算所有可能解的优先级，
+		 * 程序走到这里意味着迭代到参数的上限
+		 * */
+		if(isCoveredTargetPC==false)
+		{
+			//给每一个预测向量申请优先级的GPU空间
+			PriorityDouble* dev_priority = NULL;
+			cudaStatus = cudaMalloc((void**)&dev_priority, calaArraySize * sizeof(PriorityDouble));
+        	ErrorHandle::dealError(cudaStatus,"cudaMalloc((void**)&dev_priority, calaArraySize * sizeof(PriorityDouble));");
+
+        	//并行计算所有的解的优先级
+        	ParallelATG::calaPriorityForCalaArray(dev_priority,dev_calaArray,row,calaArraySize);
+
+        	//规约计算最大的优先级以及对应的的当前搜索方向的变量值
+        	PriorityDouble* maxPriority = new PriorityDouble();
+        	ParallelATG::calaMaxPriority(maxPriority,dev_priority,calaArraySize);
+
+        	//设置优先级最高的当前向量以及最大的优先级
+        	ATG::parameters[ATG::currentSearchParamIndex] = maxPriority->x;
+        	ATG::currentSearchParamPriotity = maxPriority->priority;
+        	delete maxPriority;
+
+        	//打印当前的优先级最高的解向量
+        	cout<<"CurrentSearchParamIndex: "<<ATG::currentSearchParamIndex<<"    x: "<<ATG::currentSearchParamPriotity<<endl;
+        	cout<<"Max Priority: "<<ATG::currentSearchParamPriotity<<endl;
+    		for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
+    			cout<<ATG::parameters[i]<<" , ";
+    		cout<<endl;
+			cout<<"**********************    No No NO Solutions     **********************"<<endl;
 		}
 
 
+		/*
+		 * 程序走到这里正式结束
+		 * */
+		//最初申请的一个单位的coveredInfo必去析构
 		delete coveredInfo;
-		cudaFree( dev_predictArray);
-		cudaFree( dev_parameters);
+		//这个是最后一次申请但是没有析构的要处理
+		cudaFree(dev_coveredInfo);
+		//由于跳出循环，导致predictarray没有合并到calaarray，所以二者都要析构
+		cudaFree(dev_parameters);
 
-		if(isCoveredTargetPC)
-			cout<<"**********************    Find Solutions     **********************"<<endl;
+		//当参数过低导致只是经过第一次的运算，跳过循环直接到这里的时候，只做一次就可以啦
+		if(dev_predictArray==dev_calaArray)
+			cudaFree(dev_calaArray);
 		else
-			cout<<"**********************    No No NO Solutions     **********************"<<endl;
+		{
+			cudaFree(dev_predictArray);
+			cudaFree(dev_calaArray);
+		}
 		return isCoveredTargetPC;
 	}
-
 
 
 	/*
@@ -276,7 +352,7 @@
 	 * 1）对于整形int： 直接[i-RandomLengthInt/2,i+RandomLengthInt/2]做扩展，step一般为1
 	 * 2）对于浮点型float：直接[i-RandomLengthFloat/2,i+RandomLengthFloat/2]做扩展，step一般为1
 	 * */
-	void ParallelATG::initRandomMatrix(CoodinateDouble (*mat)[ParallelATG::RandomLengthInt],int row,int col)
+	void ParallelATG::initRandomMatrix(CoodinateDouble (*mat)[ParallelATG::RandomLengthInt],const int row,const int col)
 	{
 		int currentIndex = ATG::currentSearchParamIndex;
 		int center = ATG::parameters[currentIndex];
@@ -356,12 +432,13 @@
 		 *  如果dev_coveredInfo[i]标记为未覆盖，直接把dev_coveredInfo[i+step]信息赋值即可
 		 *
 		 * */
-		bool condition = (i < SIZE) & (dev_coveredInfo[0].isCovered==false) & (dev_coveredInfo[i].isCovered==false);
+		bool condition = (i < SIZE) && (dev_coveredInfo[i].isCovered==false);
 		if (condition)
 		{
 			dev_coveredInfo[i].isCovered = dev_coveredInfo[i+step].isCovered;
 			dev_coveredInfo[i].index = dev_coveredInfo[i+step].index;
 		}
+
 	}
 
 	/*
@@ -472,14 +549,14 @@
 			dev_classification[i].hasIntervel = (dev_classification[i].case0 | dev_classification[i].case2 | dev_classification[i].case3);
 
 			//下面是测试代码
-			int calaType = (int)(dev_classification[i].case0)*1
+/*			int calaType = (int)(dev_classification[i].case0)*1
 					     + (int)(dev_classification[i].case1)*2
 					     + (int)(dev_classification[i].case2)*4
 					     + (int)(dev_classification[i].case3)*8
 					     + (int)(dev_classification[i].case4)*16
 					     + (int)(dev_classification[i].case5)*32;
 			//printf("calatype:  %d\n",calaType);
-/*			if(calaType!=1 && calaType!=2 && calaType!=4 && calaType!=8 && calaType!=16 && calaType!=32)
+			if(calaType!=1 && calaType!=2 && calaType!=4 && calaType!=8 && calaType!=16 && calaType!=32)
 			{
 				printf("Thread %d Classification Type case0: %d ,case1: %d ,case2: %d ,case3: %d ,case4: %d ,case5: %d , calaType: %d point a(%f,%f),b(%f,%f)\n"
 				,i ,(int)(dev_classification[i].case0),(int)(dev_classification[i].case1),(int)(dev_classification[i].case2),
@@ -1131,6 +1208,8 @@
 
 				//合并数组原始
 				mergeTwoPredictArray<<<stra.NumOfBlock,stra.ThreadPreBlock>>>(dev_one,oneSize,dev_lastArray,lastSize,res[i],num[i],calaSize);
+				cudaStatus = cudaGetLastError();
+				ErrorHandle::dealError(cudaStatus,"mergeTwoPredictArray<<<stra.NumOfBlock,stra.ThreadPreBlock>>>(dev_one,oneSize,dev_lastArray,lastSize,res[i],num[i],calaSize);");
 
 				//释放指针，并设置修改last指针
 				cudaFree(dev_lastArray);
@@ -1146,19 +1225,72 @@
 /*		stra = HardwareStrategy::getHardwareStrategy(1);
 		getAll<<<stra.NumOfBlock,stra.ThreadPreBlock>>>(dev_finalAllPredictValue,finalAllPredictValueSize,1);*/
 
-		delete zeroArray;
+		delete[] zeroArray;
 		cudaFree(dev_zeroArray);
 
 		for(int i=0;i<SIZE;i++)
 			cudaFree(res[i]);
-		delete res;
+		delete[] res;
 		cudaFree(dev_res);
 
-		delete size;
+		delete[] size;
 		cudaFree(dev_size);
 
 		return dev_finalAllPredictValue;
 	}
+
+
+	/*
+	 * 计算每一个解向量的优先级
+	 * */
+	void ParallelATG::calaPriorityForCalaArray(PriorityDouble* dev_priority,CoodinateDouble* dev_calaArray,
+			const int row,const int calaArraySize)
+	{
+		Block res = HardwareStrategy::getHardwareStrategy(calaArraySize);
+		calaPriority<<<res.NumOfBlock , res.ThreadPreBlock>>>(dev_priority,dev_calaArray,row,calaArraySize);
+		cudaError_t cudaStatus = cudaGetLastError();
+		ErrorHandle::dealError(cudaStatus,"calaPriority<<<res.NumOfBlock , res.ThreadPreBlock>>>(dev_priority,dev_calaArray,row,calaArraySize);");
+	}
+
+	/*
+	 * 使用规约并行获取最大的优先级以及对应的当前变量
+	 * */
+	__global__ void getMaxPriority(PriorityDouble* dev_priority,const int step,const int Size)
+	{
+		int i= threadIdx.x + blockIdx.x*blockDim.x;
+		bool condition = (i < Size) && (dev_priority[i+step].priority > dev_priority[i].priority);
+		if (condition)
+		{
+			dev_priority[i].priority = dev_priority[i+step].priority;
+			dev_priority[i].x = dev_priority[i+step].x;
+		}
+	}
+
+	/*
+	 * 使用规约计算得到优先级最大的值以及对应的当前变量
+	 * */
+	void ParallelATG::calaMaxPriority(PriorityDouble* maxPriority,PriorityDouble* dev_priority,const int calaArraySize)
+	{
+		cudaError_t cudaStatus;
+		int size = calaArraySize/2;
+		int step = (calaArraySize+1)/2;
+		while(size > 0)
+		{
+			//计算分配硬件资源
+			Block res = HardwareStrategy::getHardwareStrategy(size);
+			//并行规约计算有效的的数量
+			getMaxPriority<<<res.NumOfBlock , res.ThreadPreBlock>>>(dev_priority,step,size);
+			cudaStatus = cudaGetLastError();
+			ErrorHandle::dealError(cudaStatus,"getMaxPriority<<<res.NumOfBlock , res.ThreadPreBlock>>>(dev_priority,step,size);");
+			size = step/2;
+			step = (step+1)/2;
+		}
+
+		//复制，最大的优先级的对应的变量
+		cudaStatus = cudaMemcpy(maxPriority,dev_priority,1 * sizeof(PriorityDouble),cudaMemcpyDeviceToHost);
+		ErrorHandle::dealError(cudaStatus,"cudaMemcpy(maxPriority,dev_priority,1 * sizeof(PriorityDouble),cudaMemcpyDeviceToHost);");
+	}
+
 
 	/*
 	 * 一个打印函数
@@ -1183,11 +1315,11 @@
 	/*
 	 * 根据预测的可能的解向量（一个一维数组），生成预测矩阵（一个矩阵）
 	 * */
-	void ParallelATG::gereratePredictArray(CoodinateDouble* dev_predictArray,const int row ,const int finalAllPredictValueSize,PredictValue* dev_finalAllPredictValue)
+	void ParallelATG::gereratePredictArray(CoodinateDouble* dev_predictArray,const int row ,const int col,PredictValue* dev_finalAllPredictValue)
 	{
 		cudaError_t cudaStatus;
-		Block res = HardwareStrategy::getHardwareStrategy(finalAllPredictValueSize);
-		generatePredictMat<<<res.NumOfBlock , res.ThreadPreBlock>>>(dev_predictArray,dev_finalAllPredictValue,finalAllPredictValueSize);
+		Block res = HardwareStrategy::getHardwareStrategy(col);
+		generatePredictMat<<<res.NumOfBlock , res.ThreadPreBlock>>>(dev_predictArray,dev_finalAllPredictValue,col);
 		cudaStatus = cudaGetLastError();
 		ErrorHandle::dealError(cudaStatus,"generatePredictMat<<<res.NumOfBlock , res.ThreadPreBlock>>>(dev_predictArray,dev_finalAllPredictValue,finalAllPredictValueSize);");
 

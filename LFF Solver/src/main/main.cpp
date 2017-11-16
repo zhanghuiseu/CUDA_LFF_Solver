@@ -12,8 +12,6 @@
 
 	using namespace std;
 
-	#include "./../cuda/CLF.cuh"
-
 
 	int main()
 	{
