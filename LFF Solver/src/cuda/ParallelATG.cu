@@ -42,6 +42,11 @@
 	{
 		//ParallelATG::testExtremeRumtimeValue();
 		//ParallelATG::testMergeFunction();
+
+		//记录现行拟合的时间
+		clock_t start,finish;
+		start = clock();
+
 		cudaError_t cudaStatus;
 		//当前的的搜索变量传输到显卡GPU
 		double* dev_parameters = NULL;
@@ -96,6 +101,8 @@
 		cout<<"The Predict Solution FullCovered Info Is As Following: Index： "<<coveredInfo->index<<endl;
 		cout<<"The Predict Solution FullCovered Info Is As Following: VaildNum： "<<coveredInfo->vaildNum<<endl;
 
+		//线性拟合次数
+		SolverParameter::function_frequency++;
 
 
 		//第一次运行结果的初步判断，
@@ -115,6 +122,10 @@
     		cudaFree(dev_coveredInfo);
     		cudaFree( dev_predictArray);
     		cudaFree( dev_parameters);
+
+    		//记录现行拟合时间
+    		finish = clock();
+    		SolverParameter::function_time += (double)(finish - start) / CLOCKS_PER_SEC;
         	return isCoveredTargetPC;
         }
 
@@ -253,6 +264,9 @@
 			cout<<"The Predict Solution FullCovered Info Is As Following: Index： "<<coveredInfo->index<<endl;
 			cout<<"The Predict Solution FullCovered Info Is As Following: VaildNum： "<<coveredInfo->vaildNum<<endl;
 
+			//线性拟合次数
+			SolverParameter::function_frequency++;
+
 			//这个是给在做merge所有元素到calaArray中的参数设置
 			predictArraySize = col;
 			vaildPredictArraySize = coveredInfo->vaildNum;
@@ -343,6 +357,11 @@
 			cudaFree(dev_predictArray);
 			cudaFree(dev_calaArray);
 		}
+
+		//记录现行拟合时间
+		finish = clock();
+		SolverParameter::function_time += (double)(finish - start) / CLOCKS_PER_SEC;
+
 		return isCoveredTargetPC;
 	}
 

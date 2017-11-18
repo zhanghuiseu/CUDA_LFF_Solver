@@ -66,7 +66,6 @@
 			string resultOne = "";
 			//参数重置
 			SolverParameter::reset();
-
 			//获取当前的时间
 			start = clock();
 			bool isCovered = atg.generateTestDataForSolver();

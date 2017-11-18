@@ -1,4 +1,4 @@
-20:46:25 **** Incremental Build of configuration Debug for project LFF Solver ****
+15:28:30 **** Incremental Build of configuration Debug for project LFF Solver ****
 make all 
 Building file: ../src/solver/ATG.cpp
 Invoking: NVCC Compiler
@@ -7,11 +7,64 @@ Invoking: NVCC Compiler
 nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
 Finished building: ../src/solver/ATG.cpp
  
+Building file: ../src/solver/PCATG.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/PCATG.d" "../src/solver/PCATG.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/PCATG.o" "../src/solver/PCATG.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/PCATG.cpp
+ 
+Building file: ../src/solver/SolverParameter.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/SolverParameter.d" "../src/solver/SolverParameter.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/SolverParameter.o" "../src/solver/SolverParameter.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/SolverParameter.cpp
+ 
+Building file: ../src/solver/runLFFSolver.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/solver" -M -o "src/solver/runLFFSolver.d" "../src/solver/runLFFSolver.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/solver/runLFFSolver.o" "../src/solver/runLFFSolver.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/solver/runLFFSolver.cpp
+ 
+Building file: ../src/model/SearchTask.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/model" -M -o "src/model/SearchTask.d" "../src/model/SearchTask.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/model/SearchTask.o" "../src/model/SearchTask.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/model/SearchTask.cpp
+ 
+Building file: ../src/main/main.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/main" -M -o "src/main/main.d" "../src/main/main.cpp"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile  -x c++ -o  "src/main/main.o" "../src/main/main.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../src/main/main.cpp
+ 
+Building file: ../src/cuda/CLF.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/cuda" -M -o "src/cuda/CLF.d" "../src/cuda/CLF.cu"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/cuda/CLF.o" "../src/cuda/CLF.cu"
+Finished building: ../src/cuda/CLF.cu
+ 
+Building file: ../src/cuda/ExcuteConstraint.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/cuda" -M -o "src/cuda/ExcuteConstraint.d" "../src/cuda/ExcuteConstraint.cu"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/cuda/ExcuteConstraint.o" "../src/cuda/ExcuteConstraint.cu"
+Finished building: ../src/cuda/ExcuteConstraint.cu
+ 
+Building file: ../src/cuda/ParallelATG.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/cuda" -M -o "src/cuda/ParallelATG.d" "../src/cuda/ParallelATG.cu"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/cuda/ParallelATG.o" "../src/cuda/ParallelATG.cu"
+Finished building: ../src/cuda/ParallelATG.cu
+ 
 Building target: LFF Solver
 Invoking: NVCC Linker
 /usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "LFF Solver"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/SolverParameter.o ./src/solver/runLFFSolver.o  ./src/model/SearchTask.o  ./src/main/main.o  ./src/cuda/CLF.o ./src/cuda/ExcuteConstraint.o ./src/cuda/ParallelATG.o  ./src/ConstraintParser/ConstraintParameter.o   
 Finished building target: LFF Solver
  
 
-20:46:26 Build Finished (took 510ms)
+15:28:36 Build Finished (took 6s.220ms)
 

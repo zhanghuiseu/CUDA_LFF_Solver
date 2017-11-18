@@ -32,7 +32,19 @@ public:
 	static Block getHardwareStrategy(const int calaSize)
 	{
 		Block res=Block();
-		res.ThreadPreBlock = 256;
+
+		//默认参数设置
+		int threadPreBlcok = 256;
+		if(calaSize <= 32)
+			threadPreBlcok = calaSize;
+		else if(calaSize <= 256)
+			threadPreBlcok = 32;
+		else if(calaSize <= 1024)
+			threadPreBlcok = 128;
+		else
+			threadPreBlcok = 256;
+
+		res.ThreadPreBlock = threadPreBlcok;
 		res.NumOfBlock = (calaSize + res.ThreadPreBlock -1) / res.ThreadPreBlock;
 		return res;
 	}

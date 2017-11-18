@@ -1,0 +1,32 @@
+package cn.nju.seg.atg.util;
+
+
+public class ConstantValue 
+{
+
+	
+	/**
+	 * 拟合线段与横轴交点在区间左侧
+	 */
+	public static final int LEFT = 1;	
+	/**
+	 * 拟合线段与横轴交点在区间右侧
+	 */
+	public static final int RIGHT = 2;
+	/**
+	 * 拟合线段与横轴交点不在区间外
+	 */
+	public static final int INSIDE = 0;
+	
+	/**
+	 * 变量搜索方式为全变量交叉搜索
+	 */
+	public static final int SEARCH_STRATEGY_ALL = 0;
+	/**
+	 * 变量搜索方式为按变量下标顺序搜索
+	 */
+	public static final int SEARCH_STRATEGY_ONE_BY_ONE = 1;
+	
+
+	private ConstantValue() {};
+}
