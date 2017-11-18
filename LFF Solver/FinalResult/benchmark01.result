@@ -3,25 +3,25 @@
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0.737337, 3, 2.46469 ] 
+Yes!!!!!   Find Covered Input: [ -1.84577, 258, 4.97244 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-9 > x*y*z  RuntimeValue:  3.54808  isCovered： true
-z > x*y  RuntimeValue:  0.252682  isCovered： true
- y > z   RuntimeValue:  0.535308  isCovered： true
+9 > x*y*z  RuntimeValue:  2376.91  isCovered： true
+z > x*y  RuntimeValue:  481.18  isCovered： true
+ y > z   RuntimeValue:  253.028  isCovered： true
 
-SolverParameter::totalTime[0] = 0.074567
-SolverParameter::algorithmTime[0] = 0.0745669
-SolverParameter::FunctionTime[0] = 7.4537e-08
-SolverParameter::totalFrequency[0] = 3
+SolverParameter::totalTime[0] = 0.076513
+SolverParameter::algorithmTime[0] = 0.0765129
+SolverParameter::FunctionTime[0] = 7.6486e-08
+SolverParameter::totalFrequency[0] = 2
 
 ----------------------------statistical result----------------------------
-Average Time:	0.074567
-Best Time:	0.074567
-Worst Time:	0.074567
-Average Frequency:	3
+Average Time:	0.076513
+Best Time:	0.076513
+Worst Time:	0.076513
+Average Frequency:	2
 Coverage Result:	[ true ] 
 Parameter Setting: 
 MAX_NUM_OF_PREDICT_PARAM = 200

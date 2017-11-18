@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LFF Solver/src/ConstraintParser/ConstraintParameter.cpp&apos; to &apos;ConstraintParameter.cu&apos;" description="Rename resource &apos;ConstraintParameter.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/ConstraintParser/ConstraintParameter.cpp" name="ConstraintParameter.cu" stamp="1511009516238" updateReferences="true"/>
+</session>

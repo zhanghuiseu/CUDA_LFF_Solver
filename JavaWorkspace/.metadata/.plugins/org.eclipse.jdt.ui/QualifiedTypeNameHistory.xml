@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="testForAll.ConstraintParameter"/>
-<fullyQualifiedTypeName name="com.greenpineyu.fel.parser.FelParser.integerLiteral_return"/>
 <fullyQualifiedTypeName name="cn.nju.seg.atg.BEParse.BinaryExpressionParse"/>
 <fullyQualifiedTypeName name="beginParser.ConstraintParameter"/>
+<fullyQualifiedTypeName name="cn.nju.seg.atpc.main.ATPC"/>
+<fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="cn.nju.seg.atpc.generate.ForConstraintParameter"/>
+<fullyQualifiedTypeName name="com.greenpineyu.fel.parser.FelParser.integerLiteral_return"/>
+<fullyQualifiedTypeName name="cn.nju.seg.atpc.model.Expression"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="cn.nju.seg.atpc.model.Operator"/>
 </qualifiedTypeNameHistroy>
