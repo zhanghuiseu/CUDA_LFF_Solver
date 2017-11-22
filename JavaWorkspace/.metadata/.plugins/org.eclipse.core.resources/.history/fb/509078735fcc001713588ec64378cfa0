@@ -1,9 +1,0 @@
-package cn.nju.seg.atpc.generate;
-
-/*
- * 这个类主要负责
- * */
-public class ForConstraintParameter 
-{
-	
-}

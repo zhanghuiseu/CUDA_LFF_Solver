@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;cn.nju.seg.atpc.main.BeginParser&apos; to &apos;Main&apos;&#x0A;- Original project: &apos;CUDA_LFF_Solver_AutoGenerateParallelCode&apos;&#x0A;- Original element: &apos;cn.nju.seg.atpc.main.BeginParser&apos;&#x0A;- Renamed element: &apos;cn.nju.seg.atpc.main.Main&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;BeginParser&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;cn.nju.seg.atpc.main{BeginParser.java[BeginParser" matchStrategy="1" name="Main" qualified="false" references="true" similarDeclarations="false" stamp="1511056899179" textual="false" version="1.0"/>
+</session>

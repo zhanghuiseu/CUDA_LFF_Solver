@@ -1,0 +1,5 @@
+
+	static RuntimeValue* getConstraintValue_0_0(double x,double y,double z);
+	static RuntimeValue* getConstraintValue_0_1(double x,double y,double z);
+	static RuntimeValue* getConstraintValue_0_2(double x,double y,double z);
+

@@ -1,0 +1,86 @@
+while i < N
+	启动kernel函数计算，并行计算如下：
+	for thread i  0 to  sizePredict
+		for constraint j in DNF（析取范式）   
+	       使用predictArray[i]计算constraint j 的运行时刻值得到predictMat[j][i]
+		end for
+	end for
+
+	if 存在满足复合约束的向量v
+		break;
+        else
+            计算覆盖度最高的解:这么做的好处是直接，使用已经计算过得数据，不用专门计算
+
+	把predictArray做清洗，
+        for thread i  0 to  sizeConstraint
+		predictArray[i]去除NaN和infinite的数据
+	启动kernel函数计算，并行计算如下：
+	for thread i  0 to  sizeConstraint
+		calaMat[i] = predictMat[i] || calaMat[i] 合并到calaMat[i]
+	end for
+	
+	设置分组的indexCase0...indexCase5，用以保存对应case的下标：
+	启动kernel函数计算，并行计算如下：
+    for constraint i in DNF（析取范式）
+	    for thread j  1 to  sizeCalaMatCol
+	        使用calaMat[i][j-1]和calaMat[i][j]两个拟合点做拟合
+			计算得到分类case i
+			indexCasei添加分类信息i和j（只需要保存一个下标就可以了）
+			
+			/****** 下面是说明代码
+			关于分类也肯定要用到if判断，但是可以转换为计算问题，比如
+			bit0 = (calaMat[i][j-1]>=0 && calaMat[i][j]>=0) * 1;
+			bit1 = (calaMat[i][j-1]<=0 && calaMat[i][j]<=0) * 1;
+			bit2 = (calaMat[i][j-1]>=0 && calaMat[i][j]<=0) * 1;
+			bit3 = (calaMat[i][j-1]<=0 && calaMat[i][j]>=0) * 1;
+			......
+			就是把if的条件语句的判断转换为一个计算编码的问题，
+			硬件的底层就是这么做编码的
+			******/
+		end for
+	end for
+	
+	启动kernel函数计算，并行计算如下：
+	for case 0 to 5 ：
+		for thread j  1 to  sizeIndexCasei：
+			获取待处理元素的下标i和j得到待处理元素calaMat[i][j-1]和calaMat[i][j]
+			按照case i 的处理方式直接处理
+			
+			/***** 下面的是说明代码 
+			为了便于说明，下面写了一段伪代码：
+			if 拟合曲线有解区间
+			    直接计算解区间one
+			else
+			    if 是边界区间
+				   区间细化：预测可行解d；
+				else
+				   区间扩展：计算解区间，预测可行解d
+				end if
+		    end if
+			******/	
+		endfor
+	endfor
+	
+	启动kernel函数计算，并行计算如下：
+	 for constraint j in DNF（析取范式）
+		constraint 拟合出的区间直接做合并
+	end for
+
+	启动kernel函数计算，并行计算如下：计算解区间的预测解，//可能要抛弃某些点
+	for thread i  0 to sizeFinalIntervel
+	    根据解区间预测可行解p
+		predictArray[i]=p;
+	end for
+	
+	收集区间细化和区间扩展的预测解
+	启动kernel函数计算，并行计算如下：
+	for constraint j in DNF（析取范式）
+		for thread i  0 to  sizesolutionIntervelCol
+			收集不可解的可行解d（有序）
+			tmp = tmp || d 合并
+		end for
+		zeroArray = zeroArray || tmp
+	end for
+	
+	predictArray = predictArray || zeroArray
+end while

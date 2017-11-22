@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="757" key="DIALOG_WIDTH"/>
-		<item value="201" key="DIALOG_Y_ORIGIN"/>
+		<item value="147" key="DIALOG_Y_ORIGIN"/>
 		<item value="1098" key="DIALOG_X_ORIGIN"/>
-		<item value="748" key="DIALOG_HEIGHT"/>
+		<item value="804" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="经过区间扩展和区间细化得到的所有的有效的预测解的数量：" key="selection"/>
+		<item value=" Check Over，Res:" key="selection"/>
 		<list key="findhistory">
-			<item value="经过区间扩展和区间细化得到的所有的有效的预测解的数量："/>
-			<item value="Before:  calaArraySize:"/>
-			<item value="calaFeasibleSolution&lt;&lt;&lt;res.NumOfBlock , res.ThreadPreBlock&gt;&gt;&gt;(dev_coveredInfo , dev_predictArray , col);"/>
-			<item value="ParallelATG::isFullCovered"/>
-			<item value="calaFeasibleSolution&lt;&lt;&lt;res.NumOfBlock , res.ThreadPreBlock&gt;&gt;&gt;(dev_coveredInfo , dev_predictArray , col);&#x0A;"/>
-			<item value="ParallelATG::calaPriorityForCalaArray"/>
-			<item value="calaPriority&lt;&lt;&lt;res.NumOfBlock , res.ThreadPreBlock&gt;&gt;&gt;(dev_priority,dev_calaArray,row,calaArraySize);"/>
-			<item value="The Predict Solution FullCovered Info Is As Following: VaildNum："/>
+			<item value=" Check Over，Res:"/>
+			<item value="ala CLFF Loop:  "/>
+			<item value="############  Cala CLFF Loop:  &#x0A;"/>
+			<item value="ParallelATG::gereratePredictArray"/>
+			<item value="Exist Case5"/>
+			<item value="Exist Case4"/>
+			<item value="-2.25761, -3.2483, -1.95513, 57.2439, -7.65588"/>
+			<item value="makeClean"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

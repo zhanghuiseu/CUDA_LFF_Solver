@@ -1,0 +1,31 @@
+**************** The Constraints Is As Following ****************
+( ( 9>x*y*z ) && ( z>=x*y ) && ( z>y ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.659887, -7.91957, -1.10076 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+9>x*y*z  RuntimeValue:  3.24741  isCovered： true
+z>=x*y  RuntimeValue:  4.12526  isCovered： true
+z>y  RuntimeValue:  6.81881  isCovered： true
+
+SolverParameter::totalTime[0] = 0.195519
+SolverParameter::algorithmTime[0] = 0.195519
+SolverParameter::FunctionTime[0] = 1.95492e-07
+SolverParameter::totalFrequency[0] = 34
+
+----------------------------statistical result----------------------------
+Average Time:	0.195519
+Best Time:	0.195519
+Worst Time:	0.195519
+Average Frequency:	34
+Coverage Result:	[ true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 256
+MAX_NUM_OF_GENERATE_CYCLE = 1
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+
