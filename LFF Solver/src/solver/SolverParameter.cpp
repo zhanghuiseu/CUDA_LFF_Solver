@@ -38,5 +38,6 @@
 		double SolverParameter::algorithmTime[countOfRepeation] = {0.0};
 		int SolverParameter::coveredRatio[countOfRepeation] = {0};
 		bool SolverParameter::findResult[countOfRepeation] = {0};
-		double SolverParameter::CUSTOMIZED_PARAMS[ConstraintParameter::NUM_OF_PARAM] ={0};
 
+		bool SolverParameter::IS_CUSTOMIZED = false;
+		double SolverParameter::CUSTOMIZED_PARAMS[ConstraintParameter::NUM_OF_PARAM] = {10, 10, 10, 0, 10, 0};

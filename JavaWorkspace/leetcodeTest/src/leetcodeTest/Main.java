@@ -3,23 +3,28 @@ package leetcodeTest;
 public class Main 
 {
 
+	public int calaTaskNum(int numOfParams,int level)
+	{
+		if(level<=0)
+			return 0;
+		else if(level==1)
+			return numOfParams;
+		else 
+		{
+			int sum = numOfParams;
+			int k = numOfParams;
+			for(int i=1;i<level;i++)
+			{
+				k = k*(numOfParams-1);
+				sum+=k;
+			}
+			return sum;
+		}
+	}
 	public static void main(String[] args) 
 	{
-		double x = 2.66262;
-		double y = 3.62272; 
-		double z =-2.31449; 
-		double w = 4.12452; 
-		double t = 4.7762; 
-		double v = 0.75775;
-		System.out.println((x-y+Math.tan(v) - (z+t)/(w+t)));
-		System.out.println(Math.sqrt(x-t) - z/y);
-		System.out.println(Math.log(x*y) - Math.log(t+w+z));
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		
+		Main test = new Main();
+		System.out.println(test.calaTaskNum(6, 6));
 	}
 
 }

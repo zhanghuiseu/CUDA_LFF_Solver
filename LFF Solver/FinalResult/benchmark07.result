@@ -1,0 +1,121 @@
+**************** The Constraints Is As Following ****************
+( ( sin(2*x-y)/(cos(2*y+y)+1)==cos(2*z+x)/(sin(2*w+y)-1) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.538899, -2.04397, 0.523809, 2.90102 ] 
+Best Covered is: 99.9993%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(2*x-y)/(cos(2*y+y)+1)==cos(2*z+x)/(sin(2*w+y)-1)  RuntimeValue:  6.74935e-06  isCovered： false
+
+SolverParameter::totalTime[0] = 0.569601
+SolverParameter::algorithmTime[0] = 0.5696
+SolverParameter::FunctionTime[0] = 5.69403e-07
+SolverParameter::totalFrequency[0] = 63
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.00753596, -3.56692, -0.118053, -4.8345 ] 
+Best Covered is: 99.9903%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(2*x-y)/(cos(2*y+y)+1)==cos(2*z+x)/(sin(2*w+y)-1)  RuntimeValue:  9.72864e-05  isCovered： false
+
+SolverParameter::totalTime[1] = 0.460088
+SolverParameter::algorithmTime[1] = 0.460088
+SolverParameter::FunctionTime[1] = 4.59955e-07
+SolverParameter::totalFrequency[1] = 63
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 3.75997, 4.71456, -0.748189, 0.196022 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(2*x-y)/(cos(2*y+y)+1)==cos(2*z+x)/(sin(2*w+y)-1)  RuntimeValue:  3.23588e-07  isCovered： false
+
+SolverParameter::totalTime[2] = 0.406961
+SolverParameter::algorithmTime[2] = 0.406961
+SolverParameter::FunctionTime[2] = 4.06823e-07
+SolverParameter::totalFrequency[2] = 60
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.184553, -2.69059, -2.36847, 3.19348 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(2*x-y)/(cos(2*y+y)+1)==cos(2*z+x)/(sin(2*w+y)-1)  RuntimeValue:  3.16251e-07  isCovered： false
+
+SolverParameter::totalTime[3] = 0.531835
+SolverParameter::algorithmTime[3] = 0.531834
+SolverParameter::FunctionTime[3] = 5.31705e-07
+SolverParameter::totalFrequency[3] = 64
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 3.54443, 2.11623, 4.7814, 4.09555 ] 
+Best Covered is: 99.9995%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(2*x-y)/(cos(2*y+y)+1)==cos(2*z+x)/(sin(2*w+y)-1)  RuntimeValue:  5.14741e-06  isCovered： false
+
+SolverParameter::totalTime[4] = 0.39735
+SolverParameter::algorithmTime[4] = 0.39735
+SolverParameter::FunctionTime[4] = 3.9722e-07
+SolverParameter::totalFrequency[4] = 60
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -0.084561, -0.368537, 3.99169, -4.89661 ] 
+Best Covered is: 99.9935%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(2*x-y)/(cos(2*y+y)+1)==cos(2*z+x)/(sin(2*w+y)-1)  RuntimeValue:  6.47728e-05  isCovered： false
+
+SolverParameter::totalTime[5] = 0.456325
+SolverParameter::algorithmTime[5] = 0.456325
+SolverParameter::FunctionTime[5] = 4.56197e-07
+SolverParameter::totalFrequency[5] = 61
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 2.68695, 0.749936, -1.49651, -3.16675 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(2*x-y)/(cos(2*y+y)+1)==cos(2*z+x)/(sin(2*w+y)-1)  RuntimeValue:  4.68363e-07  isCovered： false
+
+SolverParameter::totalTime[6] = 0.453366
+SolverParameter::algorithmTime[6] = 0.453366
+SolverParameter::FunctionTime[6] = 4.53181e-07
+SolverParameter::totalFrequency[6] = 61
+
+----------------------------statistical result----------------------------
+Average Time:	0.467932
+Best Time:	0.39735
+Worst Time:	0.569601
+Average Frequency:	61.7143
+Coverage Result:	[ false, false, false, false, false, false, false ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 100
+MAX_NUM_OF_GENERATE_CYCLE = 4
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ONE_BY_ONE 
+
+

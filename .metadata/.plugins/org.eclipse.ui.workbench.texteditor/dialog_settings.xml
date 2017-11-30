@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="757" key="DIALOG_WIDTH"/>
+		<item value="717" key="DIALOG_WIDTH"/>
 		<item value="147" key="DIALOG_Y_ORIGIN"/>
 		<item value="1098" key="DIALOG_X_ORIGIN"/>
-		<item value="804" key="DIALOG_HEIGHT"/>
+		<item value="848" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value=" Check Over，Res:" key="selection"/>
+		<item value="Cala Prioruty Wrong" key="selection"/>
 		<list key="findhistory">
-			<item value=" Check Over，Res:"/>
-			<item value="ala CLFF Loop:  "/>
-			<item value="############  Cala CLFF Loop:  &#x0A;"/>
-			<item value="ParallelATG::gereratePredictArray"/>
-			<item value="Exist Case5"/>
-			<item value="Exist Case4"/>
-			<item value="-2.25761, -3.2483, -1.95513, 57.2439, -7.65588"/>
-			<item value="makeClean"/>
+			<item value="Cala Prioruty Wrong"/>
+			<item value="Cala Prioruty Wrong,index:"/>
+			<item value="merge"/>
+			<item value="initialParameter"/>
+			<item value="PCATG::initialParameter"/>
+			<item value="ATG::currentSearchParamPriotity"/>
+			<item value="ParallelATG::calaPredictValueFromFinalInterval"/>
+			<item value="Exist Predict Intervel"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

@@ -1,0 +1,24 @@
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 5.56319, 3.10484, 7.39245, 1.27558, 3.75964, -5.90426 ] 
+Best Covered is: 94.9068%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tan(v)>(z+t)/(w+t)  RuntimeValue:  0.641698  isCovered： true
+sqrt(x-t)>z/y  RuntimeValue:  -1.03798  isCovered： false
+log(x*y)>log(t+w+z)  RuntimeValue:  0.329209  isCovered： true
+pow(y,t)*cos(v)>z*2+w*3+x*7  RuntimeValue:  8.2018  isCovered： true
+z+w>x+y  RuntimeValue:  3.55271e-15  isCovered： true
+x/y>w  RuntimeValue:  0.516201  isCovered： true
+x>(w+y-z)  RuntimeValue:  8.57523  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  4.09041  isCovered： true
+x*cos(t+y)>log(w*z*3)  RuntimeValue:  1.30699  isCovered： true
+cos(t)*sin(v)>cos(y)  RuntimeValue:  0.697834  isCovered： true
+
+SolverParameter::totalTime[0] = 283.663
+SolverParameter::algorithmTime[0] = 283.663
+SolverParameter::FunctionTime[0] = 0.000283442
+SolverParameter::totalFrequency[0] = 78649
+

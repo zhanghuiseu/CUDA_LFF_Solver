@@ -1,9 +1,0 @@
-package cn.nju.seg.atpc.main;
-
-public class ATPC
-{
-	/**
-	 * 约束输入参数的类型
-	 */
-	public static bool forDouble = true;
-}

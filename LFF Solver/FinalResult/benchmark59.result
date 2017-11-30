@@ -1,0 +1,136 @@
+**************** The Constraints Is As Following ****************
+( ( x*y+atan(z)*sin(w*t)>x/y+z+tan(w+t) ) && ( pow(log10(z+w+t),tan(w*t))>=pow(log10(x),log10(y)) ) && ( tan(w*(x+y))+sin(t*(y+z))>asin(x+y+z)+acos(x+y+z)+atan(x+y+z) ) && ( w==t*3/4 ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 2.88641, -1.41597, -2.40677, 1.00686, 1.34249 ] 
+Best Covered is: 75%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atan(z)*sin(w*t)>x/y+z+tan(w+t)  RuntimeValue:  0.223097  isCovered： true
+pow(log10(z+w+t),tan(w*t))>=pow(log10(x),log10(y))  RuntimeValue:  nan  isCovered： false
+tan(w*(x+y))+sin(t*(y+z))>asin(x+y+z)+acos(x+y+z)+atan(x+y+z)  RuntimeValue:  11.1436  isCovered： true
+w==t*3/4  RuntimeValue:  2.22045e-16  isCovered： false
+
+SolverParameter::totalTime[0] = 16.7754
+SolverParameter::algorithmTime[0] = 16.7754
+SolverParameter::FunctionTime[0] = 1.67599e-05
+SolverParameter::totalFrequency[0] = 6022
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.2086, 3.24331, -3.49223, 3.06649, 3.9506 ] 
+Best Covered is: 83.6555%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atan(z)*sin(w*t)>x/y+z+tan(w+t)  RuntimeValue:  6.70161  isCovered： true
+pow(log10(z+w+t),tan(w*t))>=pow(log10(x),log10(y))  RuntimeValue:  1.06098  isCovered： true
+tan(w*(x+y))+sin(t*(y+z))>asin(x+y+z)+acos(x+y+z)+atan(x+y+z)  RuntimeValue:  -1.27251  isCovered： false
+w==t*3/4  RuntimeValue:  0.103535  isCovered： false
+
+SolverParameter::totalTime[1] = 16.7378
+SolverParameter::algorithmTime[1] = 16.7378
+SolverParameter::FunctionTime[1] = 1.67225e-05
+SolverParameter::totalFrequency[1] = 5749
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.48041, 1.60998, -2.55197, 3.51301, 4.68401 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atan(z)*sin(w*t)>x/y+z+tan(w+t)  RuntimeValue:  7.62928  isCovered： true
+pow(log10(z+w+t),tan(w*t))>=pow(log10(x),log10(y))  RuntimeValue:  0.0742211  isCovered： true
+tan(w*(x+y))+sin(t*(y+z))>asin(x+y+z)+acos(x+y+z)+atan(x+y+z)  RuntimeValue:  6.03675  isCovered： true
+w==t*3/4  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[2] = 3.14576
+SolverParameter::algorithmTime[2] = 3.14576
+SolverParameter::FunctionTime[2] = 3.1427e-06
+SolverParameter::totalFrequency[2] = 1023
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.48041, 1.60998, -2.55197, 3.51301, 4.68401 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atan(z)*sin(w*t)>x/y+z+tan(w+t)  RuntimeValue:  7.62928  isCovered： true
+pow(log10(z+w+t),tan(w*t))>=pow(log10(x),log10(y))  RuntimeValue:  0.0742211  isCovered： true
+tan(w*(x+y))+sin(t*(y+z))>asin(x+y+z)+acos(x+y+z)+atan(x+y+z)  RuntimeValue:  6.03675  isCovered： true
+w==t*3/4  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000332
+SolverParameter::algorithmTime[3] = 0.000332
+SolverParameter::FunctionTime[3] = 3.09e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.48041, 1.60998, -2.55197, 3.51301, 4.68401 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atan(z)*sin(w*t)>x/y+z+tan(w+t)  RuntimeValue:  7.62928  isCovered： true
+pow(log10(z+w+t),tan(w*t))>=pow(log10(x),log10(y))  RuntimeValue:  0.0742211  isCovered： true
+tan(w*(x+y))+sin(t*(y+z))>asin(x+y+z)+acos(x+y+z)+atan(x+y+z)  RuntimeValue:  6.03675  isCovered： true
+w==t*3/4  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000368
+SolverParameter::algorithmTime[4] = 0.000368
+SolverParameter::FunctionTime[4] = 3.42e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.48041, 1.60998, -2.55197, 3.51301, 4.68401 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atan(z)*sin(w*t)>x/y+z+tan(w+t)  RuntimeValue:  7.62928  isCovered： true
+pow(log10(z+w+t),tan(w*t))>=pow(log10(x),log10(y))  RuntimeValue:  0.0742211  isCovered： true
+tan(w*(x+y))+sin(t*(y+z))>asin(x+y+z)+acos(x+y+z)+atan(x+y+z)  RuntimeValue:  6.03675  isCovered： true
+w==t*3/4  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[5] = 0.001315
+SolverParameter::algorithmTime[5] = 0.001315
+SolverParameter::FunctionTime[5] = 1.307e-09
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.48041, 1.60998, -2.55197, 3.51301, 4.68401 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atan(z)*sin(w*t)>x/y+z+tan(w+t)  RuntimeValue:  7.62928  isCovered： true
+pow(log10(z+w+t),tan(w*t))>=pow(log10(x),log10(y))  RuntimeValue:  0.0742211  isCovered： true
+tan(w*(x+y))+sin(t*(y+z))>asin(x+y+z)+acos(x+y+z)+atan(x+y+z)  RuntimeValue:  6.03675  isCovered： true
+w==t*3/4  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000327
+SolverParameter::algorithmTime[6] = 0.000327
+SolverParameter::FunctionTime[6] = 3.18e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	5.23733
+Best Time:	0.000327
+Worst Time:	16.7754
+Average Frequency:	1828.29
+Coverage Result:	[ false, false, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 50
+MAX_NUM_OF_GENERATE_CYCLE = 5
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

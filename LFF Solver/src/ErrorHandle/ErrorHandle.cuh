@@ -28,6 +28,7 @@ public:
 			cout<<"ErrorInfo: "<<cudaGetErrorString(cudaStatus) << endl;
 			cout<<"In The Position Of:  "<<info<<endl;
 			cout<<endl<<endl;
+			//cudaDeviceReset();
 			exit(-1);
 		}
 	}

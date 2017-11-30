@@ -1,0 +1,120 @@
+**************** The Constraints Is As Following ****************
+( ( sin(x)+sin(y)+sin(z)==4*cos(x)*cos(y)*cos(z) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -44.9126, -68.0509, 4.04798 ] 
+Best Covered is: 99.9434%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)+sin(y)+sin(z)==4*cos(x)*cos(y)*cos(z)  RuntimeValue:  0.000566126  isCovered： false
+
+SolverParameter::totalTime[0] = 1.70116
+SolverParameter::algorithmTime[0] = 1.70115
+SolverParameter::FunctionTime[0] = 1.70089e-06
+SolverParameter::totalFrequency[0] = 42
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 12.5835, 89.7746, -1.55896 ] 
+Best Covered is: 99.9895%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)+sin(y)+sin(z)==4*cos(x)*cos(y)*cos(z)  RuntimeValue:  -0.000105405  isCovered： false
+
+SolverParameter::totalTime[1] = 2.02863
+SolverParameter::algorithmTime[1] = 2.02862
+SolverParameter::FunctionTime[1] = 2.02842e-06
+SolverParameter::totalFrequency[1] = 43
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 4.97446, 87.9329, -4.71485 ] 
+Best Covered is: 99.9863%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)+sin(y)+sin(z)==4*cos(x)*cos(y)*cos(z)  RuntimeValue:  -0.000137496  isCovered： false
+
+SolverParameter::totalTime[2] = 1.87268
+SolverParameter::algorithmTime[2] = 1.87268
+SolverParameter::FunctionTime[2] = 1.87245e-06
+SolverParameter::totalFrequency[2] = 42
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -45.6987, 78.4463, -34.9213 ] 
+Best Covered is: 99.9711%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)+sin(y)+sin(z)==4*cos(x)*cos(y)*cos(z)  RuntimeValue:  -0.000288908  isCovered： false
+
+SolverParameter::totalTime[3] = 1.87625
+SolverParameter::algorithmTime[3] = 1.87624
+SolverParameter::FunctionTime[3] = 1.87604e-06
+SolverParameter::totalFrequency[3] = 42
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 94.1592, 23.4497, -36.7005 ] 
+Best Covered is: 99.9877%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)+sin(y)+sin(z)==4*cos(x)*cos(y)*cos(z)  RuntimeValue:  0.000123424  isCovered： false
+
+SolverParameter::totalTime[4] = 1.90085
+SolverParameter::algorithmTime[4] = 1.90085
+SolverParameter::FunctionTime[4] = 1.90065e-06
+SolverParameter::totalFrequency[4] = 42
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 95.38, -31.5846, -1.72147 ] 
+Best Covered is: 99.9885%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)+sin(y)+sin(z)==4*cos(x)*cos(y)*cos(z)  RuntimeValue:  0.000115336  isCovered： false
+
+SolverParameter::totalTime[5] = 1.85845
+SolverParameter::algorithmTime[5] = 1.85845
+SolverParameter::FunctionTime[5] = 1.85822e-06
+SolverParameter::totalFrequency[5] = 42
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -80.0555, -32.6721, 3.12077 ] 
+Best Covered is: 99.9803%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)+sin(y)+sin(z)==4*cos(x)*cos(y)*cos(z)  RuntimeValue:  0.000197198  isCovered： false
+
+SolverParameter::totalTime[6] = 1.90093
+SolverParameter::algorithmTime[6] = 1.90093
+SolverParameter::FunctionTime[6] = 1.90073e-06
+SolverParameter::totalFrequency[6] = 42
+
+----------------------------statistical result----------------------------
+Average Time:	1.87699
+Best Time:	1.70116
+Worst Time:	2.02863
+Average Frequency:	42.1429
+Coverage Result:	[ false, false, false, false, false, false, false ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 1024
+MAX_NUM_OF_GENERATE_CYCLE = 3
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

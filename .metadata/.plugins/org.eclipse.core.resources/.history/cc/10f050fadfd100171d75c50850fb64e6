@@ -1,0 +1,44 @@
+/*
+ * testCUDADouble.cu
+ *
+ *  Created on: Nov 25, 2017
+ *      Author: zy
+ */
+
+
+
+
+using namespace std;
+
+/*
+ * device 函数值得学习和处理
+ * */
+
+__global__ void test(double x,double y,double z)
+{
+	int i = threadIdx.x + blockIdx.x*blockDim.x;
+	if(i==0)
+	{
+		bool isCovered = (sin(x)+sin(y)+sin(z)==4*cos(x)*cos(y)*cos(z));
+		double left = sin(x)+sin(y)+sin(z);
+		double right = 4*cos(x)*cos(y)*cos(z);
+		bool res = left-right == 0;
+		printf("isCovered:%d , left:%f , right:%f , res:%d \n",isCovered,left,right,res);
+	}
+}
+
+int testCUDADouble()
+{
+	cout<<"Begin Test CUDA DOuble "<<endl;
+	const int SIZE=1;
+	const int threadPreBlock=32;
+    const int numOfBlocks=(SIZE+threadPreBlock-1)/threadPreBlock;
+
+    double x = -1.79324;
+    double y = -3.16665;
+    double z = 3.07124;
+
+    test<<<numOfBlocks,threadPreBlock>>>(x,y,z);
+
+	return 1;
+}

@@ -6,6 +6,7 @@
 	 */
 
 	#include <iostream>
+	#include <set>
 	#include <algorithm>
 
 	#include "ParallelATG.cuh"
@@ -42,6 +43,12 @@
 
 	bool ParallelATG::generateTestDataForSolver(const int MaxTryParamSize)
 	{
+    	//打印当前的优先级最高的解向量
+    	cout<<"**************    开始搜索的起始点： "<<endl<<"( ";
+		for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
+			cout<<ATG::parameters[i]<<" , ";
+		cout<<" ) "<<endl;
+
 		//ParallelATG::testExtremeRumtimeValue();
 		//ParallelATG::testMergeFunction();
 
@@ -66,6 +73,7 @@
 		CoodinateDouble* predictArray = new CoodinateDouble[row*col];
 		CoodinateDouble (*predictMat)[col] = (CoodinateDouble(*)[col])predictArray;
 		ParallelATG::initRandomMatrix(predictMat,row,col);
+		//ParallelATG::printRandomMat(predictMat,row,col);
 
 		//随机点传输到显卡
 		CoodinateDouble* dev_predictArray = NULL;
@@ -87,25 +95,24 @@
 		ParallelATG::isFullCovered(dev_coveredInfo,dev_predictArray,row,col);
 
 		//CPU验证模块
-		bool findSolution = false;
-		bool check = checkisFullCovered(dev_coveredInfo,predictArray,findSolution,row,col);
-        cout<<"*****  Check Over，Res:  "<<boolalpha<<check<<endl;
-        cout<<"*****  Find   Solution:  "<<findSolution<<endl;
+		//bool findSolution = false;
+		//bool check = checkisFullCovered(dev_coveredInfo,predictArray,findSolution,row,col);
+        //cout<<"*****  Check Over，Res:  "<<boolalpha<<check<<endl;
+        //cout<<"*****  Find   Solution:  "<<findSolution<<endl;
 
         FullCoveredInfo* coveredInfo = new FullCoveredInfo();
         ParallelATG::getFullCoveredIndex(coveredInfo,dev_coveredInfo,row,col);
 
         //打印相应的关系
-		cout<<"Now Search Point "<<ATG::parameters[ATG::currentSearchParamIndex]<<endl;
-		for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
-			cout<<ATG::parameters[i]<<" , ";
-		cout<<endl;
-		cout<<"The Predict Solution FullCovered Info Is As Following: Index： "<<coveredInfo->index<<endl;
-		cout<<"The Predict Solution FullCovered Info Is As Following: VaildNum： "<<coveredInfo->vaildNum<<endl;
+		//cout<<"Now Search Point "<<ATG::parameters[ATG::currentSearchParamIndex]<<endl;
+		//for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
+			//cout<<ATG::parameters[i]<<" , ";
+		//cout<<endl;
+		//cout<<"The Predict Solution FullCovered Info Is As Following: Index： "<<coveredInfo->index<<endl;
+		//cout<<"The Predict Solution FullCovered Info Is As Following: VaildNum： "<<coveredInfo->vaildNum<<endl;
 
 		//线性拟合次数
 		SolverParameter::function_frequency++;
-
 
 		//第一次运行结果的初步判断，
 		bool isCoveredTargetPC = false;
@@ -142,7 +149,7 @@
 		 * */
 		int calaArraySize = 0;
 		int predictArraySize = col;
-		int vaildPredictArraySize = coveredInfo->vaildNum;
+		int vaildPredictArraySize = col;//coveredInfo->vaildNum;
 
         /*
          * 尝试的测试点的数量，用于搜索任务的参数上限的判断,
@@ -150,7 +157,7 @@
 		int tryParamNum = col;
 		while(tryParamNum < MaxTryParamSize && isCoveredTargetPC == false)
 		{
-			cout<<"############  Cala CLFF Loop:  "<<endl;
+			//cout<<"############  Cala CLFF Loop:  "<<endl;
 			/*
 			 * @合并calaArray和predictArray到calaArray，分为下面两种情况：
 			 * 1）calaArray为NULL，直接把predictArray赋值给calaArray
@@ -201,7 +208,7 @@
 			ParallelATG::calaPredictValueFromFinalInterval(dev_PredictValue,dev_finalIntervel,calaArraySize);
 
 			int PredictValueSize = ParallelATG::calaPredictValueSize(dev_PredictValue,calaArraySize);
-			cout<<"Vaild Predict Num is "<<PredictValueSize<<endl;
+			//cout<<"Vaild Predict Num is "<<PredictValueSize<<endl;
 
 			/*
 			 * 收集零点
@@ -220,7 +227,7 @@
 			int sum = 0;
 			for(int gg=0;gg<count.size();gg++)
 				sum+=count[gg];
-			cout<<"Valid Zeros Num: "<<sum<<endl;
+			//cout<<"Valid Zeros Num: "<<sum<<endl;
 
 			/*
 			 *  根据区间细化和区间扩展的规则，收集所有的valid和预测解
@@ -230,11 +237,17 @@
 			//收集合并零点
 			PredictValueWithOne* dev_finalAllPredictValue = ParallelATG::collectValidZero(count,dev_ZerosValue,calaArraySize,row,
 					dev_PredictValue,PredictValueSize,finalAllPredictValueSize);
-			cout<<"经过区间扩展和区间细化得到的所有的有效的预测解的数量： "<<finalAllPredictValueSize<<endl;
+			//cout<<"经过区间扩展和区间细化得到的所有的有效的预测解的数量： "<<finalAllPredictValueSize<<endl;
 			if(finalAllPredictValueSize==0)
 			{
 				cout<<"╮(╯▽╰)╭，你得多么的不幸运才会导致"<<calaArraySize
 				<<"个点进过线性拟合，然后做区间细化和扩展的运算竟然预测到0个可行解，真是服了你了"<<endl;
+				cudaFree(dev_classification);
+				cudaFree(dev_intervel);
+				cudaFree(dev_finalIntervel);
+				cudaFree(dev_PredictValue);
+				cudaFree(dev_ZerosValue);
+				cudaFree(dev_finalAllPredictValue);
 				break;
 			}
 
@@ -264,15 +277,16 @@
 			ParallelATG::isFullCovered(dev_coveredInfo,dev_predictArray,row,col);
 			//获合法解的数量，满足情况等等
 	        ParallelATG::getFullCoveredIndex(coveredInfo,dev_coveredInfo,row,col);
-			cout<<"The Predict Solution FullCovered Info Is As Following: Index： "<<coveredInfo->index<<endl;
-			cout<<"The Predict Solution FullCovered Info Is As Following: VaildNum： "<<coveredInfo->vaildNum<<endl;
+			//cout<<"The Predict Solution FullCovered Info Is As Following: Index： "<<coveredInfo->index<<endl;
+			//cout<<"The Predict Solution FullCovered Info Is As Following: VaildNum： "<<coveredInfo->vaildNum<<endl;
 
 			//线性拟合次数
 			SolverParameter::function_frequency++;
 
 			//这个是给在做merge所有元素到calaArray中的参数设置
 			predictArraySize = col;
-			vaildPredictArraySize = coveredInfo->vaildNum;
+			vaildPredictArraySize = col;
+			//vaildPredictArraySize = coveredInfo->vaildNum;
 
 			//运行结果的初步判断，
 	        if(coveredInfo->isCovered==true)
@@ -328,16 +342,20 @@
         	ParallelATG::calaMaxPriority(maxPriority,dev_priority,calaArraySize);
 
         	//设置优先级最高的当前向量以及最大的优先级
-        	ATG::parameters[ATG::currentSearchParamIndex] = maxPriority->x;
-        	ATG::currentSearchParamPriotity = maxPriority->priority;
+        	if(maxPriority->priority > ATG::currentSearchParamPriotity)
+        	{
+            	ATG::parameters[ATG::currentSearchParamIndex] = maxPriority->x;
+            	ATG::currentSearchParamPriotity = maxPriority->priority;
+        	}
         	delete maxPriority;
 
         	//打印当前的优先级最高的解向量
+        	cout<<"**************    循环迭代计算结束："<<endl;
         	cout<<"CurrentSearchParamIndex: "<<ATG::currentSearchParamIndex<<"    x: "<<ATG::currentSearchParamPriotity<<endl;
-        	cout<<"Max Priority: "<<ATG::currentSearchParamPriotity<<endl;
+        	cout<<"Max Priority: "<<ATG::currentSearchParamPriotity<<endl<<"( ";
     		for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
     			cout<<ATG::parameters[i]<<" , ";
-    		cout<<endl;
+    		cout<<" )"<<endl;
 			cout<<"**********************    No No NO Solutions     **********************"<<endl;
 		}
 
@@ -377,41 +395,88 @@
 	void ParallelATG::initRandomMatrix(CoodinateDouble (*mat)[ParallelATG::RandomLengthInt],const int row,const int col)
 	{
 		int currentIndex = ATG::currentSearchParamIndex;
-		int center = ATG::parameters[currentIndex];
+		double center = ATG::parameters[currentIndex];
 
-		//浮点数部分的初始化
-		if(ConstraintParameter::constraintVarType[currentIndex]==ConstantValue::FloatType)
+		//使用区间和步长来获取有序的随机数
+		bool useStep = true;
+		if(useStep)
 		{
-			int begin = center - (ParallelATG::RandomLengthFloat / 2 -1);
-			int left = begin, right = begin;
-			for(int i = 0; i < col; i++)
+			//浮点数部分的初始化
+			if(ConstraintParameter::constraintVarType[currentIndex]==ConstantValue::FloatType)
 			{
-				left = begin + i * ParallelATG::StepDouble;
-				right = left + ParallelATG::StepDouble;
-				if (PCATG::random() <= 0.5)
-					mat[0][i].x = PCATG::random()*(right - left) + left;
-				else
-					mat[0][i].x = right - PCATG::random()*(right - left);
-			}
-
-			mat[0][col/2].x = center;
-
-			for(int i = 1; i < row; i++)
-			{
-				for(int j = 0; j < col; j++)
+				double begin = center - (ParallelATG::RandomLengthFloat / 2 -1);
+				double left = begin, right = begin;
+				for(int i = 0; i < col; i++)
 				{
-					mat[i][j].x = mat[0][j].x;
+					left = begin + i * ParallelATG::StepDouble;
+					right = left + ParallelATG::StepDouble;
+					if (PCATG::random() <= 0.5)
+						mat[0][i].x = PCATG::random()*(right - left) + left;
+					else
+						mat[0][i].x = right - PCATG::random()*(right - left);
+				}
+
+				mat[0][col/2].x = center;
+
+				for(int i = 1; i < row; i++)
+				{
+					for(int j = 0; j < col; j++)
+					{
+						mat[i][j].x = mat[0][j].x;
+					}
+				}
+
+			}else
+			{   //整数部分的初始化
+				double begin = center - (ParallelATG::RandomLengthInt / 2 -1);
+				double left = begin;
+				for(int i = 0; i < col; i++)
+				{
+					left = begin + i * ParallelATG::StepInt;
+					mat[0][i].x = left;
+				}
+
+				for(int i = 1; i < row; i++)
+				{
+					for(int j = 0; j < col; j++)
+					{
+						mat[i][j].x = mat[0][j].x;
+					}
 				}
 			}
-
 		}else
-		{   //整数部分的初始化
-			int begin = center - (ParallelATG::RandomLengthInt / 2 -1);
-			int left = begin;
+		{
+			set<double> resSet;
+			resSet.insert(center);
+			int count = 0;
+			while(count<col)
+			{
+				if(ConstraintParameter::constraintVarType[currentIndex]==ConstantValue::FloatType)
+				{
+					double a = rand();
+					int flag = rand()%2==0?-1:1;
+					double random = flag* a * PCATG::random();
+					if(resSet.find(random)==resSet.end())
+					{
+						resSet.insert(random);
+						count++;
+					}
+				}else
+				{
+					double a = rand();
+					if(resSet.find(a)==resSet.end())
+					{
+						resSet.insert(a);
+						count++;
+					}
+				}
+
+			}
+			vector<double> resVec(resSet.begin(),resSet.end());
+			sort(resVec.begin(),resVec.end());
 			for(int i = 0; i < col; i++)
 			{
-				left = begin + i * ParallelATG::StepInt;
-				mat[0][i].x = left;
+				mat[0][i].x =  resVec[i];
 			}
 
 			for(int i = 1; i < row; i++)
@@ -543,7 +608,7 @@
 			int k = 0; // index for res
 			while(j < predictArraySize)
 			{
-				if(dev_coveredInfo[j].isVaild==true)
+				//if(dev_coveredInfo[j].isVaild==true)
 				{
 					copyCoodinateDouble( (res+k) , (b+j) );
 					k = k + 1;
@@ -574,8 +639,8 @@
 			int k = 0; // index for res
 			while( i < calaArraySize && j < predictArraySize)
 			{
-				if(dev_coveredInfo[j].isVaild==true)
-				{
+				//if(dev_coveredInfo[j].isVaild==true)
+				//{
 					if( (a+i)->x < (b+j)->x )
 					{
 						copyCoodinateDouble( (res+k) , (a+i) );
@@ -587,8 +652,8 @@
 						j = j + 1;
 						k = k + 1;
 					}
-				}else
-					j = j + 1;
+				//}else
+					//j = j + 1;
 			}
 
 			while(i < calaArraySize)
@@ -600,7 +665,7 @@
 
 			while(j < predictArraySize)
 			{
-				if(dev_coveredInfo[j].isVaild==true)
+				//if(dev_coveredInfo[j].isVaild==true)
 				{
 					copyCoodinateDouble( (res+k) , (b+j) );
 					k = k + 1;
@@ -675,12 +740,22 @@
 			const int calaArraySize,const int cmpType)
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
-		bool condition = (i>=1) & (i < calaArraySize);
+		bool condition = (i>=1) && (i < calaArraySize);
 		if(condition)
 		{
 			CoodinateDouble* a = dev_calaArray + i - 1;
 			CoodinateDouble* b = dev_calaArray + i;
 			dev_classification[i].zero  = ((a->x)*(b->y)-(b->x)*(a->y))/((b->y)-(a->y));
+
+/*			double k =(b->y - a->y)/(b->x - a->x);
+			double bb = b->y - k*b->x;
+			double zz = -bb/k;
+			if(zz!=dev_classification[i].zero)
+			{
+				double dif =abs(zz-dev_classification[i].zero);
+				printf("Zero Not EQual %f   %f  %f\n",dev_classification[i].zero,zz,dif);
+			}*/
+
 			dev_classification[i].case0 = case0(a,b,cmpType);
 			dev_classification[i].case1 = case1(a,b,cmpType);
 			dev_classification[i].case2 = case2(a,b,cmpType);
@@ -689,14 +764,23 @@
 			dev_classification[i].case5 = case5(a,b,cmpType);
 			dev_classification[i].hasIntervel = (dev_classification[i].case0 | dev_classification[i].case2 | dev_classification[i].case3);
 
-			//下面是测试代码
-/*			int calaType = (int)(dev_classification[i].case0)*1
+
+
+/*			//下面是测试代码
+			int calaType = (int)(dev_classification[i].case0)*1
 					     + (int)(dev_classification[i].case1)*2
 					     + (int)(dev_classification[i].case2)*4
 					     + (int)(dev_classification[i].case3)*8
 					     + (int)(dev_classification[i].case4)*16
 					     + (int)(dev_classification[i].case5)*32;
-			//printf("calatype:  %d\n",calaType);
+			if(calaType ==0)
+				printf("Thread %d Classification Type case0: %d ,case1: %d ,case2: %d ,case3: %d ,case4: %d ,case5: %d , calaType: %d point a(%f,%f),b(%f,%f)\n"
+			,i ,(int)(dev_classification[i].case0),(int)(dev_classification[i].case1),(int)(dev_classification[i].case2),
+			 (int)(dev_classification[i].case3),(int)(dev_classification[i].case4),(int)(dev_classification[i].case5),
+			 calaType,a->x,a->y,b->x,b->y
+			 );
+
+			printf("calatype:  %d\n",calaType);
 			if(calaType!=1 && calaType!=2 && calaType!=4 && calaType!=8 && calaType!=16 && calaType!=32)
 			{
 				printf("Thread %d Classification Type case0: %d ,case1: %d ,case2: %d ,case3: %d ,case4: %d ,case5: %d , calaType: %d point a(%f,%f),b(%f,%f)\n"
@@ -704,9 +788,9 @@
 				 (int)(dev_classification[i].case3),(int)(dev_classification[i].case4),(int)(dev_classification[i].case5),
 				 calaType,a->x,a->y,b->x,b->y
 				 );
-			}*/
-			//if(dev_classification[i].case5)
-				//printf("case4：(%f,%f),(%f,%f) Zeros: %f\n",a->x,a->y,b->x,b->y,dev_classification[i].zero);
+			}
+			if(dev_classification[i].case5)
+				printf("case4：(%f,%f),(%f,%f) Zeros: %f\n",a->x,a->y,b->x,b->y,dev_classification[i].zero);*/
 		}
 	}
 
@@ -739,11 +823,12 @@
 	__global__ void initIntervel(IntervalDouble* dev_interval,CoodinateDouble* dev_calaArray,const int calaArraySize)
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
-		bool condition = (i>=1) & (i < calaArraySize);
+		bool condition = (i>=1) && (i < calaArraySize);
 		if(condition)
 		{
 			dev_interval[i].left  = dev_calaArray[i-1].x;
 			dev_interval[i].right = dev_calaArray[i].x;
+			dev_interval[i].hasIntervel = true;
 		}
 	}
 
@@ -763,7 +848,7 @@
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
 		bool condition = (i>=1) && (i < calaArraySize);
-		if( condition && dev_classification[i].case0 )
+		if( condition && dev_classification[i].case0 == true )
 		{
 			//等式、不等式、均大于等于0，解是全区间
 			dev_interval[i].left = dev_calaArray[i-1].x;
@@ -777,7 +862,7 @@
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
 		bool condition = (i>=1) && (i < calaArraySize);
-		if( condition && dev_classification[i].case1 )
+		if( condition && dev_classification[i].case1 == true )
 		{
 			//斜率不存在，无解
 			dev_interval[i].left = dev_calaArray[i-1].x;
@@ -791,7 +876,7 @@
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
 		bool condition = (i>=1) && (i < calaArraySize);
-		if( condition && dev_classification[i].case2 )
+		if( condition && dev_classification[i].case2 == true )
 		{
 			//零点落在中间，左边区间
 			dev_interval[i].left = dev_calaArray[i-1].x;
@@ -805,7 +890,7 @@
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
 		bool condition = (i>=1) && (i < calaArraySize);
-		if( condition && dev_classification[i].case3 )
+		if( condition && dev_classification[i].case3 == true )
 		{
 			//零点落在中间，右边边区间
 			dev_interval[i].left = dev_classification[i].zero;
@@ -819,7 +904,7 @@
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
 		bool condition = (i>=1) && (i < calaArraySize);
-		if( condition && dev_classification[i].case4 )
+		if( condition && dev_classification[i].case4 == true )
 		{
 			//均小于0，无解，零点落在左边
 			dev_interval[i].left = dev_calaArray[i-1].x;
@@ -833,7 +918,7 @@
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
 		bool condition = (i>=1) && (i < calaArraySize);
-		if( condition && dev_classification[i].case5 )
+		if( condition && dev_classification[i].case5 == true )
 		{
 			//均小于0，无解，零点落在右边边
 			dev_interval[i].left = dev_calaArray[i-1].x;
@@ -923,9 +1008,9 @@
 		bool condition = (i>=1) & (i<calaArraySize);
 		if(condition)
 		{
-			dev_PredictValue[i].left = 1/3.0 * (dev_finalIntervel[i].right - dev_finalIntervel[i].left) + dev_finalIntervel[i].left;
+			dev_PredictValue[i].left = (SolverParameter::GoldenPointRatio-0.1) * (dev_finalIntervel[i].right - dev_finalIntervel[i].left) + dev_finalIntervel[i].left;
 			dev_PredictValue[i].value = getGoldenPoint(dev_finalIntervel[i].left,dev_finalIntervel[i].right);
-			dev_PredictValue[i].right = 2/3.0 * (dev_finalIntervel[i].right - dev_finalIntervel[i].left) + dev_finalIntervel[i].left;
+			dev_PredictValue[i].right = (SolverParameter::GoldenPointRatio + 0.4) * (dev_finalIntervel[i].right - dev_finalIntervel[i].left) + dev_finalIntervel[i].left;
 
 			dev_PredictValue[i].isValid = dev_finalIntervel[i].hasIntervel;
 
@@ -954,8 +1039,11 @@
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
 		if (i < Size)
 		{
-			dev_count[i] = (int)(dev_PredictValue[i].isValid);
-			dev_count[0] = 0;
+			//不要直接写dev_PredictValue[i].isValid，而是用dev_PredictValue[i].isValid==true,因为要不然的转换有问题
+			dev_count[i] = (int)(dev_PredictValue[i].isValid==true);
+			//dev_count[0] = 0;
+			if(dev_count[i]!=0 && dev_count[i]!=1)
+				printf("Count =  %d ,cala Wrong\n",dev_count[i]);
 		}
 	}
 
@@ -1016,8 +1104,8 @@
 			CoodinateDouble* dev_calaArray,const int calaArraySize,bool isDouble)
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
-		bool condition = (i>=1) & (i<calaArraySize);
-		if( condition && dev_classification[i].case4
+		bool condition = (i>=1) && (i<calaArraySize);
+		if( condition && (dev_classification[i].case4 == true)
 			&& (i>=2) && (dev_classification[i].zero >= dev_calaArray[i-2].x))
 		{
 			//取黄金分割点
@@ -1049,10 +1137,12 @@
 			dev_ZerosValue[i].value = dev_classification[i].zero;
 			dev_ZerosValue[i].isValid = true;
 
-			bool isEQ = dev_ZerosValue[i].left == dev_ZerosValue[i].value
+			//printf("Exist Case4 Zeros: %f\n",dev_classification[i].zero);
+
+/*			bool isEQ = dev_ZerosValue[i].left == dev_ZerosValue[i].value
 					&&  dev_ZerosValue[i].value == dev_ZerosValue[i].right;
 			if(isEQ)
-				printf("ISEQ@@@@@@@@@@@@@@@@@@\n");
+				printf("Case4  ISEQ@@@@@@@@@@@@@@@@@@\n");*/
 
 /*			printf("Exist Case4:(%f,%f),(%f,%f),(%f,%f) (%f,%f),PreditValue:（%f,%f,%f）iSEQual:%d\n",
 					dev_calaArray[i-2].x,dev_calaArray[i-2].y,
@@ -1071,8 +1161,8 @@
 			CoodinateDouble* dev_calaArray,const int calaArraySize,bool isDouble)
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
-		bool condition = (i>=1) & (i<calaArraySize);
-		if( condition & dev_classification[i].case5
+		bool condition = (i>=1) && (i<calaArraySize);
+		if( condition & dev_classification[i].case5 == true
 			& (i+1<calaArraySize) & (dev_classification[i].zero <= dev_calaArray[i+1].x) )
 		{
 			//取黄金分割点
@@ -1104,11 +1194,11 @@
 			dev_ZerosValue[i].value = dev_classification[i].zero;
 			dev_ZerosValue[i].isValid = true;
 
-
-			bool isEQ = dev_ZerosValue[i].left == dev_ZerosValue[i].value
+			//printf("Exist Case5 Zeros: %f\n",dev_classification[i].zero);
+/*			bool isEQ = dev_ZerosValue[i].left == dev_ZerosValue[i].value
 					&&  dev_ZerosValue[i].value == dev_ZerosValue[i].right;
 			if(isEQ)
-				printf("ISEQ@@@@@@@@@@@@@@@@@@\n");
+				printf("Case5  ISEQ@@@@@@@@@@@@@@@@@@\n");*/
 /*			printf("Exist Case5:(%f,%f,%f) (%f,%f),PreditValue:（%f,%f,%f）iSEQual：%d\n",dev_calaArray[i-1].x,dev_calaArray[i].x,dev_calaArray[i+1].x,
 					dev_classification[i].zero,dev_calaArray[i+1].x,
 					dev_ZerosValue[i].left,dev_ZerosValue[i].value,dev_ZerosValue[i].right,isEQ);*/
@@ -1122,17 +1212,19 @@
 			CoodinateDouble* dev_calaArray,const int calaArraySize,bool isDouble)
 	{
 		int i = threadIdx.x + blockIdx.x*blockDim.x;
-		bool condition = ((i==1) && dev_classification[i].case4)
-				       || ((i==1) && dev_classification[i].case5)
-				       || ((i==calaArraySize-1) && dev_classification[i].case4)
-				       || ((i==calaArraySize-1) && dev_classification[i].case5);
+		bool condition = ((i==1) && dev_classification[i].case4 == true)
+				       || ((i==1) && dev_classification[i].case5 == true)
+				       || ((i==calaArraySize-1) && dev_classification[i].case4 == true)
+				       || ((i==calaArraySize-1) && dev_classification[i].case5 == true);
 		if( condition)
 		{
-			dev_ZerosValue[i].left = dev_classification[i].zero - 500;
+			dev_ZerosValue[i].left = dev_classification[i].zero -  ParallelATG::RandomLengthFloat * SolverParameter::GoldenPointRatio;;
 			dev_ZerosValue[i].value = dev_classification[i].zero;
-			dev_ZerosValue[i].right = dev_classification[i].zero + 500;
-
+			dev_ZerosValue[i].right = dev_classification[i].zero + ParallelATG::RandomLengthFloat * SolverParameter::GoldenPointRatio;
 			dev_ZerosValue[i].isValid = true;
+
+			//printf("Exist Case4 && Case5 Zeros: %f\n",dev_classification[i].zero);
+
 
 			//printf("Exist Case4 && Case5:%f\n",dev_classification[i].zero);
 		}
@@ -1246,7 +1338,7 @@
 		return num;
 	}
 
-	__device__ bool cmp(PredictValueWithOne a,PredictValueWithOne b)
+	__device__ bool cmp1(PredictValueWithOne a,PredictValueWithOne b)
 	{
 		return a.value<=b.value;
 	}
@@ -1263,7 +1355,7 @@
 			int targetSize = dev_size[index];
 			for(int i=0,k=0;i<calaArraySize && k<targetSize*3;i++)
 			{
-				if(one[i].isValid)
+				if(one[i].isValid == true)
 				{
 					target[k].value = one[i].left;
 					target[k].isValid = one[i].isValid;
@@ -1278,7 +1370,7 @@
 					k++;
 				}
 			}
-			thrust::sort(target,target+targetSize,cmp);
+			thrust::sort(target,target+targetSize,cmp1);
 		}
 	}
 
@@ -1484,7 +1576,9 @@
 	__global__ void getMaxPriority(PriorityDouble* dev_priority,const int step,const int Size)
 	{
 		int i= threadIdx.x + blockIdx.x*blockDim.x;
-		bool condition = (i < Size) && (dev_priority[i+step].priority > dev_priority[i].priority);
+		bool condition = (i < Size) &&
+		(dev_priority[i+step].priority > dev_priority[i].priority) ;
+
 		if (condition)
 		{
 			dev_priority[i].priority = dev_priority[i+step].priority;
@@ -1562,7 +1656,7 @@
 		{
 			for(int j = 0; j < col; j++)
 			{
-				cout<<initMat[i][j].x<<"  "<<initMat[i][j].y<<"  "<<initMat[i][j].isCovered<<endl;
+				cout<<" ( "<<initMat[i][j].x<<" , "<<initMat[i][j].y<<" , "<<initMat[i][j].isCovered<<" ) , ";
 			}
 			cout<<endl;
 		}

@@ -1,0 +1,58 @@
+/*
+ * testCUDADouble.cu
+ *
+ *  Created on: Nov 25, 2017
+ *      Author: zy
+ */
+
+
+
+
+#include <thrust/device_vector.h>
+#include <thrust/copy.h>
+#include <vector>
+#include <list>
+#include <stdio.h>
+#include <cstdlib>
+#include <ctime>
+
+#include "hello.cuh"
+#include "Point.h"
+#include "Instrument.cuh"
+
+#include <thrust/host_vector.h>
+#include <thrust/copy.h>
+#include <thrust/fill.h>
+#include <thrust/sequence.h>
+using namespace std;
+
+/*
+ * device 函数值得学习和处理
+ * */
+
+__global__ void kernel_PointMult(double x,double y,double z)
+{
+	int i = threadIdx.x + blockIdx.x*blockDim.x;
+	if(i==0)
+	{
+		bool isCovered = (sin(x)+sin(y)+sin(z)==4*cos(x)*cos(y)*cos(z));
+		double left = sin(x)+sin(y)+sin(z);
+		double right = 4*cos(x)*cos(y)*cos(z);
+		bool res = left-right == 0
+	}
+}
+
+int mainFotPoint()
+{
+
+	const int SIZE=1;
+	const int threadPreBlock=32;
+    const int numOfBlocks=(SIZE+threadPreBlock-1)/threadPreBlock;
+
+    double x = -1.79324;
+    double y = -3.16665;
+    double z = 3.07124;
+    kernel_Cala<<<numOfBlocks,threadPreBlock>>>(raw_pointer,one1,index,numOfConstraint,array_device.size());
+
+	return 1;
+}

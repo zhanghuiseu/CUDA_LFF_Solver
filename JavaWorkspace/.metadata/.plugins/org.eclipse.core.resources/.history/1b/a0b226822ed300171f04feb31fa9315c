@@ -1,0 +1,16 @@
+package leetcodeTest;
+
+public class Main 
+{
+
+	public int calaTaskNum(int numOfParams,int level)
+	{
+		
+	}
+	public static void main(String[] args) 
+	{
+
+		
+	}
+
+}

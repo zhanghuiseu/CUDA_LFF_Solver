@@ -11,12 +11,14 @@ CU_SRCS += \
 ../src/TestPoint.cu \
 ../src/TestVector.cu \
 ../src/TestVector222.cu \
+../src/testCUDADouble.cu \
 ../src/testSort.cu 
 
 CU_DEPS += \
 ./src/TestPoint.d \
 ./src/TestVector.d \
 ./src/TestVector222.d \
+./src/testCUDADouble.d \
 ./src/testSort.d 
 
 OBJS += \
@@ -25,6 +27,7 @@ OBJS += \
 ./src/TestVector222.o \
 ./src/file1.o \
 ./src/main.o \
+./src/testCUDADouble.o \
 ./src/testSort.o 
 
 CPP_DEPS += \

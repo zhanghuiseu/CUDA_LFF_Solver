@@ -27,9 +27,11 @@ int main()
 
 	//testForDeviceVectorAdd();
 
-	mainFotPoint();
+	//mainFotPoint();
 
-	mainForSort();
+	///mainForSort();
+
+	testCUDADouble();
 
 	cout<<"Game Over!!!!"<<endl;
 	return 1;

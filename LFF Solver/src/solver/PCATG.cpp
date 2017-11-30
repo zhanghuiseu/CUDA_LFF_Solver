@@ -37,6 +37,23 @@
 		double pri = ATG::currentSearchParamPriotity;
 
 		/*
+		 * 设置最终的参数，这个分为两种情况
+		 *  1）找到解，那么这就是找到的解向量
+		 *  2）没找到，那么这就是找到的覆盖度最高的向量
+		 * */
+        if(isCovered == true)
+        {
+    		for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
+    			SolverParameter::finalParams[i] = ATG::parameters[i];
+    		SolverParameter::finalCovered = ATG::currentSearchParamPriotity;
+        }else if(ATG::currentSearchParamPriotity > SolverParameter::finalCovered)
+        {
+    		for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
+    			SolverParameter::finalParams[i] = ATG::parameters[i];
+    		SolverParameter::finalCovered = ATG::currentSearchParamPriotity;
+        }
+
+		/*
 		 * 运算完成后的结果返回部分
 		 * */
 		if(round == -1)
@@ -53,7 +70,7 @@
 
 		cout<<"**********            "<<(paramIndex)<<"     "<<nextRoundSeedIndex<<"   Count: "<<count++<<endl<<endl<<endl;
 
-		//return false;
+
 		return isCovered;
 	}
 
@@ -64,6 +81,7 @@
 	 * */
 	void PCATG::initialParameter(double*& initParams)
 	{
+		ATG::currentSearchParamPriotity = 0.0;
 		if(initParams != NULL)
 		{
 			//根据给定的初始值直接作为LFF的起始搜索点

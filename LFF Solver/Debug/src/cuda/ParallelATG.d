@@ -182,6 +182,10 @@ src/cuda/ParallelATG.o : ../src/cuda/ParallelATG.cu \
     /usr/include/c++/5/bits/ostream.tcc \
     /usr/include/c++/5/istream \
     /usr/include/c++/5/bits/istream.tcc \
+    /usr/include/c++/5/set \
+    /usr/include/c++/5/bits/stl_tree.h \
+    /usr/include/c++/5/bits/stl_set.h \
+    /usr/include/c++/5/bits/stl_multiset.h \
     /usr/include/c++/5/algorithm \
     /usr/include/c++/5/utility \
     /usr/include/c++/5/bits/stl_relops.h \
@@ -799,10 +803,6 @@ src/cuda/ParallelATG.o : ../src/cuda/ParallelATG.cu \
     /usr/local/cuda-8.0/bin/..//include/thrust/system/detail/adl/partition.h \
     /usr/local/cuda-8.0/bin/..//include/thrust/system/cpp/detail/partition.h \
     /usr/local/cuda-8.0/bin/..//include/thrust/detail/trivial_sequence.h \
-    /usr/include/c++/5/set \
-    /usr/include/c++/5/bits/stl_tree.h \
-    /usr/include/c++/5/bits/stl_set.h \
-    /usr/include/c++/5/bits/stl_multiset.h \
     /usr/include/c++/5/map \
     /usr/include/c++/5/bits/stl_map.h \
     /usr/include/c++/5/bits/stl_multimap.h

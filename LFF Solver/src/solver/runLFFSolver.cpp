@@ -9,6 +9,7 @@
 	#include <fstream>
 	#include <string>
 	#include <ctime>
+	#include <iomanip>
 	#include <time.h>
 
 	#include "runLFFSolver.h"
@@ -21,6 +22,7 @@
 
 	#include "cuda_runtime.h"
 	#include "device_launch_parameters.h"
+	#include "cuda_profiler_api.h"
 
 	using namespace std;
 
@@ -29,6 +31,9 @@
 	 * */
 	void runLFFSolver::run()
 	{
+		//cudaProfilerStart();
+
+		cout<<fixed<<setprecision(20);
 		//选择当前的显卡
 		cudaError_t cudaStatus = cudaSetDevice(0);
 		ErrorHandle::dealError(cudaStatus,"cudaError_t cudaStatus = cudaSetDevice(0);");
@@ -57,9 +62,8 @@
 		/*
 		 * 下面是搜索策略以及实验参数的设置
 		 * */
-		SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 1357;
-		SolverParameter::MAX_NUM_OF_GENERATE_CYCLE = ConstraintParameter::NUM_OF_PARAM;
-
+		/*SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 1357;
+		SolverParameter::MAX_NUM_OF_GENERATE_CYCLE = ConstraintParameter::NUM_OF_PARAM;*/
 
 		for(int indexOfRun = 1 ; indexOfRun <= SolverParameter::countOfRepeation; indexOfRun++)
 		{
@@ -121,7 +125,19 @@
 
 			cout<<resultOne<<endl<<endl;
 
+			//把上一次计算的结果做为下一轮的开始的搜索点
+			if(isCovered == true)
+			{
+				SolverParameter::IS_CUSTOMIZED = true;
+				for(int k=0;k<ConstraintParameter::NUM_OF_PARAM;k++)
+				{
+					SolverParameter::CUSTOMIZED_PARAMS[k] = SolverParameter::finalParams[k];
+				}
+			}
+
 		}
+
+		//cudaProfilerStop();
 
 		//打印所有的结果
 		runLFFSolver::printTotalResult(resultInfo);
@@ -138,7 +154,7 @@
 	void runLFFSolver::printOneResult(string resultOne , int index)
 	{
 		ofstream out;
-		string filePath = "./TempResult/" + ConstraintParameter::constraintName + "__"
+		string filePath = "./TempResult/" + ConstraintParameter::constraintName + "_"
 					   + MathFunction::toString(index)+ ".result";
 		out.open(filePath.c_str());
 		out<<resultOne<<endl;

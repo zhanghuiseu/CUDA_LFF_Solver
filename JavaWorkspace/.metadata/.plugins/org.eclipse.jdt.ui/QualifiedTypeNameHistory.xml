@@ -28,4 +28,6 @@
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.greenpineyu.fel.parser.FelParser.integerLiteral_return"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.util.function.LongToDoubleFunction"/>
+<fullyQualifiedTypeName name="leetcodeTest.Main"/>
 </qualifiedTypeNameHistroy>

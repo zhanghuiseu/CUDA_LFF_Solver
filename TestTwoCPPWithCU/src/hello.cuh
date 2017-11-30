@@ -21,4 +21,6 @@ int mainForSort();
 
 int mainFotPoint();
 
+int testCUDADouble();
+
 #endif /* HELLO_CUH_ */

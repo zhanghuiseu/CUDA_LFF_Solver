@@ -1,6 +1,6 @@
-09:43:03 **** Incremental Build of configuration Debug for project TestCUDA ****
+19:18:30 **** Incremental Build of configuration Debug for project TestCUDA ****
 make all 
 make: Nothing to be done for 'all'.
 
-09:43:03 Build Finished (took 59ms)
+19:18:30 Build Finished (took 60ms)
 

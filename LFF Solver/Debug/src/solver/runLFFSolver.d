@@ -107,6 +107,7 @@ src/solver/runLFFSolver.o : ../src/solver/runLFFSolver.cpp \
     /usr/include/x86_64-linux-gnu/c++/5/bits/c++io.h \
     /usr/include/c++/5/bits/fstream.tcc \
     /usr/include/c++/5/ctime \
+    /usr/include/c++/5/iomanip \
     ../src/solver/runLFFSolver.h \
     /usr/include/c++/5/vector \
     /usr/include/c++/5/bits/stl_construct.h \
@@ -173,4 +174,5 @@ src/solver/runLFFSolver.o : ../src/solver/runLFFSolver.cpp \
     /usr/local/cuda-8.0/bin/..//include/driver_functions.h \
     /usr/local/cuda-8.0/bin/..//include/vector_functions.h \
     /usr/local/cuda-8.0/bin/..//include/vector_functions.hpp \
-    /usr/local/cuda-8.0/bin/..//include/device_launch_parameters.h
+    /usr/local/cuda-8.0/bin/..//include/device_launch_parameters.h \
+    /usr/local/cuda-8.0/bin/..//include/cuda_profiler_api.h
