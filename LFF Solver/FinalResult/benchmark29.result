@@ -1,113 +1,114 @@
 **************** The Constraints Is As Following ****************
-( ( exp(x)>5 ) )
+( ( expf(x)>5 ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 3.38159 ] 
+Yes!!!!!   Find Covered Input: [ 35.053 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x)>5  RuntimeValue:  24.4174  isCovered： true
+expf(x)>5  RuntimeValue:  1.67228e+15  isCovered： true
 
-SolverParameter::totalTime[0] = 0.071116
-SolverParameter::algorithmTime[0] = 0.0711159
-SolverParameter::FunctionTime[0] = 7.1074e-08
+SolverParameter::totalTime[0] = 0.074726
+SolverParameter::algorithmTime[0] = 0.0747259
+SolverParameter::FunctionTime[0] = 8.19564e-08
 SolverParameter::totalFrequency[0] = 1
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 2.60144 ] 
+Yes!!!!!   Find Covered Input: [ 35.053 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x)>5  RuntimeValue:  8.48308  isCovered： true
+expf(x)>5  RuntimeValue:  1.67228e+15  isCovered： true
 
-SolverParameter::totalTime[1] = 0.000323
-SolverParameter::algorithmTime[1] = 0.000323
-SolverParameter::FunctionTime[1] = 3.13e-10
+SolverParameter::totalTime[1] = 0.000483
+SolverParameter::algorithmTime[1] = 0.000483
+SolverParameter::FunctionTime[1] = 4.94765e-10
 SolverParameter::totalFrequency[1] = 1
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 2.25106 ] 
+Yes!!!!!   Find Covered Input: [ 35.053 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x)>5  RuntimeValue:  4.49777  isCovered： true
+expf(x)>5  RuntimeValue:  1.67228e+15  isCovered： true
 
-SolverParameter::totalTime[2] = 0.000458
-SolverParameter::algorithmTime[2] = 0.000458
-SolverParameter::FunctionTime[2] = 4.47e-10
+SolverParameter::totalTime[2] = 0.000486
+SolverParameter::algorithmTime[2] = 0.000486
+SolverParameter::FunctionTime[2] = 4.94765e-10
 SolverParameter::totalFrequency[2] = 1
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 1.64796 ] 
+Yes!!!!!   Find Covered Input: [ 35.053 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x)>5  RuntimeValue:  0.196377  isCovered： true
+expf(x)>5  RuntimeValue:  1.67228e+15  isCovered： true
 
-SolverParameter::totalTime[3] = 0.000309
-SolverParameter::algorithmTime[3] = 0.000309
-SolverParameter::FunctionTime[3] = 3.01e-10
+SolverParameter::totalTime[3] = 0.000469
+SolverParameter::algorithmTime[3] = 0.000469
+SolverParameter::FunctionTime[3] = 4.36557e-10
 SolverParameter::totalFrequency[3] = 1
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 1.64796 ] 
+Yes!!!!!   Find Covered Input: [ 35.053 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x)>5  RuntimeValue:  0.196377  isCovered： true
+expf(x)>5  RuntimeValue:  1.67228e+15  isCovered： true
 
-SolverParameter::totalTime[4] = 0.000273
-SolverParameter::algorithmTime[4] = 0.000273
-SolverParameter::FunctionTime[4] = 2.62e-10
+SolverParameter::totalTime[4] = 0.000479
+SolverParameter::algorithmTime[4] = 0.000479
+SolverParameter::FunctionTime[4] = 4.94765e-10
 SolverParameter::totalFrequency[4] = 1
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 1.64796 ] 
+Yes!!!!!   Find Covered Input: [ 35.053 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x)>5  RuntimeValue:  0.196377  isCovered： true
+expf(x)>5  RuntimeValue:  1.67228e+15  isCovered： true
 
-SolverParameter::totalTime[5] = 0.000442
-SolverParameter::algorithmTime[5] = 0.000442
-SolverParameter::FunctionTime[5] = 4.28e-10
+SolverParameter::totalTime[5] = 0.000468
+SolverParameter::algorithmTime[5] = 0.000468
+SolverParameter::FunctionTime[5] = 4.65661e-10
 SolverParameter::totalFrequency[5] = 1
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 1.64796 ] 
+Yes!!!!!   Find Covered Input: [ 35.053 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x)>5  RuntimeValue:  0.196377  isCovered： true
+expf(x)>5  RuntimeValue:  1.67228e+15  isCovered： true
 
-SolverParameter::totalTime[6] = 0.00032
-SolverParameter::algorithmTime[6] = 0.00032
-SolverParameter::FunctionTime[6] = 3.07e-10
+SolverParameter::totalTime[6] = 0.000471
+SolverParameter::algorithmTime[6] = 0.000471
+SolverParameter::FunctionTime[6] = 4.65661e-10
 SolverParameter::totalFrequency[6] = 1
 
 ----------------------------statistical result----------------------------
-Average Time:	0.010463
-Best Time:	0.000273
-Worst Time:	0.071116
+Average Time:	0.0110831
+Best Time:	0.000468
+Worst Time:	0.074726
 Average Frequency:	1
 Coverage Result:	[ true, true, true, true, true, true, true ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 50
-MAX_NUM_OF_GENERATE_CYCLE = 3
+MAX_NUM_OF_PREDICT_PARAM = 200
+MAX_NUM_OF_GENERATE_CYCLE = 1
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

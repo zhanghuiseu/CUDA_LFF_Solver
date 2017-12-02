@@ -1,0 +1,127 @@
+**************** The Constraints Is As Following ****************
+( ( 0.0==(pow(((a*sin(((0.017453292519943295*b)-(0.017453292519943295*c))))-(0.0*d)),2.0)+pow((a*cos((((0.017453292519943295*b)-(0.017453292519943295*c))+0.0))),2.0)) ) && ( e!=0 ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.00854338, 3.5505, 0.175111, -1.96981, -4 ] 
+Best Covered is: 99.9964%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0.0==(pow(((a*sin(((0.017453292519943295*b)-(0.017453292519943295*c))))-(0.0*d)),2.0)+pow((a*cos((((0.017453292519943295*b)-(0.017453292519943295*c))+0.0))),2.0))  RuntimeValue:  -7.29894e-05  isCovered： false
+e!=0  RuntimeValue:  -4  isCovered： true
+
+SolverParameter::totalTime[0] = 2.74846
+SolverParameter::algorithmTime[0] = 2.74846
+SolverParameter::FunctionTime[0] = 2.74429e-06
+SolverParameter::totalFrequency[0] = 1275
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -0.00198329, -0.0637768, -3.63631e+15, -3.90061, 5 ] 
+Best Covered is: 99.9998%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0.0==(pow(((a*sin(((0.017453292519943295*b)-(0.017453292519943295*c))))-(0.0*d)),2.0)+pow((a*cos((((0.017453292519943295*b)-(0.017453292519943295*c))+0.0))),2.0))  RuntimeValue:  -3.93343e-06  isCovered： false
+e!=0  RuntimeValue:  5  isCovered： true
+
+SolverParameter::totalTime[1] = 2.56157
+SolverParameter::algorithmTime[1] = 2.56157
+SolverParameter::FunctionTime[1] = 2.55777e-06
+SolverParameter::totalFrequency[1] = 1275
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -5.18414e-05, -8.00302e+15, -2.79203, -1.3644, 2 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0.0==(pow(((a*sin(((0.017453292519943295*b)-(0.017453292519943295*c))))-(0.0*d)),2.0)+pow((a*cos((((0.017453292519943295*b)-(0.017453292519943295*c))+0.0))),2.0))  RuntimeValue:  -2.68753e-09  isCovered： false
+e!=0  RuntimeValue:  2  isCovered： true
+
+SolverParameter::totalTime[2] = 2.59185
+SolverParameter::algorithmTime[2] = 2.59185
+SolverParameter::FunctionTime[2] = 2.58791e-06
+SolverParameter::totalFrequency[2] = 1275
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 3.80324e-05, -0.104656, 2.18562, 0.0988916, 2 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0.0==(pow(((a*sin(((0.017453292519943295*b)-(0.017453292519943295*c))))-(0.0*d)),2.0)+pow((a*cos((((0.017453292519943295*b)-(0.017453292519943295*c))+0.0))),2.0))  RuntimeValue:  -1.44646e-09  isCovered： false
+e!=0  RuntimeValue:  2  isCovered： true
+
+SolverParameter::totalTime[3] = 2.62824
+SolverParameter::algorithmTime[3] = 2.62824
+SolverParameter::FunctionTime[3] = 2.62422e-06
+SolverParameter::totalFrequency[3] = 1275
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.00173764, -2.48027, -0.826758, -3.13273, -3 ] 
+Best Covered is: 99.9998%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0.0==(pow(((a*sin(((0.017453292519943295*b)-(0.017453292519943295*c))))-(0.0*d)),2.0)+pow((a*cos((((0.017453292519943295*b)-(0.017453292519943295*c))+0.0))),2.0))  RuntimeValue:  -3.0194e-06  isCovered： false
+e!=0  RuntimeValue:  -3  isCovered： true
+
+SolverParameter::totalTime[4] = 2.72959
+SolverParameter::algorithmTime[4] = 2.72959
+SolverParameter::FunctionTime[4] = 2.72565e-06
+SolverParameter::totalFrequency[4] = 1275
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -0.00426571, 2.04934, 2.18259, -2.58224, -4 ] 
+Best Covered is: 99.9991%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0.0==(pow(((a*sin(((0.017453292519943295*b)-(0.017453292519943295*c))))-(0.0*d)),2.0)+pow((a*cos((((0.017453292519943295*b)-(0.017453292519943295*c))+0.0))),2.0))  RuntimeValue:  -1.81963e-05  isCovered： false
+e!=0  RuntimeValue:  -4  isCovered： true
+
+SolverParameter::totalTime[5] = 2.62035
+SolverParameter::algorithmTime[5] = 2.62035
+SolverParameter::FunctionTime[5] = 2.61628e-06
+SolverParameter::totalFrequency[5] = 1275
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -0.00160347, -2.10665, -3.26562, 4.83041, -1 ] 
+Best Covered is: 99.9999%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0.0==(pow(((a*sin(((0.017453292519943295*b)-(0.017453292519943295*c))))-(0.0*d)),2.0)+pow((a*cos((((0.017453292519943295*b)-(0.017453292519943295*c))+0.0))),2.0))  RuntimeValue:  -2.57112e-06  isCovered： false
+e!=0  RuntimeValue:  -1  isCovered： true
+
+SolverParameter::totalTime[6] = 2.69868
+SolverParameter::algorithmTime[6] = 2.69868
+SolverParameter::FunctionTime[6] = 2.69428e-06
+SolverParameter::totalFrequency[6] = 1275
+
+----------------------------statistical result----------------------------
+Average Time:	2.65411
+Best Time:	2.56157
+Worst Time:	2.74846
+Average Frequency:	1275
+Coverage Result:	[ false, false, false, false, false, false, false ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 30
+MAX_NUM_OF_GENERATE_CYCLE = 4
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

@@ -1,0 +1,18 @@
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 28.7688, 2.53175, 36.9597 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*atanf(z)>powf(x,tanf(y))+z  RuntimeValue:  7.35644  isCovered： true
+sinf(y)+cosf(y)+tanf(y)>=x-z  RuntimeValue:  7.24518  isCovered： true
+atanf(x)+atanf(y)>y  RuntimeValue:  0.198925  isCovered： true
+logf(z)>logf(powf(x,tanf(y)))  RuntimeValue:  5.95693  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000423
+SolverParameter::algorithmTime[1] = 0.000423
+SolverParameter::FunctionTime[1] = 4.07454e-10
+SolverParameter::totalFrequency[1] = 1
+Cala Type: float
+

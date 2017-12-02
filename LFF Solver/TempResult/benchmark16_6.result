@@ -1,0 +1,15 @@
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -192.708, 14.8519, -1.51123, 0.545175, -2.09034 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  23.5443  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000428
+SolverParameter::algorithmTime[5] = 0.000428
+SolverParameter::FunctionTime[5] = 4.36557e-10
+SolverParameter::totalFrequency[5] = 1
+Cala Type: float
+

@@ -1,0 +1,18 @@
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.835165, 37.8206 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y>powf(x,2)+3*sqrtf(y)  RuntimeValue:  12.4394  isCovered： true
+powf(y,2)>x  RuntimeValue:  1429.57  isCovered： true
+50>x+y  RuntimeValue:  11.3442  isCovered： true
+log10f(y)>powf(x,x)  RuntimeValue:  0.717395  isCovered： true
+
+SolverParameter::totalTime[0] = 0.089229
+SolverParameter::algorithmTime[0] = 0.0892289
+SolverParameter::FunctionTime[0] = 8.9407e-08
+SolverParameter::totalFrequency[0] = 5
+Cala Type: float
+

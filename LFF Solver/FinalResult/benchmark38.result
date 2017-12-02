@@ -1,120 +1,121 @@
 **************** The Constraints Is As Following ****************
-( ( atan2(x,y)==1.0 ) )
+( ( atan2f(x,y)==1.0 ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 7.72232, 4.95828 ] 
-Best Covered is: 99.9985%
+The Best Input Is: [ 62.4494, 39.9915 ] 
+Best Covered is: 99.879%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-atan2(x,y)==1.0  RuntimeValue:  1.46587e-05  isCovered： false
+atan2f(x,y)==1.0  RuntimeValue:  0.00121188  isCovered： false
 
-SolverParameter::totalTime[0] = 0.285219
-SolverParameter::algorithmTime[0] = 0.285219
-SolverParameter::FunctionTime[0] = 2.85108e-07
-SolverParameter::totalFrequency[0] = 31
+SolverParameter::totalTime[0] = 0.181962
+SolverParameter::algorithmTime[0] = 0.181962
+SolverParameter::FunctionTime[0] = 1.78814e-07
+SolverParameter::totalFrequency[0] = 8
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 3.22429, 2.06499 ] 
-Best Covered is: 99.8835%
+The Best Input Is: [ 60.3293, 38.5113 ] 
+Best Covered is: 99.7354%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-atan2(x,y)==1.0  RuntimeValue:  0.00116667  isCovered： false
+atan2f(x,y)==1.0  RuntimeValue:  0.00265288  isCovered： false
 
-SolverParameter::totalTime[1] = 0.200205
-SolverParameter::algorithmTime[1] = 0.200205
-SolverParameter::FunctionTime[1] = 2.00113e-07
-SolverParameter::totalFrequency[1] = 32
+SolverParameter::totalTime[1] = 0.104718
+SolverParameter::algorithmTime[1] = 0.104718
+SolverParameter::FunctionTime[1] = 1.04308e-07
+SolverParameter::totalFrequency[1] = 8
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 10.9565, 7.04489 ] 
-Best Covered is: 99.9366%
+The Best Input Is: [ 62.3692, 39.8495 ] 
+Best Covered is: 99.7762%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-atan2(x,y)==1.0  RuntimeValue:  -0.000634191  isCovered： false
+atan2f(x,y)==1.0  RuntimeValue:  0.00224268  isCovered： false
 
-SolverParameter::totalTime[2] = 0.138045
-SolverParameter::algorithmTime[2] = 0.138045
-SolverParameter::FunctionTime[2] = 1.37983e-07
-SolverParameter::totalFrequency[2] = 29
+SolverParameter::totalTime[2] = 0.106513
+SolverParameter::algorithmTime[2] = 0.106513
+SolverParameter::FunctionTime[2] = 1.11759e-07
+SolverParameter::totalFrequency[2] = 8
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 1.78621, 1.14658 ] 
-Best Covered is: 99.9869%
+The Best Input Is: [ 4.47289, 2.85631 ] 
+Best Covered is: 99.7517%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-atan2(x,y)==1.0  RuntimeValue:  0.000131166  isCovered： false
+atan2f(x,y)==1.0  RuntimeValue:  0.00248921  isCovered： false
 
-SolverParameter::totalTime[3] = 0.178965
-SolverParameter::algorithmTime[3] = 0.178965
-SolverParameter::FunctionTime[3] = 1.78897e-07
-SolverParameter::totalFrequency[3] = 29
+SolverParameter::totalTime[3] = 0.100394
+SolverParameter::algorithmTime[3] = 0.100394
+SolverParameter::FunctionTime[3] = 1.04308e-07
+SolverParameter::totalFrequency[3] = 8
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 19.7994, 12.7116 ] 
-Best Covered is: 99.995%
+The Best Input Is: [ 5.47194, 3.35135 ] 
+Best Covered is: 97.9178%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-atan2(x,y)==1.0  RuntimeValue:  5.02673e-05  isCovered： false
+atan2f(x,y)==1.0  RuntimeValue:  0.0212642  isCovered： false
 
-SolverParameter::totalTime[4] = 0.114307
-SolverParameter::algorithmTime[4] = 0.114307
-SolverParameter::FunctionTime[4] = 1.14245e-07
-SolverParameter::totalFrequency[4] = 28
+SolverParameter::totalTime[4] = 0.100303
+SolverParameter::algorithmTime[4] = 0.100303
+SolverParameter::FunctionTime[4] = 1.04308e-07
+SolverParameter::totalFrequency[4] = 8
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 12.715, 8.16462 ] 
-Best Covered is: 99.9977%
+The Best Input Is: [ 5.43923, 3.56422 ] 
+Best Covered is: 99.0804%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-atan2(x,y)==1.0  RuntimeValue:  -2.34202e-05  isCovered： false
+atan2f(x,y)==1.0  RuntimeValue:  -0.00928175  isCovered： false
 
-SolverParameter::totalTime[5] = 0.070029
-SolverParameter::algorithmTime[5] = 0.0700289
-SolverParameter::FunctionTime[5] = 6.9969e-08
-SolverParameter::totalFrequency[5] = 25
+SolverParameter::totalTime[5] = 0.110945
+SolverParameter::algorithmTime[5] = 0.110945
+SolverParameter::FunctionTime[5] = 1.11759e-07
+SolverParameter::totalFrequency[5] = 8
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 2.7624, 1.77361 ] 
-Best Covered is: 99.9974%
+The Best Input Is: [ 67.6319, 43.181 ] 
+Best Covered is: 99.7438%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-atan2(x,y)==1.0  RuntimeValue:  2.62684e-05  isCovered： false
+atan2f(x,y)==1.0  RuntimeValue:  0.00256813  isCovered： false
 
-SolverParameter::totalTime[6] = 0.168508
-SolverParameter::algorithmTime[6] = 0.168508
-SolverParameter::FunctionTime[6] = 1.68421e-07
-SolverParameter::totalFrequency[6] = 30
+SolverParameter::totalTime[6] = 0.105458
+SolverParameter::algorithmTime[6] = 0.105458
+SolverParameter::FunctionTime[6] = 9.68575e-08
+SolverParameter::totalFrequency[6] = 8
 
 ----------------------------statistical result----------------------------
-Average Time:	0.16504
-Best Time:	0.070029
-Worst Time:	0.285219
-Average Frequency:	29.1429
+Average Time:	0.115756
+Best Time:	0.100303
+Worst Time:	0.181962
+Average Frequency:	8
 Coverage Result:	[ false, false, false, false, false, false, false ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 100
-MAX_NUM_OF_GENERATE_CYCLE = 4
+MAX_NUM_OF_PREDICT_PARAM = 400
+MAX_NUM_OF_GENERATE_CYCLE = 2
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

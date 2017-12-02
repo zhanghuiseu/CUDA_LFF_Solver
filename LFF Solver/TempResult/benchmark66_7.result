@@ -1,0 +1,24 @@
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 69.2709, 22.3754, 137.97, 2.56457, 3.65383 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x+y>(z+t)/(w+t)  RuntimeValue:  68.8713  isCovered： true
+sqrtf(x)>z/y  RuntimeValue:  2.15676  isCovered： true
+logf(x*y)>logf(t+w+z)  RuntimeValue:  2.37486  isCovered： true
+powf(y,t)>z*2+w*3+x*7  RuntimeValue:  84706.3  isCovered： true
+z+w>x+y  RuntimeValue:  48.8886  isCovered： true
+x/y>w  RuntimeValue:  0.531274  isCovered： true
+x>(w+y-z)  RuntimeValue:  182.301  isCovered： true
+sqrtf(w*y*z)>log10f(t*x)  RuntimeValue:  86.5754  isCovered： true
+x*cosf(t+y)>logf(w*z*3)  RuntimeValue:  36.2805  isCovered： true
+cosf(t)>cosf(y)  RuntimeValue:  0.0554194  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000973
+SolverParameter::algorithmTime[6] = 0.000972999
+SolverParameter::FunctionTime[6] = 9.8953e-10
+SolverParameter::totalFrequency[6] = 1
+Cala Type: float
+

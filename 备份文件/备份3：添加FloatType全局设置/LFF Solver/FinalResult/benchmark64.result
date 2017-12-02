@@ -1,0 +1,169 @@
+**************** The Constraints Is As Following ****************
+( ( x+y>z/(w+t) ) && ( sqrt(x)>z/y ) && ( log(x*y)>log(t+w+z) ) && ( pow(y,t)>z*2+w*3+x*7 ) && ( z+w>x+y ) && ( x/y>w ) && ( x>(w+y-z) ) && ( sqrt(w*y*z)>log10(t*x) ) && ( x*(t+y)>log(w*z*3) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.78836, 3.34247, 5.29661, 0.834222, 3.01119 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x+y>z/(w+t)  RuntimeValue:  4.75345  isCovered： true
+sqrt(x)>z/y  RuntimeValue:  0.0851995  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0192829  isCovered： true
+pow(y,t)>z*2+w*3+x*7  RuntimeValue:  5.23566  isCovered： true
+z+w>x+y  RuntimeValue:  8.88178e-16  isCovered： true
+x/y>w  RuntimeValue:  1.22125e-15  isCovered： true
+x>(w+y-z)  RuntimeValue:  3.90828  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  2.91894  isCovered： true
+x*(t+y)>log(w*z*3)  RuntimeValue:  15.1319  isCovered： true
+
+SolverParameter::totalTime[0] = 10.3327
+SolverParameter::algorithmTime[0] = 10.3327
+SolverParameter::FunctionTime[0] = 1.03219e-05
+SolverParameter::totalFrequency[0] = 3956
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.78836, 3.34247, 5.29661, 0.834222, 3.01119 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x+y>z/(w+t)  RuntimeValue:  4.75345  isCovered： true
+sqrt(x)>z/y  RuntimeValue:  0.0851995  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0192829  isCovered： true
+pow(y,t)>z*2+w*3+x*7  RuntimeValue:  5.23566  isCovered： true
+z+w>x+y  RuntimeValue:  8.88178e-16  isCovered： true
+x/y>w  RuntimeValue:  1.22125e-15  isCovered： true
+x>(w+y-z)  RuntimeValue:  3.90828  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  2.91894  isCovered： true
+x*(t+y)>log(w*z*3)  RuntimeValue:  15.1319  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000344
+SolverParameter::algorithmTime[1] = 0.000344
+SolverParameter::FunctionTime[1] = 3.35e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.78836, 3.34247, 5.29661, 0.834222, 3.01119 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x+y>z/(w+t)  RuntimeValue:  4.75345  isCovered： true
+sqrt(x)>z/y  RuntimeValue:  0.0851995  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0192829  isCovered： true
+pow(y,t)>z*2+w*3+x*7  RuntimeValue:  5.23566  isCovered： true
+z+w>x+y  RuntimeValue:  8.88178e-16  isCovered： true
+x/y>w  RuntimeValue:  1.22125e-15  isCovered： true
+x>(w+y-z)  RuntimeValue:  3.90828  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  2.91894  isCovered： true
+x*(t+y)>log(w*z*3)  RuntimeValue:  15.1319  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000335
+SolverParameter::algorithmTime[2] = 0.000335
+SolverParameter::FunctionTime[2] = 3.27e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.78836, 3.34247, 5.29661, 0.834222, 3.01119 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x+y>z/(w+t)  RuntimeValue:  4.75345  isCovered： true
+sqrt(x)>z/y  RuntimeValue:  0.0851995  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0192829  isCovered： true
+pow(y,t)>z*2+w*3+x*7  RuntimeValue:  5.23566  isCovered： true
+z+w>x+y  RuntimeValue:  8.88178e-16  isCovered： true
+x/y>w  RuntimeValue:  1.22125e-15  isCovered： true
+x>(w+y-z)  RuntimeValue:  3.90828  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  2.91894  isCovered： true
+x*(t+y)>log(w*z*3)  RuntimeValue:  15.1319  isCovered： true
+
+SolverParameter::totalTime[3] = 0.00033
+SolverParameter::algorithmTime[3] = 0.00033
+SolverParameter::FunctionTime[3] = 3.21e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.78836, 3.34247, 5.29661, 0.834222, 3.01119 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x+y>z/(w+t)  RuntimeValue:  4.75345  isCovered： true
+sqrt(x)>z/y  RuntimeValue:  0.0851995  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0192829  isCovered： true
+pow(y,t)>z*2+w*3+x*7  RuntimeValue:  5.23566  isCovered： true
+z+w>x+y  RuntimeValue:  8.88178e-16  isCovered： true
+x/y>w  RuntimeValue:  1.22125e-15  isCovered： true
+x>(w+y-z)  RuntimeValue:  3.90828  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  2.91894  isCovered： true
+x*(t+y)>log(w*z*3)  RuntimeValue:  15.1319  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000314
+SolverParameter::algorithmTime[4] = 0.000314
+SolverParameter::FunctionTime[4] = 3.06e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.78836, 3.34247, 5.29661, 0.834222, 3.01119 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x+y>z/(w+t)  RuntimeValue:  4.75345  isCovered： true
+sqrt(x)>z/y  RuntimeValue:  0.0851995  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0192829  isCovered： true
+pow(y,t)>z*2+w*3+x*7  RuntimeValue:  5.23566  isCovered： true
+z+w>x+y  RuntimeValue:  8.88178e-16  isCovered： true
+x/y>w  RuntimeValue:  1.22125e-15  isCovered： true
+x>(w+y-z)  RuntimeValue:  3.90828  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  2.91894  isCovered： true
+x*(t+y)>log(w*z*3)  RuntimeValue:  15.1319  isCovered： true
+
+SolverParameter::totalTime[5] = 0.00034
+SolverParameter::algorithmTime[5] = 0.00034
+SolverParameter::FunctionTime[5] = 3.17e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.78836, 3.34247, 5.29661, 0.834222, 3.01119 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x+y>z/(w+t)  RuntimeValue:  4.75345  isCovered： true
+sqrt(x)>z/y  RuntimeValue:  0.0851995  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0192829  isCovered： true
+pow(y,t)>z*2+w*3+x*7  RuntimeValue:  5.23566  isCovered： true
+z+w>x+y  RuntimeValue:  8.88178e-16  isCovered： true
+x/y>w  RuntimeValue:  1.22125e-15  isCovered： true
+x>(w+y-z)  RuntimeValue:  3.90828  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  2.91894  isCovered： true
+x*(t+y)>log(w*z*3)  RuntimeValue:  15.1319  isCovered： true
+
+SolverParameter::totalTime[6] = 0.00033
+SolverParameter::algorithmTime[6] = 0.00033
+SolverParameter::FunctionTime[6] = 3.22e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	1.47638
+Best Time:	0.000314
+Worst Time:	10.3327
+Average Frequency:	566
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 50
+MAX_NUM_OF_GENERATE_CYCLE = 5
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

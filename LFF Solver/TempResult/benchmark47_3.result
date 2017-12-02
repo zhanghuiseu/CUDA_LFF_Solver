@@ -1,0 +1,16 @@
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 5.22754, -4.71647, 0.541412 ] 
+Best Covered is: 95.1147%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+expf(x+y)==expf(z)  RuntimeValue:  -0.0513622  isCovered： false
+
+SolverParameter::totalTime[2] = 0.557155
+SolverParameter::algorithmTime[2] = 0.557154
+SolverParameter::FunctionTime[2] = 5.96046e-07
+SolverParameter::totalFrequency[2] = 42
+Cala Type: float
+

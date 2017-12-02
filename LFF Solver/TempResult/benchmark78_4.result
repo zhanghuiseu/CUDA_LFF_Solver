@@ -1,0 +1,18 @@
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.03727, 2253.79, -86.2477, -0.0340249, -6.10687, -12, -1, -6 ] 
+Best Covered is: 99.9996%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0.0==(powf(((a*sinf(((b*0.017453292519943295-c*0.017453292519943295)+(((((((powf(d,2.0)/(sinf(e*0.017453292519943295)/cosf(e*0.017453292519943295)))/68443.0)*0.0)/d)*-1.0)*a)/((powf(a,2.0)/(sinf((e*0.017453292519943295))/cosf((e*0.017453292519943295))))/68443.0)))))-(d*0.0)),2.0)+powf(((a*cosf((((b*0.017453292519943295)-(c*0.017453292519943295))+(((((((powf(d,2.0)/(sinf((e*0.017453292519943295))/cosf((e*0.017453292519943295))))/68443.0)*0.0)/d)*-1.0)*a)/((powf(a,2.0)/(sinf((e*0.017453292519943295))/cosf((e*0.017453292519943295))))/68443.0)))))-d*1.0),2.0))  RuntimeValue:  -1.05313e-05  isCovered： false
+f!=0  RuntimeValue:  -12  isCovered： true
+h!=0  RuntimeValue:  -6  isCovered： true
+
+SolverParameter::totalTime[3] = 0.573058
+SolverParameter::algorithmTime[3] = 0.573057
+SolverParameter::FunctionTime[3] = 5.96046e-07
+SolverParameter::totalFrequency[3] = 192
+Cala Type: float
+

@@ -1,6 +1,6 @@
-19:18:31 **** Incremental Build of configuration Debug for project TestTwoCPPWithCU ****
+17:35:20 **** Incremental Build of configuration Debug for project TestTwoCPPWithCU ****
 make all 
 make: Nothing to be done for 'all'.
 
-19:18:31 Build Finished (took 108ms)
+17:35:20 Build Finished (took 110ms)
 

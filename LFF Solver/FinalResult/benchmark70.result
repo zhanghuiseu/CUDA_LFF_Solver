@@ -1,270 +1,269 @@
 **************** The Constraints Is As Following ****************
-( ( sin(a)>sin(b) ) && ( sin(b)>sin(c) ) && ( sin(c)>sin(d) ) && ( sin(d)>sin(e) ) && ( sin(e)>sin(f) ) && ( sin(f)>sin(g) ) && ( sin(g)>sin(h) ) && ( sin(h)>sin(i) ) && ( sin(i)>sin(j) ) && ( sin(j)>sin(k) ) && ( sin(k)>sin(l) ) && ( sin(l)>sin(m) ) && ( sin(m)>sin(n) ) && ( sin(n)>sin(o) ) && ( sin(o)>sin(p) ) && ( sin(p)>sin(q) ) && ( sin(q)>sin(r) ) && ( sin(r)>sin(s) ) && ( sin(s)>sin(t) ) && ( sin(t)>sin(u) ) && ( sin(u)>sin(v) ) && ( sin(v)>sin(x) ) && ( sin(x)>sin(z) ) )
+( ( sinf(a)>sinf(b) ) && ( sinf(b)>sinf(c) ) && ( sinf(c)>sinf(d) ) && ( sinf(d)>sinf(e) ) && ( sinf(e)>sinf(f) ) && ( sinf(f)>sinf(g) ) && ( sinf(g)>sinf(h) ) && ( sinf(h)>sinf(i) ) && ( sinf(i)>sinf(j) ) && ( sinf(j)>sinf(k) ) && ( sinf(k)>sinf(l) ) && ( sinf(l)>sinf(m) ) && ( sinf(m)>sinf(n) ) && ( sinf(n)>sinf(o) ) && ( sinf(o)>sinf(p) ) && ( sinf(p)>sinf(q) ) && ( sinf(q)>sinf(r) ) && ( sinf(r)>sinf(s) ) && ( sinf(s)>sinf(t) ) && ( sinf(t)>sinf(u) ) && ( sinf(u)>sinf(v) ) && ( sinf(v)>sinf(x) ) && ( sinf(x)>sinf(z) ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
-Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -4.82049, -4.58613, 13.7001, -36.667, -5.26701, -5.27327, 2.151, -4.13219, 2.16413, 2.26562, 2.32564, -0.591102, -0.598144, -2.52833, 3.7705, -0.640508, 3.81247, 3.81368, -12.2899, 0.275743, 0.275742, -3.43634, -3.43634, -3.4308 ] 
-Best Covered is: 97.8679%
+Yes!!!!!   Find Covered Input: [ 1.19924, 7.23806, 0.816839, 0.410645, 2.7663, 2.78862, -3.48894, 2.83856, 6.53194, -3.32093, -3.23794, -0.0724591, 3.33911, 3.33945, 6.07617, 3.35655, 3.44376, 5.61991, -2.45554, -2.31083, -2.27774, 4.11237, -1.84291, -1.79342 ] 
+Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(a)>sin(b)  RuntimeValue:  0.00212323  isCovered： true
-sin(b)>sin(c)  RuntimeValue:  0.0860368  isCovered： true
-sin(c)>sin(d)  RuntimeValue:  0.0476356  isCovered： true
-sin(d)>sin(e)  RuntimeValue:  0.00826827  isCovered： true
-sin(e)>sin(f)  RuntimeValue:  0.0033114  isCovered： true
-sin(f)>sin(g)  RuntimeValue:  0.0104339  isCovered： true
-sin(g)>sin(h)  RuntimeValue:  -1.11022e-16  isCovered： false
-sin(h)>sin(i)  RuntimeValue:  0.00727236  isCovered： true
-sin(i)>sin(j)  RuntimeValue:  0.0609143  isCovered： true
-sin(j)>sin(k)  RuntimeValue:  0.0397865  isCovered： true
-sin(k)>sin(l)  RuntimeValue:  1.28566  isCovered： true
-sin(l)>sin(m)  RuntimeValue:  0.00583373  isCovered： true
-sin(m)>sin(n)  RuntimeValue:  0.0124283  isCovered： true
-sin(n)>sin(o)  RuntimeValue:  0.0127227  isCovered： true
-sin(o)>sin(p)  RuntimeValue:  0.00934237  isCovered： true
-sin(p)>sin(q)  RuntimeValue:  0.0240702  isCovered： true
-sin(q)>sin(r)  RuntimeValue:  0.00094677  isCovered： true
-sin(r)>sin(s)  RuntimeValue:  -0.895614  isCovered： false
-sin(s)>sin(t)  RuntimeValue:  0.000732117  isCovered： true
-sin(t)>sin(u)  RuntimeValue:  5.86179e-07  isCovered： true
-sin(u)>sin(v)  RuntimeValue:  -0.0182352  isCovered： false
-sin(v)>sin(x)  RuntimeValue:  3.23763e-12  isCovered： true
-sin(x)>sin(z)  RuntimeValue:  0.00529993  isCovered： true
+sinf(a)>sinf(b)  RuntimeValue:  0.115522  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0872563  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.329785  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0326588  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0208524  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.00528103  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0419906  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.0522245  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.0678208  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.0821778  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.168591  isCovered： true
+sinf(l)>sinf(m)  RuntimeValue:  0.123841  isCovered： true
+sinf(m)>sinf(n)  RuntimeValue:  0.000335231  isCovered： true
+sinf(n)>sinf(o)  RuntimeValue:  0.00896733  isCovered： true
+sinf(o)>sinf(p)  RuntimeValue:  0.00777075  isCovered： true
+sinf(p)>sinf(q)  RuntimeValue:  0.08428  isCovered： true
+sinf(q)>sinf(r)  RuntimeValue:  0.318113  isCovered： true
+sinf(r)>sinf(s)  RuntimeValue:  0.0177861  isCovered： true
+sinf(s)>sinf(t)  RuntimeValue:  0.104959  isCovered： true
+sinf(t)>sinf(u)  RuntimeValue:  0.0219027  isCovered： true
+sinf(u)>sinf(v)  RuntimeValue:  0.0649748  isCovered： true
+sinf(v)>sinf(x)  RuntimeValue:  0.137879  isCovered： true
+sinf(x)>sinf(z)  RuntimeValue:  0.0121174  isCovered： true
 
-SolverParameter::totalTime[0] = 5.03066
-SolverParameter::algorithmTime[0] = 5.03066
-SolverParameter::FunctionTime[0] = 5.02056e-06
-SolverParameter::totalFrequency[0] = 1020
+SolverParameter::totalTime[0] = 1.4111
+SolverParameter::algorithmTime[0] = 1.4111
+SolverParameter::FunctionTime[0] = 1.43051e-06
+SolverParameter::totalFrequency[0] = 322
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
-Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -7.06417, -0.874042, -0.948891, 4.09288, 4.11453, -2.1386, 4.25465, -7.45688, 5.10949, 0.440355, -3.58196, -5.90215, -9.79316, -7.02896, 3.90288, -1.1586, -1.97295, -1.91597, -1.84155, 4.4811, -1.43204, 4.57705, 10.9, -1.51484 ] 
-Best Covered is: 97.5035%
+Yes!!!!!   Find Covered Input: [ 1.19924, 7.23806, 0.816839, 0.410645, 2.7663, 2.78862, -3.48894, 2.83856, 6.53194, -3.32093, -3.23794, -0.0724591, 3.33911, 3.33945, 6.07617, 3.35655, 3.44376, 5.61991, -2.45554, -2.31083, -2.27774, 4.11237, -1.84291, -1.79342 ] 
+Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(a)>sin(b)  RuntimeValue:  0.0629515  isCovered： true
-sin(b)>sin(c)  RuntimeValue:  0.0458406  isCovered： true
-sin(c)>sin(d)  RuntimeValue:  0.00139656  isCovered： true
-sin(d)>sin(e)  RuntimeValue:  0.0123769  isCovered： true
-sin(e)>sin(f)  RuntimeValue:  0.0165429  isCovered： true
-sin(f)>sin(g)  RuntimeValue:  0.0539676  isCovered： true
-sin(g)>sin(h)  RuntimeValue:  0.0251331  isCovered： true
-sin(h)>sin(i)  RuntimeValue:  -6.0274e-13  isCovered： false
-sin(i)>sin(j)  RuntimeValue:  -1.34845  isCovered： false
-sin(j)>sin(k)  RuntimeValue:  -1.15271e-05  isCovered： false
-sin(k)>sin(l)  RuntimeValue:  0.0543931  isCovered： true
-sin(l)>sin(m)  RuntimeValue:  0.011771  isCovered： true
-sin(m)>sin(n)  RuntimeValue:  1.03865  isCovered： true
-sin(n)>sin(o)  RuntimeValue:  0.01131  isCovered： true
-sin(o)>sin(p)  RuntimeValue:  0.226389  isCovered： true
-sin(p)>sin(q)  RuntimeValue:  0.00397879  isCovered： true
-sin(q)>sin(r)  RuntimeValue:  0.0207943  isCovered： true
-sin(r)>sin(s)  RuntimeValue:  0.0225522  isCovered： true
-sin(s)>sin(t)  RuntimeValue:  0.00980253  isCovered： true
-sin(t)>sin(u)  RuntimeValue:  0.0170177  isCovered： true
-sin(u)>sin(v)  RuntimeValue:  0.000466593  isCovered： true
-sin(v)>sin(x)  RuntimeValue:  0.00457988  isCovered： true
-sin(x)>sin(z)  RuntimeValue:  0.00299978  isCovered： true
+sinf(a)>sinf(b)  RuntimeValue:  0.115522  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0872563  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.329785  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0326588  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0208524  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.00528103  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0419906  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.0522245  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.0678208  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.0821778  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.168591  isCovered： true
+sinf(l)>sinf(m)  RuntimeValue:  0.123841  isCovered： true
+sinf(m)>sinf(n)  RuntimeValue:  0.000335231  isCovered： true
+sinf(n)>sinf(o)  RuntimeValue:  0.00896733  isCovered： true
+sinf(o)>sinf(p)  RuntimeValue:  0.00777075  isCovered： true
+sinf(p)>sinf(q)  RuntimeValue:  0.08428  isCovered： true
+sinf(q)>sinf(r)  RuntimeValue:  0.318113  isCovered： true
+sinf(r)>sinf(s)  RuntimeValue:  0.0177861  isCovered： true
+sinf(s)>sinf(t)  RuntimeValue:  0.104959  isCovered： true
+sinf(t)>sinf(u)  RuntimeValue:  0.0219027  isCovered： true
+sinf(u)>sinf(v)  RuntimeValue:  0.0649748  isCovered： true
+sinf(v)>sinf(x)  RuntimeValue:  0.137879  isCovered： true
+sinf(x)>sinf(z)  RuntimeValue:  0.0121174  isCovered： true
 
-SolverParameter::totalTime[1] = 5.49426
-SolverParameter::algorithmTime[1] = 5.49425
-SolverParameter::FunctionTime[1] = 5.48429e-06
-SolverParameter::totalFrequency[1] = 1121
+SolverParameter::totalTime[1] = 0.000949
+SolverParameter::algorithmTime[1] = 0.000948999
+SolverParameter::FunctionTime[1] = 9.31323e-10
+SolverParameter::totalFrequency[1] = 1
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 14.2684, 1.79545, -4.44577, 1.97035, -4.22426, 2.07569, 1.05083, 0.963467, -5.50536, 2.40521, -3.87707, -3.87705, 2.40613, 7.01846, 2.42237, 13.1223, -5.75178, -5.91841, 2.82815, 0.295391, -3.4079, 2.93213, -0.779743, 3.97479 ] 
+Yes!!!!!   Find Covered Input: [ 1.19924, 7.23806, 0.816839, 0.410645, 2.7663, 2.78862, -3.48894, 2.83856, 6.53194, -3.32093, -3.23794, -0.0724591, 3.33911, 3.33945, 6.07617, 3.35655, 3.44376, 5.61991, -2.45554, -2.31083, -2.27774, 4.11237, -1.84291, -1.79342 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(a)>sin(b)  RuntimeValue:  0.0165316  isCovered： true
-sin(b)>sin(c)  RuntimeValue:  0.0102037  isCovered： true
-sin(c)>sin(d)  RuntimeValue:  0.0434328  isCovered： true
-sin(d)>sin(e)  RuntimeValue:  0.0380197  isCovered： true
-sin(e)>sin(f)  RuntimeValue:  0.00798934  isCovered： true
-sin(f)>sin(g)  RuntimeValue:  0.00738692  isCovered： true
-sin(g)>sin(h)  RuntimeValue:  0.0466631  isCovered： true
-sin(h)>sin(i)  RuntimeValue:  0.119446  isCovered： true
-sin(i)>sin(j)  RuntimeValue:  0.0301142  isCovered： true
-sin(j)>sin(k)  RuntimeValue:  0.000669735  isCovered： true
-sin(k)>sin(l)  RuntimeValue:  1.4657e-05  isCovered： true
-sin(l)>sin(m)  RuntimeValue:  2.43891e-06  isCovered： true
-sin(m)>sin(n)  RuntimeValue:  0.000133553  isCovered： true
-sin(n)>sin(o)  RuntimeValue:  0.0119922  isCovered： true
-sin(o)>sin(p)  RuntimeValue:  0.131075  isCovered： true
-sin(p)>sin(q)  RuntimeValue:  0.0209803  isCovered： true
-sin(q)>sin(r)  RuntimeValue:  0.150012  isCovered： true
-sin(r)>sin(s)  RuntimeValue:  0.0484003  isCovered： true
-sin(s)>sin(t)  RuntimeValue:  0.0172205  isCovered： true
-sin(t)>sin(u)  RuntimeValue:  0.02794  isCovered： true
-sin(u)>sin(v)  RuntimeValue:  0.0552398  isCovered： true
-sin(v)>sin(x)  RuntimeValue:  0.911032  isCovered： true
-sin(x)>sin(z)  RuntimeValue:  0.0369903  isCovered： true
+sinf(a)>sinf(b)  RuntimeValue:  0.115522  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0872563  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.329785  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0326588  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0208524  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.00528103  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0419906  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.0522245  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.0678208  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.0821778  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.168591  isCovered： true
+sinf(l)>sinf(m)  RuntimeValue:  0.123841  isCovered： true
+sinf(m)>sinf(n)  RuntimeValue:  0.000335231  isCovered： true
+sinf(n)>sinf(o)  RuntimeValue:  0.00896733  isCovered： true
+sinf(o)>sinf(p)  RuntimeValue:  0.00777075  isCovered： true
+sinf(p)>sinf(q)  RuntimeValue:  0.08428  isCovered： true
+sinf(q)>sinf(r)  RuntimeValue:  0.318113  isCovered： true
+sinf(r)>sinf(s)  RuntimeValue:  0.0177861  isCovered： true
+sinf(s)>sinf(t)  RuntimeValue:  0.104959  isCovered： true
+sinf(t)>sinf(u)  RuntimeValue:  0.0219027  isCovered： true
+sinf(u)>sinf(v)  RuntimeValue:  0.0649748  isCovered： true
+sinf(v)>sinf(x)  RuntimeValue:  0.137879  isCovered： true
+sinf(x)>sinf(z)  RuntimeValue:  0.0121174  isCovered： true
 
-SolverParameter::totalTime[2] = 3.21519
-SolverParameter::algorithmTime[2] = 3.21518
-SolverParameter::FunctionTime[2] = 3.2089e-06
-SolverParameter::totalFrequency[2] = 647
+SolverParameter::totalTime[2] = 0.000958
+SolverParameter::algorithmTime[2] = 0.000957999
+SolverParameter::FunctionTime[2] = 9.8953e-10
+SolverParameter::totalFrequency[2] = 1
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 14.2684, 1.79545, -4.44577, 1.97035, -4.22426, 2.07569, 1.05083, 0.963467, -5.50536, 2.40521, -3.87707, -3.87705, 2.40613, 7.01846, 2.42237, 13.1223, -5.75178, -5.91841, 2.82815, 0.295391, -3.4079, 2.93213, -0.779743, 3.97479 ] 
+Yes!!!!!   Find Covered Input: [ 1.19924, 7.23806, 0.816839, 0.410645, 2.7663, 2.78862, -3.48894, 2.83856, 6.53194, -3.32093, -3.23794, -0.0724591, 3.33911, 3.33945, 6.07617, 3.35655, 3.44376, 5.61991, -2.45554, -2.31083, -2.27774, 4.11237, -1.84291, -1.79342 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(a)>sin(b)  RuntimeValue:  0.0165316  isCovered： true
-sin(b)>sin(c)  RuntimeValue:  0.0102037  isCovered： true
-sin(c)>sin(d)  RuntimeValue:  0.0434328  isCovered： true
-sin(d)>sin(e)  RuntimeValue:  0.0380197  isCovered： true
-sin(e)>sin(f)  RuntimeValue:  0.00798934  isCovered： true
-sin(f)>sin(g)  RuntimeValue:  0.00738692  isCovered： true
-sin(g)>sin(h)  RuntimeValue:  0.0466631  isCovered： true
-sin(h)>sin(i)  RuntimeValue:  0.119446  isCovered： true
-sin(i)>sin(j)  RuntimeValue:  0.0301142  isCovered： true
-sin(j)>sin(k)  RuntimeValue:  0.000669735  isCovered： true
-sin(k)>sin(l)  RuntimeValue:  1.4657e-05  isCovered： true
-sin(l)>sin(m)  RuntimeValue:  2.43891e-06  isCovered： true
-sin(m)>sin(n)  RuntimeValue:  0.000133553  isCovered： true
-sin(n)>sin(o)  RuntimeValue:  0.0119922  isCovered： true
-sin(o)>sin(p)  RuntimeValue:  0.131075  isCovered： true
-sin(p)>sin(q)  RuntimeValue:  0.0209803  isCovered： true
-sin(q)>sin(r)  RuntimeValue:  0.150012  isCovered： true
-sin(r)>sin(s)  RuntimeValue:  0.0484003  isCovered： true
-sin(s)>sin(t)  RuntimeValue:  0.0172205  isCovered： true
-sin(t)>sin(u)  RuntimeValue:  0.02794  isCovered： true
-sin(u)>sin(v)  RuntimeValue:  0.0552398  isCovered： true
-sin(v)>sin(x)  RuntimeValue:  0.911032  isCovered： true
-sin(x)>sin(z)  RuntimeValue:  0.0369903  isCovered： true
+sinf(a)>sinf(b)  RuntimeValue:  0.115522  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0872563  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.329785  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0326588  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0208524  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.00528103  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0419906  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.0522245  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.0678208  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.0821778  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.168591  isCovered： true
+sinf(l)>sinf(m)  RuntimeValue:  0.123841  isCovered： true
+sinf(m)>sinf(n)  RuntimeValue:  0.000335231  isCovered： true
+sinf(n)>sinf(o)  RuntimeValue:  0.00896733  isCovered： true
+sinf(o)>sinf(p)  RuntimeValue:  0.00777075  isCovered： true
+sinf(p)>sinf(q)  RuntimeValue:  0.08428  isCovered： true
+sinf(q)>sinf(r)  RuntimeValue:  0.318113  isCovered： true
+sinf(r)>sinf(s)  RuntimeValue:  0.0177861  isCovered： true
+sinf(s)>sinf(t)  RuntimeValue:  0.104959  isCovered： true
+sinf(t)>sinf(u)  RuntimeValue:  0.0219027  isCovered： true
+sinf(u)>sinf(v)  RuntimeValue:  0.0649748  isCovered： true
+sinf(v)>sinf(x)  RuntimeValue:  0.137879  isCovered： true
+sinf(x)>sinf(z)  RuntimeValue:  0.0121174  isCovered： true
 
-SolverParameter::totalTime[3] = 0.001095
-SolverParameter::algorithmTime[3] = 0.001095
-SolverParameter::FunctionTime[3] = 1.075e-09
+SolverParameter::totalTime[3] = 0.000942
+SolverParameter::algorithmTime[3] = 0.000941999
+SolverParameter::FunctionTime[3] = 9.31323e-10
 SolverParameter::totalFrequency[3] = 1
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 14.2684, 1.79545, -4.44577, 1.97035, -4.22426, 2.07569, 1.05083, 0.963467, -5.50536, 2.40521, -3.87707, -3.87705, 2.40613, 7.01846, 2.42237, 13.1223, -5.75178, -5.91841, 2.82815, 0.295391, -3.4079, 2.93213, -0.779743, 3.97479 ] 
+Yes!!!!!   Find Covered Input: [ 1.19924, 7.23806, 0.816839, 0.410645, 2.7663, 2.78862, -3.48894, 2.83856, 6.53194, -3.32093, -3.23794, -0.0724591, 3.33911, 3.33945, 6.07617, 3.35655, 3.44376, 5.61991, -2.45554, -2.31083, -2.27774, 4.11237, -1.84291, -1.79342 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(a)>sin(b)  RuntimeValue:  0.0165316  isCovered： true
-sin(b)>sin(c)  RuntimeValue:  0.0102037  isCovered： true
-sin(c)>sin(d)  RuntimeValue:  0.0434328  isCovered： true
-sin(d)>sin(e)  RuntimeValue:  0.0380197  isCovered： true
-sin(e)>sin(f)  RuntimeValue:  0.00798934  isCovered： true
-sin(f)>sin(g)  RuntimeValue:  0.00738692  isCovered： true
-sin(g)>sin(h)  RuntimeValue:  0.0466631  isCovered： true
-sin(h)>sin(i)  RuntimeValue:  0.119446  isCovered： true
-sin(i)>sin(j)  RuntimeValue:  0.0301142  isCovered： true
-sin(j)>sin(k)  RuntimeValue:  0.000669735  isCovered： true
-sin(k)>sin(l)  RuntimeValue:  1.4657e-05  isCovered： true
-sin(l)>sin(m)  RuntimeValue:  2.43891e-06  isCovered： true
-sin(m)>sin(n)  RuntimeValue:  0.000133553  isCovered： true
-sin(n)>sin(o)  RuntimeValue:  0.0119922  isCovered： true
-sin(o)>sin(p)  RuntimeValue:  0.131075  isCovered： true
-sin(p)>sin(q)  RuntimeValue:  0.0209803  isCovered： true
-sin(q)>sin(r)  RuntimeValue:  0.150012  isCovered： true
-sin(r)>sin(s)  RuntimeValue:  0.0484003  isCovered： true
-sin(s)>sin(t)  RuntimeValue:  0.0172205  isCovered： true
-sin(t)>sin(u)  RuntimeValue:  0.02794  isCovered： true
-sin(u)>sin(v)  RuntimeValue:  0.0552398  isCovered： true
-sin(v)>sin(x)  RuntimeValue:  0.911032  isCovered： true
-sin(x)>sin(z)  RuntimeValue:  0.0369903  isCovered： true
+sinf(a)>sinf(b)  RuntimeValue:  0.115522  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0872563  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.329785  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0326588  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0208524  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.00528103  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0419906  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.0522245  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.0678208  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.0821778  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.168591  isCovered： true
+sinf(l)>sinf(m)  RuntimeValue:  0.123841  isCovered： true
+sinf(m)>sinf(n)  RuntimeValue:  0.000335231  isCovered： true
+sinf(n)>sinf(o)  RuntimeValue:  0.00896733  isCovered： true
+sinf(o)>sinf(p)  RuntimeValue:  0.00777075  isCovered： true
+sinf(p)>sinf(q)  RuntimeValue:  0.08428  isCovered： true
+sinf(q)>sinf(r)  RuntimeValue:  0.318113  isCovered： true
+sinf(r)>sinf(s)  RuntimeValue:  0.0177861  isCovered： true
+sinf(s)>sinf(t)  RuntimeValue:  0.104959  isCovered： true
+sinf(t)>sinf(u)  RuntimeValue:  0.0219027  isCovered： true
+sinf(u)>sinf(v)  RuntimeValue:  0.0649748  isCovered： true
+sinf(v)>sinf(x)  RuntimeValue:  0.137879  isCovered： true
+sinf(x)>sinf(z)  RuntimeValue:  0.0121174  isCovered： true
 
-SolverParameter::totalTime[4] = 0.00106
-SolverParameter::algorithmTime[4] = 0.00106
-SolverParameter::FunctionTime[4] = 1.041e-09
+SolverParameter::totalTime[4] = 0.000948
+SolverParameter::algorithmTime[4] = 0.000947999
+SolverParameter::FunctionTime[4] = 9.31323e-10
 SolverParameter::totalFrequency[4] = 1
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 14.2684, 1.79545, -4.44577, 1.97035, -4.22426, 2.07569, 1.05083, 0.963467, -5.50536, 2.40521, -3.87707, -3.87705, 2.40613, 7.01846, 2.42237, 13.1223, -5.75178, -5.91841, 2.82815, 0.295391, -3.4079, 2.93213, -0.779743, 3.97479 ] 
+Yes!!!!!   Find Covered Input: [ 1.19924, 7.23806, 0.816839, 0.410645, 2.7663, 2.78862, -3.48894, 2.83856, 6.53194, -3.32093, -3.23794, -0.0724591, 3.33911, 3.33945, 6.07617, 3.35655, 3.44376, 5.61991, -2.45554, -2.31083, -2.27774, 4.11237, -1.84291, -1.79342 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(a)>sin(b)  RuntimeValue:  0.0165316  isCovered： true
-sin(b)>sin(c)  RuntimeValue:  0.0102037  isCovered： true
-sin(c)>sin(d)  RuntimeValue:  0.0434328  isCovered： true
-sin(d)>sin(e)  RuntimeValue:  0.0380197  isCovered： true
-sin(e)>sin(f)  RuntimeValue:  0.00798934  isCovered： true
-sin(f)>sin(g)  RuntimeValue:  0.00738692  isCovered： true
-sin(g)>sin(h)  RuntimeValue:  0.0466631  isCovered： true
-sin(h)>sin(i)  RuntimeValue:  0.119446  isCovered： true
-sin(i)>sin(j)  RuntimeValue:  0.0301142  isCovered： true
-sin(j)>sin(k)  RuntimeValue:  0.000669735  isCovered： true
-sin(k)>sin(l)  RuntimeValue:  1.4657e-05  isCovered： true
-sin(l)>sin(m)  RuntimeValue:  2.43891e-06  isCovered： true
-sin(m)>sin(n)  RuntimeValue:  0.000133553  isCovered： true
-sin(n)>sin(o)  RuntimeValue:  0.0119922  isCovered： true
-sin(o)>sin(p)  RuntimeValue:  0.131075  isCovered： true
-sin(p)>sin(q)  RuntimeValue:  0.0209803  isCovered： true
-sin(q)>sin(r)  RuntimeValue:  0.150012  isCovered： true
-sin(r)>sin(s)  RuntimeValue:  0.0484003  isCovered： true
-sin(s)>sin(t)  RuntimeValue:  0.0172205  isCovered： true
-sin(t)>sin(u)  RuntimeValue:  0.02794  isCovered： true
-sin(u)>sin(v)  RuntimeValue:  0.0552398  isCovered： true
-sin(v)>sin(x)  RuntimeValue:  0.911032  isCovered： true
-sin(x)>sin(z)  RuntimeValue:  0.0369903  isCovered： true
+sinf(a)>sinf(b)  RuntimeValue:  0.115522  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0872563  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.329785  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0326588  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0208524  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.00528103  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0419906  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.0522245  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.0678208  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.0821778  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.168591  isCovered： true
+sinf(l)>sinf(m)  RuntimeValue:  0.123841  isCovered： true
+sinf(m)>sinf(n)  RuntimeValue:  0.000335231  isCovered： true
+sinf(n)>sinf(o)  RuntimeValue:  0.00896733  isCovered： true
+sinf(o)>sinf(p)  RuntimeValue:  0.00777075  isCovered： true
+sinf(p)>sinf(q)  RuntimeValue:  0.08428  isCovered： true
+sinf(q)>sinf(r)  RuntimeValue:  0.318113  isCovered： true
+sinf(r)>sinf(s)  RuntimeValue:  0.0177861  isCovered： true
+sinf(s)>sinf(t)  RuntimeValue:  0.104959  isCovered： true
+sinf(t)>sinf(u)  RuntimeValue:  0.0219027  isCovered： true
+sinf(u)>sinf(v)  RuntimeValue:  0.0649748  isCovered： true
+sinf(v)>sinf(x)  RuntimeValue:  0.137879  isCovered： true
+sinf(x)>sinf(z)  RuntimeValue:  0.0121174  isCovered： true
 
-SolverParameter::totalTime[5] = 0.001056
-SolverParameter::algorithmTime[5] = 0.001056
-SolverParameter::FunctionTime[5] = 1.039e-09
+SolverParameter::totalTime[5] = 0.000943
+SolverParameter::algorithmTime[5] = 0.000942999
+SolverParameter::FunctionTime[5] = 9.31323e-10
 SolverParameter::totalFrequency[5] = 1
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 13.9311, 1.79545, -4.44577, 1.97035, -4.22426, 2.07569, 1.05083, 0.963467, -5.50536, 2.40521, -3.87707, -3.87705, 2.40613, 7.01846, 2.42237, 13.1223, -5.75178, -5.91841, 2.82815, 0.295391, -3.4079, 2.93213, -0.779743, 3.97479 ] 
+Yes!!!!!   Find Covered Input: [ 1.19924, 7.23806, 0.816839, 0.410645, 2.7663, 2.78862, -3.48894, 2.83856, 6.53194, -3.32093, -3.23794, -0.0724591, 3.33911, 3.33945, 6.07617, 3.35655, 3.44376, 5.61991, -2.45554, -2.31083, -2.27774, 4.11237, -1.84291, -1.79342 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(a)>sin(b)  RuntimeValue:  0.00398303  isCovered： true
-sin(b)>sin(c)  RuntimeValue:  0.0102037  isCovered： true
-sin(c)>sin(d)  RuntimeValue:  0.0434328  isCovered： true
-sin(d)>sin(e)  RuntimeValue:  0.0380197  isCovered： true
-sin(e)>sin(f)  RuntimeValue:  0.00798934  isCovered： true
-sin(f)>sin(g)  RuntimeValue:  0.00738692  isCovered： true
-sin(g)>sin(h)  RuntimeValue:  0.0466631  isCovered： true
-sin(h)>sin(i)  RuntimeValue:  0.119446  isCovered： true
-sin(i)>sin(j)  RuntimeValue:  0.0301142  isCovered： true
-sin(j)>sin(k)  RuntimeValue:  0.000669735  isCovered： true
-sin(k)>sin(l)  RuntimeValue:  1.4657e-05  isCovered： true
-sin(l)>sin(m)  RuntimeValue:  2.43891e-06  isCovered： true
-sin(m)>sin(n)  RuntimeValue:  0.000133553  isCovered： true
-sin(n)>sin(o)  RuntimeValue:  0.0119922  isCovered： true
-sin(o)>sin(p)  RuntimeValue:  0.131075  isCovered： true
-sin(p)>sin(q)  RuntimeValue:  0.0209803  isCovered： true
-sin(q)>sin(r)  RuntimeValue:  0.150012  isCovered： true
-sin(r)>sin(s)  RuntimeValue:  0.0484003  isCovered： true
-sin(s)>sin(t)  RuntimeValue:  0.0172205  isCovered： true
-sin(t)>sin(u)  RuntimeValue:  0.02794  isCovered： true
-sin(u)>sin(v)  RuntimeValue:  0.0552398  isCovered： true
-sin(v)>sin(x)  RuntimeValue:  0.911032  isCovered： true
-sin(x)>sin(z)  RuntimeValue:  0.0369903  isCovered： true
+sinf(a)>sinf(b)  RuntimeValue:  0.115522  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0872563  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.329785  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0326588  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0208524  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.00528103  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0419906  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.0522245  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.0678208  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.0821778  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.168591  isCovered： true
+sinf(l)>sinf(m)  RuntimeValue:  0.123841  isCovered： true
+sinf(m)>sinf(n)  RuntimeValue:  0.000335231  isCovered： true
+sinf(n)>sinf(o)  RuntimeValue:  0.00896733  isCovered： true
+sinf(o)>sinf(p)  RuntimeValue:  0.00777075  isCovered： true
+sinf(p)>sinf(q)  RuntimeValue:  0.08428  isCovered： true
+sinf(q)>sinf(r)  RuntimeValue:  0.318113  isCovered： true
+sinf(r)>sinf(s)  RuntimeValue:  0.0177861  isCovered： true
+sinf(s)>sinf(t)  RuntimeValue:  0.104959  isCovered： true
+sinf(t)>sinf(u)  RuntimeValue:  0.0219027  isCovered： true
+sinf(u)>sinf(v)  RuntimeValue:  0.0649748  isCovered： true
+sinf(v)>sinf(x)  RuntimeValue:  0.137879  isCovered： true
+sinf(x)>sinf(z)  RuntimeValue:  0.0121174  isCovered： true
 
-SolverParameter::totalTime[6] = 0.001057
-SolverParameter::algorithmTime[6] = 0.001057
-SolverParameter::FunctionTime[6] = 1.04e-09
+SolverParameter::totalTime[6] = 0.000942
+SolverParameter::algorithmTime[6] = 0.000941999
+SolverParameter::FunctionTime[6] = 9.31323e-10
 SolverParameter::totalFrequency[6] = 1
 
 ----------------------------statistical result----------------------------
-Average Time:	1.96348
-Best Time:	0.001056
-Worst Time:	5.49426
-Average Frequency:	398.857
-Coverage Result:	[ false, false, true, true, true, true, true ] 
+Average Time:	0.202398
+Best Time:	0.000942
+Worst Time:	1.4111
+Average Frequency:	46.8571
+Coverage Result:	[ true, true, true, true, true, true, true ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 20
+MAX_NUM_OF_PREDICT_PARAM = 10
 MAX_NUM_OF_GENERATE_CYCLE = 24
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ONE_BY_ONE 
 
+Cala Type: float
 

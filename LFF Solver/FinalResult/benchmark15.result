@@ -1,114 +1,121 @@
 **************** The Constraints Is As Following ****************
-( ( (atan(z)*atan(w))>((asin(x)*asin(cos(y*z)))-1) ) )
+( ( (atanf(0)*atanf(0))>((asinf(1)*asinf(cosf(9*57)))-1) ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 1.75525e-316, -3.4397, -1.23503, -1.7613 ] 
-Best Covered is: 100%
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0, 0, 0, 0 ] 
+Best Covered is: 0%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-(atan(z)*atan(w))>((asin(x)*asin(cos(y*z)))-1)  RuntimeValue:  1.93861  isCovered： true
+(atanf(0)*atanf(0))>((asinf(1)*asinf(cosf(9*57)))-1)  RuntimeValue:  2.02164  isCovered： true
 
-SolverParameter::totalTime[0] = 0.16601
-SolverParameter::algorithmTime[0] = 0.16601
-SolverParameter::FunctionTime[0] = 1.65919e-07
-SolverParameter::totalFrequency[0] = 18
+SolverParameter::totalTime[0] = 7e-05
+SolverParameter::algorithmTime[0] = 7e-05
+SolverParameter::FunctionTime[0] = 0
+SolverParameter::totalFrequency[0] = 0
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -0.0510746, -3.4397, -1.23503, -1.7613 ] 
-Best Covered is: 100%
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0, 0, 0, 0 ] 
+Best Covered is: 0%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-(atan(z)*atan(w))>((asin(x)*asin(cos(y*z)))-1)  RuntimeValue:  1.91489  isCovered： true
+(atanf(0)*atanf(0))>((asinf(1)*asinf(cosf(9*57)))-1)  RuntimeValue:  2.02164  isCovered： true
 
-SolverParameter::totalTime[1] = 0.000189
-SolverParameter::algorithmTime[1] = 0.000189
-SolverParameter::FunctionTime[1] = 1.73e-10
-SolverParameter::totalFrequency[1] = 1
+SolverParameter::totalTime[1] = 3.4e-05
+SolverParameter::algorithmTime[1] = 3.4e-05
+SolverParameter::FunctionTime[1] = 0
+SolverParameter::totalFrequency[1] = 0
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -0.797796, -3.4397, -1.23503, -1.7613 ] 
-Best Covered is: 100%
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0, 0, 0, 0 ] 
+Best Covered is: 0%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-(atan(z)*atan(w))>((asin(x)*asin(cos(y*z)))-1)  RuntimeValue:  1.50981  isCovered： true
+(atanf(0)*atanf(0))>((asinf(1)*asinf(cosf(9*57)))-1)  RuntimeValue:  2.02164  isCovered： true
 
-SolverParameter::totalTime[2] = 0.00025
-SolverParameter::algorithmTime[2] = 0.00025
-SolverParameter::FunctionTime[2] = 2.36e-10
-SolverParameter::totalFrequency[2] = 1
+SolverParameter::totalTime[2] = 3.5e-05
+SolverParameter::algorithmTime[2] = 3.5e-05
+SolverParameter::FunctionTime[2] = 0
+SolverParameter::totalFrequency[2] = 0
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -0.887611, -3.4397, -1.23503, -1.7613 ] 
-Best Covered is: 100%
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0, 0, 0, 0 ] 
+Best Covered is: 0%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-(atan(z)*atan(w))>((asin(x)*asin(cos(y*z)))-1)  RuntimeValue:  1.43159  isCovered： true
+(atanf(0)*atanf(0))>((asinf(1)*asinf(cosf(9*57)))-1)  RuntimeValue:  2.02164  isCovered： true
 
-SolverParameter::totalTime[3] = 0.000134
-SolverParameter::algorithmTime[3] = 0.000134
-SolverParameter::FunctionTime[3] = 1.23e-10
-SolverParameter::totalFrequency[3] = 1
+SolverParameter::totalTime[3] = 3.3e-05
+SolverParameter::algorithmTime[3] = 3.3e-05
+SolverParameter::FunctionTime[3] = 0
+SolverParameter::totalFrequency[3] = 0
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -0.887611, -3.4397, -1.23503, -1.7613 ] 
-Best Covered is: 100%
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0, 0, 0, 0 ] 
+Best Covered is: 0%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-(atan(z)*atan(w))>((asin(x)*asin(cos(y*z)))-1)  RuntimeValue:  1.43159  isCovered： true
+(atanf(0)*atanf(0))>((asinf(1)*asinf(cosf(9*57)))-1)  RuntimeValue:  2.02164  isCovered： true
 
-SolverParameter::totalTime[4] = 0.000171
-SolverParameter::algorithmTime[4] = 0.000171
-SolverParameter::FunctionTime[4] = 1.56e-10
-SolverParameter::totalFrequency[4] = 1
+SolverParameter::totalTime[4] = 3.6e-05
+SolverParameter::algorithmTime[4] = 3.6e-05
+SolverParameter::FunctionTime[4] = 0
+SolverParameter::totalFrequency[4] = 0
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -0.887611, -3.4397, -1.23503, -1.7613 ] 
-Best Covered is: 100%
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0, 0, 0, 0 ] 
+Best Covered is: 0%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-(atan(z)*atan(w))>((asin(x)*asin(cos(y*z)))-1)  RuntimeValue:  1.43159  isCovered： true
+(atanf(0)*atanf(0))>((asinf(1)*asinf(cosf(9*57)))-1)  RuntimeValue:  2.02164  isCovered： true
 
-SolverParameter::totalTime[5] = 0.000138
-SolverParameter::algorithmTime[5] = 0.000138
-SolverParameter::FunctionTime[5] = 1.22e-10
-SolverParameter::totalFrequency[5] = 1
+SolverParameter::totalTime[5] = 3.3e-05
+SolverParameter::algorithmTime[5] = 3.3e-05
+SolverParameter::FunctionTime[5] = 0
+SolverParameter::totalFrequency[5] = 0
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -0.991466, -3.4397, -1.23503, -1.7613 ] 
-Best Covered is: 100%
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0, 0, 0, 0 ] 
+Best Covered is: 0%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-(atan(z)*atan(w))>((asin(x)*asin(cos(y*z)))-1)  RuntimeValue:  1.27006  isCovered： true
+(atanf(0)*atanf(0))>((asinf(1)*asinf(cosf(9*57)))-1)  RuntimeValue:  2.02164  isCovered： true
 
-SolverParameter::totalTime[6] = 0.000136
-SolverParameter::algorithmTime[6] = 0.000136
-SolverParameter::FunctionTime[6] = 1.22e-10
-SolverParameter::totalFrequency[6] = 1
+SolverParameter::totalTime[6] = 3.2e-05
+SolverParameter::algorithmTime[6] = 3.2e-05
+SolverParameter::FunctionTime[6] = 0
+SolverParameter::totalFrequency[6] = 0
 
 ----------------------------statistical result----------------------------
-Average Time:	0.0238611
-Best Time:	0.000134
-Worst Time:	0.16601
-Average Frequency:	3.42857
-Coverage Result:	[ true, true, true, true, true, true, true ] 
+Average Time:	3.9e-05
+Best Time:	3.2e-05
+Worst Time:	7e-05
+Average Frequency:	0
+Coverage Result:	[ false, false, false, false, false, false, false ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 100
+MAX_NUM_OF_PREDICT_PARAM = 200
 MAX_NUM_OF_GENERATE_CYCLE = 4
 PREDICT_BOUNDARY = 5
-Search Strategy: SEARCH_STRATEGY_ONE_BY_ONE 
-
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

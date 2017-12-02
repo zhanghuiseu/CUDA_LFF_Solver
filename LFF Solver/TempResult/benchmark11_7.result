@@ -1,0 +1,15 @@
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.467126, -2.6202, -2.82839, 3.68215 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cosf(y)*cosf(z)-atanf(w)>asinf(x)  RuntimeValue:  0.00536725  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000514
+SolverParameter::algorithmTime[6] = 0.000513999
+SolverParameter::FunctionTime[6] = 5.23869e-10
+SolverParameter::totalFrequency[6] = 1
+Cala Type: float
+

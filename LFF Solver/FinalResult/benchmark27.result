@@ -1,120 +1,121 @@
 **************** The Constraints Is As Following ****************
-( ( sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z))) ) && ( cos(sin(x*y))>sin(cos(x*y)) ) )
+( ( sinf(x*cosf(y*sinf(z)))>cosf(x*sinf(y*cosf(z))) ) && ( cosf(sinf(x*y))>sinf(cosf(x*y)) ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -506.125, -3.79328, -2.31061 ] 
+Yes!!!!!   Find Covered Input: [ -2.32862, 3.50005, 4.59623 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  0.57693  isCovered： true
-cos(sin(x*y))>sin(cos(x*y))  RuntimeValue:  1.74422  isCovered： true
+sinf(x*cosf(y*sinf(z)))>cosf(x*sinf(y*cosf(z)))  RuntimeValue:  0.202248  isCovered： true
+cosf(sinf(x*y))>sinf(cosf(x*y))  RuntimeValue:  0.864308  isCovered： true
 
-SolverParameter::totalTime[0] = 0.07331
-SolverParameter::algorithmTime[0] = 0.0733099
-SolverParameter::FunctionTime[0] = 7.3285e-08
+SolverParameter::totalTime[0] = 0.074533
+SolverParameter::algorithmTime[0] = 0.0745329
+SolverParameter::FunctionTime[0] = 8.19564e-08
 SolverParameter::totalFrequency[0] = 1
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 259.451, -0.301913, -1.60286 ] 
+Yes!!!!!   Find Covered Input: [ -2.32862, 3.50005, 4.59623 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  1.24924  isCovered： true
-cos(sin(x*y))>sin(cos(x*y))  RuntimeValue:  1.80834  isCovered： true
+sinf(x*cosf(y*sinf(z)))>cosf(x*sinf(y*cosf(z)))  RuntimeValue:  0.202248  isCovered： true
+cosf(sinf(x*y))>sinf(cosf(x*y))  RuntimeValue:  0.864308  isCovered： true
 
-SolverParameter::totalTime[1] = 0.000731
-SolverParameter::algorithmTime[1] = 0.000730999
-SolverParameter::FunctionTime[1] = 7.25e-10
+SolverParameter::totalTime[1] = 0.000837
+SolverParameter::algorithmTime[1] = 0.000836999
+SolverParameter::FunctionTime[1] = 8.73115e-10
 SolverParameter::totalFrequency[1] = 1
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -510.307, -2.44655, -4.15449 ] 
+Yes!!!!!   Find Covered Input: [ -2.32862, 3.50005, 4.59623 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  0.412938  isCovered： true
-cos(sin(x*y))>sin(cos(x*y))  RuntimeValue:  0.858625  isCovered： true
+sinf(x*cosf(y*sinf(z)))>cosf(x*sinf(y*cosf(z)))  RuntimeValue:  0.202248  isCovered： true
+cosf(sinf(x*y))>sinf(cosf(x*y))  RuntimeValue:  0.864308  isCovered： true
 
-SolverParameter::totalTime[2] = 0.00071
-SolverParameter::algorithmTime[2] = 0.000709999
-SolverParameter::FunctionTime[2] = 7.05e-10
+SolverParameter::totalTime[2] = 0.001941
+SolverParameter::algorithmTime[2] = 0.001941
+SolverParameter::FunctionTime[2] = 1.97906e-09
 SolverParameter::totalFrequency[2] = 1
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -254.903, -4.5661, 3.81847 ] 
+Yes!!!!!   Find Covered Input: [ -2.32862, 3.50005, 4.59623 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  0.794252  isCovered： true
-cos(sin(x*y))>sin(cos(x*y))  RuntimeValue:  0.493784  isCovered： true
+sinf(x*cosf(y*sinf(z)))>cosf(x*sinf(y*cosf(z)))  RuntimeValue:  0.202248  isCovered： true
+cosf(sinf(x*y))>sinf(cosf(x*y))  RuntimeValue:  0.864308  isCovered： true
 
-SolverParameter::totalTime[3] = 0.000712
-SolverParameter::algorithmTime[3] = 0.000711999
-SolverParameter::FunctionTime[3] = 7.06e-10
+SolverParameter::totalTime[3] = 0.00066
+SolverParameter::algorithmTime[3] = 0.000659999
+SolverParameter::FunctionTime[3] = 6.98492e-10
 SolverParameter::totalFrequency[3] = 1
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -506.306, 0.280176, -1.76864 ] 
+Yes!!!!!   Find Covered Input: [ -2.32862, 3.50005, 4.59623 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  1.2845  isCovered： true
-cos(sin(x*y))>sin(cos(x*y))  RuntimeValue:  1.66817  isCovered： true
+sinf(x*cosf(y*sinf(z)))>cosf(x*sinf(y*cosf(z)))  RuntimeValue:  0.202248  isCovered： true
+cosf(sinf(x*y))>sinf(cosf(x*y))  RuntimeValue:  0.864308  isCovered： true
 
-SolverParameter::totalTime[4] = 0.000714
-SolverParameter::algorithmTime[4] = 0.000713999
-SolverParameter::FunctionTime[4] = 7.09e-10
+SolverParameter::totalTime[4] = 0.00165
+SolverParameter::algorithmTime[4] = 0.00165
+SolverParameter::FunctionTime[4] = 1.62981e-09
 SolverParameter::totalFrequency[4] = 1
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -514.951, -0.165205, -1.65211 ] 
+Yes!!!!!   Find Covered Input: [ -2.32862, 3.50005, 4.59623 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  0.00456016  isCovered： true
-cos(sin(x*y))>sin(cos(x*y))  RuntimeValue:  1.79393  isCovered： true
+sinf(x*cosf(y*sinf(z)))>cosf(x*sinf(y*cosf(z)))  RuntimeValue:  0.202248  isCovered： true
+cosf(sinf(x*y))>sinf(cosf(x*y))  RuntimeValue:  0.864308  isCovered： true
 
-SolverParameter::totalTime[5] = 0.000801
-SolverParameter::algorithmTime[5] = 0.000800999
-SolverParameter::FunctionTime[5] = 7.95e-10
+SolverParameter::totalTime[5] = 0.000511
+SolverParameter::algorithmTime[5] = 0.000510999
+SolverParameter::FunctionTime[5] = 5.23869e-10
 SolverParameter::totalFrequency[5] = 1
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -253.667, 4.34743, 0.447913 ] 
+Yes!!!!!   Find Covered Input: [ -2.32862, 3.50005, 4.59623 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  0.967407  isCovered： true
-cos(sin(x*y))>sin(cos(x*y))  RuntimeValue:  1.83341  isCovered： true
+sinf(x*cosf(y*sinf(z)))>cosf(x*sinf(y*cosf(z)))  RuntimeValue:  0.202248  isCovered： true
+cosf(sinf(x*y))>sinf(cosf(x*y))  RuntimeValue:  0.864308  isCovered： true
 
-SolverParameter::totalTime[6] = 0.001039
-SolverParameter::algorithmTime[6] = 0.001039
-SolverParameter::FunctionTime[6] = 1.033e-09
+SolverParameter::totalTime[6] = 0.000503
+SolverParameter::algorithmTime[6] = 0.000503
+SolverParameter::FunctionTime[6] = 4.65661e-10
 SolverParameter::totalFrequency[6] = 1
 
 ----------------------------statistical result----------------------------
-Average Time:	0.0111453
-Best Time:	0.00071
-Worst Time:	0.07331
+Average Time:	0.0115193
+Best Time:	0.000503
+Worst Time:	0.074533
 Average Frequency:	1
 Coverage Result:	[ true, true, true, true, true, true, true ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 1500
+MAX_NUM_OF_PREDICT_PARAM = 150
 MAX_NUM_OF_GENERATE_CYCLE = 3
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

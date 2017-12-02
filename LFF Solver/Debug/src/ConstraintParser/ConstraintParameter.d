@@ -182,8 +182,10 @@ src/ConstraintParser/ConstraintParameter.o : ../src/ConstraintParser/ConstraintP
     /usr/include/c++/5/bits/ostream.tcc \
     /usr/include/c++/5/istream \
     /usr/include/c++/5/bits/istream.tcc \
+    ../src/ConstraintParser/./../solver/type.h \
     ../src/ConstraintParser/./../solver/ConstantValue.h \
     ../src/ConstraintParser/./../model/RuntimeValue.h \
+    ../src/ConstraintParser/./../model/./../solver/type.h \
     ../src/ConstraintParser/ConstraintParameter.cuh \
     /usr/include/c++/5/vector \
     /usr/include/c++/5/bits/stl_construct.h \

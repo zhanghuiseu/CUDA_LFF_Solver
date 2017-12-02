@@ -1,120 +1,121 @@
 **************** The Constraints Is As Following ****************
-( ( 0>sin(sin(x*y)) ) && ( cos(2*x)>0.25 ) )
+( ( 0>sinf(sinf(x*y)) ) && ( cosf(2*x)>0.25 ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -250.796, -2.01845 ] 
+Yes!!!!!   Find Covered Input: [ -31.5054, -3.50833 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-0>sin(sin(x*y))  RuntimeValue:  0.399379  isCovered： true
-cos(2*x)>0.25  RuntimeValue:  0.236751  isCovered： true
+0>sinf(sinf(x*y))  RuntimeValue:  0.517796  isCovered： true
+cosf(2*x)>0.25  RuntimeValue:  0.734047  isCovered： true
 
-SolverParameter::totalTime[0] = 0.063715
-SolverParameter::algorithmTime[0] = 0.0637149
-SolverParameter::FunctionTime[0] = 6.3696e-08
+SolverParameter::totalTime[0] = 0.063008
+SolverParameter::algorithmTime[0] = 0.0630079
+SolverParameter::FunctionTime[0] = 6.70552e-08
 SolverParameter::totalFrequency[0] = 1
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -254.125, 2.28311 ] 
+Yes!!!!!   Find Covered Input: [ -31.5054, -3.50833 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-0>sin(sin(x*y))  RuntimeValue:  0.745179  isCovered： true
-cos(2*x)>0.25  RuntimeValue:  0.522711  isCovered： true
+0>sinf(sinf(x*y))  RuntimeValue:  0.517796  isCovered： true
+cosf(2*x)>0.25  RuntimeValue:  0.734047  isCovered： true
 
-SolverParameter::totalTime[1] = 0.000767
-SolverParameter::algorithmTime[1] = 0.000766999
-SolverParameter::FunctionTime[1] = 7.61e-10
+SolverParameter::totalTime[1] = 0.000527
+SolverParameter::algorithmTime[1] = 0.000526999
+SolverParameter::FunctionTime[1] = 5.23869e-10
 SolverParameter::totalFrequency[1] = 1
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -97.5463, 1.63102 ] 
+Yes!!!!!   Find Covered Input: [ -31.5054, -3.50833 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-0>sin(sin(x*y))  RuntimeValue:  0.783751  isCovered： true
-cos(2*x)>0.25  RuntimeValue:  0.701122  isCovered： true
+0>sinf(sinf(x*y))  RuntimeValue:  0.517796  isCovered： true
+cosf(2*x)>0.25  RuntimeValue:  0.734047  isCovered： true
 
-SolverParameter::totalTime[2] = 0.001656
-SolverParameter::algorithmTime[2] = 0.001656
-SolverParameter::FunctionTime[2] = 1.651e-09
+SolverParameter::totalTime[2] = 0.0006
+SolverParameter::algorithmTime[2] = 0.000599999
+SolverParameter::FunctionTime[2] = 6.40284e-10
 SolverParameter::totalFrequency[2] = 1
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -251.085, 0.726957 ] 
+Yes!!!!!   Find Covered Input: [ -31.5054, -3.50833 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-0>sin(sin(x*y))  RuntimeValue:  0.305452  isCovered： true
-cos(2*x)>0.25  RuntimeValue:  0.634719  isCovered： true
+0>sinf(sinf(x*y))  RuntimeValue:  0.517796  isCovered： true
+cosf(2*x)>0.25  RuntimeValue:  0.734047  isCovered： true
 
-SolverParameter::totalTime[3] = 0.000723
-SolverParameter::algorithmTime[3] = 0.000722999
-SolverParameter::FunctionTime[3] = 7.18e-10
+SolverParameter::totalTime[3] = 0.000522
+SolverParameter::algorithmTime[3] = 0.000521999
+SolverParameter::FunctionTime[3] = 5.23869e-10
 SolverParameter::totalFrequency[3] = 1
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 63.3062, -3.90922 ] 
+Yes!!!!!   Find Covered Input: [ -94.1777, -3.50833 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-0>sin(sin(x*y))  RuntimeValue:  0.605479  isCovered： true
-cos(2*x)>0.25  RuntimeValue:  0.332697  isCovered： true
+0>sinf(sinf(x*y))  RuntimeValue:  0.491234  isCovered： true
+cosf(2*x)>0.25  RuntimeValue:  0.74018  isCovered： true
 
-SolverParameter::totalTime[4] = 0.002093
-SolverParameter::algorithmTime[4] = 0.002093
-SolverParameter::FunctionTime[4] = 2.088e-09
+SolverParameter::totalTime[4] = 0.000513
+SolverParameter::algorithmTime[4] = 0.000513
+SolverParameter::FunctionTime[4] = 4.65661e-10
 SolverParameter::totalFrequency[4] = 1
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 389.074, -2.94308 ] 
+Yes!!!!!   Find Covered Input: [ -94.1777, -3.50833 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-0>sin(sin(x*y))  RuntimeValue:  0.841201  isCovered： true
-cos(2*x)>0.25  RuntimeValue:  0.318584  isCovered： true
+0>sinf(sinf(x*y))  RuntimeValue:  0.491234  isCovered： true
+cosf(2*x)>0.25  RuntimeValue:  0.74018  isCovered： true
 
-SolverParameter::totalTime[5] = 0.000726
-SolverParameter::algorithmTime[5] = 0.000725999
-SolverParameter::FunctionTime[5] = 7.21e-10
+SolverParameter::totalTime[5] = 0.00052
+SolverParameter::algorithmTime[5] = 0.00052
+SolverParameter::FunctionTime[5] = 4.65661e-10
 SolverParameter::totalFrequency[5] = 1
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -446.008, -4.57155 ] 
+Yes!!!!!   Find Covered Input: [ -156.738, -3.50833 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-0>sin(sin(x*y))  RuntimeValue:  0.0544375  isCovered： true
-cos(2*x)>0.25  RuntimeValue:  0.730809  isCovered： true
+0>sinf(sinf(x*y))  RuntimeValue:  0.108491  isCovered： true
+cosf(2*x)>0.25  RuntimeValue:  0.525023  isCovered： true
 
-SolverParameter::totalTime[6] = 0.000705
-SolverParameter::algorithmTime[6] = 0.000704999
-SolverParameter::FunctionTime[6] = 6.99e-10
+SolverParameter::totalTime[6] = 0.000521
+SolverParameter::algorithmTime[6] = 0.000520999
+SolverParameter::FunctionTime[6] = 5.23869e-10
 SolverParameter::totalFrequency[6] = 1
 
 ----------------------------statistical result----------------------------
-Average Time:	0.010055
-Best Time:	0.000705
-Worst Time:	0.063715
+Average Time:	0.00945872
+Best Time:	0.000513
+Worst Time:	0.063008
 Average Frequency:	1
 Coverage Result:	[ true, true, true, true, true, true, true ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 1500
+MAX_NUM_OF_PREDICT_PARAM = 200
 MAX_NUM_OF_GENERATE_CYCLE = 2
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

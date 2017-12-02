@@ -1,0 +1,153 @@
+**************** The Constraints Is As Following ****************
+( ( sin(a)>sin(b) ) && ( sin(b)>sin(c) ) && ( sin(c)>sin(d) ) && ( sin(d)>sin(e) ) && ( sin(e)>sin(f) ) && ( sin(f)>sin(g) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.7849, 1.34074, 2.32583, -3.61047, -3.61047, 0.209338, -0.554594 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(a)>sin(b)  RuntimeValue:  0.0035149  isCovered： true
+sin(b)>sin(c)  RuntimeValue:  0.245403  isCovered： true
+sin(c)>sin(d)  RuntimeValue:  0.276365  isCovered： true
+sin(d)>sin(e)  RuntimeValue:  0  isCovered： false
+sin(e)>sin(f)  RuntimeValue:  0.244072  isCovered： true
+sin(f)>sin(g)  RuntimeValue:  0.734411  isCovered： true
+
+SolverParameter::totalTime[0] = 0.138071
+SolverParameter::algorithmTime[0] = 0.138071
+SolverParameter::FunctionTime[0] = 1.37916e-07
+SolverParameter::totalFrequency[0] = 31
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -3.50928, -3.7255, -11.9869, -3.71323, 2.85878, -2.25692, 5.37158 ] 
+Best Covered is: 97.3174%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(a)>sin(b)  RuntimeValue:  -0.191829  isCovered： false
+sin(b)>sin(c)  RuntimeValue:  0.00369401  isCovered： true
+sin(c)>sin(d)  RuntimeValue:  0.00658712  isCovered： true
+sin(d)>sin(e)  RuntimeValue:  0.261951  isCovered： true
+sin(e)>sin(f)  RuntimeValue:  1.05276  isCovered： true
+sin(f)>sin(g)  RuntimeValue:  0.016781  isCovered： true
+
+SolverParameter::totalTime[1] = 0.041829
+SolverParameter::algorithmTime[1] = 0.041829
+SolverParameter::FunctionTime[1] = 4.1699e-08
+SolverParameter::totalFrequency[1] = 26
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.611559, 3.15167, 3.15167, -3.94255, 2.30555, -3.96944, -1.01649 ] 
+Best Covered is: 92.5877%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(a)>sin(b)  RuntimeValue:  0.584221  isCovered： true
+sin(b)>sin(c)  RuntimeValue:  0  isCovered： false
+sin(c)>sin(d)  RuntimeValue:  -0.728096  isCovered： false
+sin(d)>sin(e)  RuntimeValue:  -0.0239736  isCovered： false
+sin(e)>sin(f)  RuntimeValue:  0.00551749  isCovered： true
+sin(f)>sin(g)  RuntimeValue:  1.58674  isCovered： true
+
+SolverParameter::totalTime[2] = 0.043783
+SolverParameter::algorithmTime[2] = 0.043783
+SolverParameter::FunctionTime[2] = 4.3672e-08
+SolverParameter::totalFrequency[2] = 32
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.78004, 3.30926, 5.2803, -1.10007, 4.24098, -3.67573, 2.82379 ] 
+Best Covered is: 90.2725%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(a)>sin(b)  RuntimeValue:  1.14508  isCovered： true
+sin(b)>sin(c)  RuntimeValue:  0.676142  isCovered： true
+sin(c)>sin(d)  RuntimeValue:  0.0482095  isCovered： true
+sin(d)>sin(e)  RuntimeValue:  -0.000310911  isCovered： false
+sin(e)>sin(f)  RuntimeValue:  -1.40002  isCovered： false
+sin(f)>sin(g)  RuntimeValue:  0.196618  isCovered： true
+
+SolverParameter::totalTime[3] = 0.040403
+SolverParameter::algorithmTime[3] = 0.040403
+SolverParameter::FunctionTime[3] = 4.0303e-08
+SolverParameter::totalFrequency[3] = 27
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.79117, 1.02315, -4.10277, 0.856617, 2.7073, 3.42701, 4.99894 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(a)>sin(b)  RuntimeValue:  0.122061  isCovered： true
+sin(b)>sin(c)  RuntimeValue:  0.0338902  isCovered： true
+sin(c)>sin(d)  RuntimeValue:  0.0642329  isCovered： true
+sin(d)>sin(e)  RuntimeValue:  0.334859  isCovered： true
+sin(e)>sin(f)  RuntimeValue:  0.702334  isCovered： true
+sin(f)>sin(g)  RuntimeValue:  0.677663  isCovered： true
+
+SolverParameter::totalTime[4] = 0.013603
+SolverParameter::algorithmTime[4] = 0.013603
+SolverParameter::FunctionTime[4] = 1.3571e-08
+SolverParameter::totalFrequency[4] = 11
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4.14142, 0.0926848, -3.20647, 3.14476, 4.41976, -1.32961, -1.80624 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(a)>sin(b)  RuntimeValue:  0.748827  isCovered： true
+sin(b)>sin(c)  RuntimeValue:  0.0277177  isCovered： true
+sin(c)>sin(d)  RuntimeValue:  0.068005  isCovered： true
+sin(d)>sin(e)  RuntimeValue:  0.954318  isCovered： true
+sin(e)>sin(f)  RuntimeValue:  0.013567  isCovered： true
+sin(f)>sin(g)  RuntimeValue:  0.00135505  isCovered： true
+
+SolverParameter::totalTime[5] = 0.020786
+SolverParameter::algorithmTime[5] = 0.020786
+SolverParameter::FunctionTime[5] = 2.0722e-08
+SolverParameter::totalFrequency[5] = 17
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4.67427, 1.67836, 2.15988, 3.03348, -18.8258, 3.33898, -2.76781 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(a)>sin(b)  RuntimeValue:  0.00505323  isCovered： true
+sin(b)>sin(c)  RuntimeValue:  0.162768  isCovered： true
+sin(c)>sin(d)  RuntimeValue:  0.723554  isCovered： true
+sin(d)>sin(e)  RuntimeValue:  0.0841235  isCovered： true
+sin(e)>sin(f)  RuntimeValue:  0.21988  isCovered： true
+sin(f)>sin(g)  RuntimeValue:  0.16903  isCovered： true
+
+SolverParameter::totalTime[6] = 0.034328
+SolverParameter::algorithmTime[6] = 0.034328
+SolverParameter::FunctionTime[6] = 3.421e-08
+SolverParameter::totalFrequency[6] = 29
+
+----------------------------statistical result----------------------------
+Average Time:	0.0475433
+Best Time:	0.013603
+Worst Time:	0.138071
+Average Frequency:	24.7143
+Coverage Result:	[ false, false, false, false, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 10
+MAX_NUM_OF_GENERATE_CYCLE = 2
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ONE_BY_ONE 
+
+

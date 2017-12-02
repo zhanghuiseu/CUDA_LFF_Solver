@@ -11,15 +11,17 @@
 	#include <iostream>
 
 	#include "./../ConstraintParser/ConstraintParameter.cuh"
-	#include "./../model/CoodinateDouble.cuh"
-	#include "./../model/IntervalDouble.cuh"
-	#include "./../model/PriorityDouble.cuh"
+	#include "./../model/Coodinate.cuh"
+	#include "./../model/Interval.cuh"
+	#include "./../model/Priority.cuh"
 	#include "./../model/FullCoveredInfo.cuh"
 	#include "./../model/Classification.cuh"
 	#include "./../model/PredictValue.cuh"
 	#include "./../model/PredictValueWithOne.cuh"
     #include "./../solver/ATG.h"
+    #include "./../solver/type.h"
 	#include "./../solver/PCATG.h"
+	#include "./../solver/type.h"
 	#include "HardwareStrategy.cuh"
 	#include "CLF.cuh"
 
@@ -41,22 +43,22 @@
 	/*
 	 * 节点复制函数
 	 * */
-	__device__ void copyCoodinateDouble(CoodinateDouble* res,CoodinateDouble* a);
+	__device__ void copyCoodinate(Coodinate* res,Coodinate* a);
 
 	/*
 	 * CUDA归并函数，就是先计算向量的初始地址，然后逐个复制即可
 	 * */
 	__global__ void mergeByCuda(FullCoveredInfo* dev_coveredInfo,
-			                    CoodinateDouble* dev_mergeArray,const int mergeArraySize,
-			                    CoodinateDouble* dev_predictArray,const int predictArraySize,const int row);
+			                    Coodinate* dev_mergeArray,const int mergeArraySize,
+			                    Coodinate* dev_predictArray,const int predictArraySize,const int row);
 
 	/*
 	 * CUDA归并函数，就是先计算向量的初始地址，然后逐个复制即可
 	 * */
 	__global__ void mergeByCuda(FullCoveredInfo* dev_coveredInfo,
-			                    CoodinateDouble* dev_mergeArray,const int mergeArraySize,
-			                    CoodinateDouble* dev_calaArray,const int calaArraySize,
-			                    CoodinateDouble* dev_predictArray,const int predictArraySize,const int row);
+			                    Coodinate* dev_mergeArray,const int mergeArraySize,
+			                    Coodinate* dev_calaArray,const int calaArraySize,
+			                    Coodinate* dev_predictArray,const int predictArraySize,const int row);
 
 	/*
 	 *  这个核函数是计算所有的有效的接向量的数量
@@ -67,19 +69,19 @@
 	/*
 	 * 测试核函数，这个是测试极端函数值的一个函数
 	 * */
-	__global__ void testExtremeValue(double* dev_a,double* dev_b,double* dev_res,const int SIZE);
+	__global__ void testExtremeValue(FloatType* dev_a,FloatType* dev_b,FloatType* dev_res,const int SIZE);
 
 	/*
 	 *  根据节点的信息计算并更新分类信息
 	 *  注意，上述的case0-5都是相互独立的，也即是说。两个点的只能属于case0-5的其中一个
 	 * */
-	__global__ void classification(Classification* dev_classification,CoodinateDouble* dev_calaArray,
+	__global__ void classification(Classification* dev_classification,Coodinate* dev_calaArray,
 			const int calaArraySize,const int cmpType);
 
 	/*
 	 * 解区间的初始化
 	 * */
-	__global__ void initIntervel(IntervalDouble* dev_interval,CoodinateDouble* dev_calaArray,const int calaArraySize);
+	__global__ void initIntervel(Interval* dev_interval,Coodinate* dev_calaArray,const int calaArraySize);
 
 	/*
 	 * 根据分类情况分别计算可行解区间
@@ -92,25 +94,25 @@
 	 *  000001 1  case0
 	 *  000000 这种情况不可能出现
 	 * */
-	__global__ void calaIntervelForCase0(IntervalDouble* dev_interval,Classification* dev_classification,CoodinateDouble* dev_calaArray,
+	__global__ void calaIntervelForCase0(Interval* dev_interval,Classification* dev_classification,Coodinate* dev_calaArray,
 			const int calaArraySize);
-	__global__ void calaIntervelForCase1(IntervalDouble* dev_interval,Classification* dev_classification,CoodinateDouble* dev_calaArray,
+	__global__ void calaIntervelForCase1(Interval* dev_interval,Classification* dev_classification,Coodinate* dev_calaArray,
 			const int calaArraySize);
-	__global__ void calaIntervelForCase2(IntervalDouble* dev_interval,Classification* dev_classification,CoodinateDouble* dev_calaArray,
+	__global__ void calaIntervelForCase2(Interval* dev_interval,Classification* dev_classification,Coodinate* dev_calaArray,
 			const int calaArraySize);
-	__global__ void calaIntervelForCase3(IntervalDouble* dev_interval,Classification* dev_classification,CoodinateDouble* dev_calaArray,
+	__global__ void calaIntervelForCase3(Interval* dev_interval,Classification* dev_classification,Coodinate* dev_calaArray,
 			const int calaArraySize);
-	__global__ void calaIntervelForCase4(IntervalDouble* dev_interval,Classification* dev_classification,CoodinateDouble* dev_calaArray,
+	__global__ void calaIntervelForCase4(Interval* dev_interval,Classification* dev_classification,Coodinate* dev_calaArray,
 			const int calaArraySize);
-	__global__ void calaIntervelForCase5(IntervalDouble* dev_interval,Classification* dev_classification,CoodinateDouble* dev_calaArray,
+	__global__ void calaIntervelForCase5(Interval* dev_interval,Classification* dev_classification,Coodinate* dev_calaArray,
 			const int calaArraySize);
 
 	/*
 	 * 计算黄金分割点
 	 * */
-	__global__ void calaGoldenPoint(PredictValue* dev_PredictValue,IntervalDouble* dev_finalIntervel,const int calaArraySize);
+	__global__ void calaGoldenPoint(PredictValue* dev_PredictValue,Interval* dev_finalIntervel,const int calaArraySize);
 
-	__device__ double getGoldenPoint(double left,double right);
+	__device__ FloatType getGoldenPoint(FloatType left,FloatType right);
 
 	/*
 	 * 初始化工作
@@ -131,18 +133,18 @@
 	 * 收集零点部分，这是case4的处理部分
 	 * */
 	__global__ void collectZerosForCase4(PredictValue* dev_ZerosValue,Classification* dev_classification,
-			CoodinateDouble* dev_calaArray,const int calaArraySize,bool isDouble);
+			Coodinate* dev_calaArray,const int calaArraySize,bool isDouble);
 
 	/*
 	 * 收集零点部分，这是case5的处理部分
 	 * */
 	__global__ void collectZerosForCase5(PredictValue* dev_ZerosValue,Classification* dev_classification,
-			CoodinateDouble* dev_calaArray,const int calaArraySize,bool isDouble);
+			Coodinate* dev_calaArray,const int calaArraySize,bool isDouble);
 	/*
 	 * 区间扩展部分，case4和5一起考虑的
 	 * */
 	__global__ void collectZerosIntervalExtendCase4And5(PredictValue* dev_ZerosValue,Classification* dev_classification,
-			CoodinateDouble* dev_calaArray,const int calaArraySize,bool isDouble);
+			Coodinate* dev_calaArray,const int calaArraySize,bool isDouble);
 
 	/*
 	 * 收集计算好的零点预测解
@@ -167,7 +169,7 @@
 	/*
 	 * 使用规约并行获取最大的优先级以及对应的当前变量
 	 * */
-	__global__ void getMaxPriority(PriorityDouble* dev_priority,const int step,const int Size);
+	__global__ void getMaxPriority(Priority* dev_priority,const int step,const int Size);
 
 
 class ParallelATG
@@ -176,9 +178,9 @@ public:
 	/*
 	 * 这个是设计好的随机取点的范围长度,就是在某一个点周围的[i-len/2,i+len/2]这个区间作为起始区间去做搜索
 	 * */
-	static const int RandomLengthInt = 8;
+	static const int RandomLengthInt = 4;
 	static const int StepInt = 1;
-	static const int RandomLengthFloat = 8;
+	static const int RandomLengthFloat = 4;
 	static const int StepDouble = 1;
 
 public:
@@ -192,13 +194,13 @@ public:
 	 * 1）对于整形int： 直接[i-RandomLengthInt/2,i+RandomLengthInt/2]做扩展，step一般为1
 	 * 2）对于浮点型float：直接[i-RandomLengthFloat/2,i+RandomLengthFloat/2]做扩展，step一般为1
 	 * */
-	static void initRandomMatrix(CoodinateDouble (*initMat)[RandomLengthInt],const int row,const int col);
+	static void initRandomMatrix(Coodinate (*initMat)[RandomLengthInt],const int row,const int col);
 
 
 	/*
 	 * 判断是否有满足复合约束的可行解
 	 * */
-	static void isFullCovered(FullCoveredInfo* dev_coveredInfo,CoodinateDouble* dev_all,const int row,const int col);
+	static void isFullCovered(FullCoveredInfo* dev_coveredInfo,Coodinate* dev_all,const int row,const int col);
 
 	/*
 	 * 上一轮的预测点执行结束之后判断是否存在已经覆盖复合约束的解向量
@@ -211,8 +213,8 @@ public:
 	/*
 	 * 使用CUDA把dev_calaArray和dev_predictArray合并到dev_mergeArray
 	 * */
-	static void merge(FullCoveredInfo* dev_coveredInfo,CoodinateDouble* dev_mergeArray,const int mergeArraySize,CoodinateDouble* dev_calaArray,const int calaArraySize,
-			CoodinateDouble* dev_predictArray,const int predictArraySize,const int row);
+	static void merge(FullCoveredInfo* dev_coveredInfo,Coodinate* dev_mergeArray,const int mergeArraySize,Coodinate* dev_calaArray,const int calaArraySize,
+			Coodinate* dev_predictArray,const int predictArraySize,const int row);
 
 
 	/*
@@ -220,31 +222,31 @@ public:
 	 * 关于这个函数并行化的做法的效率问题：
 	 * 我查阅过并行版本的归并排序mergeSort，它的合并部分就是这么做的，所以这里也采用这样的做法
 	 * */
-	static CoodinateDouble* mergePredictArrayToCalaArray(FullCoveredInfo* dev_coveredInfo,CoodinateDouble* dev_calaArray,const int calaArraySize,
-				CoodinateDouble* dev_predictArray,const int predictArraySize,const int vaildPredictArraySize, const int row);
+	static Coodinate* mergePredictArrayToCalaArray(FullCoveredInfo* dev_coveredInfo,Coodinate* dev_calaArray,const int calaArraySize,
+				Coodinate* dev_predictArray,const int predictArraySize,const int vaildPredictArraySize, const int row);
 
 	/*
 	 * 启动分类操作
 	 * */
-	static void classificationForAllCase(Classification* dev_classification,CoodinateDouble* dev_calaArray,
+	static void classificationForAllCase(Classification* dev_classification,Coodinate* dev_calaArray,
 				const int calaArraySize,const int row);
 
 	/*
 	 * 计算拟合函数，其实就是计算可行解区间
 	 * */
-	static void calsCLFF(IntervalDouble* dev_intervel,Classification* dev_classification,CoodinateDouble* dev_calaArray,
+	static void calsCLFF(Interval* dev_intervel,Classification* dev_classification,Coodinate* dev_calaArray,
 			const int calaArraySize,const int row);
 
 	/*
 	 * 区间交运算
 	 * */
-	static void intersectionIntervel(IntervalDouble* dev_finalIntervel,IntervalDouble* dev_interval,const int calaArraySize);
+	static void intersectionIntervel(Interval* dev_finalIntervel,Interval* dev_interval,const int calaArraySize);
 
 
 	/*
 	 * 根据归并区间生成测试用例
 	 * */
-	static void calaPredictValueFromFinalInterval(PredictValue* dev_PredictValue,IntervalDouble* dev_finalIntervel,const int calaArraySize);
+	static void calaPredictValueFromFinalInterval(PredictValue* dev_PredictValue,Interval* dev_finalIntervel,const int calaArraySize);
 
 	/*
 	 * 统计预测值的数量
@@ -255,7 +257,7 @@ public:
 	/*
 	 * 收集所有的不可解的零点
 	 * */
-	static void collectZeros(PredictValue* dev_ZerosValue,Classification* dev_classification,CoodinateDouble* dev_calaArray,
+	static void collectZeros(PredictValue* dev_ZerosValue,Classification* dev_classification,Coodinate* dev_calaArray,
 			const int calaArraySize,const int row,bool isDouble);
 
 	/*
@@ -275,25 +277,25 @@ public:
 	/*
 	 * 根据预测的可能的解向量（一个一维数组），生成预测矩阵（一个二维矩阵）
 	 * */
-	static void gereratePredictArray(CoodinateDouble* dev_predictArray,const int row ,const int col,PredictValueWithOne* dev_finalAllPredictValue);
+	static void gereratePredictArray(Coodinate* dev_predictArray,const int row ,const int col,PredictValueWithOne* dev_finalAllPredictValue);
 
 	/*
 	 * 计算每一个解向量的优先级
 	 * */
-	static void calaPriorityForCalaArray(PriorityDouble* dev_priority,CoodinateDouble* dev_calaArray,
+	static void calaPriorityForCalaArray(Priority* dev_priority,Coodinate* dev_calaArray,
 			const int row,const int calaArraySize);
 
 
 	/*
 	 * 使用规约计算得到优先级最大的值以及对应的当前变量
 	 * */
-	static void calaMaxPriority(PriorityDouble* maxPriority,PriorityDouble* dev_priority,const int calaArraySize);
+	static void calaMaxPriority(Priority* maxPriority,Priority* dev_priority,const int calaArraySize);
 
 
 	/*
 	 * 打印函数
 	 * */
-	static void printRandomMat(CoodinateDouble (*initMat)[RandomLengthInt],int row,int col);
+	static void printRandomMat(Coodinate (*initMat)[RandomLengthInt],int row,int col);
 
 	/*
 	 * merge合并过程的测试函数

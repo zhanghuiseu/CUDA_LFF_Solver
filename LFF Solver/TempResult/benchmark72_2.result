@@ -1,0 +1,20 @@
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.817203, 2.33597, 2.34385, -0.605848, -2.49035, -2.48558, -1.69283 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(a)>sinf(b)  RuntimeValue:  0.00797397  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.00547969  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  1.28524  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.036716  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.00378722  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.382601  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000202
+SolverParameter::algorithmTime[1] = 0.000202
+SolverParameter::FunctionTime[1] = 1.89175e-10
+SolverParameter::totalFrequency[1] = 1
+Cala Type: float
+

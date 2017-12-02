@@ -1,0 +1,18 @@
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.01918, 3.42353, -5.76693, 3.09471, 4.12628 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  10.4445  isCovered： true
+powf(log10f(z+w+t),tanf(w*t))>=powf(log10f(x),log10f(y))  RuntimeValue:  0.157396  isCovered： true
+tanf(w*(x+y))+sinf(t*(y+z))>asinf(x+y+z)+acosf(x+y+z)+atanf(x+y+z)  RuntimeValue:  1.13626  isCovered： true
+w==t*3/4  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000406
+SolverParameter::algorithmTime[6] = 0.000406
+SolverParameter::FunctionTime[6] = 4.07454e-10
+SolverParameter::totalFrequency[6] = 1
+Cala Type: float
+

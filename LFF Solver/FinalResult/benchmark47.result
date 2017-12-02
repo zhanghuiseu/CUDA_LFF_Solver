@@ -1,120 +1,121 @@
 **************** The Constraints Is As Following ****************
-( ( exp(x+y)==exp(z) ) )
+( ( expf(x+y)==expf(z) ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -4.81617, 0.606419, -4.21568 ] 
-Best Covered is: 99.9912%
+The Best Input Is: [ -4.0219, 2.99942, -0.697553 ] 
+Best Covered is: 87.8657%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x+y)==exp(z)  RuntimeValue:  8.77274e-05  isCovered： false
+expf(x+y)==expf(z)  RuntimeValue:  -0.138101  isCovered： false
 
-SolverParameter::totalTime[0] = 0.477468
-SolverParameter::algorithmTime[0] = 0.477468
-SolverParameter::FunctionTime[0] = 4.77237e-07
-SolverParameter::totalFrequency[0] = 78
+SolverParameter::totalTime[0] = 0.647448
+SolverParameter::algorithmTime[0] = 0.647447
+SolverParameter::FunctionTime[0] = 6.55651e-07
+SolverParameter::totalFrequency[0] = 42
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 0.570911, -0.931012, -0.359531 ] 
-Best Covered is: 99.9603%
+The Best Input Is: [ 3.30196, -3.73491, -0.378051 ] 
+Best Covered is: 96.4693%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x+y)==exp(z)  RuntimeValue:  -0.000397607  isCovered： false
+expf(x+y)==expf(z)  RuntimeValue:  -0.0365989  isCovered： false
 
-SolverParameter::totalTime[1] = 0.531284
-SolverParameter::algorithmTime[1] = 0.531283
-SolverParameter::FunctionTime[1] = 5.31116e-07
-SolverParameter::totalFrequency[1] = 81
+SolverParameter::totalTime[1] = 0.558111
+SolverParameter::algorithmTime[1] = 0.55811
+SolverParameter::FunctionTime[1] = 5.96046e-07
+SolverParameter::totalFrequency[1] = 42
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 1.09068, -0.13804, 0.952761 ] 
-Best Covered is: 99.9697%
+The Best Input Is: [ 5.22754, -4.71647, 0.541412 ] 
+Best Covered is: 95.1147%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x+y)==exp(z)  RuntimeValue:  -0.000302746  isCovered： false
+expf(x+y)==expf(z)  RuntimeValue:  -0.0513622  isCovered： false
 
-SolverParameter::totalTime[2] = 0.453908
-SolverParameter::algorithmTime[2] = 0.453908
-SolverParameter::FunctionTime[2] = 4.53743e-07
-SolverParameter::totalFrequency[2] = 81
+SolverParameter::totalTime[2] = 0.557155
+SolverParameter::algorithmTime[2] = 0.557154
+SolverParameter::FunctionTime[2] = 5.96046e-07
+SolverParameter::totalFrequency[2] = 42
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 0.773783, 2.35, 3.12379 ] 
-Best Covered is: 99.9823%
+The Best Input Is: [ -0.212476, -1.23912, -1.37475 ] 
+Best Covered is: 98.1637%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x+y)==exp(z)  RuntimeValue:  -0.000176976  isCovered： false
+expf(x+y)==expf(z)  RuntimeValue:  -0.0187064  isCovered： false
 
-SolverParameter::totalTime[3] = 0.361712
-SolverParameter::algorithmTime[3] = 0.361712
-SolverParameter::FunctionTime[3] = 3.61531e-07
-SolverParameter::totalFrequency[3] = 79
+SolverParameter::totalTime[3] = 0.535862
+SolverParameter::algorithmTime[3] = 0.535861
+SolverParameter::FunctionTime[3] = 5.96046e-07
+SolverParameter::totalFrequency[3] = 42
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -4.5087, 1.49482, -3.01378 ] 
-Best Covered is: 99.9995%
+The Best Input Is: [ -2.18516, -3.0978, -5.29249 ] 
+Best Covered is: 99.9952%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x+y)==exp(z)  RuntimeValue:  -4.776e-06  isCovered： false
+expf(x+y)==expf(z)  RuntimeValue:  4.81727e-05  isCovered： false
 
-SolverParameter::totalTime[4] = 0.363673
-SolverParameter::algorithmTime[4] = 0.363673
-SolverParameter::FunctionTime[4] = 3.63507e-07
-SolverParameter::totalFrequency[4] = 75
+SolverParameter::totalTime[4] = 0.533574
+SolverParameter::algorithmTime[4] = 0.533573
+SolverParameter::FunctionTime[4] = 5.36442e-07
+SolverParameter::totalFrequency[4] = 42
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -4.47802, 2.88086, -1.59538 ] 
-Best Covered is: 99.964%
+The Best Input Is: [ 1.80604, 0.148788, 1.9668 ] 
+Best Covered is: 92.1642%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x+y)==exp(z)  RuntimeValue:  -0.000360401  isCovered： false
+expf(x+y)==expf(z)  RuntimeValue:  -0.0850201  isCovered： false
 
-SolverParameter::totalTime[5] = 0.513757
-SolverParameter::algorithmTime[5] = 0.513756
-SolverParameter::FunctionTime[5] = 5.13593e-07
-SolverParameter::totalFrequency[5] = 82
+SolverParameter::totalTime[5] = 0.540137
+SolverParameter::algorithmTime[5] = 0.540136
+SolverParameter::FunctionTime[5] = 5.36442e-07
+SolverParameter::totalFrequency[5] = 42
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 1.08909, -3.90289, -2.81393 ] 
-Best Covered is: 99.9991%
+The Best Input Is: [ -9.00243, 3.5808, -5.33577 ] 
+Best Covered is: 99.9604%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-exp(x+y)==exp(z)  RuntimeValue:  8.54018e-06  isCovered： false
+expf(x+y)==expf(z)  RuntimeValue:  -0.000396254  isCovered： false
 
-SolverParameter::totalTime[6] = 0.523161
-SolverParameter::algorithmTime[6] = 0.52316
-SolverParameter::FunctionTime[6] = 5.2299e-07
-SolverParameter::totalFrequency[6] = 79
+SolverParameter::totalTime[6] = 0.532575
+SolverParameter::algorithmTime[6] = 0.532574
+SolverParameter::FunctionTime[6] = 5.96046e-07
+SolverParameter::totalFrequency[6] = 42
 
 ----------------------------statistical result----------------------------
-Average Time:	0.460709
-Best Time:	0.361712
-Worst Time:	0.531284
-Average Frequency:	79.2857
+Average Time:	0.557837
+Best Time:	0.532575
+Worst Time:	0.647448
+Average Frequency:	42
 Coverage Result:	[ false, false, false, false, false, false, false ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 100
+MAX_NUM_OF_PREDICT_PARAM = 150
 MAX_NUM_OF_GENERATE_CYCLE = 3
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

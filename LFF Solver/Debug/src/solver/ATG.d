@@ -107,6 +107,7 @@ src/solver/ATG.o : ../src/solver/ATG.cpp \
     /usr/include/x86_64-linux-gnu/bits/nan.h \
     /usr/include/x86_64-linux-gnu/bits/mathdef.h \
     /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+    ../src/solver/type.h \
     ../src/solver/ATG.h \
     ../src/solver/PCATG.h \
     /usr/include/stdlib.h \
@@ -121,6 +122,7 @@ src/solver/ATG.o : ../src/solver/ATG.cpp \
     /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
     /usr/include/c++/5/ctime \
     ../src/solver/./../model/SearchTask.h \
+    ../src/solver/./../model/./../solver/type.h \
     ../src/solver/./../model/./../solver/SolverParameter.h \
     /usr/include/c++/5/limits \
     ../src/solver/./../model/./../solver/./../ConstraintParser/ConstraintParameter.cuh \
@@ -131,6 +133,8 @@ src/solver/ATG.o : ../src/solver/ATG.cpp \
     /usr/include/c++/5/bits/stl_bvector.h \
     /usr/include/c++/5/bits/vector.tcc \
     ../src/solver/./../model/./../solver/./../ConstraintParser/./../model/RuntimeValue.h \
+    ../src/solver/./../model/./../solver/./../ConstraintParser/./../model/./../solver/type.h \
+    ../src/solver/./../model/./../solver/./../ConstraintParser/./../solver/type.h \
     ../src/solver/./../model/./../ConstraintParser/ConstraintParameter.cuh \
     ../src/solver/SolverParameter.h \
     ../src/solver/ConstantValue.h \

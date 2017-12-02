@@ -1,0 +1,16 @@
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.4013e-45, -3.96831, 0.206276, -2.30964, -5 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0.0==(powf(((a*sinf(((0.017453292519943295*b)-(0.017453292519943295*c))))-(0.0*d)),2.0)+powf((a*cosf((((0.017453292519943295*b)-(0.017453292519943295*c))+0.0))),2.0))  RuntimeValue:  0  isCovered： true
+e!=0  RuntimeValue:  -5  isCovered： true
+
+SolverParameter::totalTime[2] = 0.00013
+SolverParameter::algorithmTime[2] = 0.00013
+SolverParameter::FunctionTime[2] = 1.16415e-10
+SolverParameter::totalFrequency[2] = 1
+Cala Type: float
+

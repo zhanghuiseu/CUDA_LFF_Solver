@@ -1,113 +1,114 @@
 **************** The Constraints Is As Following ****************
-( ( sin(w*w)*cos(x*w*v)-tan(cos(x*w*x))+sin(w)>tan(w-x)*cos(sin(w/v))-atan(y+20+z)+asin(y-15) ) )
+( ( sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15) ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 3.52696, 14.5897, 4.28079, -1.01642, -4.89092 ] 
+Yes!!!!!   Find Covered Input: [ -4.67238, 14.8519, -1.51123, 0.545175, -2.09034 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(w*w)*cos(x*w*v)-tan(cos(x*w*x))+sin(w)>tan(w-x)*cos(sin(w/v))-atan(y+20+z)+asin(y-15)  RuntimeValue:  5.52304  isCovered： true
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  3.12129  isCovered： true
 
-SolverParameter::totalTime[0] = 0.310909
-SolverParameter::algorithmTime[0] = 0.310909
-SolverParameter::FunctionTime[0] = 3.10795e-07
-SolverParameter::totalFrequency[0] = 16
+SolverParameter::totalTime[0] = 0.225622
+SolverParameter::algorithmTime[0] = 0.225622
+SolverParameter::FunctionTime[0] = 2.23517e-07
+SolverParameter::totalFrequency[0] = 11
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -10.9261, 14.5897, 4.28079, -1.01642, -4.89092 ] 
+Yes!!!!!   Find Covered Input: [ -67.2137, 14.8519, -1.51123, 0.545175, -2.09034 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(w*w)*cos(x*w*v)-tan(cos(x*w*x))+sin(w)>tan(w-x)*cos(sin(w/v))-atan(y+20+z)+asin(y-15)  RuntimeValue:  0.47248  isCovered： true
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  5.20443  isCovered： true
 
-SolverParameter::totalTime[1] = 0.000378
-SolverParameter::algorithmTime[1] = 0.000378
-SolverParameter::FunctionTime[1] = 3.66e-10
+SolverParameter::totalTime[1] = 0.00044
+SolverParameter::algorithmTime[1] = 0.00044
+SolverParameter::FunctionTime[1] = 4.36557e-10
 SolverParameter::totalFrequency[1] = 1
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -25.1297, 14.5897, 4.28079, -1.01642, -4.89092 ] 
+Yes!!!!!   Find Covered Input: [ -67.2137, 14.8519, -1.51123, 0.545175, -2.09034 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(w*w)*cos(x*w*v)-tan(cos(x*w*x))+sin(w)>tan(w-x)*cos(sin(w/v))-atan(y+20+z)+asin(y-15)  RuntimeValue:  2.72932  isCovered： true
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  5.20443  isCovered： true
 
-SolverParameter::totalTime[2] = 0.000346
-SolverParameter::algorithmTime[2] = 0.000346
-SolverParameter::FunctionTime[2] = 3.35e-10
+SolverParameter::totalTime[2] = 0.000538
+SolverParameter::algorithmTime[2] = 0.000537999
+SolverParameter::FunctionTime[2] = 5.82077e-10
 SolverParameter::totalFrequency[2] = 1
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -39.1667, 14.5897, 4.28079, -1.01642, -4.89092 ] 
+Yes!!!!!   Find Covered Input: [ -130.054, 14.8519, -1.51123, 0.545175, -2.09034 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(w*w)*cos(x*w*v)-tan(cos(x*w*x))+sin(w)>tan(w-x)*cos(sin(w/v))-atan(y+20+z)+asin(y-15)  RuntimeValue:  0.886345  isCovered： true
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  7.46039  isCovered： true
 
-SolverParameter::totalTime[3] = 0.000376
-SolverParameter::algorithmTime[3] = 0.000376
-SolverParameter::FunctionTime[3] = 3.63e-10
+SolverParameter::totalTime[3] = 0.000452
+SolverParameter::algorithmTime[3] = 0.000452
+SolverParameter::FunctionTime[3] = 4.65661e-10
 SolverParameter::totalFrequency[3] = 1
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -53.7411, 14.5897, 4.28079, -1.01642, -4.89092 ] 
+Yes!!!!!   Find Covered Input: [ -130.054, 14.8519, -1.51123, 0.545175, -2.09034 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(w*w)*cos(x*w*v)-tan(cos(x*w*x))+sin(w)>tan(w-x)*cos(sin(w/v))-atan(y+20+z)+asin(y-15)  RuntimeValue:  0.77221  isCovered： true
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  7.46039  isCovered： true
 
-SolverParameter::totalTime[4] = 0.00186
-SolverParameter::algorithmTime[4] = 0.00186
-SolverParameter::FunctionTime[4] = 1.832e-09
+SolverParameter::totalTime[4] = 0.00038
+SolverParameter::algorithmTime[4] = 0.00038
+SolverParameter::FunctionTime[4] = 3.7835e-10
 SolverParameter::totalFrequency[4] = 1
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -68.0756, 14.5897, 4.28079, -1.01642, -4.89092 ] 
+Yes!!!!!   Find Covered Input: [ -192.708, 14.8519, -1.51123, 0.545175, -2.09034 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(w*w)*cos(x*w*v)-tan(cos(x*w*x))+sin(w)>tan(w-x)*cos(sin(w/v))-atan(y+20+z)+asin(y-15)  RuntimeValue:  0.249062  isCovered： true
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  23.5443  isCovered： true
 
-SolverParameter::totalTime[5] = 0.000412
-SolverParameter::algorithmTime[5] = 0.000412
-SolverParameter::FunctionTime[5] = 3.74e-10
+SolverParameter::totalTime[5] = 0.000428
+SolverParameter::algorithmTime[5] = 0.000428
+SolverParameter::FunctionTime[5] = 4.36557e-10
 SolverParameter::totalFrequency[5] = 1
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ -82.8261, 14.5897, 4.28079, -1.01642, -4.89092 ] 
+Yes!!!!!   Find Covered Input: [ -192.708, 14.8519, -1.51123, 0.545175, -2.09034 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(w*w)*cos(x*w*v)-tan(cos(x*w*x))+sin(w)>tan(w-x)*cos(sin(w/v))-atan(y+20+z)+asin(y-15)  RuntimeValue:  0.0926569  isCovered： true
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  23.5443  isCovered： true
 
-SolverParameter::totalTime[6] = 0.000461
-SolverParameter::algorithmTime[6] = 0.000461
-SolverParameter::FunctionTime[6] = 4.46e-10
+SolverParameter::totalTime[6] = 0.000958
+SolverParameter::algorithmTime[6] = 0.000957999
+SolverParameter::FunctionTime[6] = 9.8953e-10
 SolverParameter::totalFrequency[6] = 1
 
 ----------------------------statistical result----------------------------
-Average Time:	0.0449631
-Best Time:	0.000346
-Worst Time:	0.310909
-Average Frequency:	3.14286
+Average Time:	0.0326883
+Best Time:	0.00038
+Worst Time:	0.225622
+Average Frequency:	2.42857
 Coverage Result:	[ true, true, true, true, true, true, true ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 400
+MAX_NUM_OF_PREDICT_PARAM = 200
 MAX_NUM_OF_GENERATE_CYCLE = 5
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

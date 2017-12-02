@@ -1,120 +1,121 @@
 **************** The Constraints Is As Following ****************
-( ( log10(z)*(1.0/sqrt(sin(x)))==sqrt(cos(exp(y))) ) )
+( ( log10f(z)*(1.0/sqrtf(sinf(x)))==sqrtf(cosf(expf(y))) ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 0.42467, -1.79494, 4.3346 ] 
-Best Covered is: 99.9215%
+The Best Input Is: [ 20.396, -4.8787, 10.0056 ] 
+Best Covered is: 99.9594%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-log10(z)*(1.0/sqrt(sin(x)))==sqrt(cos(exp(y)))  RuntimeValue:  -0.000786082  isCovered： false
+log10f(z)*(1.0/sqrtf(sinf(x)))==sqrtf(cosf(expf(y)))  RuntimeValue:  0.000406025  isCovered： false
 
-SolverParameter::totalTime[0] = 0.294604
-SolverParameter::algorithmTime[0] = 0.294604
-SolverParameter::FunctionTime[0] = 2.94337e-07
-SolverParameter::totalFrequency[0] = 71
+SolverParameter::totalTime[0] = 0.595964
+SolverParameter::algorithmTime[0] = 0.595963
+SolverParameter::FunctionTime[0] = 6.55651e-07
+SolverParameter::totalFrequency[0] = 42
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 1.71335, 3.48441, 4.0635 ] 
-Best Covered is: 99.9779%
+The Best Input Is: [ -42.1039, 15.6883, 9.36211 ] 
+Best Covered is: 99.9614%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-log10(z)*(1.0/sqrt(sin(x)))==sqrt(cos(exp(y)))  RuntimeValue:  0.000221053  isCovered： false
+log10f(z)*(1.0/sqrtf(sinf(x)))==sqrtf(cosf(expf(y)))  RuntimeValue:  0.000386493  isCovered： false
 
-SolverParameter::totalTime[1] = 0.210666
-SolverParameter::algorithmTime[1] = 0.210666
-SolverParameter::FunctionTime[1] = 2.10507e-07
-SolverParameter::totalFrequency[1] = 71
+SolverParameter::totalTime[1] = 0.512452
+SolverParameter::algorithmTime[1] = 0.512452
+SolverParameter::FunctionTime[1] = 4.76837e-07
+SolverParameter::totalFrequency[1] = 42
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -4.31827, 3.48255, 4.26282 ] 
-Best Covered is: 99.9936%
+The Best Input Is: [ -74.1374, 3.44387, 9.37038 ] 
+Best Covered is: 99.8698%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-log10(z)*(1.0/sqrt(sin(x)))==sqrt(cos(exp(y)))  RuntimeValue:  -6.38596e-05  isCovered： false
+log10f(z)*(1.0/sqrtf(sinf(x)))==sqrtf(cosf(expf(y)))  RuntimeValue:  -0.00130428  isCovered： false
 
-SolverParameter::totalTime[2] = 0.243567
-SolverParameter::algorithmTime[2] = 0.243567
-SolverParameter::FunctionTime[2] = 2.43345e-07
-SolverParameter::totalFrequency[2] = 72
+SolverParameter::totalTime[2] = 0.516464
+SolverParameter::algorithmTime[2] = 0.516463
+SolverParameter::FunctionTime[2] = 5.36442e-07
+SolverParameter::totalFrequency[2] = 42
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -3.84236, -1.7444, 6.25734 ] 
-Best Covered is: 99.9419%
+The Best Input Is: [ -42.3938, -2.21358, 10.4516 ] 
+Best Covered is: 97.8235%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-log10(z)*(1.0/sqrt(sin(x)))==sqrt(cos(exp(y)))  RuntimeValue:  -0.000581667  isCovered： false
+log10f(z)*(1.0/sqrtf(sinf(x)))==sqrtf(cosf(expf(y)))  RuntimeValue:  0.0222493  isCovered： false
 
-SolverParameter::totalTime[3] = 0.173847
-SolverParameter::algorithmTime[3] = 0.173847
-SolverParameter::FunctionTime[3] = 1.7368e-07
-SolverParameter::totalFrequency[3] = 68
+SolverParameter::totalTime[3] = 0.508286
+SolverParameter::algorithmTime[3] = 0.508286
+SolverParameter::FunctionTime[3] = 4.76837e-07
+SolverParameter::totalFrequency[3] = 42
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -3.99438, 3.928, 6.11749 ] 
-Best Covered is: 98.0552%
+The Best Input Is: [ 45.0913, 51.572, 3.9511 ] 
+Best Covered is: 99.9134%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-log10(z)*(1.0/sqrt(sin(x)))==sqrt(cos(exp(y)))  RuntimeValue:  -0.0198337  isCovered： false
+log10f(z)*(1.0/sqrtf(sinf(x)))==sqrtf(cosf(expf(y)))  RuntimeValue:  -0.000866709  isCovered： false
 
-SolverParameter::totalTime[4] = 0.23418
-SolverParameter::algorithmTime[4] = 0.23418
-SolverParameter::FunctionTime[4] = 2.34007e-07
-SolverParameter::totalFrequency[4] = 71
+SolverParameter::totalTime[4] = 0.517938
+SolverParameter::algorithmTime[4] = 0.517937
+SolverParameter::FunctionTime[4] = 5.36442e-07
+SolverParameter::totalFrequency[4] = 42
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 2.55299, -1.33214, 5.41322 ] 
-Best Covered is: 99.8187%
+The Best Input Is: [ 19.7096, 0.298606, 2.58421 ] 
+Best Covered is: 99.6466%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-log10(z)*(1.0/sqrt(sin(x)))==sqrt(cos(exp(y)))  RuntimeValue:  0.00181595  isCovered： false
+log10f(z)*(1.0/sqrtf(sinf(x)))==sqrtf(cosf(expf(y)))  RuntimeValue:  0.00354694  isCovered： false
 
-SolverParameter::totalTime[5] = 0.217926
-SolverParameter::algorithmTime[5] = 0.217926
-SolverParameter::FunctionTime[5] = 2.17733e-07
-SolverParameter::totalFrequency[5] = 70
+SolverParameter::totalTime[5] = 0.510652
+SolverParameter::algorithmTime[5] = 0.510652
+SolverParameter::FunctionTime[5] = 4.76837e-07
+SolverParameter::totalFrequency[5] = 42
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 0.184966, -4.42368, 2.66155 ] 
-Best Covered is: 99.1445%
+The Best Input Is: [ -3.28851, 40.3906, 1.98726 ] 
+Best Covered is: 99.9685%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-log10(z)*(1.0/sqrt(sin(x)))==sqrt(cos(exp(y)))  RuntimeValue:  -0.00862912  isCovered： false
+log10f(z)*(1.0/sqrtf(sinf(x)))==sqrtf(cosf(expf(y)))  RuntimeValue:  0.000315012  isCovered： false
 
-SolverParameter::totalTime[6] = 0.20367
-SolverParameter::algorithmTime[6] = 0.20367
-SolverParameter::FunctionTime[6] = 2.03477e-07
-SolverParameter::totalFrequency[6] = 73
+SolverParameter::totalTime[6] = 0.517006
+SolverParameter::algorithmTime[6] = 0.517005
+SolverParameter::FunctionTime[6] = 5.36442e-07
+SolverParameter::totalFrequency[6] = 42
 
 ----------------------------statistical result----------------------------
-Average Time:	0.225494
-Best Time:	0.173847
-Worst Time:	0.294604
-Average Frequency:	70.8571
+Average Time:	0.525537
+Best Time:	0.508286
+Worst Time:	0.595964
+Average Frequency:	42
 Coverage Result:	[ false, false, false, false, false, false, false ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 50
+MAX_NUM_OF_PREDICT_PARAM = 400
 MAX_NUM_OF_GENERATE_CYCLE = 3
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

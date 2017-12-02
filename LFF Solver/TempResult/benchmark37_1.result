@@ -1,0 +1,16 @@
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -36.0779, -3.69414, 45.4551 ] 
+Best Covered is: 99.1655%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+log10f(tanf(z))*(1.0/sqrtf(sinf(x)))==sqrtf(cosf(expf(y)))  RuntimeValue:  0.00841482  isCovered： false
+
+SolverParameter::totalTime[0] = 0.603592
+SolverParameter::algorithmTime[0] = 0.603591
+SolverParameter::FunctionTime[0] = 5.96046e-07
+SolverParameter::totalFrequency[0] = 42
+Cala Type: float
+

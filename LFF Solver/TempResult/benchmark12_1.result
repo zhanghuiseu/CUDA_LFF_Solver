@@ -1,0 +1,16 @@
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0, 0, 0, 0 ] 
+Best Covered is: 0%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+atanf(z)*atanf(w)>(asinf(x)*asinf(y))-1  RuntimeValue:  1  isCovered： true
+
+SolverParameter::totalTime[0] = 3.93064
+SolverParameter::algorithmTime[0] = 3.93064
+SolverParameter::FunctionTime[0] = 4.05312e-06
+SolverParameter::totalFrequency[0] = 320
+Cala Type: float
+

@@ -8,6 +8,8 @@
 #ifndef ERRORHANDLE_CUH_
 #define ERRORHANDLE_CUH_
 #include <string>
+#include <iostream>
+
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 
@@ -25,8 +27,9 @@ public:
 		if (cudaStatus != cudaSuccess)
 		{
 			cout << "*************  CUDA ERROR  *************" << endl;
-			cout<<"ErrorInfo: "<<cudaGetErrorString(cudaStatus) << endl;
-			cout<<"In The Position Of:  "<<info<<endl;
+			cout<<"ErrorInfo          : "<<cudaGetErrorString(cudaStatus) << endl;
+			//cout<<"LastErrorInfo      : "<<cudaGetLastError()<<endl;
+			cout<<"In The Position Of : "<<info<<endl;
 			cout<<endl<<endl;
 			//cudaDeviceReset();
 			exit(-1);

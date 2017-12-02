@@ -1,23 +1,24 @@
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 26.566, 8.52749, 36.0475, 2.10177, 4.57678, 0.214841 ] 
+Yes!!!!!   Find Covered Input: [ 44.6389, 8.94854, 53.2658, 4.97551, 3.10942, -0.0305009 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-x-y+tan(v)>(z+t)/(w+t)  RuntimeValue:  12.1739  isCovered： true
-sqrt(x-t)>z/y  RuntimeValue:  0.462063  isCovered： true
-log(x*y)>log(t+w+z)  RuntimeValue:  1.66812  isCovered： true
-pow(y,t)*cos(v)>z*2+w*3+x*7  RuntimeValue:  17521.2  isCovered： true
-z+w>x+y  RuntimeValue:  3.05573  isCovered： true
-x/y>w  RuntimeValue:  1.01357  isCovered： true
-x>(w+y-z)  RuntimeValue:  51.9842  isCovered： true
-sqrt(w*y*z)>log10(t*x)  RuntimeValue:  23.3331  isCovered： true
-x*cos(t+y)>log(w*z*3)  RuntimeValue:  17.3882  isCovered： true
-cos(t)*sin(v)>cos(y)  RuntimeValue:  0.594914  isCovered： true
+x-y+tanf(v)>(z+t)/(w+t)  RuntimeValue:  28.6869  isCovered： true
+sqrtf(x-t)>z/y  RuntimeValue:  0.491879  isCovered： true
+logf(x*y)>logf(t+w+z)  RuntimeValue:  1.87349  isCovered： true
+powf(y,t)*cosf(v)>z*2+w*3+x*7  RuntimeValue:  476.392  isCovered： true
+z+w>x+y  RuntimeValue:  4.65388  isCovered： true
+x/y>w  RuntimeValue:  0.012887  isCovered： true
+x>(w+y-z)  RuntimeValue:  83.9806  isCovered： true
+sqrtf(w*y*z)>log10f(t*x)  RuntimeValue:  46.5565  isCovered： true
+x*cosf(t+y)>logf(w*z*3)  RuntimeValue:  32.3145  isCovered： true
+cosf(t)*sinf(v)>cosf(y)  RuntimeValue:  0.919206  isCovered： true
 
-SolverParameter::totalTime[0] = 25.201
-SolverParameter::algorithmTime[0] = 25.201
-SolverParameter::FunctionTime[0] = 2.51849e-05
-SolverParameter::totalFrequency[0] = 6592
+SolverParameter::totalTime[0] = 16.8947
+SolverParameter::algorithmTime[0] = 16.8947
+SolverParameter::FunctionTime[0] = 1.52588e-05
+SolverParameter::totalFrequency[0] = 4501
+Cala Type: float
 

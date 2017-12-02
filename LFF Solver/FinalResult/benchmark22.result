@@ -1,127 +1,128 @@
 **************** The Constraints Is As Following ****************
-( ( cos(sin(y*z))>sin(cos(x*y)) ) && ( sin(w*2.0-y)/(cos(t*2.0+q)+1.0)==(cos(z*2.0+x)/(sin(w*2.0+v)+1.0)) ) )
+( ( cosf(sinf(y*z))>sinf(cosf(x*y)) ) && ( sinf(w*2.0-y)/(cosf(t*2.0+q)+1.0)==(cosf(z*2.0+x)/(sinf(w*2.0+v)+1.0)) ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 1.48141, 4.99927, 4.17628, 1.28723, -0.553434, 4.00842, -0.532172 ] 
-Best Covered is: 99.997%
+The Best Input Is: [ -2.38837, -42.7567, -2.69594, 2.14553, -2.24661, 4.40147, 41.1496 ] 
+Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(sin(y*z))>sin(cos(x*y))  RuntimeValue:  0.204231  isCovered： true
-sin(w*2.0-y)/(cos(t*2.0+q)+1.0)==(cos(z*2.0+x)/(sin(w*2.0+v)+1.0))  RuntimeValue:  5.94758e-05  isCovered： false
+cosf(sinf(y*z))>sinf(cosf(x*y))  RuntimeValue:  0.695844  isCovered： true
+sinf(w*2.0-y)/(cosf(t*2.0+q)+1.0)==(cosf(z*2.0+x)/(sinf(w*2.0+v)+1.0))  RuntimeValue:  7.91569e-07  isCovered： false
 
-SolverParameter::totalTime[0] = 2.35499
-SolverParameter::algorithmTime[0] = 2.35499
-SolverParameter::FunctionTime[0] = 2.35195e-06
-SolverParameter::totalFrequency[0] = 1027
+SolverParameter::totalTime[0] = 8.55759
+SolverParameter::algorithmTime[0] = 8.55758
+SolverParameter::FunctionTime[0] = 9.53674e-06
+SolverParameter::totalFrequency[0] = 651
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -0.126989, 0.239832, -1.96881, -0.632312, -1.41951, -3.75656, 2.87761 ] 
-Best Covered is: 99.9976%
+The Best Input Is: [ 0.318664, 47.6107, -4.72675, 0.879436, -44.1709, -1.74988, -46.6621 ] 
+Best Covered is: 99.9993%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(sin(y*z))>sin(cos(x*y))  RuntimeValue:  0.0571147  isCovered： true
-sin(w*2.0-y)/(cos(t*2.0+q)+1.0)==(cos(z*2.0+x)/(sin(w*2.0+v)+1.0))  RuntimeValue:  -4.75394e-05  isCovered： false
+cosf(sinf(y*z))>sinf(cosf(x*y))  RuntimeValue:  1.36884  isCovered： true
+sinf(w*2.0-y)/(cosf(t*2.0+q)+1.0)==(cosf(z*2.0+x)/(sinf(w*2.0+v)+1.0))  RuntimeValue:  -1.42004e-05  isCovered： false
 
-SolverParameter::totalTime[1] = 2.11769
-SolverParameter::algorithmTime[1] = 2.11769
-SolverParameter::FunctionTime[1] = 2.11478e-06
-SolverParameter::totalFrequency[1] = 945
+SolverParameter::totalTime[1] = 7.21645
+SolverParameter::algorithmTime[1] = 7.21644
+SolverParameter::FunctionTime[1] = 6.67572e-06
+SolverParameter::totalFrequency[1] = 630
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -4.10565, 4.06248, 1.21118, -1.14642, -2.98853, 3.23256, 4.71449 ] 
+The Best Input Is: [ 0.136154, 2.95331, -21.2206, -3.06457, -0.533798, -1.18628, -54.3313 ] 
 Best Covered is: 99.9994%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(sin(y*z))>sin(cos(x*y))  RuntimeValue:  1.09316  isCovered： true
-sin(w*2.0-y)/(cos(t*2.0+q)+1.0)==(cos(z*2.0+x)/(sin(w*2.0+v)+1.0))  RuntimeValue:  1.26211e-05  isCovered： false
+cosf(sinf(y*z))>sinf(cosf(x*y))  RuntimeValue:  0.191457  isCovered： true
+sinf(w*2.0-y)/(cosf(t*2.0+q)+1.0)==(cosf(z*2.0+x)/(sinf(w*2.0+v)+1.0))  RuntimeValue:  -1.1458e-05  isCovered： false
 
-SolverParameter::totalTime[2] = 2.17993
-SolverParameter::algorithmTime[2] = 2.17993
-SolverParameter::FunctionTime[2] = 2.17696e-06
-SolverParameter::totalFrequency[2] = 955
+SolverParameter::totalTime[2] = 7.8412
+SolverParameter::algorithmTime[2] = 7.84119
+SolverParameter::FunctionTime[2] = 8.10623e-06
+SolverParameter::totalFrequency[2] = 602
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 4.21937, -0.937076, -2.81262, -3.52644, 2.88693, -3.43047, 1.06919 ] 
-Best Covered is: 99.9997%
+The Best Input Is: [ 4.28458, -43.4952, 4.51937, 45.3023, -0.331884, 4.22193, 4.12387 ] 
+Best Covered is: 99.999%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(sin(y*z))>sin(cos(x*y))  RuntimeValue:  1.51972  isCovered： true
-sin(w*2.0-y)/(cos(t*2.0+q)+1.0)==(cos(z*2.0+x)/(sin(w*2.0+v)+1.0))  RuntimeValue:  6.05026e-06  isCovered： false
+cosf(sinf(y*z))>sinf(cosf(x*y))  RuntimeValue:  1.07164  isCovered： true
+sinf(w*2.0-y)/(cosf(t*2.0+q)+1.0)==(cosf(z*2.0+x)/(sinf(w*2.0+v)+1.0))  RuntimeValue:  -2.07662e-05  isCovered： false
 
-SolverParameter::totalTime[3] = 2.19961
-SolverParameter::algorithmTime[3] = 2.19961
-SolverParameter::FunctionTime[3] = 2.19661e-06
-SolverParameter::totalFrequency[3] = 1026
+SolverParameter::totalTime[3] = 7.84643
+SolverParameter::algorithmTime[3] = 7.84642
+SolverParameter::FunctionTime[3] = 8.10623e-06
+SolverParameter::totalFrequency[3] = 602
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 3.63818, 0.419502, 1.9397, 4.86923, -2.03165, 3.67325, 0.879237 ] 
-Best Covered is: 99.9968%
+The Best Input Is: [ -4.4656, -0.924911, 3.8005, 2.13685, 3.97785, -23.8938, 17.1681 ] 
+Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(sin(y*z))>sin(cos(x*y))  RuntimeValue:  0.702733  isCovered： true
-sin(w*2.0-y)/(cos(t*2.0+q)+1.0)==(cos(z*2.0+x)/(sin(w*2.0+v)+1.0))  RuntimeValue:  -6.48236e-05  isCovered： false
+cosf(sinf(y*z))>sinf(cosf(x*y))  RuntimeValue:  1.45666  isCovered： true
+sinf(w*2.0-y)/(cosf(t*2.0+q)+1.0)==(cosf(z*2.0+x)/(sinf(w*2.0+v)+1.0))  RuntimeValue:  6.49689e-07  isCovered： false
 
-SolverParameter::totalTime[4] = 2.33005
-SolverParameter::algorithmTime[4] = 2.33005
-SolverParameter::FunctionTime[4] = 2.32708e-06
-SolverParameter::totalFrequency[4] = 959
+SolverParameter::totalTime[4] = 7.58476
+SolverParameter::algorithmTime[4] = 7.58475
+SolverParameter::FunctionTime[4] = 7.62939e-06
+SolverParameter::totalFrequency[4] = 632
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -2.93271, -3.54414, -2.17147, -3.66223, 3.19672, 5.62037, -4.94272 ] 
-Best Covered is: 99.9982%
+The Best Input Is: [ -2.38081, 0.609656, 61.9088, -3.96065, 4.58187, -11.1128, -15.5299 ] 
+Best Covered is: 99.9999%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(sin(y*z))>sin(cos(x*y))  RuntimeValue:  1.087  isCovered： true
-sin(w*2.0-y)/(cos(t*2.0+q)+1.0)==(cos(z*2.0+x)/(sin(w*2.0+v)+1.0))  RuntimeValue:  3.60464e-05  isCovered： false
+cosf(sinf(y*z))>sinf(cosf(x*y))  RuntimeValue:  0.880274  isCovered： true
+sinf(w*2.0-y)/(cosf(t*2.0+q)+1.0)==(cosf(z*2.0+x)/(sinf(w*2.0+v)+1.0))  RuntimeValue:  -1.72019e-06  isCovered： false
 
-SolverParameter::totalTime[5] = 2.3051
-SolverParameter::algorithmTime[5] = 2.30509
-SolverParameter::FunctionTime[5] = 2.30204e-06
-SolverParameter::totalFrequency[5] = 946
+SolverParameter::totalTime[5] = 7.77423
+SolverParameter::algorithmTime[5] = 7.77422
+SolverParameter::FunctionTime[5] = 8.10623e-06
+SolverParameter::totalFrequency[5] = 648
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 4.9173, -4.29833, 4.09092, -1.88526, 5.10654, 1.73093, 4.23778 ] 
-Best Covered is: 99.9925%
+The Best Input Is: [ 0.994679, 4.04337, 4.72764, 32.1575, -31.8038, 19.5894, -1.51688 ] 
+Best Covered is: 99.9999%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(sin(y*z))>sin(cos(x*y))  RuntimeValue:  1.18878  isCovered： true
-sin(w*2.0-y)/(cos(t*2.0+q)+1.0)==(cos(z*2.0+x)/(sin(w*2.0+v)+1.0))  RuntimeValue:  -0.000150009  isCovered： false
+cosf(sinf(y*z))>sinf(cosf(x*y))  RuntimeValue:  1.56038  isCovered： true
+sinf(w*2.0-y)/(cosf(t*2.0+q)+1.0)==(cosf(z*2.0+x)/(sinf(w*2.0+v)+1.0))  RuntimeValue:  -2.41318e-06  isCovered： false
 
-SolverParameter::totalTime[6] = 2.33197
-SolverParameter::algorithmTime[6] = 2.33197
-SolverParameter::FunctionTime[6] = 2.32889e-06
-SolverParameter::totalFrequency[6] = 946
+SolverParameter::totalTime[6] = 7.61031
+SolverParameter::algorithmTime[6] = 7.6103
+SolverParameter::FunctionTime[6] = 7.62939e-06
+SolverParameter::totalFrequency[6] = 602
 
 ----------------------------statistical result----------------------------
-Average Time:	2.25991
-Best Time:	2.11769
-Worst Time:	2.35499
-Average Frequency:	972
+Average Time:	7.77585
+Best Time:	7.21645
+Worst Time:	8.55759
+Average Frequency:	623.857
 Coverage Result:	[ false, false, false, false, false, false, false ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 50
+MAX_NUM_OF_PREDICT_PARAM = 200
 MAX_NUM_OF_GENERATE_CYCLE = 3
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

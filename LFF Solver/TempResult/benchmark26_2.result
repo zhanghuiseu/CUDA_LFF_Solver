@@ -1,0 +1,19 @@
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.84805, -0.617084, -1.6448, 4.46418, 8.08664 ] 
+Best Covered is: 99.9941%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cosf(sinf(x*z))>sinf(cosf(x*y))  RuntimeValue:  0.589599  isCovered： true
+sinf(2*w-y)/(cosf(2*y+v)+1)==cosf(2*z+x)/(sinf(2*w+v)-1)  RuntimeValue:  0.000235006  isCovered： false
+sinf(x*y*z*w)>0  RuntimeValue:  0.868002  isCovered： true
+0>cosf(x*y*z*w)  RuntimeValue:  0.496561  isCovered： true
+
+SolverParameter::totalTime[1] = 2.18866
+SolverParameter::algorithmTime[1] = 2.18866
+SolverParameter::FunctionTime[1] = 2.14577e-06
+SolverParameter::totalFrequency[1] = 209
+Cala Type: float
+

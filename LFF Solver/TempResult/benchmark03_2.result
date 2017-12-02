@@ -1,0 +1,16 @@
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 38.5239, 44.734 ] 
+Best Covered is: 99.6097%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(x)-cosf(y)==0  RuntimeValue:  0.00391871  isCovered： false
+
+SolverParameter::totalTime[1] = 0.117939
+SolverParameter::algorithmTime[1] = 0.117939
+SolverParameter::FunctionTime[1] = 1.19209e-07
+SolverParameter::totalFrequency[1] = 8
+Cala Type: float
+

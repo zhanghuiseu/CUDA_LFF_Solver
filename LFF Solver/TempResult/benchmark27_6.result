@@ -1,0 +1,16 @@
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -2.32862, 3.50005, 4.59623 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(x*cosf(y*sinf(z)))>cosf(x*sinf(y*cosf(z)))  RuntimeValue:  0.202248  isCovered： true
+cosf(sinf(x*y))>sinf(cosf(x*y))  RuntimeValue:  0.864308  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000511
+SolverParameter::algorithmTime[5] = 0.000510999
+SolverParameter::FunctionTime[5] = 5.23869e-10
+SolverParameter::totalFrequency[5] = 1
+Cala Type: float
+

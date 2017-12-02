@@ -1,0 +1,15 @@
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -441.614, 0.582834 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0.0000000001>sinf(x)-cosf(y)  RuntimeValue:  1.81085  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000475
+SolverParameter::algorithmTime[6] = 0.000475
+SolverParameter::FunctionTime[6] = 4.65661e-10
+SolverParameter::totalFrequency[6] = 1
+Cala Type: float
+

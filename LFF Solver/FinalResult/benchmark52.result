@@ -1,120 +1,121 @@
 **************** The Constraints Is As Following ****************
-( ( x*atan(z)>pow(x,tan(y))+z ) && ( sin(y)+cos(y)+tan(y)>=x-z ) )
+( ( x*atanf(z)>powf(x,tanf(y))+z ) && ( sinf(y)+cosf(y)+tanf(y)>=x-z ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0.202627, 4.65963, -1.07996 ] 
+Yes!!!!!   Find Covered Input: [ 6.42283, -49.7527, 4.67085 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-x*atan(z)>pow(x,tan(y))+z  RuntimeValue:  0.913027  isCovered： true
-sin(y)+cos(y)+tan(y)>=x-z  RuntimeValue:  16.6011  isCovered： true
+x*atanf(z)>powf(x,tanf(y))+z  RuntimeValue:  1.21403  isCovered： true
+sinf(y)+cosf(y)+tanf(y)>=x-z  RuntimeValue:  0.173019  isCovered： true
 
-SolverParameter::totalTime[0] = 0.22838
-SolverParameter::algorithmTime[0] = 0.22838
-SolverParameter::FunctionTime[0] = 2.28267e-07
-SolverParameter::totalFrequency[0] = 25
+SolverParameter::totalTime[0] = 0.11327
+SolverParameter::algorithmTime[0] = 0.11327
+SolverParameter::FunctionTime[0] = 1.11759e-07
+SolverParameter::totalFrequency[0] = 8
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0.202627, 4.65963, -1.07996 ] 
+Yes!!!!!   Find Covered Input: [ 6.42283, -49.7527, 4.67085 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-x*atan(z)>pow(x,tan(y))+z  RuntimeValue:  0.913027  isCovered： true
-sin(y)+cos(y)+tan(y)>=x-z  RuntimeValue:  16.6011  isCovered： true
+x*atanf(z)>powf(x,tanf(y))+z  RuntimeValue:  1.21403  isCovered： true
+sinf(y)+cosf(y)+tanf(y)>=x-z  RuntimeValue:  0.173019  isCovered： true
 
-SolverParameter::totalTime[1] = 0.000201
-SolverParameter::algorithmTime[1] = 0.000201
-SolverParameter::FunctionTime[1] = 1.89e-10
+SolverParameter::totalTime[1] = 0.000256
+SolverParameter::algorithmTime[1] = 0.000256
+SolverParameter::FunctionTime[1] = 2.32831e-10
 SolverParameter::totalFrequency[1] = 1
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0.173225, 4.65963, -1.07996 ] 
+Yes!!!!!   Find Covered Input: [ 6.42283, -49.7527, 4.67085 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-x*atan(z)>pow(x,tan(y))+z  RuntimeValue:  0.93725  isCovered： true
-sin(y)+cos(y)+tan(y)>=x-z  RuntimeValue:  16.6305  isCovered： true
+x*atanf(z)>powf(x,tanf(y))+z  RuntimeValue:  1.21403  isCovered： true
+sinf(y)+cosf(y)+tanf(y)>=x-z  RuntimeValue:  0.173019  isCovered： true
 
-SolverParameter::totalTime[2] = 0.000224
-SolverParameter::algorithmTime[2] = 0.000224
-SolverParameter::FunctionTime[2] = 2.12e-10
+SolverParameter::totalTime[2] = 0.001621
+SolverParameter::algorithmTime[2] = 0.001621
+SolverParameter::FunctionTime[2] = 1.62981e-09
 SolverParameter::totalFrequency[2] = 1
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0.0194451, 4.65963, -1.07996 ] 
+Yes!!!!!   Find Covered Input: [ 6.42283, -49.7527, 4.67085 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-x*atan(z)>pow(x,tan(y))+z  RuntimeValue:  1.06394  isCovered： true
-sin(y)+cos(y)+tan(y)>=x-z  RuntimeValue:  16.7843  isCovered： true
+x*atanf(z)>powf(x,tanf(y))+z  RuntimeValue:  1.21403  isCovered： true
+sinf(y)+cosf(y)+tanf(y)>=x-z  RuntimeValue:  0.173019  isCovered： true
 
-SolverParameter::totalTime[3] = 0.000219
-SolverParameter::algorithmTime[3] = 0.000219
-SolverParameter::FunctionTime[3] = 2.08e-10
+SolverParameter::totalTime[3] = 0.00019
+SolverParameter::algorithmTime[3] = 0.00019
+SolverParameter::FunctionTime[3] = 1.89175e-10
 SolverParameter::totalFrequency[3] = 1
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0.0194451, 4.65963, -1.07996 ] 
+Yes!!!!!   Find Covered Input: [ 6.42283, -49.7527, 4.67085 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-x*atan(z)>pow(x,tan(y))+z  RuntimeValue:  1.06394  isCovered： true
-sin(y)+cos(y)+tan(y)>=x-z  RuntimeValue:  16.7843  isCovered： true
+x*atanf(z)>powf(x,tanf(y))+z  RuntimeValue:  1.21403  isCovered： true
+sinf(y)+cosf(y)+tanf(y)>=x-z  RuntimeValue:  0.173019  isCovered： true
 
-SolverParameter::totalTime[4] = 0.000219
-SolverParameter::algorithmTime[4] = 0.000219
-SolverParameter::FunctionTime[4] = 2.1e-10
+SolverParameter::totalTime[4] = 0.000195
+SolverParameter::algorithmTime[4] = 0.000195
+SolverParameter::FunctionTime[4] = 2.03727e-10
 SolverParameter::totalFrequency[4] = 1
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0.0194451, 4.65963, -1.07996 ] 
+Yes!!!!!   Find Covered Input: [ 6.42283, -49.7527, 4.67085 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-x*atan(z)>pow(x,tan(y))+z  RuntimeValue:  1.06394  isCovered： true
-sin(y)+cos(y)+tan(y)>=x-z  RuntimeValue:  16.7843  isCovered： true
+x*atanf(z)>powf(x,tanf(y))+z  RuntimeValue:  1.21403  isCovered： true
+sinf(y)+cosf(y)+tanf(y)>=x-z  RuntimeValue:  0.173019  isCovered： true
 
-SolverParameter::totalTime[5] = 0.00018
-SolverParameter::algorithmTime[5] = 0.00018
-SolverParameter::FunctionTime[5] = 1.68e-10
+SolverParameter::totalTime[5] = 0.000186
+SolverParameter::algorithmTime[5] = 0.000186
+SolverParameter::FunctionTime[5] = 1.89175e-10
 SolverParameter::totalFrequency[5] = 1
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
-Yes!!!!!   Find Covered Input: [ 0.0194451, 4.65963, -1.07996 ] 
+Yes!!!!!   Find Covered Input: [ 6.42283, -49.7527, 4.67085 ] 
 Best Covered is: 100%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-x*atan(z)>pow(x,tan(y))+z  RuntimeValue:  1.06394  isCovered： true
-sin(y)+cos(y)+tan(y)>=x-z  RuntimeValue:  16.7843  isCovered： true
+x*atanf(z)>powf(x,tanf(y))+z  RuntimeValue:  1.21403  isCovered： true
+sinf(y)+cosf(y)+tanf(y)>=x-z  RuntimeValue:  0.173019  isCovered： true
 
-SolverParameter::totalTime[6] = 0.0002
-SolverParameter::algorithmTime[6] = 0.0002
-SolverParameter::FunctionTime[6] = 1.76e-10
+SolverParameter::totalTime[6] = 0.000188
+SolverParameter::algorithmTime[6] = 0.000188
+SolverParameter::FunctionTime[6] = 1.89175e-10
 SolverParameter::totalFrequency[6] = 1
 
 ----------------------------statistical result----------------------------
-Average Time:	0.0328033
-Best Time:	0.00018
-Worst Time:	0.22838
-Average Frequency:	4.42857
+Average Time:	0.016558
+Best Time:	0.000186
+Worst Time:	0.11327
+Average Frequency:	2
 Coverage Result:	[ true, true, true, true, true, true, true ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 200
-MAX_NUM_OF_GENERATE_CYCLE = 5
+MAX_NUM_OF_PREDICT_PARAM = 150
+MAX_NUM_OF_GENERATE_CYCLE = 3
 PREDICT_BOUNDARY = 5
 Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

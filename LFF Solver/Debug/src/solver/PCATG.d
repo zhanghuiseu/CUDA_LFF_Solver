@@ -118,9 +118,11 @@ src/solver/PCATG.o : ../src/solver/PCATG.cpp \
     /usr/include/x86_64-linux-gnu/bits/nan.h \
     /usr/include/x86_64-linux-gnu/bits/mathdef.h \
     /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+    ../src/solver/type.h \
     ../src/solver/ATG.h \
     ../src/solver/PCATG.h \
     ../src/solver/./../model/SearchTask.h \
+    ../src/solver/./../model/./../solver/type.h \
     ../src/solver/./../model/./../solver/SolverParameter.h \
     /usr/include/c++/5/limits \
     ../src/solver/./../model/./../solver/./../ConstraintParser/ConstraintParameter.cuh \
@@ -131,18 +133,22 @@ src/solver/PCATG.o : ../src/solver/PCATG.cpp \
     /usr/include/c++/5/bits/stl_bvector.h \
     /usr/include/c++/5/bits/vector.tcc \
     ../src/solver/./../model/./../solver/./../ConstraintParser/./../model/RuntimeValue.h \
+    ../src/solver/./../model/./../solver/./../ConstraintParser/./../model/./../solver/type.h \
+    ../src/solver/./../model/./../solver/./../ConstraintParser/./../solver/type.h \
     ../src/solver/./../model/./../ConstraintParser/ConstraintParameter.cuh \
     ../src/solver/ConstantValue.h \
     ../src/solver/./../cuda/ParallelATG.cuh \
     ../src/solver/./../cuda/./../ConstraintParser/ConstraintParameter.cuh \
-    ../src/solver/./../cuda/./../model/CoodinateDouble.cuh \
-    ../src/solver/./../cuda/./../model/IntervalDouble.cuh \
-    ../src/solver/./../cuda/./../model/PriorityDouble.cuh \
+    ../src/solver/./../cuda/./../model/Coodinate.cuh \
+    ../src/solver/./../cuda/./../model/./../solver/type.h \
+    ../src/solver/./../cuda/./../model/Interval.cuh \
+    ../src/solver/./../cuda/./../model/Priority.cuh \
     ../src/solver/./../cuda/./../model/FullCoveredInfo.cuh \
     ../src/solver/./../cuda/./../model/Classification.cuh \
     ../src/solver/./../cuda/./../model/PredictValue.cuh \
     ../src/solver/./../cuda/./../model/PredictValueWithOne.cuh \
     ../src/solver/./../cuda/./../solver/ATG.h \
+    ../src/solver/./../cuda/./../solver/type.h \
     ../src/solver/./../cuda/./../solver/PCATG.h \
     ../src/solver/./../cuda/HardwareStrategy.cuh \
     ../src/solver/./../cuda/CLF.cuh \

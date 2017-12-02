@@ -1,0 +1,15 @@
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 38.5407 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+roundf(x)>5  RuntimeValue:  34  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000466
+SolverParameter::algorithmTime[5] = 0.000466
+SolverParameter::FunctionTime[5] = 4.65661e-10
+SolverParameter::totalFrequency[5] = 1
+Cala Type: float
+

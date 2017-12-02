@@ -1,0 +1,114 @@
+**************** The Constraints Is As Following ****************
+( ( cos(y)*cos(z)-atan(w)>sin(y)*asin(x) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.542626, 11.9816, 0, -60.6674 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(y)*cos(z)-atan(w)>sin(y)*asin(x)  RuntimeValue:  2.70476  isCovered： true
+
+SolverParameter::totalTime[0] = 1.15012
+SolverParameter::algorithmTime[0] = 1.15012
+SolverParameter::FunctionTime[0] = 1.15005e-06
+SolverParameter::totalFrequency[0] = 197
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.892191, -32.1159, -0.249746, 3.60158 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(y)*cos(z)-atan(w)>sin(y)*asin(x)  RuntimeValue:  0.151189  isCovered： true
+
+SolverParameter::totalTime[1] = 0.634671
+SolverParameter::algorithmTime[1] = 0.63467
+SolverParameter::FunctionTime[1] = 6.34652e-07
+SolverParameter::totalFrequency[1] = 113
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.885922, -0.58107, -2.22536, -2.66635 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(y)*cos(z)-atan(w)>sin(y)*asin(x)  RuntimeValue:  1.30058  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000503
+SolverParameter::algorithmTime[2] = 0.000503
+SolverParameter::FunctionTime[2] = 4.95e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.501397, -61.533, 43.9775, -60.6782 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(y)*cos(z)-atan(w)>sin(y)*asin(x)  RuntimeValue:  2.32882  isCovered： true
+
+SolverParameter::totalTime[3] = 1.09471
+SolverParameter::algorithmTime[3] = 1.09471
+SolverParameter::FunctionTime[3] = 1.09468e-06
+SolverParameter::totalFrequency[3] = 172
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.0472383, -0.780274, -3.14436, -2.3971 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(y)*cos(z)-atan(w)>sin(y)*asin(x)  RuntimeValue:  0.431615  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000507
+SolverParameter::algorithmTime[4] = 0.000507
+SolverParameter::FunctionTime[4] = 4.98e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0, -3.19131, 1.01194, -1.47292 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(y)*cos(z)-atan(w)>sin(y)*asin(x)  RuntimeValue:  0.444793  isCovered： true
+
+SolverParameter::totalTime[5] = 0.0005
+SolverParameter::algorithmTime[5] = 0.0005
+SolverParameter::FunctionTime[5] = 4.92e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.997975, 3.99268, -3.0394, 1.26352 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(y)*cos(z)-atan(w)>sin(y)*asin(x)  RuntimeValue:  0.887806  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000501
+SolverParameter::algorithmTime[6] = 0.000501
+SolverParameter::FunctionTime[6] = 4.92e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.411645
+Best Time:	0.0005
+Worst Time:	1.15012
+Average Frequency:	69.4286
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 1000
+MAX_NUM_OF_GENERATE_CYCLE = 6
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ONE_BY_ONE 
+
+

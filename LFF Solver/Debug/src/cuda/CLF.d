@@ -191,15 +191,20 @@ src/cuda/CLF.o : ../src/cuda/CLF.cu \
     /usr/include/c++/5/istream \
     /usr/include/c++/5/bits/istream.tcc \
     ../src/cuda/./../ConstraintParser/./../model/RuntimeValue.h \
-    ../src/cuda/./../model/CoodinateDouble.cuh \
-    ../src/cuda/./../model/IntervalDouble.cuh \
-    ../src/cuda/./../model/PriorityDouble.cuh \
+    ../src/cuda/./../ConstraintParser/./../model/./../solver/type.h \
+    ../src/cuda/./../ConstraintParser/./../solver/type.h \
+    ../src/cuda/./../model/Coodinate.cuh \
+    ../src/cuda/./../model/./../solver/type.h \
+    ../src/cuda/./../model/Interval.cuh \
+    ../src/cuda/./../model/Priority.cuh \
     ../src/cuda/./../model/FullCoveredInfo.cuh \
     ../src/cuda/./../model/Classification.cuh \
     ../src/cuda/./../solver/ATG.h \
+    ../src/cuda/./../solver/type.h \
     ../src/cuda/./../solver/PCATG.h \
     /usr/include/c++/5/ctime \
     ../src/cuda/./../solver/./../model/SearchTask.h \
+    ../src/cuda/./../solver/./../model/./../solver/type.h \
     ../src/cuda/./../solver/./../model/./../solver/SolverParameter.h \
     /usr/include/c++/5/limits \
     ../src/cuda/./../solver/./../model/./../solver/./../ConstraintParser/ConstraintParameter.cuh \

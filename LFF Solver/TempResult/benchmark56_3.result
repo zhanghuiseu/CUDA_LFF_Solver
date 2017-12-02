@@ -1,0 +1,15 @@
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -183.433, 0.451303, 0.144668, 3.562, -3.14412 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  323.22  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000489
+SolverParameter::algorithmTime[2] = 0.000489
+SolverParameter::FunctionTime[2] = 4.65661e-10
+SolverParameter::totalFrequency[2] = 1
+Cala Type: float
+

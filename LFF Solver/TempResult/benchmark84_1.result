@@ -1,0 +1,21 @@
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1, 1, 1, 1 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+1-c==0  RuntimeValue:  -1.19209e-07  isCovered： false
+1-a==0  RuntimeValue:  1.19209e-07  isCovered： false
+10*(b-a*a)==0  RuntimeValue:  0  isCovered： true
+sqrtf(90)*(d-c*c)==0  RuntimeValue:  0  isCovered： true
+sqrtf(10)*(b+d-2)==0  RuntimeValue:  0  isCovered： true
+powf(10,-0.5)*(b-d)==0  RuntimeValue:  -1.50789e-07  isCovered： false
+
+SolverParameter::totalTime[0] = 1.29183
+SolverParameter::algorithmTime[0] = 1.29183
+SolverParameter::FunctionTime[0] = 1.19209e-06
+SolverParameter::totalFrequency[0] = 67
+Cala Type: float
+

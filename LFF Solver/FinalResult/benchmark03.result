@@ -1,121 +1,121 @@
 **************** The Constraints Is As Following ****************
-( ( sin(x)-cos(y)==0 ) )
+( ( sinf(x)-cosf(y)==0 ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 3.51058, 1.93979 ] 
-Best Covered is: 99.9996%
+The Best Input Is: [ -26.8909, 2.95402 ] 
+Best Covered is: 99.9959%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x)-cos(y)==0  RuntimeValue:  4.14394e-06  isCovered： false
+sinf(x)-cosf(y)==0  RuntimeValue:  -4.06504e-05  isCovered： false
 
-SolverParameter::totalTime[0] = 0.14628
-SolverParameter::algorithmTime[0] = 0.14628
-SolverParameter::FunctionTime[0] = 1.46223e-07
-SolverParameter::totalFrequency[0] = 15
+SolverParameter::totalTime[0] = 0.190214
+SolverParameter::algorithmTime[0] = 0.190214
+SolverParameter::FunctionTime[0] = 1.78814e-07
+SolverParameter::totalFrequency[0] = 8
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 0.00162244, -1.56917 ] 
-Best Covered is: 99.9999%
+The Best Input Is: [ 38.5239, 44.734 ] 
+Best Covered is: 99.6097%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x)-cos(y)==0  RuntimeValue:  7.79347e-07  isCovered： false
+sinf(x)-cosf(y)==0  RuntimeValue:  0.00391871  isCovered： false
 
-SolverParameter::totalTime[1] = 0.121183
-SolverParameter::algorithmTime[1] = 0.121183
-SolverParameter::FunctionTime[1] = 1.21146e-07
-SolverParameter::totalFrequency[1] = 15
+SolverParameter::totalTime[1] = 0.117939
+SolverParameter::algorithmTime[1] = 0.117939
+SolverParameter::FunctionTime[1] = 1.19209e-07
+SolverParameter::totalFrequency[1] = 8
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 4.94066e-324, 4.71216 ] 
-Best Covered is: 99.9771%
+The Best Input Is: [ 1.06756, -30.9108 ] 
+Best Covered is: 99.9095%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x)-cos(y)==0  RuntimeValue:  0.000228907  isCovered： false
+sinf(x)-cosf(y)==0  RuntimeValue:  0.000905633  isCovered： false
 
-SolverParameter::totalTime[2] = 0.102441
-SolverParameter::algorithmTime[2] = 0.102441
-SolverParameter::FunctionTime[2] = 1.02407e-07
-SolverParameter::totalFrequency[2] = 15
+SolverParameter::totalTime[2] = 0.110304
+SolverParameter::algorithmTime[2] = 0.110304
+SolverParameter::FunctionTime[2] = 1.04308e-07
+SolverParameter::totalFrequency[2] = 8
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 3.24658, 4.60739 ] 
-Best Covered is: 99.9988%
+The Best Input Is: [ 59.6774, 4.72309 ] 
+Best Covered is: 99.7857%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x)-cos(y)==0  RuntimeValue:  1.18359e-05  isCovered： false
+sinf(x)-cosf(y)==0  RuntimeValue:  0.002148  isCovered： false
 
-SolverParameter::totalTime[3] = 0.060241
-SolverParameter::algorithmTime[3] = 0.0602409
-SolverParameter::FunctionTime[3] = 6.0207e-08
-SolverParameter::totalFrequency[3] = 14
+SolverParameter::totalTime[3] = 0.108807
+SolverParameter::algorithmTime[3] = 0.108807
+SolverParameter::FunctionTime[3] = 1.04308e-07
+SolverParameter::totalFrequency[3] = 8
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -1.32578, -2.89724 ] 
-Best Covered is: 99.9839%
+The Best Input Is: [ 54.9249, -9.4701 ] 
+Best Covered is: 99.9625%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x)-cos(y)==0  RuntimeValue:  0.000160939  isCovered： false
+sinf(x)-cosf(y)==0  RuntimeValue:  0.000375569  isCovered： false
 
-SolverParameter::totalTime[4] = 0.078116
-SolverParameter::algorithmTime[4] = 0.0781159
-SolverParameter::FunctionTime[4] = 7.8092e-08
-SolverParameter::totalFrequency[4] = 15
+SolverParameter::totalTime[4] = 0.11494
+SolverParameter::algorithmTime[4] = 0.11494
+SolverParameter::FunctionTime[4] = 1.19209e-07
+SolverParameter::totalFrequency[4] = 8
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 6.69617, 1.15921 ] 
-Best Covered is: 99.872%
+The Best Input Is: [ -13.5218, -3.75897 ] 
+Best Covered is: 99.887%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x)-cos(y)==0  RuntimeValue:  0.00128145  isCovered： false
+sinf(x)-cosf(y)==0  RuntimeValue:  -0.001131  isCovered： false
 
-SolverParameter::totalTime[5] = 0.087713
-SolverParameter::algorithmTime[5] = 0.0877129
-SolverParameter::FunctionTime[5] = 8.7667e-08
-SolverParameter::totalFrequency[5] = 15
+SolverParameter::totalTime[5] = 0.11388
+SolverParameter::algorithmTime[5] = 0.11388
+SolverParameter::FunctionTime[5] = 1.19209e-07
+SolverParameter::totalFrequency[5] = 8
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 0.755942, -0.814999 ] 
-Best Covered is: 99.9895%
+The Best Input Is: [ 3.59912, -58.5709 ] 
+Best Covered is: 99.4554%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-sin(x)-cos(y)==0  RuntimeValue:  0.000104818  isCovered： false
+sinf(x)-cosf(y)==0  RuntimeValue:  -0.00547603  isCovered： false
 
-SolverParameter::totalTime[6] = 0.079041
-SolverParameter::algorithmTime[6] = 0.0790409
-SolverParameter::FunctionTime[6] = 7.9012e-08
-SolverParameter::totalFrequency[6] = 15
+SolverParameter::totalTime[6] = 0.109692
+SolverParameter::algorithmTime[6] = 0.109692
+SolverParameter::FunctionTime[6] = 1.11759e-07
+SolverParameter::totalFrequency[6] = 8
 
 ----------------------------statistical result----------------------------
-Average Time:	0.0964307
-Best Time:	0.060241
-Worst Time:	0.14628
-Average Frequency:	14.8571
+Average Time:	0.123682
+Best Time:	0.108807
+Worst Time:	0.190214
+Average Frequency:	8
 Coverage Result:	[ false, false, false, false, false, false, false ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 100
+MAX_NUM_OF_PREDICT_PARAM = 200
 MAX_NUM_OF_GENERATE_CYCLE = 2
 PREDICT_BOUNDARY = 5
-Search Strategy: SEARCH_STRATEGY_ONE_BY_ONE 
-
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

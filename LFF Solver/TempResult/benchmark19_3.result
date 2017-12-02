@@ -1,0 +1,15 @@
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.884438, 6.7546e+06, 0.0457721 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+atanf(y)+asinf(z)>3*acosf(x)  RuntimeValue:  0.160062  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000154
+SolverParameter::algorithmTime[2] = 0.000154
+SolverParameter::FunctionTime[2] = 1.45519e-10
+SolverParameter::totalFrequency[2] = 1
+Cala Type: float
+

@@ -96,6 +96,7 @@ src/model/SearchTask.o : ../src/model/SearchTask.cpp \
     /usr/include/c++/5/bits/ostream.tcc \
     /usr/include/c++/5/istream \
     /usr/include/c++/5/bits/istream.tcc \
+    ../src/model/./../solver/type.h \
     ../src/model/SearchTask.h \
     ../src/model/./../solver/SolverParameter.h \
     /usr/include/c++/5/limits \
@@ -107,4 +108,6 @@ src/model/SearchTask.o : ../src/model/SearchTask.cpp \
     /usr/include/c++/5/bits/stl_bvector.h \
     /usr/include/c++/5/bits/vector.tcc \
     ../src/model/./../solver/./../ConstraintParser/./../model/RuntimeValue.h \
+    ../src/model/./../solver/./../ConstraintParser/./../model/./../solver/type.h \
+    ../src/model/./../solver/./../ConstraintParser/./../solver/type.h \
     ../src/model/./../ConstraintParser/ConstraintParameter.cuh

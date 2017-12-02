@@ -98,6 +98,7 @@ src/solver/SolverParameter.o : ../src/solver/SolverParameter.cpp \
     /usr/include/c++/5/istream \
     /usr/include/c++/5/bits/istream.tcc \
     /usr/include/c++/5/limits \
+    ../src/solver/type.h \
     ../src/solver/./../ConstraintParser/ConstraintParameter.cuh \
     /usr/include/c++/5/vector \
     /usr/include/c++/5/bits/stl_construct.h \
@@ -106,6 +107,8 @@ src/solver/SolverParameter.o : ../src/solver/SolverParameter.cpp \
     /usr/include/c++/5/bits/stl_bvector.h \
     /usr/include/c++/5/bits/vector.tcc \
     ../src/solver/./../ConstraintParser/./../model/RuntimeValue.h \
+    ../src/solver/./../ConstraintParser/./../model/./../solver/type.h \
+    ../src/solver/./../ConstraintParser/./../solver/type.h \
     /usr/include/c++/5/cmath \
     /usr/include/math.h \
     /usr/include/x86_64-linux-gnu/bits/math-vector.h \

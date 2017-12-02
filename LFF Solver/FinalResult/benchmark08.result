@@ -1,121 +1,121 @@
 **************** The Constraints Is As Following ****************
-( ( cos(3*x+2*y-z)*sin(z+x+y)==cos(z*x*y) ) )
+( ( cosf(3*x+2*y-z)*sinf(z+x+y)==cosf(z*x*y) ) )
 
 ----------------------------run0----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 3.98213, -5.8561, 3.11663 ] 
-Best Covered is: 99.7044%
+The Best Input Is: [ -2.34918, 16.2482, -48.6855 ] 
+Best Covered is: 99.9889%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(3*x+2*y-z)*sin(z+x+y)==cos(z*x*y)  RuntimeValue:  -0.00296468  isCovered： false
+cosf(3*x+2*y-z)*sinf(z+x+y)==cosf(z*x*y)  RuntimeValue:  0.000111081  isCovered： false
 
-SolverParameter::totalTime[0] = 0.314901
-SolverParameter::algorithmTime[0] = 0.314901
-SolverParameter::FunctionTime[0] = 3.14808e-07
-SolverParameter::totalFrequency[0] = 34
+SolverParameter::totalTime[0] = 0.634316
+SolverParameter::algorithmTime[0] = 0.634315
+SolverParameter::FunctionTime[0] = 6.55651e-07
+SolverParameter::totalFrequency[0] = 42
 
 ----------------------------run1----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -3.2168, -4.47043, -2.8046 ] 
-Best Covered is: 99.9961%
+The Best Input Is: [ 4.48294, 51.9698, -33.4796 ] 
+Best Covered is: 99.9982%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(3*x+2*y-z)*sin(z+x+y)==cos(z*x*y)  RuntimeValue:  3.93106e-05  isCovered： false
+cosf(3*x+2*y-z)*sinf(z+x+y)==cosf(z*x*y)  RuntimeValue:  -1.75834e-05  isCovered： false
 
-SolverParameter::totalTime[1] = 0.291184
-SolverParameter::algorithmTime[1] = 0.291184
-SolverParameter::FunctionTime[1] = 2.91101e-07
-SolverParameter::totalFrequency[1] = 36
+SolverParameter::totalTime[1] = 0.556294
+SolverParameter::algorithmTime[1] = 0.556293
+SolverParameter::FunctionTime[1] = 5.96046e-07
+SolverParameter::totalFrequency[1] = 42
 
 ----------------------------run2----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 6.00618, -1.12996, 0.0285568 ] 
-Best Covered is: 99.9967%
+The Best Input Is: [ -14.8509, 2.35787, -3.72309 ] 
+Best Covered is: 99.9977%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(3*x+2*y-z)*sin(z+x+y)==cos(z*x*y)  RuntimeValue:  3.27649e-05  isCovered： false
+cosf(3*x+2*y-z)*sinf(z+x+y)==cosf(z*x*y)  RuntimeValue:  -2.25073e-05  isCovered： false
 
-SolverParameter::totalTime[2] = 0.188695
-SolverParameter::algorithmTime[2] = 0.188695
-SolverParameter::FunctionTime[2] = 1.88618e-07
-SolverParameter::totalFrequency[2] = 33
+SolverParameter::totalTime[2] = 0.550715
+SolverParameter::algorithmTime[2] = 0.550714
+SolverParameter::FunctionTime[2] = 5.96046e-07
+SolverParameter::totalFrequency[2] = 42
 
 ----------------------------run3----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -5.21729, -4.19085, -4.76087 ] 
-Best Covered is: 99.9691%
+The Best Input Is: [ 61.2162, 1.28586, 18.4212 ] 
+Best Covered is: 99.8391%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(3*x+2*y-z)*sin(z+x+y)==cos(z*x*y)  RuntimeValue:  0.000308899  isCovered： false
+cosf(3*x+2*y-z)*sinf(z+x+y)==cosf(z*x*y)  RuntimeValue:  0.00161143  isCovered： false
 
-SolverParameter::totalTime[3] = 0.306394
-SolverParameter::algorithmTime[3] = 0.306394
-SolverParameter::FunctionTime[3] = 3.06316e-07
-SolverParameter::totalFrequency[3] = 35
+SolverParameter::totalTime[3] = 0.564948
+SolverParameter::algorithmTime[3] = 0.564947
+SolverParameter::FunctionTime[3] = 5.96046e-07
+SolverParameter::totalFrequency[3] = 42
 
 ----------------------------run4----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -3.3368, -0.796729, -0.580422 ] 
-Best Covered is: 99.9868%
+The Best Input Is: [ 4.5492, 1.14005, -11.7809 ] 
+Best Covered is: 99.9884%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(3*x+2*y-z)*sin(z+x+y)==cos(z*x*y)  RuntimeValue:  0.000131946  isCovered： false
+cosf(3*x+2*y-z)*sinf(z+x+y)==cosf(z*x*y)  RuntimeValue:  0.000115737  isCovered： false
 
-SolverParameter::totalTime[4] = 0.307219
-SolverParameter::algorithmTime[4] = 0.307219
-SolverParameter::FunctionTime[4] = 3.07147e-07
-SolverParameter::totalFrequency[4] = 36
+SolverParameter::totalTime[4] = 0.56165
+SolverParameter::algorithmTime[4] = 0.561649
+SolverParameter::FunctionTime[4] = 5.36442e-07
+SolverParameter::totalFrequency[4] = 42
 
 ----------------------------run5----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ 3.63002, 2.37853, -1.63807 ] 
-Best Covered is: 99.9994%
+The Best Input Is: [ -50.3484, 5.8938, 8.45845 ] 
+Best Covered is: 99.9461%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(3*x+2*y-z)*sin(z+x+y)==cos(z*x*y)  RuntimeValue:  5.72492e-06  isCovered： false
+cosf(3*x+2*y-z)*sinf(z+x+y)==cosf(z*x*y)  RuntimeValue:  0.000539541  isCovered： false
 
-SolverParameter::totalTime[5] = 0.27124
-SolverParameter::algorithmTime[5] = 0.27124
-SolverParameter::FunctionTime[5] = 2.71165e-07
-SolverParameter::totalFrequency[5] = 35
+SolverParameter::totalTime[5] = 0.543913
+SolverParameter::algorithmTime[5] = 0.543912
+SolverParameter::FunctionTime[5] = 5.96046e-07
+SolverParameter::totalFrequency[5] = 42
 
 ----------------------------run6----------------------------
 Coverage Result Is As Following:
 Sorry,No!!!!! Cannot Find Covered Input ！
-The Best Input Is: [ -4.55344, 23.3309, -4.73079 ] 
-Best Covered is: 99.8264%
+The Best Input Is: [ 36.9418, 2.2884, -2.06452 ] 
+Best Covered is: 99.9953%
 
 析取范式以及运行结果如下： 
 析取范式的合取子式 0 : 
-cos(3*x+2*y-z)*sin(z+x+y)==cos(z*x*y)  RuntimeValue:  -0.00173864  isCovered： false
+cosf(3*x+2*y-z)*sinf(z+x+y)==cosf(z*x*y)  RuntimeValue:  -4.67449e-05  isCovered： false
 
-SolverParameter::totalTime[6] = 0.254204
-SolverParameter::algorithmTime[6] = 0.254204
-SolverParameter::FunctionTime[6] = 2.54122e-07
-SolverParameter::totalFrequency[6] = 35
+SolverParameter::totalTime[6] = 0.553377
+SolverParameter::algorithmTime[6] = 0.553376
+SolverParameter::FunctionTime[6] = 5.36442e-07
+SolverParameter::totalFrequency[6] = 42
 
 ----------------------------statistical result----------------------------
-Average Time:	0.276262
-Best Time:	0.188695
-Worst Time:	0.314901
-Average Frequency:	34.8571
+Average Time:	0.566459
+Best Time:	0.543913
+Worst Time:	0.634316
+Average Frequency:	42
 Coverage Result:	[ false, false, false, false, false, false, false ] 
 Parameter Setting: 
-MAX_NUM_OF_PREDICT_PARAM = 100
+MAX_NUM_OF_PREDICT_PARAM = 200
 MAX_NUM_OF_GENERATE_CYCLE = 3
 PREDICT_BOUNDARY = 5
-Search Strategy: SEARCH_STRATEGY_ONE_BY_ONE 
-
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
 

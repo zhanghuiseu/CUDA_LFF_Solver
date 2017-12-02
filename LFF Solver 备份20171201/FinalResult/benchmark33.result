@@ -1,0 +1,113 @@
+**************** The Constraints Is As Following ****************
+( ( sqrt(sin(x))>sqrt(cos(x)) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 384.071 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sqrt(sin(x))>sqrt(cos(x))  RuntimeValue:  0.00921976  isCovered： true
+
+SolverParameter::totalTime[0] = 0.067865
+SolverParameter::algorithmTime[0] = 0.0678649
+SolverParameter::FunctionTime[0] = 6.7842e-08
+SolverParameter::totalFrequency[0] = 1
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -514.428 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sqrt(sin(x))>sqrt(cos(x))  RuntimeValue:  0.00667335  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000703
+SolverParameter::algorithmTime[1] = 0.000702999
+SolverParameter::FunctionTime[1] = 6.98e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 321.328 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sqrt(sin(x))>sqrt(cos(x))  RuntimeValue:  0.0840117  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000702
+SolverParameter::algorithmTime[2] = 0.000701999
+SolverParameter::FunctionTime[2] = 6.98e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -513.738 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sqrt(sin(x))>sqrt(cos(x))  RuntimeValue:  0.703154  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000702
+SolverParameter::algorithmTime[3] = 0.000701999
+SolverParameter::FunctionTime[3] = 6.98e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -514.356 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sqrt(sin(x))>sqrt(cos(x))  RuntimeValue:  0.0672293  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000695
+SolverParameter::algorithmTime[4] = 0.000694999
+SolverParameter::FunctionTime[4] = 6.9e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -124.451 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sqrt(sin(x))>sqrt(cos(x))  RuntimeValue:  0.375464  isCovered： true
+
+SolverParameter::totalTime[5] = 0.0007
+SolverParameter::algorithmTime[5] = 0.000699999
+SolverParameter::FunctionTime[5] = 6.96e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 133.093 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sqrt(sin(x))>sqrt(cos(x))  RuntimeValue:  0.312827  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000692
+SolverParameter::algorithmTime[6] = 0.000691999
+SolverParameter::FunctionTime[6] = 6.89e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.0102941
+Best Time:	0.000692
+Worst Time:	0.067865
+Average Frequency:	1
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 1500
+MAX_NUM_OF_GENERATE_CYCLE = 1
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

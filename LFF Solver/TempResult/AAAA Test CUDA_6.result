@@ -1,0 +1,17 @@
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.903279, 2.45427, 5.76683 ] 
+Best Covered is: 84.6784%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x+2*y-z==0  RuntimeValue:  0.044991  isCovered： false
+x+y-3==0  RuntimeValue:  0.35755  isCovered： false
+
+SolverParameter::totalTime[5] = 0.226947
+SolverParameter::algorithmTime[5] = 0.226947
+SolverParameter::FunctionTime[5] = 2.23517e-07
+SolverParameter::totalFrequency[5] = 18
+Cala Type: float
+

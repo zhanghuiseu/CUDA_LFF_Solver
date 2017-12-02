@@ -1,0 +1,135 @@
+**************** The Constraints Is As Following ****************
+( ( cos(sin(x*z))>sin(cos(x*y)) ) && ( sin(2*w-y)/(cos(2*y+v)+1)>=cos(2*z+x)/(sin(2*w+v)-1) ) && ( sin(x*y*z*w)>0 ) && ( 0>cos(x*y*z*w) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4.2119, -2.62864, -0.595274, -1.22681, -1.28349 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(sin(x*z))>sin(cos(x*y))  RuntimeValue:  0.753606  isCovered： true
+sin(2*w-y)/(cos(2*y+v)+1)>=cos(2*z+x)/(sin(2*w+v)-1)  RuntimeValue:  1.53837  isCovered： true
+sin(x*y*z*w)>0  RuntimeValue:  0.973338  isCovered： true
+0>cos(x*y*z*w)  RuntimeValue:  0.229376  isCovered： true
+
+SolverParameter::totalTime[0] = 0.077596
+SolverParameter::algorithmTime[0] = 0.0775959
+SolverParameter::FunctionTime[0] = 7.7575e-08
+SolverParameter::totalFrequency[0] = 5
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4.2119, -2.62864, -0.595274, -1.22681, -1.28349 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(sin(x*z))>sin(cos(x*y))  RuntimeValue:  0.753606  isCovered： true
+sin(2*w-y)/(cos(2*y+v)+1)>=cos(2*z+x)/(sin(2*w+v)-1)  RuntimeValue:  1.53837  isCovered： true
+sin(x*y*z*w)>0  RuntimeValue:  0.973338  isCovered： true
+0>cos(x*y*z*w)  RuntimeValue:  0.229376  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000251
+SolverParameter::algorithmTime[1] = 0.000251
+SolverParameter::FunctionTime[1] = 2.45e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4.2119, -2.62864, -0.595274, -1.22681, -1.28349 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(sin(x*z))>sin(cos(x*y))  RuntimeValue:  0.753606  isCovered： true
+sin(2*w-y)/(cos(2*y+v)+1)>=cos(2*z+x)/(sin(2*w+v)-1)  RuntimeValue:  1.53837  isCovered： true
+sin(x*y*z*w)>0  RuntimeValue:  0.973338  isCovered： true
+0>cos(x*y*z*w)  RuntimeValue:  0.229376  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000341
+SolverParameter::algorithmTime[2] = 0.000341
+SolverParameter::FunctionTime[2] = 3.37e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4.2119, -2.62864, -0.595274, -1.22681, -1.28349 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(sin(x*z))>sin(cos(x*y))  RuntimeValue:  0.753606  isCovered： true
+sin(2*w-y)/(cos(2*y+v)+1)>=cos(2*z+x)/(sin(2*w+v)-1)  RuntimeValue:  1.53837  isCovered： true
+sin(x*y*z*w)>0  RuntimeValue:  0.973338  isCovered： true
+0>cos(x*y*z*w)  RuntimeValue:  0.229376  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000218
+SolverParameter::algorithmTime[3] = 0.000218
+SolverParameter::FunctionTime[3] = 2.15e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4.2119, -2.62864, -0.595274, -1.22681, -1.28349 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(sin(x*z))>sin(cos(x*y))  RuntimeValue:  0.753606  isCovered： true
+sin(2*w-y)/(cos(2*y+v)+1)>=cos(2*z+x)/(sin(2*w+v)-1)  RuntimeValue:  1.53837  isCovered： true
+sin(x*y*z*w)>0  RuntimeValue:  0.973338  isCovered： true
+0>cos(x*y*z*w)  RuntimeValue:  0.229376  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000224
+SolverParameter::algorithmTime[4] = 0.000224
+SolverParameter::FunctionTime[4] = 2.21e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4.2119, -2.62864, -0.595274, -1.22681, -1.28349 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(sin(x*z))>sin(cos(x*y))  RuntimeValue:  0.753606  isCovered： true
+sin(2*w-y)/(cos(2*y+v)+1)>=cos(2*z+x)/(sin(2*w+v)-1)  RuntimeValue:  1.53837  isCovered： true
+sin(x*y*z*w)>0  RuntimeValue:  0.973338  isCovered： true
+0>cos(x*y*z*w)  RuntimeValue:  0.229376  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000217
+SolverParameter::algorithmTime[5] = 0.000217
+SolverParameter::FunctionTime[5] = 2.14e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4.2119, -2.62864, -0.595274, -1.22681, -1.28349 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(sin(x*z))>sin(cos(x*y))  RuntimeValue:  0.753606  isCovered： true
+sin(2*w-y)/(cos(2*y+v)+1)>=cos(2*z+x)/(sin(2*w+v)-1)  RuntimeValue:  1.53837  isCovered： true
+sin(x*y*z*w)>0  RuntimeValue:  0.973338  isCovered： true
+0>cos(x*y*z*w)  RuntimeValue:  0.229376  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000215
+SolverParameter::algorithmTime[6] = 0.000215
+SolverParameter::FunctionTime[6] = 2.12e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.0112946
+Best Time:	0.000215
+Worst Time:	0.077596
+Average Frequency:	1.57143
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 100
+MAX_NUM_OF_GENERATE_CYCLE = 5
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: Double
+

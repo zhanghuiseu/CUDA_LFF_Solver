@@ -1,0 +1,127 @@
+**************** The Constraints Is As Following ****************
+( ( sin(x)>0 ) && ( sin(x)==-sin(y) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -10.6266, -1.34842 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)>0  RuntimeValue:  0.93269  isCovered： true
+sin(x)==-sin(y)  RuntimeValue:  -0.0426863  isCovered： false
+
+SolverParameter::totalTime[0] = 0.401411
+SolverParameter::algorithmTime[0] = 0.401411
+SolverParameter::FunctionTime[0] = 4.01305e-07
+SolverParameter::totalFrequency[0] = 22
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.39629e-313, 1.48715e-313 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)>0  RuntimeValue:  1.39629e-313  isCovered： true
+sin(x)==-sin(y)  RuntimeValue:  2.88345e-313  isCovered： false
+
+SolverParameter::totalTime[1] = 0.573518
+SolverParameter::algorithmTime[1] = 0.573517
+SolverParameter::FunctionTime[1] = 5.73476e-07
+SolverParameter::totalFrequency[1] = 82
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -1.50086e-314, 1.48715e-313 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)>0  RuntimeValue:  -1.50086e-314  isCovered： false
+sin(x)==-sin(y)  RuntimeValue:  1.33707e-313  isCovered： false
+
+SolverParameter::totalTime[2] = 0.245368
+SolverParameter::algorithmTime[2] = 0.245368
+SolverParameter::FunctionTime[2] = 2.45331e-07
+SolverParameter::totalFrequency[2] = 23
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -3.81827, 3.81882 ] 
+Best Covered is: 99.9786%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)>0  RuntimeValue:  0.626205  isCovered： true
+sin(x)==-sin(y)  RuntimeValue:  -0.000427717  isCovered： false
+
+SolverParameter::totalTime[3] = 0.601247
+SolverParameter::algorithmTime[3] = 0.601246
+SolverParameter::FunctionTime[3] = 6.01208e-07
+SolverParameter::totalFrequency[3] = 19
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.66632, -1.66433 ] 
+Best Covered is: 99.9906%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)>0  RuntimeValue:  0.995441  isCovered： true
+sin(x)==-sin(y)  RuntimeValue:  -0.000187164  isCovered： false
+
+SolverParameter::totalTime[4] = 0.345689
+SolverParameter::algorithmTime[4] = 0.345689
+SolverParameter::FunctionTime[4] = 3.45654e-07
+SolverParameter::totalFrequency[4] = 18
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 2.47894e-313, 2.2627e-313 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)>0  RuntimeValue:  2.47894e-313  isCovered： true
+sin(x)==-sin(y)  RuntimeValue:  4.74164e-313  isCovered： false
+
+SolverParameter::totalTime[5] = 0.39628
+SolverParameter::algorithmTime[5] = 0.39628
+SolverParameter::FunctionTime[5] = 3.96241e-07
+SolverParameter::totalFrequency[5] = 19
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.481361, -2.66025 ] 
+Best Covered is: 99.9993%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x)>0  RuntimeValue:  0.462986  isCovered： true
+sin(x)==-sin(y)  RuntimeValue:  1.38763e-05  isCovered： false
+
+SolverParameter::totalTime[6] = 0.490504
+SolverParameter::algorithmTime[6] = 0.490504
+SolverParameter::FunctionTime[6] = 4.90452e-07
+SolverParameter::totalFrequency[6] = 19
+
+----------------------------statistical result----------------------------
+Average Time:	0.436288
+Best Time:	0.245368
+Worst Time:	0.601247
+Average Frequency:	28.8571
+Coverage Result:	[ false, false, false, false, false, false, false ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 400
+MAX_NUM_OF_GENERATE_CYCLE = 2
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

@@ -1,0 +1,22 @@
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 3.08914, 1, 4.32695, 5.08914 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+powf(z,x)>sqrtf(expf(x+z))  RuntimeValue:  51.537  isCovered： true
+x>0  RuntimeValue:  3.08914  isCovered： true
+y>1  RuntimeValue:  1.19209e-07  isCovered： true
+z>1  RuntimeValue:  3.32695  isCovered： true
+1>y  RuntimeValue:  -1.19209e-07  isCovered： false
+x+2>y  RuntimeValue:  4.08914  isCovered： true
+w==x+2  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[2] = 1.2346
+SolverParameter::algorithmTime[2] = 1.2346
+SolverParameter::FunctionTime[2] = 1.19209e-06
+SolverParameter::totalFrequency[2] = 516
+Cala Type: float
+

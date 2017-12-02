@@ -1,0 +1,178 @@
+**************** The Constraints Is As Following ****************
+( ( x-y+tan(v)>(z+t)/(w+t) ) && ( sqrt(x-t)>z/y ) && ( log(x*y)>log(t+w+z) ) && ( pow(y,t)*cos(v)>z*2+w*3+x*7 ) && ( z+w>x+y ) && ( x/y>w ) && ( x>(w+y-z) ) && ( sqrt(w*y*z)>log10(t*x) ) && ( x*cos(t+y)>log(w*z*3) ) && ( cos(t)*sin(v)>cos(y) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -1.30779, -2.46658, 4.32424, 0, -3, 4.61804 ] 
+Best Covered is: 96.2749%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tan(v)>(z+t)/(w+t)  RuntimeValue:  12.1678  isCovered： true
+sqrt(x-t)>z/y  RuntimeValue:  3.05398  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.890333  isCovered： true
+pow(y,t)*cos(v)>z*2+w*3+x*7  RuntimeValue:  0.512322  isCovered： true
+z+w>x+y  RuntimeValue:  8.0986  isCovered： true
+x/y>w  RuntimeValue:  0.530204  isCovered： true
+x>(w+y-z)  RuntimeValue:  5.48302  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  -0.593659  isCovered： false
+x*cos(t+y)>log(w*z*3)  RuntimeValue:  inf  isCovered： true
+cos(t)*sin(v)>cos(y)  RuntimeValue:  1.76629  isCovered： true
+
+SolverParameter::totalTime[0] = 334.835
+SolverParameter::algorithmTime[0] = 334.834
+SolverParameter::FunctionTime[0] = 0.00033461
+SolverParameter::totalFrequency[0] = 85385
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -1.2346, -2.33327, 4.31244, 0, -2, 4.61804 ] 
+Best Covered is: 97.181%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tan(v)>(z+t)/(w+t)  RuntimeValue:  12.8225  isCovered： true
+sqrt(x-t)>z/y  RuntimeValue:  2.72311  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.219714  isCovered： true
+pow(y,t)*cos(v)>z*2+w*3+x*7  RuntimeValue:  5.89806e-17  isCovered： true
+z+w>x+y  RuntimeValue:  7.88032  isCovered： true
+x/y>w  RuntimeValue:  0.529127  isCovered： true
+x>(w+y-z)  RuntimeValue:  5.41112  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  -0.392556  isCovered： false
+x*cos(t+y)>log(w*z*3)  RuntimeValue:  inf  isCovered： true
+cos(t)*sin(v)>cos(y)  RuntimeValue:  1.10501  isCovered： true
+
+SolverParameter::totalTime[1] = 437.238
+SolverParameter::algorithmTime[1] = 437.237
+SolverParameter::FunctionTime[1] = 0.000437012
+SolverParameter::totalFrequency[1] = 117777
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.977084, -2.33327, 3.11058, 0, -1, 4.61804 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tan(v)>(z+t)/(w+t)  RuntimeValue:  14.0344  isCovered： true
+sqrt(x-t)>z/y  RuntimeValue:  1.48452  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0771252  isCovered： true
+pow(y,t)*cos(v)>z*2+w*3+x*7  RuntimeValue:  0.658796  isCovered： true
+z+w>x+y  RuntimeValue:  6.42094  isCovered： true
+x/y>w  RuntimeValue:  0.418761  isCovered： true
+x>(w+y-z)  RuntimeValue:  4.46677  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  0.010068  isCovered： true
+x*cos(t+y)>log(w*z*3)  RuntimeValue:  inf  isCovered： true
+cos(t)*sin(v)>cos(y)  RuntimeValue:  0.152816  isCovered： true
+
+SolverParameter::totalTime[2] = 108.798
+SolverParameter::algorithmTime[2] = 108.798
+SolverParameter::FunctionTime[2] = 0.000108742
+SolverParameter::totalFrequency[2] = 28733
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.977084, -2.33327, 3.11058, 0, -1, 4.61804 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tan(v)>(z+t)/(w+t)  RuntimeValue:  14.0344  isCovered： true
+sqrt(x-t)>z/y  RuntimeValue:  1.48452  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0771252  isCovered： true
+pow(y,t)*cos(v)>z*2+w*3+x*7  RuntimeValue:  0.658796  isCovered： true
+z+w>x+y  RuntimeValue:  6.42094  isCovered： true
+x/y>w  RuntimeValue:  0.418761  isCovered： true
+x>(w+y-z)  RuntimeValue:  4.46677  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  0.010068  isCovered： true
+x*cos(t+y)>log(w*z*3)  RuntimeValue:  inf  isCovered： true
+cos(t)*sin(v)>cos(y)  RuntimeValue:  0.152816  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000433
+SolverParameter::algorithmTime[3] = 0.000433
+SolverParameter::FunctionTime[3] = 4.22e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.977084, -2.33327, 3.11058, 0, -1, 4.61804 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tan(v)>(z+t)/(w+t)  RuntimeValue:  14.0344  isCovered： true
+sqrt(x-t)>z/y  RuntimeValue:  1.48452  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0771252  isCovered： true
+pow(y,t)*cos(v)>z*2+w*3+x*7  RuntimeValue:  0.658796  isCovered： true
+z+w>x+y  RuntimeValue:  6.42094  isCovered： true
+x/y>w  RuntimeValue:  0.418761  isCovered： true
+x>(w+y-z)  RuntimeValue:  4.46677  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  0.010068  isCovered： true
+x*cos(t+y)>log(w*z*3)  RuntimeValue:  inf  isCovered： true
+cos(t)*sin(v)>cos(y)  RuntimeValue:  0.152816  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000408
+SolverParameter::algorithmTime[4] = 0.000408
+SolverParameter::FunctionTime[4] = 3.98e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.977084, -2.33327, 3.11058, 0, -1, 4.61804 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tan(v)>(z+t)/(w+t)  RuntimeValue:  14.0344  isCovered： true
+sqrt(x-t)>z/y  RuntimeValue:  1.48452  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0771252  isCovered： true
+pow(y,t)*cos(v)>z*2+w*3+x*7  RuntimeValue:  0.658796  isCovered： true
+z+w>x+y  RuntimeValue:  6.42094  isCovered： true
+x/y>w  RuntimeValue:  0.418761  isCovered： true
+x>(w+y-z)  RuntimeValue:  4.46677  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  0.010068  isCovered： true
+x*cos(t+y)>log(w*z*3)  RuntimeValue:  inf  isCovered： true
+cos(t)*sin(v)>cos(y)  RuntimeValue:  0.152816  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000391
+SolverParameter::algorithmTime[5] = 0.000391
+SolverParameter::FunctionTime[5] = 3.82e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.977084, -2.33327, 3.11058, 0, -1, 4.61804 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tan(v)>(z+t)/(w+t)  RuntimeValue:  14.0344  isCovered： true
+sqrt(x-t)>z/y  RuntimeValue:  1.48452  isCovered： true
+log(x*y)>log(t+w+z)  RuntimeValue:  0.0771252  isCovered： true
+pow(y,t)*cos(v)>z*2+w*3+x*7  RuntimeValue:  0.658796  isCovered： true
+z+w>x+y  RuntimeValue:  6.42094  isCovered： true
+x/y>w  RuntimeValue:  0.418761  isCovered： true
+x>(w+y-z)  RuntimeValue:  4.46677  isCovered： true
+sqrt(w*y*z)>log10(t*x)  RuntimeValue:  0.010068  isCovered： true
+x*cos(t+y)>log(w*z*3)  RuntimeValue:  inf  isCovered： true
+cos(t)*sin(v)>cos(y)  RuntimeValue:  0.152816  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000393
+SolverParameter::algorithmTime[6] = 0.000393
+SolverParameter::FunctionTime[6] = 3.84e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	125.839
+Best Time:	0.000391
+Worst Time:	437.238
+Average Frequency:	33128.4
+Coverage Result:	[ false, false, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 100
+MAX_NUM_OF_GENERATE_CYCLE = 6
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

@@ -1,0 +1,23 @@
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -0.0806791, -2.3371, -2.45115, -2.80367, -2.80998, -2.07223, -2.73351, -3.78915, -5.1366 ] 
+Best Covered is: 94.6932%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+a>b  RuntimeValue:  2.25642  isCovered： true
+b>c  RuntimeValue:  0.114042  isCovered： true
+c>d  RuntimeValue:  0.352526  isCovered： true
+d>e  RuntimeValue:  0.00630689  isCovered： true
+e>f  RuntimeValue:  -0.737748  isCovered： false
+f>g  RuntimeValue:  0.661279  isCovered： true
+g>h  RuntimeValue:  1.05564  isCovered： true
+h>i  RuntimeValue:  1.34744  isCovered： true
+
+SolverParameter::totalTime[0] = 0.255837
+SolverParameter::algorithmTime[0] = 0.255837
+SolverParameter::FunctionTime[0] = 2.38419e-07
+SolverParameter::totalFrequency[0] = 110
+Cala Type: float
+
