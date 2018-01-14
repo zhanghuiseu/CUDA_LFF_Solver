@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="697" key="DIALOG_WIDTH"/>
-		<item value="135" key="DIALOG_Y_ORIGIN"/>
-		<item value="1114" key="DIALOG_X_ORIGIN"/>
-		<item value="828" key="DIALOG_HEIGHT"/>
+		<item value="291" key="DIALOG_WIDTH"/>
+		<item value="196" key="DIALOG_Y_ORIGIN"/>
+		<item value="1296" key="DIALOG_X_ORIGIN"/>
+		<item value="432" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,26 +13,20 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Coodinate" key="selection"/>
+		<item value="ParallelATG::isFullCovered" key="selection"/>
 		<list key="findhistory">
-			<item value="CoodinateDouble"/>
-			<item value="IntervalDouble"/>
-			<item value="PriorityDouble"/>
-			<item value="calaPriorityForCalaArray"/>
-			<item value="ParallelATG::calaMaxPriority"/>
-			<item value="Cala Prioruty Wrong"/>
-			<item value="Cala Prioruty Wrong,index:"/>
-			<item value="merge"/>
+			<item value="ParallelATG::isFullCovered"/>
+			<item value="ParallelATG::collectZeros"/>
+			<item value="ParallelATG::calaPredictValueSize"/>
+			<item value="ParallelATG::calaPredictValueFromFinalInterval"/>
+			<item value="ParallelATG::calsCLFF"/>
+			<item value="ParallelATG::classificationForAllCase"/>
+			<item value="ParallelATG::synStream"/>
+			<item value="syn"/>
 		</list>
 		<list key="replacehistory">
-			<item value="Coodinate"/>
-			<item value="Interval"/>
-			<item value="Priority"/>
-			<item value=""/>
-			<item value="isCovered==false"/>
-			<item value="sqrt"/>
-			<item value="dev_predictArray"/>
-			<item value="SIZE"/>
+			<item value="ParallelATG::stream["/>
+			<item value="ParallelATG"/>
 		</list>
 	</section>
 </section>

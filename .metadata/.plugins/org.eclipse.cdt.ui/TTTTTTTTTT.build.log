@@ -1,0 +1,28 @@
+15:01:55 **** Incremental Build of configuration Debug for project TTTTTTTTTT ****
+make all 
+Building file: ../src/cuda/ParallelATG.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/cuda" -M -o "src/cuda/ParallelATG.d" "../src/cuda/ParallelATG.cu"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/cuda/ParallelATG.o" "../src/cuda/ParallelATG.cu"
+Finished building: ../src/cuda/ParallelATG.cu
+ 
+Building file: ../src/ConstraintParser/ConstraintParameter.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 -gencode arch=compute_50,code=sm_50  -odir "src/ConstraintParser" -M -o "src/ConstraintParser/ConstraintParameter.d" "../src/ConstraintParser/ConstraintParameter.cu"
+/usr/local/cuda-8.0/bin/nvcc -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50  -x cu -o  "src/ConstraintParser/ConstraintParameter.o" "../src/ConstraintParser/ConstraintParameter.cu"
+Finished building: ../src/ConstraintParser/ConstraintParameter.cu
+ 
+Building target: TTTTTTTTTT
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50 -link -o  "TTTTTTTTTT"  ./src/solver/ATG.o ./src/solver/PCATG.o ./src/solver/SolverParameter.o ./src/solver/runLFFSolver.o  ./src/model/SearchTask.o  ./src/main/main.o  ./src/cuda/CLF.o ./src/cuda/ExcuteConstraint.o ./src/cuda/ParallelATG.o  ./src/ConstraintParser/ConstraintParameter.o   
+nvlink error   : Undefined reference to '_Z5case0P9CoodinateS0_i' in './src/cuda/ParallelATG.o'
+nvlink error   : Undefined reference to '_Z5case1P9CoodinateS0_i' in './src/cuda/ParallelATG.o'
+nvlink error   : Undefined reference to '_Z5case2P9CoodinateS0_i' in './src/cuda/ParallelATG.o'
+nvlink error   : Undefined reference to '_Z5case3P9CoodinateS0_i' in './src/cuda/ParallelATG.o'
+nvlink error   : Undefined reference to '_Z5case4P9CoodinateS0_i' in './src/cuda/ParallelATG.o'
+nvlink error   : Undefined reference to '_Z5case5P9CoodinateS0_i' in './src/cuda/ParallelATG.o'
+make: *** [TTTTTTTTTT] Error 255
+makefile:63: recipe for target 'TTTTTTTTTT' failed
+
+15:01:59 Build Finished (took 4s.417ms)
+

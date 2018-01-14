@@ -1,0 +1,34 @@
+**************** The Constraints Is As Following ****************
+( ( 1.0-x1==0.0 ) && ( 1.0-x3==0.0 ) && ( x2-x1*x1==0.0 ) && ( x4-x3*x3==0.0 ) && ( x1-x4==0 ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.854603, 0.546146, 1.20825, 1.57168 ] 
+Best Covered is: 80.5396%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+1.0-x1==0.0  RuntimeValue:  0.145397  isCovered： false
+1.0-x3==0.0  RuntimeValue:  -0.208254  isCovered： false
+x2-x1*x1==0.0  RuntimeValue:  -0.1842  isCovered： false
+x4-x3*x3==0.0  RuntimeValue:  0.111799  isCovered： false
+x1-x4==0  RuntimeValue:  -0.717075  isCovered： false
+
+SolverParameter::totalTime[0] = 2.72843
+SolverParameter::algorithmTime[0] = 2.72843
+SolverParameter::FunctionTime[0] = 2.86102e-06
+SolverParameter::totalFrequency[0] = 200
+
+----------------------------statistical result----------------------------
+Average Time:	2.72843
+Best Time:	2.72843
+Worst Time:	2.72843
+Average Frequency:	200
+Coverage Result:	[ true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 500
+MAX_NUM_OF_GENERATE_CYCLE = 4
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

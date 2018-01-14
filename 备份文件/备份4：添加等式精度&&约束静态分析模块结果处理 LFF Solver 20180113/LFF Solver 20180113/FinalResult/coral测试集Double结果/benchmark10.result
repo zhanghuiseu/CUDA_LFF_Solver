@@ -1,0 +1,113 @@
+**************** The Constraints Is As Following ****************
+( ( sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z))) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -510.044, -0.0456083, 1.74777 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  0.0209389  isCovered： true
+
+SolverParameter::totalTime[0] = 0.064207
+SolverParameter::algorithmTime[0] = 0.0642069
+SolverParameter::FunctionTime[0] = 6.4183e-08
+SolverParameter::totalFrequency[0] = 1
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -513.181, -1.42315, 4.48494 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  0.124057  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000713
+SolverParameter::algorithmTime[1] = 0.000712999
+SolverParameter::FunctionTime[1] = 7.06e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -512.544, -4.77475, 0.301112 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  1.11232  isCovered： true
+
+SolverParameter::totalTime[2] = 0.0007
+SolverParameter::algorithmTime[2] = 0.000699999
+SolverParameter::FunctionTime[2] = 6.92e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -510.277, 0.392908, -0.989085 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  1.49951  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000713
+SolverParameter::algorithmTime[3] = 0.000712999
+SolverParameter::FunctionTime[3] = 7.06e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -385.868, -4.826, -3.91129 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  0.775787  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000711
+SolverParameter::algorithmTime[4] = 0.000710999
+SolverParameter::FunctionTime[4] = 7.05e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 256.748, -2.18145, 2.50722 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  0.413381  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000703
+SolverParameter::algorithmTime[5] = 0.000702999
+SolverParameter::FunctionTime[5] = 6.96e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -254.073, -3.64947, 0.370429 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sin(x*cos(y*sin(z)))>cos(x*sin(y*cos(z)))  RuntimeValue:  0.9041  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000698
+SolverParameter::algorithmTime[6] = 0.000697999
+SolverParameter::FunctionTime[6] = 6.91e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.00977786
+Best Time:	0.000698
+Worst Time:	0.064207
+Average Frequency:	1
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 1500
+MAX_NUM_OF_GENERATE_CYCLE = 3
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

@@ -1,1 +1,11 @@
+
+一般性查看所有函数运行时间
 nvprof --unified-memory-profiling off ./LFF\ Solver
+
+
+查看分支效率，主要是分支总的数量  和  分化的分支数量
+nvprof --unified-memory-profiling off --events branch,divergent_branch ./LFF\ Solver 
+
+
+查看内核的内存读取效率和全局加载效率,占用率
+nvprof --unified-memory-profiling off --metrics gld_throughput,gld_efficiency,achieved_occupancy,gst_efficiency, ./LFF\ Solver 

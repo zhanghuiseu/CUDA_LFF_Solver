@@ -1,0 +1,25 @@
+package cn.nju.seg.atpc.simplification;
+
+import java.util.List;
+
+import cn.nju.seg.atpc.model.BinaryExpression;
+
+
+
+/*
+ * 这个是做特殊的奇技淫巧的Tricks
+ * 就是直接特殊替换的处理
+ * */
+public class SpecialTrick 
+{
+	/*
+	 * 保存在要处理的约束
+	 * 合取子式
+	 * */
+	public List<BinaryExpression> target = null;
+	
+	public SpecialTrick() {
+		// TODO Auto-generated constructor stub
+	}
+	
+}

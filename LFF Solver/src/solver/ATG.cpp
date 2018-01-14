@@ -2,7 +2,7 @@
 	 * ATG.cpp
 	 *
 	 *  Created on: Oct 14, 2017
-	 *      Author: zy
+	 *      Author: zhanghui
 	 */
 
 
@@ -62,14 +62,14 @@
 	 * */
 	void ATG::setStrategy()
 	{
-		SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 50;
+		SolverParameter::MAX_NUM_OF_PREDICT_PARAM = 70;
 		SolverParameter::MAX_NUM_OF_GENERATE_CYCLE = ConstraintParameter::NUM_OF_PARAM;
 
 		/*
 		 * 对于约束参数数量大于一定数量的时候才使用多变量交叉搜索，
 		 * 否则直接使用单变量交叉搜索
 		 * */
-		if(ConstraintParameter::NUM_OF_PARAM >=0)   //zy   >6
+		if(ConstraintParameter::NUM_OF_PARAM >=1110)   //zy   >6
 		{
 			SolverParameter::SEARCH_STRATEGY = ConstantValue::SEARCH_STRATEGY_ONE_BY_ONE;
 			SolverParameter::Cala_Strategy = ConstantValue::SEARCH_STRATEGY_ONE_BY_ONE;

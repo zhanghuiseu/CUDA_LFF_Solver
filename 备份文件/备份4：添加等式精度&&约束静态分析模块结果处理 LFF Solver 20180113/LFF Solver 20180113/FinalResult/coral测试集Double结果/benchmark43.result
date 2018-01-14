@@ -1,0 +1,128 @@
+**************** The Constraints Is As Following ****************
+( ( pow(x,y)>pow(y,x) ) && ( exp(y)>exp(x) ) && ( pow(x,2)>y ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.084082, 0.0840034 ] 
+Best Covered is: 97.6159%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)>pow(y,x)  RuntimeValue:  0.000222061  isCovered： true
+exp(y)>exp(x)  RuntimeValue:  -8.5551e-05  isCovered： false
+pow(x,2)>y  RuntimeValue:  -0.0769336  isCovered： false
+
+SolverParameter::totalTime[0] = 0.231558
+SolverParameter::algorithmTime[0] = 0.231558
+SolverParameter::FunctionTime[0] = 2.31425e-07
+SolverParameter::totalFrequency[0] = 32
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.08978, 3.87083 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)>pow(y,x)  RuntimeValue:  0.420984  isCovered： true
+exp(y)>exp(x)  RuntimeValue:  39.8988  isCovered： true
+pow(x,2)>y  RuntimeValue:  0.496367  isCovered： true
+
+SolverParameter::totalTime[1] = 0.042154
+SolverParameter::algorithmTime[1] = 0.042154
+SolverParameter::FunctionTime[1] = 4.2101e-08
+SolverParameter::totalFrequency[1] = 22
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.08978, 3.87083 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)>pow(y,x)  RuntimeValue:  0.420984  isCovered： true
+exp(y)>exp(x)  RuntimeValue:  39.8988  isCovered： true
+pow(x,2)>y  RuntimeValue:  0.496367  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000264
+SolverParameter::algorithmTime[2] = 0.000264
+SolverParameter::FunctionTime[2] = 2.57e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.08978, 3.87083 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)>pow(y,x)  RuntimeValue:  0.420984  isCovered： true
+exp(y)>exp(x)  RuntimeValue:  39.8988  isCovered： true
+pow(x,2)>y  RuntimeValue:  0.496367  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000231
+SolverParameter::algorithmTime[3] = 0.000231
+SolverParameter::FunctionTime[3] = 2.22e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.08978, 3.87083 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)>pow(y,x)  RuntimeValue:  0.420984  isCovered： true
+exp(y)>exp(x)  RuntimeValue:  39.8988  isCovered： true
+pow(x,2)>y  RuntimeValue:  0.496367  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000377
+SolverParameter::algorithmTime[4] = 0.000377
+SolverParameter::FunctionTime[4] = 3.68e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.08978, 3.87083 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)>pow(y,x)  RuntimeValue:  0.420984  isCovered： true
+exp(y)>exp(x)  RuntimeValue:  39.8988  isCovered： true
+pow(x,2)>y  RuntimeValue:  0.496367  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000221
+SolverParameter::algorithmTime[5] = 0.000221
+SolverParameter::FunctionTime[5] = 2.12e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 2.08978, 3.87083 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)>pow(y,x)  RuntimeValue:  0.420984  isCovered： true
+exp(y)>exp(x)  RuntimeValue:  39.8988  isCovered： true
+pow(x,2)>y  RuntimeValue:  0.496367  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000232
+SolverParameter::algorithmTime[6] = 0.000232
+SolverParameter::FunctionTime[6] = 2.24e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.039291
+Best Time:	0.000221
+Worst Time:	0.231558
+Average Frequency:	8.42857
+Coverage Result:	[ false, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 100
+MAX_NUM_OF_GENERATE_CYCLE = 4
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

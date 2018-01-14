@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="com.nvidia.cuda.ide.eight_zero.configuration.debug.1606935040;com.nvidia.cuda.ide.eight_zero.configuration.debug.1606935040.;nvcc.compiler.base.585208362;nvcc.compiler.input.cpp.1683989417">
+<instance id="com.nvidia.cuda.ide.eight_zero.configuration.debug.562708720;com.nvidia.cuda.ide.eight_zero.configuration.debug.562708720.;nvcc.compiler.base.1784414374;nvcc.compiler.input.c.1415081843">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/usr/local/cuda-8.0/bin/..//include"/>
 <includePath path="/usr/include/c++/5"/>
@@ -289,7 +289,7 @@
 <definedSymbol symbol="__STDC_NO_THREADS__=1"/>
 </collector>
 </instance>
-<instance id="com.nvidia.cuda.ide.eight_zero.configuration.debug.1606935040;com.nvidia.cuda.ide.eight_zero.configuration.debug.1606935040.;nvcc.compiler.base.585208362;nvcc.compiler.input.cu.1764267006">
+<instance id="com.nvidia.cuda.ide.eight_zero.configuration.debug.562708720;com.nvidia.cuda.ide.eight_zero.configuration.debug.562708720.;nvcc.compiler.base.1784414374;nvcc.compiler.input.cu.1301411622">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/usr/local/cuda-8.0/bin/..//include"/>
 <includePath path="/usr/include/c++/5"/>
@@ -578,7 +578,7 @@
 <definedSymbol symbol="__STDC_NO_THREADS__=1"/>
 </collector>
 </instance>
-<instance id="com.nvidia.cuda.ide.eight_zero.configuration.debug.1606935040;com.nvidia.cuda.ide.eight_zero.configuration.debug.1606935040.;nvcc.compiler.base.585208362;nvcc.compiler.input.c.1343787614">
+<instance id="com.nvidia.cuda.ide.eight_zero.configuration.debug.562708720;com.nvidia.cuda.ide.eight_zero.configuration.debug.562708720.;nvcc.compiler.base.1784414374;nvcc.compiler.input.cpp.1741329847">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/usr/local/cuda-8.0/bin/..//include"/>
 <includePath path="/usr/include/c++/5"/>
@@ -867,7 +867,7 @@
 <definedSymbol symbol="__STDC_NO_THREADS__=1"/>
 </collector>
 </instance>
-<instance id="com.nvidia.cuda.ide.eight_zero.configuration.release.677108507;com.nvidia.cuda.ide.eight_zero.configuration.release.677108507.;nvcc.compiler.base.1462828134;nvcc.compiler.input.c.1077081417">
+<instance id="com.nvidia.cuda.ide.eight_zero.configuration.release.1867524688;com.nvidia.cuda.ide.eight_zero.configuration.release.1867524688.;nvcc.compiler.base.1648204084;nvcc.compiler.input.c.946295960">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/usr/local/cuda-8.0/bin/..//include"/>
 <includePath path="/usr/include/c++/5"/>
@@ -1144,7 +1144,7 @@
 <definedSymbol symbol="__STDC_NO_THREADS__=1"/>
 </collector>
 </instance>
-<instance id="com.nvidia.cuda.ide.eight_zero.configuration.release.677108507;com.nvidia.cuda.ide.eight_zero.configuration.release.677108507.;nvcc.compiler.base.1462828134;nvcc.compiler.input.cu.1022831396">
+<instance id="com.nvidia.cuda.ide.eight_zero.configuration.release.1867524688;com.nvidia.cuda.ide.eight_zero.configuration.release.1867524688.;nvcc.compiler.base.1648204084;nvcc.compiler.input.cu.1994062883">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/usr/local/cuda-8.0/bin/..//include"/>
 <includePath path="/usr/include/c++/5"/>
@@ -1159,7 +1159,7 @@
 <definedSymbol symbol="__CUDA_FTZ=0"/>
 <definedSymbol symbol="__CUDA_PREC_SQRT=1"/>
 <definedSymbol symbol="__CUDACC__="/>
-<definedSymbol symbol="__CUDA_ARCH__=200"/>
+<definedSymbol symbol="__CUDA_ARCH__=500"/>
 <definedSymbol symbol="__CUDANVVM__="/>
 <definedSymbol symbol="__DRIVER_TYPES_H__="/>
 <definedSymbol symbol="CUDA_DOUBLE_MATH_FUNCTIONS="/>
@@ -1433,7 +1433,7 @@
 <definedSymbol symbol="__STDC_NO_THREADS__=1"/>
 </collector>
 </instance>
-<instance id="com.nvidia.cuda.ide.eight_zero.configuration.release.677108507;com.nvidia.cuda.ide.eight_zero.configuration.release.677108507.;nvcc.compiler.base.1462828134;nvcc.compiler.input.cpp.1145714670">
+<instance id="com.nvidia.cuda.ide.eight_zero.configuration.release.1867524688;com.nvidia.cuda.ide.eight_zero.configuration.release.1867524688.;nvcc.compiler.base.1648204084;nvcc.compiler.input.cpp.1983419956">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/usr/local/cuda-8.0/bin/..//include"/>
 <includePath path="/usr/include/c++/5"/>

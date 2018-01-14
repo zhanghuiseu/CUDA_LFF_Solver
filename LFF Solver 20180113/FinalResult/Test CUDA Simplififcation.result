@@ -1,0 +1,37 @@
+**************** The Constraints Is As Following ****************
+( ( logf(x)>logf(y) ) && ( logf(x)>0 ) && ( logf(y)>0 ) && ( x+y>100 ) && ( 10>x-y ) && ( tanf(v)>tanf(x)+tanf(w) ) && ( x-y+tanf(v)>(z+t)/(w+t) ) && ( sqrtf(x-t)>z/y ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 106.924, 103.282, -4.90746, -0.540667, -4.94986, 0.879289 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+logf(x)>logf(y)  RuntimeValue:  0.0346599  isCovered： true
+logf(x)>0  RuntimeValue:  4.67212  isCovered： true
+logf(y)>0  RuntimeValue:  4.63746  isCovered： true
+x+y>100  RuntimeValue:  110.206  isCovered： true
+10>x-y  RuntimeValue:  6.35748  isCovered： true
+tanf(v)>tanf(x)+tanf(w)  RuntimeValue:  1.69774  isCovered： true
+x-y+tanf(v)>(z+t)/(w+t)  RuntimeValue:  3.05511  isCovered： true
+sqrtf(x-t)>z/y  RuntimeValue:  10.6246  isCovered： true
+
+SolverParameter::totalTime[0] = 0.234057
+SolverParameter::algorithmTime[0] = 0.234057
+SolverParameter::FunctionTime[0] = 2.23517e-07
+SolverParameter::totalFrequency[0] = 61
+
+----------------------------statistical result----------------------------
+Average Time:	0.234057
+Best Time:	0.234057
+Worst Time:	0.234057
+Average Frequency:	61
+Coverage Result:	[ true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 90
+MAX_NUM_OF_GENERATE_CYCLE = 6
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

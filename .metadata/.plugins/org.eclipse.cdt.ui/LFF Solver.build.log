@@ -1,6 +1,6 @@
-17:35:19 **** Incremental Build of configuration Debug for project LFF Solver ****
-make all 
+17:57:29 **** Incremental Build of configuration Debug for project LFF Solver ****
+make -j8 all 
 make: Nothing to be done for 'all'.
 
-17:35:19 Build Finished (took 109ms)
+17:57:29 Build Finished (took 159ms)
 

@@ -2,7 +2,7 @@
 	 * runLFFSolver.cpp
 	 *
 	 *  Created on: Oct 14, 2017
-	 *      Author: zy
+	 *      Author: zhanghui
 	 */
 
 	#include <iostream>
@@ -20,12 +20,31 @@
 	#include "./../model/MathFunction.h"
 	#include "./../model/RuntimeValue.h"
 	#include "./../ErrorHandle/ErrorHandle.cuh"
+	#include "./../cuda/ParallelATG.cuh"
 
 	#include "cuda_runtime.h"
 	#include "device_launch_parameters.h"
 	#include "cuda_profiler_api.h"
 
 	using namespace std;
+
+	/*
+	 * LFF Solver 函数时间和频率的重置
+	 *
+	 * 同时还要把约束化简求解的部分变量的值做赋值给finalParams
+	 * */
+	void runLFFSolver::reset()
+	{
+		SolverParameter::function_time = 0.0;
+		SolverParameter::function_frequency = 0;
+
+		SolverParameter::finalCovered = 0.0;
+		for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
+		{
+			SolverParameter::finalParams[i] = 0;
+		}
+	}
+
 
 	/*
 	 * LFF Solver 的总的开始部分
@@ -39,11 +58,17 @@
 		cudaError_t cudaStatus = cudaSetDevice(0);
 		ErrorHandle::dealError(cudaStatus,"cudaError_t cudaStatus = cudaSetDevice(0);");
 
+		//并行流的申明
+		ParallelATG::mallocStream();
+
 		//给随机生成数设定seed
 		srand(time(0));
 
 		//为最终的解向量申请空间
 		SolverParameter::finalParams = new FloatType[ConstraintParameter::NUM_OF_PARAM];
+
+		//相关变量的初始化
+		ConstraintParameter::initConstraintPreprocess();
 
 		//设置ATG开始得了类，ATG中是并行搜索任务的调度类
 		ATG atg = ATG();
@@ -69,14 +94,25 @@
 		for(int indexOfRun = 1 ; indexOfRun <= SolverParameter::countOfRepeation; indexOfRun++)
 		{
 			string resultOne = "";
-			//参数重置
-			SolverParameter::reset();
+
+			//参数重置 && 同时还要把约束化简求解的部分变量的值做赋值给finalParams
+			runLFFSolver::reset();
+
+			bool isCovered = false;
 			//获取当前的时间
 			start = clock();
-			bool isCovered = atg.generateTestDataForSolver();
+
+			//使用最小不可达集合做一个判断
+			if(ConstraintParameter::hasSolution==true)
+				isCovered = atg.generateTestDataForSolver();
+			else
+				isCovered = false;
 			finish = clock();
 
-			/*解
+			//约束化简过程中求解出来的变量的值赋值到finalParams
+			runLFFSolver::copyConstValueToFinalParams();
+
+			/*
 			 * 下面是一次计算结束之后结果输出
 			 * 并打印测试记录
 			 * */
@@ -124,6 +160,11 @@
 			runLFFSolver::printOneResult(resultOne,indexOfRun);
 			resultInfo += resultOne + "\n";
 
+			if(ConstraintParameter::hasSolution==false)
+			{
+				cout<<"*********************  找到最小不可解集  *********************"<<endl;
+				cout<<ConstraintParameter::noSolutionInfo<<endl<<endl;
+			}
 			cout<<resultOne<<endl<<endl;
 
 			//把上一次计算的结果做为下一轮的开始的搜索点
@@ -138,6 +179,9 @@
 
 		}
 
+		//并行流的销毁
+		ParallelATG::destoryStream();
+
 		//cudaProfilerStop();
 
 		//打印所有的结果
@@ -147,8 +191,27 @@
 		 * 最后的析构部分，这个千万不要忘记了
 		 * */
 		delete SolverParameter::finalParams;
+		return ;
 	}
 
+
+	/*
+	 * 这个函数是把约束化简过程中求解出来的变量的值赋值到finalParams
+	 * 因为这些变量是与花间后的约束没有依赖关系，这是因为已经做过替换了
+	 * 所以最后赋值到finalParams即可
+	 * */
+	void runLFFSolver::copyConstValueToFinalParams()
+	{
+		for(int i=0;i<ConstraintParameter::NUM_OF_PARAM ;i++)
+		{
+			string key =ConstraintParameter::constraintVarName[i];
+			if(ConstraintParameter::allVarEqualMap.find(key)!= ConstraintParameter::allVarEqualMap.end())
+			{
+				SolverParameter::finalParams[i] = ConstraintParameter::allVarEqualMap[key];
+			}
+		}
+
+	}
 	/*
 	 * LFF Solver打印一次实验的结果
 	 * */
@@ -165,6 +228,9 @@
 		else
 			resultOne = resultOne + "Cala Type Wrong \n";
 
+		if(ConstraintParameter::hasSolution==false)
+			resultOne = resultOne + "\n" + ConstraintParameter::noSolutionInfo+"\n";
+
 		out.open(filePath.c_str());
 		out<<resultOne<<endl;
 		out.close();
@@ -177,6 +243,13 @@
 	void runLFFSolver::printTotalResult(string resultInfo)
 	{
 		resultInfo += "----------------------------statistical result----------------------------\n";
+
+		if(ConstraintParameter::hasSolution==false)
+		{
+			resultInfo = "*********************  找到最小不可解集  *********************\n"
+					  + ConstraintParameter::noSolutionInfo + "\n\n\n\n" + resultInfo;
+		}
+
 		FloatType averageTime = MathFunction::getAverage(SolverParameter::totalTime,SolverParameter::countOfRepeation);
 		resultInfo += "Average Time:\t" + MathFunction::toString(averageTime) + "\n";
 		FloatType bestTime = MathFunction::getMin(SolverParameter::totalTime,SolverParameter::countOfRepeation);
@@ -202,6 +275,11 @@
 			resultInfo = resultInfo + "Cala Type: float\n";
 		else
 			resultInfo = resultInfo + "Cala Type Wrong \n";
+
+		if(ConstraintParameter::hasSolution==false)
+		{
+			resultInfo = resultInfo +"\n\n"+ ConstraintParameter::noSolutionInfo + "\n\n";
+		}
 
 		ofstream out;
 		string filePath = "./FinalResult/" + ConstraintParameter::constraintName + ".result";

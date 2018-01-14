@@ -1,0 +1,17 @@
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 96.9509, 95.4321, 2.76103 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sqrtf(logf(x))>sqrtf(logf(y))  RuntimeValue:  0.00369453  isCovered： true
+x+y>100  RuntimeValue:  92.3831  isCovered： true
+10>x-y  RuntimeValue:  8.4812  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000166
+SolverParameter::algorithmTime[4] = 0.000166
+SolverParameter::FunctionTime[4] = 1.45519e-10
+SolverParameter::totalFrequency[4] = 1
+Cala Type: float
+

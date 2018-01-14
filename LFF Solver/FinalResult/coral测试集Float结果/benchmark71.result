@@ -1,0 +1,185 @@
+**************** The Constraints Is As Following ****************
+( ( sinf(a)>sinf(b) ) && ( sinf(b)>sinf(c) ) && ( sinf(c)>sinf(d) ) && ( sinf(d)>sinf(e) ) && ( sinf(e)>sinf(f) ) && ( sinf(f)>sinf(g) ) && ( sinf(g)>sinf(h) ) && ( sinf(h)>sinf(i) ) && ( sinf(i)>sinf(j) ) && ( sinf(j)>sinf(k) ) && ( sinf(k)>sinf(l) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.871582, -0.887124, -0.971911, -2.14786, 4.23171, 4.39145, 4.96597, -1.75678, -1.67489, 4.81447, 4.61378, 4.68368 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(a)>sinf(b)  RuntimeValue:  0.00991029  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0507057  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.0121065  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0486117  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0622563  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.0190812  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0147356  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.011831  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.00020802  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.000347197  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.00444591  isCovered： true
+
+SolverParameter::totalTime[0] = 0.478458
+SolverParameter::algorithmTime[0] = 0.478458
+SolverParameter::FunctionTime[0] = 4.47035e-07
+SolverParameter::totalFrequency[0] = 192
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.871582, -0.887124, -0.971911, -2.14786, 4.23171, 4.39145, 4.96597, -1.75678, -1.67489, 4.81447, 4.61378, 4.68368 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(a)>sinf(b)  RuntimeValue:  0.00991029  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0507057  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.0121065  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0486117  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0622563  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.0190812  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0147356  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.011831  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.00020802  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.000347197  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.00444591  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000322
+SolverParameter::algorithmTime[1] = 0.000322
+SolverParameter::FunctionTime[1] = 3.20142e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.871582, -0.887124, -0.971911, -2.14786, 4.23171, 4.39145, 4.96597, -1.75678, -1.67489, 4.81447, 4.61378, 4.68368 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(a)>sinf(b)  RuntimeValue:  0.00991029  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0507057  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.0121065  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0486117  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0622563  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.0190812  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0147356  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.011831  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.00020802  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.000347197  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.00444591  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000309
+SolverParameter::algorithmTime[2] = 0.000309
+SolverParameter::FunctionTime[2] = 2.91038e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.871582, -0.887124, -0.971911, -2.14786, 4.23171, 4.39145, 4.96597, -1.75678, -1.67489, 4.81447, 4.61378, 4.68368 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(a)>sinf(b)  RuntimeValue:  0.00991029  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0507057  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.0121065  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0486117  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0622563  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.0190812  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0147356  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.011831  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.00020802  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.000347197  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.00444591  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000304
+SolverParameter::algorithmTime[3] = 0.000304
+SolverParameter::FunctionTime[3] = 2.91038e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.871582, -0.887124, -0.971911, -2.14786, 4.23171, 4.39145, 4.96597, -1.75678, -1.67489, 4.81447, 4.61378, 4.68368 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(a)>sinf(b)  RuntimeValue:  0.00991029  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0507057  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.0121065  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0486117  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0622563  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.0190812  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0147356  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.011831  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.00020802  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.000347197  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.00444591  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000306
+SolverParameter::algorithmTime[4] = 0.000306
+SolverParameter::FunctionTime[4] = 3.20142e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.871582, -0.887124, -0.971911, -2.14786, 4.23171, 4.39145, 4.96597, -1.75678, -1.67489, 4.81447, 4.61378, 4.68368 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(a)>sinf(b)  RuntimeValue:  0.00991029  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0507057  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.0121065  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0486117  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0622563  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.0190812  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0147356  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.011831  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.00020802  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.000347197  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.00444591  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000327
+SolverParameter::algorithmTime[5] = 0.000327
+SolverParameter::FunctionTime[5] = 3.20142e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.871582, -0.887124, -0.971911, -2.14786, 4.23171, 4.39145, 4.96597, -1.75678, -1.67489, 4.81447, 4.61378, 4.68368 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(a)>sinf(b)  RuntimeValue:  0.00991029  isCovered： true
+sinf(b)>sinf(c)  RuntimeValue:  0.0507057  isCovered： true
+sinf(c)>sinf(d)  RuntimeValue:  0.0121065  isCovered： true
+sinf(d)>sinf(e)  RuntimeValue:  0.0486117  isCovered： true
+sinf(e)>sinf(f)  RuntimeValue:  0.0622563  isCovered： true
+sinf(f)>sinf(g)  RuntimeValue:  0.0190812  isCovered： true
+sinf(g)>sinf(h)  RuntimeValue:  0.0147356  isCovered： true
+sinf(h)>sinf(i)  RuntimeValue:  0.011831  isCovered： true
+sinf(i)>sinf(j)  RuntimeValue:  0.00020802  isCovered： true
+sinf(j)>sinf(k)  RuntimeValue:  0.000347197  isCovered： true
+sinf(k)>sinf(l)  RuntimeValue:  0.00444591  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000305
+SolverParameter::algorithmTime[6] = 0.000305
+SolverParameter::FunctionTime[6] = 2.91038e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.0686187
+Best Time:	0.000304
+Worst Time:	0.478458
+Average Frequency:	28.2857
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 8
+MAX_NUM_OF_GENERATE_CYCLE = 12
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ONE_BY_ONE 
+
+Cala Type: float
+

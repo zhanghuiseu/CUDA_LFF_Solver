@@ -1,0 +1,113 @@
+**************** The Constraints Is As Following ****************
+( ( pow(x,y)==1.0 ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.981104, 1.75515e-316 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)==1.0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[0] = 0.133001
+SolverParameter::algorithmTime[0] = 0.133001
+SolverParameter::FunctionTime[0] = 1.32935e-07
+SolverParameter::totalFrequency[0] = 10
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.291839, 1.75515e-316 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)==1.0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000141
+SolverParameter::algorithmTime[1] = 0.000141
+SolverParameter::FunctionTime[1] = 1.33e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.291839, 1.75515e-316 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)==1.0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000182
+SolverParameter::algorithmTime[2] = 0.000182
+SolverParameter::FunctionTime[2] = 1.6e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.102201, 1.75515e-316 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)==1.0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000155
+SolverParameter::algorithmTime[3] = 0.000155
+SolverParameter::FunctionTime[3] = 1.48e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.102201, 1.75515e-316 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)==1.0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000135
+SolverParameter::algorithmTime[4] = 0.000135
+SolverParameter::FunctionTime[4] = 1.28e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.102201, 1.75515e-316 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)==1.0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000136
+SolverParameter::algorithmTime[5] = 0.000136
+SolverParameter::FunctionTime[5] = 1.29e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.102201, 1.75515e-316 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+pow(x,y)==1.0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000135
+SolverParameter::algorithmTime[6] = 0.000135
+SolverParameter::FunctionTime[6] = 1.28e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.0191264
+Best Time:	0.000135
+Worst Time:	0.133001
+Average Frequency:	2.28571
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 100
+MAX_NUM_OF_GENERATE_CYCLE = 4
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

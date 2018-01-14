@@ -1,0 +1,137 @@
+**************** The Constraints Is As Following ****************
+( ( 50>x+y ) && ( powf(y,2)>x ) && ( x*y>powf(x,2)+3*sqrtf(y) ) && ( x==-13+y ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.44377, 8.01948 ] 
+Best Covered is: 78.3673%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+50>x+y  RuntimeValue:  40.5368  isCovered： true
+powf(y,2)>x  RuntimeValue:  62.8683  isCovered： true
+x*y>powf(x,2)+3*sqrtf(y)  RuntimeValue:  0.998216  isCovered： true
+x==-13+y  RuntimeValue:  6.42429  isCovered： false
+
+SolverParameter::totalTime[0] = 0.133828
+SolverParameter::algorithmTime[0] = 0.133828
+SolverParameter::FunctionTime[0] = 1.3411e-07
+SolverParameter::totalFrequency[0] = 8
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.35406, 12.0864 ] 
+Best Covered is: 82.6508%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+50>x+y  RuntimeValue:  36.5595  isCovered： true
+powf(y,2)>x  RuntimeValue:  144.728  isCovered： true
+x*y>powf(x,2)+3*sqrtf(y)  RuntimeValue:  4.1026  isCovered： true
+x==-13+y  RuntimeValue:  2.26761  isCovered： false
+
+SolverParameter::totalTime[1] = 0.032416
+SolverParameter::algorithmTime[1] = 0.032416
+SolverParameter::FunctionTime[1] = 3.35276e-08
+SolverParameter::totalFrequency[1] = 8
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.18362, 14.1836 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+50>x+y  RuntimeValue:  34.6328  isCovered： true
+powf(y,2)>x  RuntimeValue:  199.991  isCovered： true
+x*y>powf(x,2)+3*sqrtf(y)  RuntimeValue:  4.0887  isCovered： true
+x==-13+y  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[2] = 0.045181
+SolverParameter::algorithmTime[2] = 0.045181
+SolverParameter::FunctionTime[2] = 4.47035e-08
+SolverParameter::totalFrequency[2] = 8
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.18362, 14.1836 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+50>x+y  RuntimeValue:  34.6328  isCovered： true
+powf(y,2)>x  RuntimeValue:  199.991  isCovered： true
+x*y>powf(x,2)+3*sqrtf(y)  RuntimeValue:  4.0887  isCovered： true
+x==-13+y  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000502
+SolverParameter::algorithmTime[3] = 0.000502
+SolverParameter::FunctionTime[3] = 4.65661e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.18362, 14.1836 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+50>x+y  RuntimeValue:  34.6328  isCovered： true
+powf(y,2)>x  RuntimeValue:  199.991  isCovered： true
+x*y>powf(x,2)+3*sqrtf(y)  RuntimeValue:  4.0887  isCovered： true
+x==-13+y  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000487
+SolverParameter::algorithmTime[4] = 0.000487
+SolverParameter::FunctionTime[4] = 4.94765e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.18362, 14.1836 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+50>x+y  RuntimeValue:  34.6328  isCovered： true
+powf(y,2)>x  RuntimeValue:  199.991  isCovered： true
+x*y>powf(x,2)+3*sqrtf(y)  RuntimeValue:  4.0887  isCovered： true
+x==-13+y  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000485
+SolverParameter::algorithmTime[5] = 0.000485
+SolverParameter::FunctionTime[5] = 4.94765e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.18362, 14.1836 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+50>x+y  RuntimeValue:  34.6328  isCovered： true
+powf(y,2)>x  RuntimeValue:  199.991  isCovered： true
+x*y>powf(x,2)+3*sqrtf(y)  RuntimeValue:  4.0887  isCovered： true
+x==-13+y  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000485
+SolverParameter::algorithmTime[6] = 0.000485
+SolverParameter::FunctionTime[6] = 4.94765e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.0304834
+Best Time:	0.000485
+Worst Time:	0.133828
+Average Frequency:	4
+Coverage Result:	[ false, false, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 150
+MAX_NUM_OF_GENERATE_CYCLE = 2
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

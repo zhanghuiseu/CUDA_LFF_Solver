@@ -121,8 +121,24 @@ src/solver/runLFFSolver.o : ../src/solver/runLFFSolver.cpp \
     ../src/solver/SolverParameter.h \
     /usr/include/c++/5/limits \
     ../src/solver/./../ConstraintParser/ConstraintParameter.cuh \
+    /usr/include/c++/5/map \
+    /usr/include/c++/5/bits/stl_tree.h \
+    /usr/include/c++/5/bits/stl_map.h \
+    /usr/include/c++/5/bits/stl_multimap.h \
+    /usr/include/c++/5/cmath \
+    /usr/include/math.h \
+    /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+    /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+    /usr/include/x86_64-linux-gnu/bits/huge_val.h \
+    /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
+    /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
+    /usr/include/x86_64-linux-gnu/bits/inf.h \
+    /usr/include/x86_64-linux-gnu/bits/nan.h \
+    /usr/include/x86_64-linux-gnu/bits/mathdef.h \
+    /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
     ../src/solver/./../ConstraintParser/./../model/RuntimeValue.h \
     ../src/solver/./../ConstraintParser/./../solver/type.h \
+    ../src/solver/./../ConstraintParser/./../solver/SolverParameter.h \
     ../src/solver/ATG.h \
     ../src/solver/PCATG.h \
     /usr/include/stdlib.h \
@@ -139,17 +155,6 @@ src/solver/runLFFSolver.o : ../src/solver/runLFFSolver.cpp \
     ../src/solver/./../model/./../solver/SolverParameter.h \
     ../src/solver/./../model/./../ConstraintParser/ConstraintParameter.cuh \
     ../src/solver/./../model/MathFunction.h \
-    /usr/include/c++/5/cmath \
-    /usr/include/math.h \
-    /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-    /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-    /usr/include/x86_64-linux-gnu/bits/huge_val.h \
-    /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
-    /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
-    /usr/include/x86_64-linux-gnu/bits/inf.h \
-    /usr/include/x86_64-linux-gnu/bits/nan.h \
-    /usr/include/x86_64-linux-gnu/bits/mathdef.h \
-    /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
     /usr/include/c++/5/sstream \
     /usr/include/c++/5/bits/sstream.tcc \
     ../src/solver/./../ErrorHandle/ErrorHandle.cuh \
@@ -178,4 +183,23 @@ src/solver/runLFFSolver.o : ../src/solver/runLFFSolver.cpp \
     /usr/local/cuda-8.0/bin/..//include/vector_functions.h \
     /usr/local/cuda-8.0/bin/..//include/vector_functions.hpp \
     /usr/local/cuda-8.0/bin/..//include/device_launch_parameters.h \
+    ../src/solver/./../cuda/ParallelATG.cuh \
+    ../src/solver/./../cuda/./../ConstraintParser/ConstraintParameter.cuh \
+    ../src/solver/./../cuda/./../model/Coodinate.cuh \
+    ../src/solver/./../cuda/./../model/./../solver/type.h \
+    ../src/solver/./../cuda/./../model/Interval.cuh \
+    ../src/solver/./../cuda/./../model/Priority.cuh \
+    ../src/solver/./../cuda/./../model/FullCoveredInfo.cuh \
+    ../src/solver/./../cuda/./../model/Classification.cuh \
+    ../src/solver/./../cuda/./../model/PredictValue.cuh \
+    ../src/solver/./../cuda/./../model/PredictValueWithOne.cuh \
+    ../src/solver/./../cuda/./../solver/ATG.h \
+    ../src/solver/./../cuda/./../solver/type.h \
+    ../src/solver/./../cuda/./../solver/PCATG.h \
+    ../src/solver/./../cuda/HardwareStrategy.cuh \
+    ../src/solver/./../cuda/CLF.cuh \
+    ../src/solver/./../cuda/./../solver/ConstantValue.h \
+    ../src/solver/./../cuda/./../ErrorHandle/ErrorHandle.cuh \
+    ../src/solver/./../cuda/ExcuteConstraint.cuh \
+    /usr/include/c++/5/climits \
     /usr/local/cuda-8.0/bin/..//include/cuda_profiler_api.h

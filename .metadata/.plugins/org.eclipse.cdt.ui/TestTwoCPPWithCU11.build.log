@@ -1,0 +1,6 @@
+15:19:40 **** Build of configuration Default for project TestTwoCPPWithCU11 ****
+make all 
+make: *** No rule to make target 'all'.  Stop.
+
+15:19:40 Build Finished (took 61ms)
+

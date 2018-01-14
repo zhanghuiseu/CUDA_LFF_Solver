@@ -1,0 +1,121 @@
+**************** The Constraints Is As Following ****************
+( ( log10(x)==2 ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 100.69 ] 
+Best Covered is: 99.7023%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+log10(x)==2  RuntimeValue:  0.00298551  isCovered： false
+
+SolverParameter::totalTime[0] = 0.16499
+SolverParameter::algorithmTime[0] = 0.16499
+SolverParameter::FunctionTime[0] = 1.64951e-07
+SolverParameter::totalFrequency[0] = 8
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 100.658 ] 
+Best Covered is: 99.7159%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+log10(x)==2  RuntimeValue:  0.00284881  isCovered： false
+
+SolverParameter::totalTime[1] = 0.086489
+SolverParameter::algorithmTime[1] = 0.0864889
+SolverParameter::FunctionTime[1] = 8.6468e-08
+SolverParameter::totalFrequency[1] = 8
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 100 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+log10(x)==2  RuntimeValue:  -7.40597e-09  isCovered： false
+
+SolverParameter::totalTime[2] = 0.057231
+SolverParameter::algorithmTime[2] = 0.0572309
+SolverParameter::FunctionTime[2] = 5.721e-08
+SolverParameter::totalFrequency[2] = 8
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 100 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+log10(x)==2  RuntimeValue:  -8.1236e-08  isCovered： false
+
+SolverParameter::totalTime[3] = 0.055647
+SolverParameter::algorithmTime[3] = 0.0556469
+SolverParameter::FunctionTime[3] = 5.5627e-08
+SolverParameter::totalFrequency[3] = 8
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 99.9882 ] 
+Best Covered is: 99.9949%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+log10(x)==2  RuntimeValue:  -5.13334e-05  isCovered： false
+
+SolverParameter::totalTime[4] = 0.060014
+SolverParameter::algorithmTime[4] = 0.0600139
+SolverParameter::FunctionTime[4] = 5.9997e-08
+SolverParameter::totalFrequency[4] = 8
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 100.52 ] 
+Best Covered is: 99.7753%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+log10(x)==2  RuntimeValue:  0.00225223  isCovered： false
+
+SolverParameter::totalTime[5] = 0.104877
+SolverParameter::algorithmTime[5] = 0.104877
+SolverParameter::FunctionTime[5] = 1.04859e-07
+SolverParameter::totalFrequency[5] = 8
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 100 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+log10(x)==2  RuntimeValue:  -1.51574e-09  isCovered： false
+
+SolverParameter::totalTime[6] = 0.087291
+SolverParameter::algorithmTime[6] = 0.0872909
+SolverParameter::FunctionTime[6] = 8.7272e-08
+SolverParameter::totalFrequency[6] = 8
+
+----------------------------statistical result----------------------------
+Average Time:	0.088077
+Best Time:	0.055647
+Worst Time:	0.16499
+Average Frequency:	8
+Coverage Result:	[ false, false, false, false, false, false, false ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 200
+MAX_NUM_OF_GENERATE_CYCLE = 2
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ONE_BY_ONE 
+
+

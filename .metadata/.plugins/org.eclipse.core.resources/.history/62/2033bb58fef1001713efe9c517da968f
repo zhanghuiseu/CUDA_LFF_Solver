@@ -1,0 +1,443 @@
+	/*
+	 * main.cpp
+	 *
+	 *  Created on: Oct 14, 2017
+	 *      Author: zhanghui
+	 */
+
+
+
+	#include <iostream>
+	#include <iomanip>
+	#include "cuda_runtime.h"
+	#include "device_launch_parameters.h"
+	#include "device_functions.hpp"
+	#include "math_functions.h"
+
+	#include <stdio.h>
+
+	using namespace std;
+
+	class Point
+	{
+	public:
+		int x;
+		double y;
+	};
+
+	static const int Size = 2048*3/10;//128*3;
+	static const int IterTime = 10;
+
+	static const int threadPreBlcok = 128;
+	static const int numOfBlock = (Size + threadPreBlcok -1) / threadPreBlcok;
+
+	void init(Point* allPoint);
+	void testBranchEfficency();
+	double withoutClassify(Point* dev_allPoint);
+	double withClassifiy(Point* dev_allPoint);
+	double withClassifiyStream(Point* dev_allPoint);
+	double withClassifiyStream222(Point* dev_allPoint);
+	__global__ void kernel_without(Point* dev_allPoint,const int Size);
+	__device__ double calaValue(int x,double y);
+	__global__ void case0(Point* dev_allPoint,const int Size);
+	__global__ void case1(Point* dev_allPoint,const int Size);
+	__global__ void case2(Point* dev_allPoint,const int Size);
+	__global__ void case3(Point* dev_allPoint,const int Size);
+	__global__ void case4(Point* dev_allPoint,const int Size);
+	__global__ void case5(Point* dev_allPoint,const int Size);
+	__global__ void case6(Point* dev_allPoint,const int Size);
+	__global__ void case7(Point* dev_allPoint,const int Size);
+	__global__ void case8(Point* dev_allPoint,const int Size);
+	__global__ void case9(Point* dev_allPoint,const int Size);
+
+
+	//测试可用的显存多少
+	void testTotalMem();
+
+	void testBranchEfficency()
+	{
+		cudaSetDevice(0);
+		srand(time(0));
+
+		cout<<setiosflags(ios::fixed)<<setprecision(8);
+		Point* allPoint = new Point[Size];
+		init(allPoint);
+
+		Point* dev_allPoint = NULL;
+		cudaMalloc((void**)&dev_allPoint, Size * sizeof(Point));
+
+		cudaMemcpy(dev_allPoint, allPoint, Size * sizeof(Point), cudaMemcpyHostToDevice);
+		double time1 = withClassifiy(dev_allPoint);
+
+		cudaMemcpy(dev_allPoint, allPoint, Size * sizeof(Point), cudaMemcpyHostToDevice);
+		double time2 =  withClassifiyStream(dev_allPoint);
+
+		//cudaMemcpy(dev_allPoint, allPoint, Size * sizeof(Point), cudaMemcpyHostToDevice);
+		//withClassifiyStream222(dev_allPoint);
+
+		cudaMemcpy(dev_allPoint, allPoint, Size * sizeof(Point), cudaMemcpyHostToDevice);
+		double time3 = withoutClassify(dev_allPoint);
+
+		if(time1 > time2)
+			cout<<"分类： 多任务效果要好，多任务是"<<time1/time2<<"倍"<<endl;
+		else
+			cout<<"分类： 单任务次执行效果要好，依次执行是"<<time2/time1<<"倍"<<endl;
+
+		cout<<endl;
+		double minTime = min(time1,time2);
+		if(minTime < time3)
+			cout<<"分类效果要好，快"<<(time3/minTime)<<"倍"<<endl;
+		else
+			cout<<"直接计算效果要好，分类慢了"<<(minTime/time3)<<"倍"<<endl;
+
+		cudaFree(dev_allPoint);
+	}
+
+	double withClassifiy(Point* dev_allPoint)
+	{
+		clock_t start,finish;
+		start = clock();
+		for(int i=0;i<IterTime;i++)
+		{
+			case0<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			case1<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			case2<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			case3<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			case4<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			case5<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			case6<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			case7<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			case8<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			case9<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			cudaDeviceSynchronize();
+		}
+
+		finish = clock();
+		double time = (double)(finish - start) / CLOCKS_PER_SEC;
+		cout<<" WithClassifiy  No Stream Time is "<<time<<endl;
+		return time;
+	}
+
+	double withClassifiyStream(Point* dev_allPoint)
+	{
+		clock_t start,finish;
+		start = clock();
+
+		const int numOfStream = 10;
+		cudaStream_t stream[numOfStream];
+		for(int i = 0; i < numOfStream; i++)
+			cudaStreamCreate(&stream[i]);
+
+		for(int i=0;i<IterTime;i++)
+		{
+			case0<<<numOfBlock , threadPreBlcok, 0 , stream[0]>>>(dev_allPoint,Size);
+			case1<<<numOfBlock , threadPreBlcok, 0 , stream[1]>>>(dev_allPoint,Size);
+			case2<<<numOfBlock , threadPreBlcok, 0 , stream[2]>>>(dev_allPoint,Size);
+			case3<<<numOfBlock , threadPreBlcok, 0 , stream[3]>>>(dev_allPoint,Size);
+			case4<<<numOfBlock , threadPreBlcok, 0 , stream[4]>>>(dev_allPoint,Size);
+			case5<<<numOfBlock , threadPreBlcok, 0 , stream[5]>>>(dev_allPoint,Size);
+			case6<<<numOfBlock , threadPreBlcok, 0 , stream[6]>>>(dev_allPoint,Size);
+			case7<<<numOfBlock , threadPreBlcok, 0 , stream[7]>>>(dev_allPoint,Size);
+			case8<<<numOfBlock , threadPreBlcok, 0 , stream[8]>>>(dev_allPoint,Size);
+			case9<<<numOfBlock , threadPreBlcok, 0 , stream[9]>>>(dev_allPoint,Size);
+			for(int k = 0; k < numOfStream; k++)
+				cudaStreamSynchronize(stream[k]);
+		}
+
+		for(int i = 0; i < numOfStream; i++)
+			cudaStreamDestroy(stream[i]);
+
+		finish = clock();
+		double time = (double)(finish - start) / CLOCKS_PER_SEC;
+		cout<<"WithClassifiy With Stream Time is "<<time<<endl;
+		return time;
+	}
+
+
+	double withClassifiyStream222(Point* dev_allPoint)
+	{
+		clock_t start,finish;
+		start = clock();
+
+		const int numOfStream = 5;
+		cudaStream_t stream[numOfStream];
+		for(int i = 0; i < numOfStream; i++)
+			cudaStreamCreate(&stream[i]);
+
+		for(int i=0;i<IterTime;i++)
+		{
+			for(int j=0;j<numOfStream;j++)
+			{
+				case0<<<numOfBlock , threadPreBlcok, 0 , stream[j]>>>(dev_allPoint,Size);
+				case1<<<numOfBlock , threadPreBlcok, 0 , stream[j]>>>(dev_allPoint,Size);
+				case2<<<numOfBlock , threadPreBlcok, 0 , stream[j]>>>(dev_allPoint,Size);
+				case3<<<numOfBlock , threadPreBlcok, 0 , stream[j]>>>(dev_allPoint,Size);
+				case4<<<numOfBlock , threadPreBlcok, 0 , stream[j]>>>(dev_allPoint,Size);
+				case5<<<numOfBlock , threadPreBlcok, 0 , stream[j]>>>(dev_allPoint,Size);
+				case6<<<numOfBlock , threadPreBlcok, 0 , stream[j]>>>(dev_allPoint,Size);
+				case7<<<numOfBlock , threadPreBlcok, 0 , stream[j]>>>(dev_allPoint,Size);
+				case8<<<numOfBlock , threadPreBlcok, 0 , stream[j]>>>(dev_allPoint,Size);
+				case9<<<numOfBlock , threadPreBlcok, 0 , stream[j]>>>(dev_allPoint,Size);
+			}
+			for(int k = 0; k < numOfStream; k++)
+				cudaStreamSynchronize(stream[k]);
+		}
+
+		for(int i = 0; i < numOfStream; i++)
+			cudaStreamDestroy(stream[i]);
+
+		finish = clock();
+		double time = (double)(finish - start) / CLOCKS_PER_SEC;
+		cout<<"2222Classifiy With Stream Time is "<<time<<endl;
+		return time;
+	}
+
+
+	double withoutClassify(Point* dev_allPoint)
+	{
+		cudaDeviceSynchronize();
+
+		clock_t start,finish;
+		start = clock();
+		for(int i=0;i<IterTime;i++)
+		{
+			kernel_without<<<numOfBlock , threadPreBlcok>>>(dev_allPoint,Size);
+			cudaDeviceSynchronize();
+		}
+
+		finish = clock();
+		double time = (double)(finish - start) / CLOCKS_PER_SEC;
+		cout<<"  Without  No  Classify  Time  is "<<time<<endl;
+		return time;
+	}
+
+
+	__device__ double calaValue(int x,double y)
+	{
+		double res = (sinf(x*y)-logf(x)*cosf(x))/(x*y) -powf(x*cosf(y),tanf(x)/y);
+		return res;
+	}
+
+	__global__ void kernel_without(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			if(x==0)
+			{
+				if(y>5.3)
+					dev_allPoint[i].y = calaValue(x,y)+x;
+				else
+					dev_allPoint[i].y = calaValue(x,-y)+x;
+			}else if(x==1)
+			{
+				if(y>3.14)
+					dev_allPoint[i].y = calaValue(x,y)+x;
+				else
+					dev_allPoint[i].y = calaValue(x,-y)+x;
+			}else if(x==2)
+			{
+				if(y>6.3)
+					dev_allPoint[i].y = calaValue(x,y)+x;
+				else
+					dev_allPoint[i].y = calaValue(x,-y)+x;
+			}else if(x==3)
+			{
+				if(y<7.2)
+					dev_allPoint[i].y = calaValue(x,y)+x;
+				else
+					dev_allPoint[i].y = calaValue(x,-y)+x;
+			}else if(x==4)
+			{
+				if(y>9.3)
+					dev_allPoint[i].y = calaValue(x,y)+x;
+				else
+					dev_allPoint[i].y = calaValue(x,-y)+x;
+			}else if(x==5)
+			{
+				if(y>11.3)
+					dev_allPoint[i].y = calaValue(x,y)+x;
+				else
+					dev_allPoint[i].y = calaValue(x,-y)+x;
+			}else if(x==6)
+			{
+				if(y>12.3)
+					dev_allPoint[i].y = calaValue(x,y)+x;
+				else
+					dev_allPoint[i].y = calaValue(x,-y)+x;
+			}else if(x==7)
+			{
+				if(y>15.2)
+					dev_allPoint[i].y = calaValue(x,y)+x;
+				else
+					dev_allPoint[i].y = calaValue(x,-y)+x;
+			}else if(x==8)
+			{
+				if(y>25.1)
+					dev_allPoint[i].y = calaValue(x,y)+x;
+				else
+					dev_allPoint[i].y = calaValue(x,-y)+x;
+			}else if(x==9)
+			{
+				if(y>34.3)
+					dev_allPoint[i].y = calaValue(x,y)+x;
+				else
+					dev_allPoint[i].y = calaValue(x,-y)+x;
+			}else
+			{
+				printf("You Shoule Never Get Here From Function: __global__ void testBranch(Point* dev_allPoint,const int Size)\n");
+			}
+		}
+	}
+
+	__global__ void case0(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size && dev_allPoint[i].x == 0)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			dev_allPoint[i].y = calaValue(x,y)+x;
+		}
+	}
+
+	__global__ void case1(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size && dev_allPoint[i].x == 1)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			dev_allPoint[i].y = calaValue(x,y)+x;
+		}
+	}
+
+	__global__ void case2(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size && dev_allPoint[i].x == 2)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			dev_allPoint[i].y = calaValue(x,y)+x;
+		}
+	}
+
+	__global__ void case3(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size && dev_allPoint[i].x == 3)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			dev_allPoint[i].y = calaValue(x,y)+x;
+		}
+	}
+
+	__global__ void case4(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size && dev_allPoint[i].x == 4)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			dev_allPoint[i].y = calaValue(x,y)+x;
+		}
+	}
+
+	__global__ void case5(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size && dev_allPoint[i].x == 5)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			dev_allPoint[i].y = calaValue(x,y)+x;
+		}
+	}
+
+	__global__ void case6(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size && dev_allPoint[i].x == 6)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			dev_allPoint[i].y = calaValue(x,y)+x;
+		}
+	}
+
+	__global__ void case7(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size && dev_allPoint[i].x == 7)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			dev_allPoint[i].y = calaValue(x,y)+x;
+		}
+	}
+
+	__global__ void case8(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size && dev_allPoint[i].x == 8)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			dev_allPoint[i].y = calaValue(x,y)+x;
+		}
+	}
+
+	__global__ void case9(Point* dev_allPoint,const int Size)
+	{
+		int i = threadIdx.x + blockIdx.x*blockDim.x;
+		if (i < Size && dev_allPoint[i].x == 9)
+		{
+			int x = dev_allPoint[i].x;
+			double y = dev_allPoint[i].y;
+			dev_allPoint[i].y = calaValue(x,y)+x;
+		}
+	}
+
+
+	void init(Point* allPoint)
+	{
+		for(int i=0;i<Size;i++)
+		{
+			allPoint[i].x = rand() % 10;
+			allPoint[i].y = (rand())/(double)(RAND_MAX) * rand();
+		}
+	}
+
+	void testTotalMem()
+	{
+		cudaError_t cudaStatus;
+		double* dev_test = NULL;
+		long long num = 1e10;
+		while(true)
+		{
+			cudaStatus = cudaMalloc((void**)&dev_test, num * sizeof(double));
+			if (cudaStatus != cudaSuccess)
+			{
+				cout<<"ErrorInfo          : "<<cudaGetErrorString(cudaStatus) << endl;
+				cout<<num<<endl;
+				break;
+			}else
+			{
+
+			}
+
+		}
+	}
+
+	int main()
+	{
+		cout<<"Test Branch Efficency  Begin:  "<<endl;
+		testBranchEfficency();
+		cout<<"Test Branch Efficency Game Over!!!"<<endl;
+	}
+
+

@@ -1,0 +1,114 @@
+**************** The Constraints Is As Following ****************
+( ( x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -57.9902, 0.451303, 0.144668, 3.562, -3.14412 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  101.876  isCovered： true
+
+SolverParameter::totalTime[0] = 0.065616
+SolverParameter::algorithmTime[0] = 0.0656159
+SolverParameter::FunctionTime[0] = 5.96046e-08
+SolverParameter::totalFrequency[0] = 1
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -120.932, 0.451303, 0.144668, 3.562, -3.14412 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  212.937  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000639
+SolverParameter::algorithmTime[1] = 0.000638999
+SolverParameter::FunctionTime[1] = 5.82077e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -183.433, 0.451303, 0.144668, 3.562, -3.14412 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  323.22  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000489
+SolverParameter::algorithmTime[2] = 0.000489
+SolverParameter::FunctionTime[2] = 4.65661e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -246.35, 0.451303, 0.144668, 3.562, -3.14412 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  434.237  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000484
+SolverParameter::algorithmTime[3] = 0.000484
+SolverParameter::FunctionTime[3] = 4.65661e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -309.163, 0.451303, 0.144668, 3.562, -3.14412 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  545.07  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000496
+SolverParameter::algorithmTime[4] = 0.000496
+SolverParameter::FunctionTime[4] = 4.65661e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -372.144, 0.451303, 0.144668, 3.562, -3.14412 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  656.201  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000722
+SolverParameter::algorithmTime[5] = 0.000721999
+SolverParameter::FunctionTime[5] = 7.567e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -434.299, 0.451303, 0.144668, 3.562, -3.14412 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  765.874  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000486
+SolverParameter::algorithmTime[6] = 0.000486
+SolverParameter::FunctionTime[6] = 4.94765e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.00984743
+Best Time:	0.000484
+Worst Time:	0.065616
+Average Frequency:	1
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 300
+MAX_NUM_OF_GENERATE_CYCLE = 5
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

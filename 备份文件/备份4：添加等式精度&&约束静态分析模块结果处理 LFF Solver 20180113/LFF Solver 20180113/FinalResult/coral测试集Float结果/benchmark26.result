@@ -1,0 +1,142 @@
+**************** The Constraints Is As Following ****************
+( ( cosf(sinf(x*z))>sinf(cosf(x*y)) ) && ( sinf(2*w-y)/(cosf(2*y+v)+1)==cosf(2*z+x)/(sinf(2*w+v)-1) ) && ( sinf(x*y*z*w)>0 ) && ( 0>cosf(x*y*z*w) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 4.26917, 2.60545, 1.74095, 18.6088, -44.4973 ] 
+Best Covered is: 99.9929%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cosf(sinf(x*z))>sinf(cosf(x*y))  RuntimeValue:  0.484953  isCovered： true
+sinf(2*w-y)/(cosf(2*y+v)+1)==cosf(2*z+x)/(sinf(2*w+v)-1)  RuntimeValue:  0.000283185  isCovered： false
+sinf(x*y*z*w)>0  RuntimeValue:  0.799429  isCovered： true
+0>cosf(x*y*z*w)  RuntimeValue:  0.600761  isCovered： true
+
+SolverParameter::totalTime[0] = 2.33067
+SolverParameter::algorithmTime[0] = 2.33067
+SolverParameter::FunctionTime[0] = 2.14577e-06
+SolverParameter::totalFrequency[0] = 212
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.84805, -0.617084, -1.6448, 4.46418, 8.08664 ] 
+Best Covered is: 99.9941%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cosf(sinf(x*z))>sinf(cosf(x*y))  RuntimeValue:  0.589599  isCovered： true
+sinf(2*w-y)/(cosf(2*y+v)+1)==cosf(2*z+x)/(sinf(2*w+v)-1)  RuntimeValue:  0.000235006  isCovered： false
+sinf(x*y*z*w)>0  RuntimeValue:  0.868002  isCovered： true
+0>cosf(x*y*z*w)  RuntimeValue:  0.496561  isCovered： true
+
+SolverParameter::totalTime[1] = 2.18866
+SolverParameter::algorithmTime[1] = 2.18866
+SolverParameter::FunctionTime[1] = 2.14577e-06
+SolverParameter::totalFrequency[1] = 209
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -23.7213, 1.18688, -4.60644, -4.10548, -16.9811 ] 
+Best Covered is: 99.9913%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cosf(sinf(x*z))>sinf(cosf(x*y))  RuntimeValue:  1.6439  isCovered： true
+sinf(2*w-y)/(cosf(2*y+v)+1)==cosf(2*z+x)/(sinf(2*w+v)-1)  RuntimeValue:  0.000348099  isCovered： false
+sinf(x*y*z*w)>0  RuntimeValue:  0.99829  isCovered： true
+0>cosf(x*y*z*w)  RuntimeValue:  0.0584542  isCovered： true
+
+SolverParameter::totalTime[2] = 2.29187
+SolverParameter::algorithmTime[2] = 2.29187
+SolverParameter::FunctionTime[2] = 2.38419e-06
+SolverParameter::totalFrequency[2] = 210
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 3.19423, -1.45515, 39.3161, -1.5561, 2.23541 ] 
+Best Covered is: 99.9997%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cosf(sinf(x*z))>sinf(cosf(x*y))  RuntimeValue:  1.06108  isCovered： true
+sinf(2*w-y)/(cosf(2*y+v)+1)==cosf(2*z+x)/(sinf(2*w+v)-1)  RuntimeValue:  -1.26958e-05  isCovered： false
+sinf(x*y*z*w)>0  RuntimeValue:  0.998466  isCovered： true
+0>cosf(x*y*z*w)  RuntimeValue:  0.0553739  isCovered： true
+
+SolverParameter::totalTime[3] = 2.27233
+SolverParameter::algorithmTime[3] = 2.27233
+SolverParameter::FunctionTime[3] = 2.14577e-06
+SolverParameter::totalFrequency[3] = 210
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 60.2662, 11.9671, -4.95613, 1.62897, 47.346 ] 
+Best Covered is: 99.9942%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cosf(sinf(x*z))>sinf(cosf(x*y))  RuntimeValue:  0.760927  isCovered： true
+sinf(2*w-y)/(cosf(2*y+v)+1)==cosf(2*z+x)/(sinf(2*w+v)-1)  RuntimeValue:  0.000231147  isCovered： false
+sinf(x*y*z*w)>0  RuntimeValue:  0.945988  isCovered： true
+0>cosf(x*y*z*w)  RuntimeValue:  0.324201  isCovered： true
+
+SolverParameter::totalTime[4] = 2.48107
+SolverParameter::algorithmTime[4] = 2.48107
+SolverParameter::FunctionTime[4] = 2.6226e-06
+SolverParameter::totalFrequency[4] = 210
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -0.647393, -1.91115, -14.4965, 2.33073, 14.6258 ] 
+Best Covered is: 99.9992%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cosf(sinf(x*z))>sinf(cosf(x*y))  RuntimeValue:  0.677642  isCovered： true
+sinf(2*w-y)/(cosf(2*y+v)+1)==cosf(2*z+x)/(sinf(2*w+v)-1)  RuntimeValue:  3.37958e-05  isCovered： false
+sinf(x*y*z*w)>0  RuntimeValue:  0.821171  isCovered： true
+0>cosf(x*y*z*w)  RuntimeValue:  0.570682  isCovered： true
+
+SolverParameter::totalTime[5] = 2.32908
+SolverParameter::algorithmTime[5] = 2.32907
+SolverParameter::FunctionTime[5] = 2.38419e-06
+SolverParameter::totalFrequency[5] = 211
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -0.378194, 3.80127, 27.2209, -0.72243, -32.2738 ] 
+Best Covered is: 99.9999%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cosf(sinf(x*z))>sinf(cosf(x*y))  RuntimeValue:  0.589451  isCovered： true
+sinf(2*w-y)/(cosf(2*y+v)+1)==cosf(2*z+x)/(sinf(2*w+v)-1)  RuntimeValue:  -5.78165e-06  isCovered： false
+sinf(x*y*z*w)>0  RuntimeValue:  0.00330154  isCovered： true
+0>cosf(x*y*z*w)  RuntimeValue:  0.999995  isCovered： true
+
+SolverParameter::totalTime[6] = 2.34764
+SolverParameter::algorithmTime[6] = 2.34764
+SolverParameter::FunctionTime[6] = 2.38419e-06
+SolverParameter::totalFrequency[6] = 209
+
+----------------------------statistical result----------------------------
+Average Time:	2.32019
+Best Time:	2.18866
+Worst Time:	2.48107
+Average Frequency:	210.143
+Coverage Result:	[ false, false, false, false, false, false, false ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 150
+MAX_NUM_OF_GENERATE_CYCLE = 3
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

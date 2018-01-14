@@ -24,7 +24,14 @@ public class Main
 	public static void main(String[] args) 
 	{
 		Main test = new Main();
-		System.out.println(test.calaTaskNum(6, 6));
+		int totalNum = test.calaTaskNum(6, 6);
+		System.out.println(totalNum);
+		
+		double a = 1800;
+		double b = 2500;
+		double c = 300;
+		System.out.println(a/c + "     "+b/c);
+		System.out.println(a/totalNum +"     "+b/totalNum+"     "+c/totalNum);
 	}
 
 }

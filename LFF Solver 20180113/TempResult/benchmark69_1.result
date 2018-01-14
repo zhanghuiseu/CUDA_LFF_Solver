@@ -1,0 +1,28 @@
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -0.939144, -4.2936, -0.910998, 2.67461, -1.25, -1.65193 ] 
+Best Covered is: 73.3287%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tanf(v)>(z+t)/(w+t)  RuntimeValue:  17.1696  isCovered： true
+sqrtf(x-t)>z/y  RuntimeValue:  0.345368  isCovered： true
+x*y>0  RuntimeValue:  4.03231  isCovered： true
+t+w+z>0  RuntimeValue:  0.513609  isCovered： true
+x*y>t+w+z  RuntimeValue:  3.5187  isCovered： true
+powf(y,t)*cosf(v)>z*2+w*3+x*7  RuntimeValue:  -nan  isCovered： false
+z+w>x+y  RuntimeValue:  6.99635  isCovered： true
+x/y>w  RuntimeValue:  -2.45588  isCovered： false
+x>w+y-z  RuntimeValue:  -0.231153  isCovered： false
+sqrtf(w*y*z)>log10f(t*x)  RuntimeValue:  3.1648  isCovered： true
+x*cosf(t+y)>logf(w*z*3)  RuntimeValue:  nan  isCovered： false
+cosf(t)*sinf(v)>cosf(y)  RuntimeValue:  0.0923718  isCovered： true
+cosf(x*y)+cosf(z*w)+cosf(t*v)>sinf(x*y)+sinf(z*w)+sinf(t*v)  RuntimeValue:  -1.31951  isCovered： false
+
+SolverParameter::totalTime[0] = 0.146675
+SolverParameter::algorithmTime[0] = 0.146675
+SolverParameter::FunctionTime[0] = 1.49012e-07
+SolverParameter::totalFrequency[0] = 19
+Cala Type: float
+

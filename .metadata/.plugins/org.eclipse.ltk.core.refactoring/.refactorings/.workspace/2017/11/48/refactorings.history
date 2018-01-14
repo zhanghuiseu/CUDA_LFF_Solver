@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;LFF Solver/TempResult/benchmark67_1.result&apos;" deleteContents="false" description="Delete resource &apos;LFF Solver/TempResult/benchmark67_1.result&apos;" element1="/LFF Solver/TempResult/benchmark67_1.result" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1511948604087"/>
-</session>

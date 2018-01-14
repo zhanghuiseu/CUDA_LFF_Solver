@@ -1,0 +1,6 @@
+15:26:23 **** Incremental Build of configuration Default for project LFF Solver1111 ****
+make all 
+make: *** No rule to make target 'all'.  Stop.
+
+15:26:23 Build Finished (took 60ms)
+

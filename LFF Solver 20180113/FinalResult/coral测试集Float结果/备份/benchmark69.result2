@@ -1,0 +1,184 @@
+**************** The Constraints Is As Following ****************
+( ( x-y+tanf(v)>(z+t)/(w+t) ) && ( sqrtf(x-t)>z/y ) && ( logf(x*y)>logf(t+w+z) ) && ( powf(y,t)*cosf(v)>z*2+w*3+x*7 ) && ( z+w>x+y ) && ( x/y>w ) && ( x>(w+y-z) ) && ( sqrtf(w*y*z)>log10f(t*x) ) && ( x*cosf(t+y)>logf(w*z*3) ) && ( cosf(t)*sinf(v)>cosf(y) ) && ( cosf(x*y)+cosf(z*w)+cosf(t*v)>sinf(x*y)+sinf(z*w)+sinf(t*v) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 26.2029, 9.83952, 35.8615, 0.180997, 3.04205, 0.941948 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tanf(v)>(z+t)/(w+t)  RuntimeValue:  5.66784  isCovered： true
+sqrtf(x-t)>z/y  RuntimeValue:  1.16794  isCovered： true
+logf(x*y)>logf(t+w+z)  RuntimeValue:  1.88655  isCovered： true
+powf(y,t)*cosf(v)>z*2+w*3+x*7  RuntimeValue:  361.203  isCovered： true
+z+w>x+y  RuntimeValue:  3.8147e-06  isCovered： true
+x/y>w  RuntimeValue:  2.48203  isCovered： true
+x>(w+y-z)  RuntimeValue:  52.0439  isCovered： true
+sqrtf(w*y*z)>log10f(t*x)  RuntimeValue:  6.09014  isCovered： true
+x*cosf(t+y)>logf(w*z*3)  RuntimeValue:  21.9431  isCovered： true
+cosf(t)*sinf(v)>cosf(y)  RuntimeValue:  0.110517  isCovered： true
+cosf(x*y)+cosf(z*w)+cosf(t*v)>sinf(x*y)+sinf(z*w)+sinf(t*v)  RuntimeValue:  0.302663  isCovered： true
+
+SolverParameter::totalTime[0] = 28.3673
+SolverParameter::algorithmTime[0] = 28.3673
+SolverParameter::FunctionTime[0] = 2.86102e-05
+SolverParameter::totalFrequency[0] = 9317
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 23.4339, 9.83952, 35.8615, 0.180997, 3.04205, 0.941948 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tanf(v)>(z+t)/(w+t)  RuntimeValue:  2.89875  isCovered： true
+sqrtf(x-t)>z/y  RuntimeValue:  0.871094  isCovered： true
+logf(x*y)>logf(t+w+z)  RuntimeValue:  1.77486  isCovered： true
+powf(y,t)*cosf(v)>z*2+w*3+x*7  RuntimeValue:  380.586  isCovered： true
+z+w>x+y  RuntimeValue:  2.76909  isCovered： true
+x/y>w  RuntimeValue:  2.20061  isCovered： true
+x>(w+y-z)  RuntimeValue:  49.2748  isCovered： true
+sqrtf(w*y*z)>log10f(t*x)  RuntimeValue:  6.13865  isCovered： true
+x*cosf(t+y)>logf(w*z*3)  RuntimeValue:  19.3104  isCovered： true
+cosf(t)*sinf(v)>cosf(y)  RuntimeValue:  0.110517  isCovered： true
+cosf(x*y)+cosf(z*w)+cosf(t*v)>sinf(x*y)+sinf(z*w)+sinf(t*v)  RuntimeValue:  0.16073  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000385
+SolverParameter::algorithmTime[1] = 0.000385
+SolverParameter::FunctionTime[1] = 3.49246e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 23.4339, 9.83952, 35.8615, 0.180997, 3.04205, 0.941948 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tanf(v)>(z+t)/(w+t)  RuntimeValue:  2.89875  isCovered： true
+sqrtf(x-t)>z/y  RuntimeValue:  0.871094  isCovered： true
+logf(x*y)>logf(t+w+z)  RuntimeValue:  1.77486  isCovered： true
+powf(y,t)*cosf(v)>z*2+w*3+x*7  RuntimeValue:  380.586  isCovered： true
+z+w>x+y  RuntimeValue:  2.76909  isCovered： true
+x/y>w  RuntimeValue:  2.20061  isCovered： true
+x>(w+y-z)  RuntimeValue:  49.2748  isCovered： true
+sqrtf(w*y*z)>log10f(t*x)  RuntimeValue:  6.13865  isCovered： true
+x*cosf(t+y)>logf(w*z*3)  RuntimeValue:  19.3104  isCovered： true
+cosf(t)*sinf(v)>cosf(y)  RuntimeValue:  0.110517  isCovered： true
+cosf(x*y)+cosf(z*w)+cosf(t*v)>sinf(x*y)+sinf(z*w)+sinf(t*v)  RuntimeValue:  0.16073  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000372
+SolverParameter::algorithmTime[2] = 0.000372
+SolverParameter::FunctionTime[2] = 3.7835e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 21.0073, 9.83952, 35.8615, 0.180997, 3.04205, 0.941948 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tanf(v)>(z+t)/(w+t)  RuntimeValue:  0.472197  isCovered： true
+sqrtf(x-t)>z/y  RuntimeValue:  0.593909  isCovered： true
+logf(x*y)>logf(t+w+z)  RuntimeValue:  1.66555  isCovered： true
+powf(y,t)*cosf(v)>z*2+w*3+x*7  RuntimeValue:  397.572  isCovered： true
+z+w>x+y  RuntimeValue:  5.19564  isCovered： true
+x/y>w  RuntimeValue:  1.95399  isCovered： true
+x>(w+y-z)  RuntimeValue:  46.8483  isCovered： true
+sqrtf(w*y*z)>log10f(t*x)  RuntimeValue:  6.18612  isCovered： true
+x*cosf(t+y)>logf(w*z*3)  RuntimeValue:  17.0034  isCovered： true
+cosf(t)*sinf(v)>cosf(y)  RuntimeValue:  0.110517  isCovered： true
+cosf(x*y)+cosf(z*w)+cosf(t*v)>sinf(x*y)+sinf(z*w)+sinf(t*v)  RuntimeValue:  0.937574  isCovered： true
+
+SolverParameter::totalTime[3] = 0.00038
+SolverParameter::algorithmTime[3] = 0.00038
+SolverParameter::FunctionTime[3] = 3.7835e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 21.0073, 9.83952, 35.8615, 0.180997, 3.04205, 0.941948 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tanf(v)>(z+t)/(w+t)  RuntimeValue:  0.472197  isCovered： true
+sqrtf(x-t)>z/y  RuntimeValue:  0.593909  isCovered： true
+logf(x*y)>logf(t+w+z)  RuntimeValue:  1.66555  isCovered： true
+powf(y,t)*cosf(v)>z*2+w*3+x*7  RuntimeValue:  397.572  isCovered： true
+z+w>x+y  RuntimeValue:  5.19564  isCovered： true
+x/y>w  RuntimeValue:  1.95399  isCovered： true
+x>(w+y-z)  RuntimeValue:  46.8483  isCovered： true
+sqrtf(w*y*z)>log10f(t*x)  RuntimeValue:  6.18612  isCovered： true
+x*cosf(t+y)>logf(w*z*3)  RuntimeValue:  17.0034  isCovered： true
+cosf(t)*sinf(v)>cosf(y)  RuntimeValue:  0.110517  isCovered： true
+cosf(x*y)+cosf(z*w)+cosf(t*v)>sinf(x*y)+sinf(z*w)+sinf(t*v)  RuntimeValue:  0.937574  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000397
+SolverParameter::algorithmTime[4] = 0.000397
+SolverParameter::FunctionTime[4] = 3.7835e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 21.0073, 9.83952, 35.8615, 0.180997, 3.04205, 0.941948 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tanf(v)>(z+t)/(w+t)  RuntimeValue:  0.472197  isCovered： true
+sqrtf(x-t)>z/y  RuntimeValue:  0.593909  isCovered： true
+logf(x*y)>logf(t+w+z)  RuntimeValue:  1.66555  isCovered： true
+powf(y,t)*cosf(v)>z*2+w*3+x*7  RuntimeValue:  397.572  isCovered： true
+z+w>x+y  RuntimeValue:  5.19564  isCovered： true
+x/y>w  RuntimeValue:  1.95399  isCovered： true
+x>(w+y-z)  RuntimeValue:  46.8483  isCovered： true
+sqrtf(w*y*z)>log10f(t*x)  RuntimeValue:  6.18612  isCovered： true
+x*cosf(t+y)>logf(w*z*3)  RuntimeValue:  17.0034  isCovered： true
+cosf(t)*sinf(v)>cosf(y)  RuntimeValue:  0.110517  isCovered： true
+cosf(x*y)+cosf(z*w)+cosf(t*v)>sinf(x*y)+sinf(z*w)+sinf(t*v)  RuntimeValue:  0.937574  isCovered： true
+
+SolverParameter::totalTime[5] = 0.00038
+SolverParameter::algorithmTime[5] = 0.00038
+SolverParameter::FunctionTime[5] = 3.7835e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 21.0073, 9.83952, 35.8615, 0.180997, 3.04205, 0.941948 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x-y+tanf(v)>(z+t)/(w+t)  RuntimeValue:  0.472197  isCovered： true
+sqrtf(x-t)>z/y  RuntimeValue:  0.593909  isCovered： true
+logf(x*y)>logf(t+w+z)  RuntimeValue:  1.66555  isCovered： true
+powf(y,t)*cosf(v)>z*2+w*3+x*7  RuntimeValue:  397.572  isCovered： true
+z+w>x+y  RuntimeValue:  5.19564  isCovered： true
+x/y>w  RuntimeValue:  1.95399  isCovered： true
+x>(w+y-z)  RuntimeValue:  46.8483  isCovered： true
+sqrtf(w*y*z)>log10f(t*x)  RuntimeValue:  6.18612  isCovered： true
+x*cosf(t+y)>logf(w*z*3)  RuntimeValue:  17.0034  isCovered： true
+cosf(t)*sinf(v)>cosf(y)  RuntimeValue:  0.110517  isCovered： true
+cosf(x*y)+cosf(z*w)+cosf(t*v)>sinf(x*y)+sinf(z*w)+sinf(t*v)  RuntimeValue:  0.937574  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000375
+SolverParameter::algorithmTime[6] = 0.000375
+SolverParameter::FunctionTime[6] = 3.7835e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	4.0528
+Best Time:	0.000372
+Worst Time:	28.3673
+Average Frequency:	1331.86
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 90
+MAX_NUM_OF_GENERATE_CYCLE = 6
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+
