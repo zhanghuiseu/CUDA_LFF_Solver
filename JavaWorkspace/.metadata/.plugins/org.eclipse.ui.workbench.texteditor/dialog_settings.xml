@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="res-&gt;" key="selection"/>
+		<item value="effectiveValue" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="effectiveValue"/>
 			<item value="res-&gt;"/>
 			<item value="getConstraintValue"/>
 			<item value="isNum"/>
@@ -15,7 +16,6 @@
 			<item value="这个是经过区间计算之后的结果"/>
 			<item value="无解"/>
 			<item value="解"/>
-			<item value="intersectionInterval"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Priority"/>

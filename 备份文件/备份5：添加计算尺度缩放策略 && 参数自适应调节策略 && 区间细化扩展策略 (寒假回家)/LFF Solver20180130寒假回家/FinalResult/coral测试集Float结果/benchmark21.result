@@ -1,0 +1,121 @@
+**************** The Constraints Is As Following ****************
+( ( 0>cosf(x*y) ) && ( sinf(2*x)>0.25 ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 35.9723, 3.89491 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0>cosf(x*y)  RuntimeValue:  0.303152  isCovered： true
+sinf(2*x)>0.25  RuntimeValue:  0.057062  isCovered： true
+
+SolverParameter::totalTime[0] = 0.078823
+SolverParameter::algorithmTime[0] = 0.0788229
+SolverParameter::FunctionTime[0] = 8.19564e-08
+SolverParameter::totalFrequency[0] = 1
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 35.9723, 3.89491 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0>cosf(x*y)  RuntimeValue:  0.303152  isCovered： true
+sinf(2*x)>0.25  RuntimeValue:  0.057062  isCovered： true
+
+SolverParameter::totalTime[1] = 0.0005
+SolverParameter::algorithmTime[1] = 0.000499999
+SolverParameter::FunctionTime[1] = 5.23869e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 35.9723, 3.89491 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0>cosf(x*y)  RuntimeValue:  0.303152  isCovered： true
+sinf(2*x)>0.25  RuntimeValue:  0.057062  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000497
+SolverParameter::algorithmTime[2] = 0.000497
+SolverParameter::FunctionTime[2] = 4.65661e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 35.9723, 3.89491 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0>cosf(x*y)  RuntimeValue:  0.303152  isCovered： true
+sinf(2*x)>0.25  RuntimeValue:  0.057062  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000495
+SolverParameter::algorithmTime[3] = 0.000495
+SolverParameter::FunctionTime[3] = 4.65661e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 35.9723, 3.89491 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0>cosf(x*y)  RuntimeValue:  0.303152  isCovered： true
+sinf(2*x)>0.25  RuntimeValue:  0.057062  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000493
+SolverParameter::algorithmTime[4] = 0.000493
+SolverParameter::FunctionTime[4] = 5.23869e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -26.8688, 3.89491 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0>cosf(x*y)  RuntimeValue:  0.557821  isCovered： true
+sinf(2*x)>0.25  RuntimeValue:  0.0745056  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000492
+SolverParameter::algorithmTime[5] = 0.000491999
+SolverParameter::FunctionTime[5] = 5.23869e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -26.8688, 3.89491 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+0>cosf(x*y)  RuntimeValue:  0.557821  isCovered： true
+sinf(2*x)>0.25  RuntimeValue:  0.0745056  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000492
+SolverParameter::algorithmTime[6] = 0.000491999
+SolverParameter::FunctionTime[6] = 5.23869e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.0116846
+Best Time:	0.000492
+Worst Time:	0.078823
+Average Frequency:	1
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 200
+MAX_NUM_OF_GENERATE_CYCLE = 2
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

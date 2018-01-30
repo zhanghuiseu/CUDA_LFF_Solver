@@ -1,0 +1,17 @@
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 2.63632e-05, 3.79316 ] 
+Best Covered is: 98.9046%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( powf(10,4)*a*b-1 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  -4.76837e-07  isCovered： true
+abs( ( expf(-a)+expf(-b)-1.0001 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  0.0223979  isCovered： false
+
+SolverParameter::totalTime[3] = 0.035004
+SolverParameter::algorithmTime[3] = 0.035004
+SolverParameter::FunctionTime[3] = 3.72529e-08
+SolverParameter::totalFrequency[3] = 12
+Cala Type: float
+

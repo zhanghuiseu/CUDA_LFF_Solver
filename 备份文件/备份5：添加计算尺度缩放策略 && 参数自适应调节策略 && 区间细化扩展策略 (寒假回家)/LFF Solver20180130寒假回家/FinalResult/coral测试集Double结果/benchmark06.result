@@ -1,0 +1,113 @@
+**************** The Constraints Is As Following ****************
+( ( cos(x)+cos(y)+cos(z)>4*sin(x/2)*sin(y/2)*sin(z/2) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -509.88, -2.84541, 2.40818 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(x)+cos(y)+cos(z)>4*sin(x/2)*sin(y/2)*sin(z/2)  RuntimeValue:  0.564437  isCovered： true
+
+SolverParameter::totalTime[0] = 0.070022
+SolverParameter::algorithmTime[0] = 0.0700219
+SolverParameter::FunctionTime[0] = 7.0001e-08
+SolverParameter::totalFrequency[0] = 1
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -508.585, -1.13045, -3.8605 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(x)+cos(y)+cos(z)>4*sin(x/2)*sin(y/2)*sin(z/2)  RuntimeValue:  0.964052  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000701
+SolverParameter::algorithmTime[1] = 0.000700999
+SolverParameter::FunctionTime[1] = 6.95e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4, 1.43795, 3.02379 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(x)+cos(y)+cos(z)>4*sin(x/2)*sin(y/2)*sin(z/2)  RuntimeValue:  0.877093  isCovered： true
+
+SolverParameter::totalTime[2] = 0.00075
+SolverParameter::algorithmTime[2] = 0.000749999
+SolverParameter::FunctionTime[2] = 7.41e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 3, -2.0334, 4.84065 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(x)+cos(y)+cos(z)>4*sin(x/2)*sin(y/2)*sin(z/2)  RuntimeValue:  0.932151  isCovered： true
+
+SolverParameter::totalTime[3] = 0.001757
+SolverParameter::algorithmTime[3] = 0.001757
+SolverParameter::FunctionTime[3] = 1.751e-09
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -514.487, 0.978044, -0.487173 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(x)+cos(y)+cos(z)>4*sin(x/2)*sin(y/2)*sin(z/2)  RuntimeValue:  2.3475  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000691
+SolverParameter::algorithmTime[4] = 0.000690999
+SolverParameter::FunctionTime[4] = 6.86e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -253.642, -3.38201, -1.99446 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(x)+cos(y)+cos(z)>4*sin(x/2)*sin(y/2)*sin(z/2)  RuntimeValue:  0.995085  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000687
+SolverParameter::algorithmTime[5] = 0.000686999
+SolverParameter::FunctionTime[5] = 6.82e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 4, -4.75245, 3.38307 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+cos(x)+cos(y)+cos(z)>4*sin(x/2)*sin(y/2)*sin(z/2)  RuntimeValue:  0.91693  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000703
+SolverParameter::algorithmTime[6] = 0.000702999
+SolverParameter::FunctionTime[6] = 6.97e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.0107587
+Best Time:	0.000687
+Worst Time:	0.070022
+Average Frequency:	1
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 1500
+MAX_NUM_OF_GENERATE_CYCLE = 3
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

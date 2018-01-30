@@ -1,0 +1,128 @@
+**************** The Constraints Is As Following ****************
+( ( sinf(x)>0 ) && ( sinf(x)==-sinf(y) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -387.74, -1.35665 ] 
+Best Covered is: 99.6361%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(x)>0  RuntimeValue:  0.969827  isCovered： true
+sinf(x)==-sinf(y)  RuntimeValue:  -0.00733179  isCovered： false
+
+SolverParameter::totalTime[0] = 0.116093
+SolverParameter::algorithmTime[0] = 0.116093
+SolverParameter::FunctionTime[0] = 1.19209e-07
+SolverParameter::totalFrequency[0] = 11
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -4.57019, -1.71193 ] 
+Best Covered is: 99.9925%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(x)>0  RuntimeValue:  0.989906  isCovered： true
+sinf(x)==-sinf(y)  RuntimeValue:  -0.000150859  isCovered： false
+
+SolverParameter::totalTime[1] = 0.034735
+SolverParameter::algorithmTime[1] = 0.034735
+SolverParameter::FunctionTime[1] = 3.72529e-08
+SolverParameter::totalFrequency[1] = 13
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 2.40901, -2.4471 ] 
+Best Covered is: 98.6006%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(x)>0  RuntimeValue:  0.668789  isCovered： true
+sinf(x)==-sinf(y)  RuntimeValue:  0.0287932  isCovered： false
+
+SolverParameter::totalTime[2] = 0.031645
+SolverParameter::algorithmTime[2] = 0.031645
+SolverParameter::FunctionTime[2] = 2.98023e-08
+SolverParameter::totalFrequency[2] = 13
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.900904, -0.895613 ] 
+Best Covered is: 99.8358%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(x)>0  RuntimeValue:  0.783888  isCovered： true
+sinf(x)==-sinf(y)  RuntimeValue:  0.00329572  isCovered： false
+
+SolverParameter::totalTime[3] = 0.014674
+SolverParameter::algorithmTime[3] = 0.014674
+SolverParameter::FunctionTime[3] = 1.49012e-08
+SolverParameter::totalFrequency[3] = 10
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 3.05334, -0.11069 ] 
+Best Covered is: 98.9079%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(x)>0  RuntimeValue:  0.0881337  isCovered： true
+sinf(x)==-sinf(y)  RuntimeValue:  -0.0223308  isCovered： false
+
+SolverParameter::totalTime[4] = 0.033029
+SolverParameter::algorithmTime[4] = 0.033029
+SolverParameter::FunctionTime[4] = 3.35276e-08
+SolverParameter::totalFrequency[4] = 17
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.77728, 4.92761 ] 
+Best Covered is: 99.9087%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(x)>0  RuntimeValue:  0.978758  isCovered： true
+sinf(x)==-sinf(y)  RuntimeValue:  0.00182891  isCovered： false
+
+SolverParameter::totalTime[5] = 0.029368
+SolverParameter::algorithmTime[5] = 0.029368
+SolverParameter::FunctionTime[5] = 2.98023e-08
+SolverParameter::totalFrequency[5] = 15
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1.35953, 4.51438 ] 
+Best Covered is: 99.8657%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(x)>0  RuntimeValue:  0.977766  isCovered： true
+sinf(x)==-sinf(y)  RuntimeValue:  -0.00269306  isCovered： false
+
+SolverParameter::totalTime[6] = 0.029227
+SolverParameter::algorithmTime[6] = 0.029227
+SolverParameter::FunctionTime[6] = 2.98023e-08
+SolverParameter::totalFrequency[6] = 13
+
+----------------------------statistical result----------------------------
+Average Time:	0.041253
+Best Time:	0.014674
+Worst Time:	0.116093
+Average Frequency:	13.1429
+Coverage Result:	[ false, false, false, false, false, false, false ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 50
+MAX_NUM_OF_GENERATE_CYCLE = 2
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

@@ -1,0 +1,121 @@
+**************** The Constraints Is As Following ****************
+( ( sinf(2*x-y)/(cosf(2*y+y)+1)==cosf(2*z+x)/(sinf(2*w+y)-1) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 77.9907, 18.5872, 4.71904, -0.546887 ] 
+Best Covered is: 99.9977%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(2*x-y)/(cosf(2*y+y)+1)==cosf(2*z+x)/(sinf(2*w+y)-1)  RuntimeValue:  2.32756e-05  isCovered： false
+
+SolverParameter::totalTime[0] = 4.35849
+SolverParameter::algorithmTime[0] = 4.35848
+SolverParameter::FunctionTime[0] = 4.76837e-06
+SolverParameter::totalFrequency[0] = 320
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 65.6812, 0.433172, 1.08323, 16.7681 ] 
+Best Covered is: 99.9887%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(2*x-y)/(cosf(2*y+y)+1)==cosf(2*z+x)/(sinf(2*w+y)-1)  RuntimeValue:  -0.00011313  isCovered： false
+
+SolverParameter::totalTime[1] = 4.12483
+SolverParameter::algorithmTime[1] = 4.12483
+SolverParameter::FunctionTime[1] = 4.29153e-06
+SolverParameter::totalFrequency[1] = 320
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 4.27953, -54.9035, 2.41128, 39.3677 ] 
+Best Covered is: 99.9995%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(2*x-y)/(cosf(2*y+y)+1)==cosf(2*z+x)/(sinf(2*w+y)-1)  RuntimeValue:  -5.1558e-06  isCovered： false
+
+SolverParameter::totalTime[2] = 4.15519
+SolverParameter::algorithmTime[2] = 4.15519
+SolverParameter::FunctionTime[2] = 4.29153e-06
+SolverParameter::totalFrequency[2] = 320
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 47.5887, 25.1255, 3.25398, 5.70937 ] 
+Best Covered is: 99.9961%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(2*x-y)/(cosf(2*y+y)+1)==cosf(2*z+x)/(sinf(2*w+y)-1)  RuntimeValue:  -3.86834e-05  isCovered： false
+
+SolverParameter::totalTime[3] = 4.23312
+SolverParameter::algorithmTime[3] = 4.23312
+SolverParameter::FunctionTime[3] = 3.8147e-06
+SolverParameter::totalFrequency[3] = 320
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 4.44754, 15.1054, -4.52191, -11.3469 ] 
+Best Covered is: 99.999%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(2*x-y)/(cosf(2*y+y)+1)==cosf(2*z+x)/(sinf(2*w+y)-1)  RuntimeValue:  -1.03414e-05  isCovered： false
+
+SolverParameter::totalTime[4] = 4.35994
+SolverParameter::algorithmTime[4] = 4.35994
+SolverParameter::FunctionTime[4] = 4.29153e-06
+SolverParameter::totalFrequency[4] = 320
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -6.79517, 6.27729, -2.42874, -1.34272 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(2*x-y)/(cosf(2*y+y)+1)==cosf(2*z+x)/(sinf(2*w+y)-1)  RuntimeValue:  1.19209e-07  isCovered： false
+
+SolverParameter::totalTime[5] = 4.22321
+SolverParameter::algorithmTime[5] = 4.22321
+SolverParameter::FunctionTime[5] = 4.29153e-06
+SolverParameter::totalFrequency[5] = 320
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -40.579, 12.2255, -22.1176, 24.5119 ] 
+Best Covered is: 99.9994%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(2*x-y)/(cosf(2*y+y)+1)==cosf(2*z+x)/(sinf(2*w+y)-1)  RuntimeValue:  6.13928e-06  isCovered： false
+
+SolverParameter::totalTime[6] = 4.30197
+SolverParameter::algorithmTime[6] = 4.30197
+SolverParameter::FunctionTime[6] = 4.29153e-06
+SolverParameter::totalFrequency[6] = 320
+
+----------------------------statistical result----------------------------
+Average Time:	4.25097
+Best Time:	4.12483
+Worst Time:	4.35994
+Average Frequency:	320
+Coverage Result:	[ false, false, false, false, false, false, false ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 200
+MAX_NUM_OF_GENERATE_CYCLE = 4
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

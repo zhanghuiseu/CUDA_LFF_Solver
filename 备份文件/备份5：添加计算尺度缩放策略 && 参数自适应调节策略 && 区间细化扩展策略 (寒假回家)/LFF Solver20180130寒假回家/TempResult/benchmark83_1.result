@@ -1,0 +1,17 @@
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 39.0627, -0.200565 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+100>a  RuntimeValue:  60.9373  isCovered： true
+a>=-10  RuntimeValue:  49.0627  isCovered： true
+3>b*b-a  RuntimeValue:  42.0225  isCovered： true
+
+SolverParameter::totalTime[0] = 0.082682
+SolverParameter::algorithmTime[0] = 0.0826819
+SolverParameter::FunctionTime[0] = 8.19564e-08
+SolverParameter::totalFrequency[0] = 1
+Cala Type: float
+

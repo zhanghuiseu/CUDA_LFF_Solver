@@ -1,0 +1,128 @@
+**************** The Constraints Is As Following ****************
+( ( x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t) ) && ( powf(log10f(z+w+t),tanf(w*t))>=powf(log10f(x),log10f(y)) ) && ( tanf(w*(x+y))+sinf(t*(y+z))>asinf(x+y+z)+acosf(x+y+z)+atanf(x+y+z) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.08215, 4.63701, -5.70613, 28.7036, 3.56281 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  7.97261  isCovered： true
+powf(log10f(z+w+t),tanf(w*t))>=powf(log10f(x),log10f(y))  RuntimeValue:  0.0119447  isCovered： true
+tanf(w*(x+y))+sinf(t*(y+z))>asinf(x+y+z)+acosf(x+y+z)+atanf(x+y+z)  RuntimeValue:  0.0600539  isCovered： true
+
+SolverParameter::totalTime[0] = 1.50864
+SolverParameter::algorithmTime[0] = 1.50864
+SolverParameter::FunctionTime[0] = 1.43051e-06
+SolverParameter::totalFrequency[0] = 140
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.08215, 4.63701, -5.70613, 28.7036, 3.56281 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  7.97261  isCovered： true
+powf(log10f(z+w+t),tanf(w*t))>=powf(log10f(x),log10f(y))  RuntimeValue:  0.0119447  isCovered： true
+tanf(w*(x+y))+sinf(t*(y+z))>asinf(x+y+z)+acosf(x+y+z)+atanf(x+y+z)  RuntimeValue:  0.0600539  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000401
+SolverParameter::algorithmTime[1] = 0.000401
+SolverParameter::FunctionTime[1] = 4.07454e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.08215, 4.63701, -5.70613, 28.7036, 3.56281 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  7.97261  isCovered： true
+powf(log10f(z+w+t),tanf(w*t))>=powf(log10f(x),log10f(y))  RuntimeValue:  0.0119447  isCovered： true
+tanf(w*(x+y))+sinf(t*(y+z))>asinf(x+y+z)+acosf(x+y+z)+atanf(x+y+z)  RuntimeValue:  0.0600539  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000389
+SolverParameter::algorithmTime[2] = 0.000389
+SolverParameter::FunctionTime[2] = 3.7835e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.08215, 4.63701, -5.70613, 28.7036, 3.56281 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  7.97261  isCovered： true
+powf(log10f(z+w+t),tanf(w*t))>=powf(log10f(x),log10f(y))  RuntimeValue:  0.0119447  isCovered： true
+tanf(w*(x+y))+sinf(t*(y+z))>asinf(x+y+z)+acosf(x+y+z)+atanf(x+y+z)  RuntimeValue:  0.0600539  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000387
+SolverParameter::algorithmTime[3] = 0.000387
+SolverParameter::FunctionTime[3] = 4.07454e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.08215, 4.63701, -5.70613, 28.7036, 3.56281 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  7.97261  isCovered： true
+powf(log10f(z+w+t),tanf(w*t))>=powf(log10f(x),log10f(y))  RuntimeValue:  0.0119447  isCovered： true
+tanf(w*(x+y))+sinf(t*(y+z))>asinf(x+y+z)+acosf(x+y+z)+atanf(x+y+z)  RuntimeValue:  0.0600539  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000421
+SolverParameter::algorithmTime[4] = 0.000421
+SolverParameter::FunctionTime[4] = 4.36557e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.08215, 4.63701, -5.70613, 28.7036, 3.56281 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  7.97261  isCovered： true
+powf(log10f(z+w+t),tanf(w*t))>=powf(log10f(x),log10f(y))  RuntimeValue:  0.0119447  isCovered： true
+tanf(w*(x+y))+sinf(t*(y+z))>asinf(x+y+z)+acosf(x+y+z)+atanf(x+y+z)  RuntimeValue:  0.0600539  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000386
+SolverParameter::algorithmTime[5] = 0.000386
+SolverParameter::FunctionTime[5] = 4.07454e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1.08215, 4.63701, -5.70613, 28.7036, 3.56281 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+x*y+atanf(z)*sinf(w*t)>x/y+z+tanf(w+t)  RuntimeValue:  7.97261  isCovered： true
+powf(log10f(z+w+t),tanf(w*t))>=powf(log10f(x),log10f(y))  RuntimeValue:  0.0119447  isCovered： true
+tanf(w*(x+y))+sinf(t*(y+z))>asinf(x+y+z)+acosf(x+y+z)+atanf(x+y+z)  RuntimeValue:  0.0600539  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000385
+SolverParameter::algorithmTime[6] = 0.000385
+SolverParameter::FunctionTime[6] = 3.49246e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.215859
+Best Time:	0.000385
+Worst Time:	1.50864
+Average Frequency:	20.8571
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 300
+MAX_NUM_OF_GENERATE_CYCLE = 5
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

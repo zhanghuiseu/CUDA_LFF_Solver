@@ -1,0 +1,152 @@
+**************** The Constraints Is As Following ****************
+( ( 1-c==0 ) && ( 1-a==0 ) && ( 10*(b-a*a)==0 ) && ( sqrtf(90)*(d-c*c)==0 ) && ( sqrtf(10)*(b+d-2)==0 ) && ( powf(10,-0.5)*(b-d)==0 ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1, 1, 1, 1 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+1-c==0  RuntimeValue:  -1.19209e-07  isCovered： false
+1-a==0  RuntimeValue:  1.19209e-07  isCovered： false
+10*(b-a*a)==0  RuntimeValue:  0  isCovered： true
+sqrtf(90)*(d-c*c)==0  RuntimeValue:  0  isCovered： true
+sqrtf(10)*(b+d-2)==0  RuntimeValue:  0  isCovered： true
+powf(10,-0.5)*(b-d)==0  RuntimeValue:  -1.50789e-07  isCovered： false
+
+SolverParameter::totalTime[0] = 1.29183
+SolverParameter::algorithmTime[0] = 1.29183
+SolverParameter::FunctionTime[0] = 1.19209e-06
+SolverParameter::totalFrequency[0] = 67
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 1, 1, 1, 1 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+1-c==0  RuntimeValue:  0  isCovered： true
+1-a==0  RuntimeValue:  -3.57628e-07  isCovered： false
+10*(b-a*a)==0  RuntimeValue:  0  isCovered： true
+sqrtf(90)*(d-c*c)==0  RuntimeValue:  0  isCovered： true
+sqrtf(10)*(b+d-2)==0  RuntimeValue:  2.26184e-06  isCovered： false
+powf(10,-0.5)*(b-d)==0  RuntimeValue:  2.26184e-07  isCovered： false
+
+SolverParameter::totalTime[1] = 1.67652
+SolverParameter::algorithmTime[1] = 1.67652
+SolverParameter::FunctionTime[1] = 1.54972e-06
+SolverParameter::totalFrequency[1] = 69
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1, 1, 1, 1 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+1-c==0  RuntimeValue:  0  isCovered： true
+1-a==0  RuntimeValue:  0  isCovered： true
+10*(b-a*a)==0  RuntimeValue:  0  isCovered： true
+sqrtf(90)*(d-c*c)==0  RuntimeValue:  0  isCovered： true
+sqrtf(10)*(b+d-2)==0  RuntimeValue:  0  isCovered： true
+powf(10,-0.5)*(b-d)==0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[2] = 0.676267
+SolverParameter::algorithmTime[2] = 0.676266
+SolverParameter::FunctionTime[2] = 7.15256e-07
+SolverParameter::totalFrequency[2] = 36
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1, 1, 1, 1 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+1-c==0  RuntimeValue:  0  isCovered： true
+1-a==0  RuntimeValue:  0  isCovered： true
+10*(b-a*a)==0  RuntimeValue:  0  isCovered： true
+sqrtf(90)*(d-c*c)==0  RuntimeValue:  0  isCovered： true
+sqrtf(10)*(b+d-2)==0  RuntimeValue:  0  isCovered： true
+powf(10,-0.5)*(b-d)==0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000165
+SolverParameter::algorithmTime[3] = 0.000165
+SolverParameter::FunctionTime[3] = 1.74623e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1, 1, 1, 1 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+1-c==0  RuntimeValue:  0  isCovered： true
+1-a==0  RuntimeValue:  0  isCovered： true
+10*(b-a*a)==0  RuntimeValue:  0  isCovered： true
+sqrtf(90)*(d-c*c)==0  RuntimeValue:  0  isCovered： true
+sqrtf(10)*(b+d-2)==0  RuntimeValue:  0  isCovered： true
+powf(10,-0.5)*(b-d)==0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000162
+SolverParameter::algorithmTime[4] = 0.000162
+SolverParameter::FunctionTime[4] = 1.60071e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1, 1, 1, 1 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+1-c==0  RuntimeValue:  0  isCovered： true
+1-a==0  RuntimeValue:  0  isCovered： true
+10*(b-a*a)==0  RuntimeValue:  0  isCovered： true
+sqrtf(90)*(d-c*c)==0  RuntimeValue:  0  isCovered： true
+sqrtf(10)*(b+d-2)==0  RuntimeValue:  0  isCovered： true
+powf(10,-0.5)*(b-d)==0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000161
+SolverParameter::algorithmTime[5] = 0.000161
+SolverParameter::FunctionTime[5] = 1.60071e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 1, 1, 1, 1 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+1-c==0  RuntimeValue:  0  isCovered： true
+1-a==0  RuntimeValue:  0  isCovered： true
+10*(b-a*a)==0  RuntimeValue:  0  isCovered： true
+sqrtf(90)*(d-c*c)==0  RuntimeValue:  0  isCovered： true
+sqrtf(10)*(b+d-2)==0  RuntimeValue:  0  isCovered： true
+powf(10,-0.5)*(b-d)==0  RuntimeValue:  0  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000162
+SolverParameter::algorithmTime[6] = 0.000162
+SolverParameter::FunctionTime[6] = 1.45519e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.520753
+Best Time:	0.000161
+Worst Time:	1.67652
+Average Frequency:	25.1429
+Coverage Result:	[ false, false, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 400
+MAX_NUM_OF_GENERATE_CYCLE = 4
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ONE_BY_ONE 
+
+Cala Type: float
+

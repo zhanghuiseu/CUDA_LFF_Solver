@@ -1,0 +1,116 @@
+**************** The Constraints Is As Following ****************
+( ( abs( ( sinf(x)-cosf(y) ) - ( 0 ) ) <= SolverParameter::floatAccuracy ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -1.31314, 1.06885 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( sinf(x)-cosf(y) ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  -1.44812  isCovered： false
+
+SolverParameter::totalTime[0] = 0.24657
+SolverParameter::algorithmTime[0] = 0.24657
+SolverParameter::FunctionTime[0] = 2.5332e-07
+SolverParameter::totalFrequency[0] = 15
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -3.85687, -0.775137 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( sinf(x)-cosf(y) ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  -0.0584959  isCovered： false
+
+SolverParameter::totalTime[1] = 0.253722
+SolverParameter::algorithmTime[1] = 0.253722
+SolverParameter::FunctionTime[1] = 2.68221e-07
+SolverParameter::totalFrequency[1] = 16
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 3.62468, -2.05389 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( sinf(x)-cosf(y) ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  9.23872e-07  isCovered： true
+
+SolverParameter::totalTime[2] = 0.266116
+SolverParameter::algorithmTime[2] = 0.266116
+SolverParameter::FunctionTime[2] = 2.68221e-07
+SolverParameter::totalFrequency[2] = 16
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 3.62468, -2.05389 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( sinf(x)-cosf(y) ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  9.23872e-07  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000124
+SolverParameter::algorithmTime[3] = 0.000124
+SolverParameter::FunctionTime[3] = 1.16415e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 3.62468, -2.05389 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( sinf(x)-cosf(y) ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  9.23872e-07  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000114
+SolverParameter::algorithmTime[4] = 0.000114
+SolverParameter::FunctionTime[4] = 1.16415e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 3.62468, -2.05389 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( sinf(x)-cosf(y) ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  9.23872e-07  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000112
+SolverParameter::algorithmTime[5] = 0.000112
+SolverParameter::FunctionTime[5] = 1.09139e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 3.62468, -2.05389 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( sinf(x)-cosf(y) ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  9.23872e-07  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000111
+SolverParameter::algorithmTime[6] = 0.000111
+SolverParameter::FunctionTime[6] = 1.09139e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.109553
+Best Time:	0.000111
+Worst Time:	0.266116
+Average Frequency:	7.28571
+Coverage Result:	[ false, false, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 200
+MAX_NUM_OF_GENERATE_CYCLE = 2
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

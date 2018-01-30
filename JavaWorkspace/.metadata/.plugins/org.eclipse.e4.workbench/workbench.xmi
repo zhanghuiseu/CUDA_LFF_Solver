@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6qlboPhMEeeFGYnaGCaPiw" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_6qlbofhMEeeFGYnaGCaPiw" bindingContexts="_6qmEoPhMEeeFGYnaGCaPiw">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ForExcuteConstraint.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ForExcuteConstraint.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ForExcuteConstraint.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Main.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/Main.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/Main.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BenchMark.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/BenchMark.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/BenchMark.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ForConstraintParameter.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ForConstraintParameter.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ForConstraintParameter.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;ArrayList.class&quot; tooltip=&quot;java.util.ArrayList&quot;>&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=CUDA_LFF_Solver_AutoGenerateParallelCode/\/usr\/java\/jdk1.8.0_144\/jre\/lib\/rt.jar&amp;lt;java.util(ArrayList.class&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Domain.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/simplification/Domain.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/simplification/Domain.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BinaryExpressionParse.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/parser/BinaryExpressionParse.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/parser/BinaryExpressionParse.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ConstraintParameter.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/ConstraintParameter.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/ConstraintParameter.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ATPC.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ATPC.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ATPC.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;StringBuilder.class&quot; tooltip=&quot;java.lang.StringBuilder&quot;>&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=CUDA_LFF_Solver_AutoGenerateParallelCode/\/usr\/java\/jdk1.8.0_144\/jre\/lib\/rt.jar&amp;lt;java.lang(StringBuilder.class&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Operator.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/model/Operator.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/model/Operator.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BinaryExpression.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/model/BinaryExpression.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/model/BinaryExpression.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;String.class&quot; tooltip=&quot;java.lang.String&quot;>&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=CUDA_LFF_Solver_AutoGenerateParallelCode/\/usr\/java\/jdk1.8.0_144\/jre\/lib\/rt.jar&amp;lt;java.lang(String.class&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Solve.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/simplification/Solve.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/simplification/Solve.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Simplification.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/simplification/Simplification.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/simplification/Simplification.java&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;LFFGUI.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/gui/LFFGUI.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/gui/LFFGUI.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;file0.data&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file0.data&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file0.data&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;LineChart.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/gui/LineChart.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/gui/LineChart.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Coodinate.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/gui/Coodinate.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/gui/Coodinate.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;file1.data&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file1.data&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file1.data&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;file4.data&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file4.data&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file4.data&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;file16.data&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file16.data&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file16.data&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;file14.data&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file14.data&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file14.data&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ATPC.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ATPC.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ATPC.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ConstraintParameter.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/ConstraintParameter.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/ConstraintParameter.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;String.class&quot; tooltip=&quot;java.lang.String&quot;>&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=CUDA_LFF_Solver_AutoGenerateParallelCode/\/usr\/java\/jdk1.8.0_144\/jre\/lib\/rt.jar&amp;lt;java.lang(String.class&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;file12.data&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file12.data&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/LFFData/file12.data&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BinaryExpression.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/model/BinaryExpression.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/model/BinaryExpression.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BinaryExpressionParse.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/parser/BinaryExpressionParse.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/parser/BinaryExpressionParse.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ForExcuteConstraint.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ForExcuteConstraint.java&quot;>&#xA;&lt;persistable path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ForExcuteConstraint.java&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_6qlbofhMEeeFGYnaGCaPiw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_6qlbovhMEeeFGYnaGCaPiw" label="%trimmedwindow.label.eclipseSDK" x="121" y="167" width="1722" height="941">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_6qlbofhMEeeFGYnaGCaPiw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_6qlbovhMEeeFGYnaGCaPiw" label="%trimmedwindow.label.eclipseSDK" x="65" y="24" width="1704" height="882">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workingSets/>"/>
@@ -71,7 +71,7 @@
           <tags>persp.viewSC:org.eclipse.wb.core.StructureView</tags>
           <tags>persp.viewSC:org.eclipse.wb.core.PaletteView</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_6qlbpfhMEeeFGYnaGCaPiw" selectedElement="_6qlbsfhMEeeFGYnaGCaPiw" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_6qlbpvhMEeeFGYnaGCaPiw" containerData="1888" selectedElement="_6qlbp_hMEeeFGYnaGCaPiw">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_6qlbpvhMEeeFGYnaGCaPiw" containerData="1628" selectedElement="_6qlbp_hMEeeFGYnaGCaPiw">
               <children xsi:type="basic:PartStack" xmi:id="_6qlbp_hMEeeFGYnaGCaPiw" elementId="left" containerData="6000" selectedElement="_6qlbqPhMEeeFGYnaGCaPiw">
                 <tags>newtablook</tags>
                 <tags>org.eclipse.e4.primaryNavigationStack</tags>
@@ -88,8 +88,8 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_6qlbsPhMEeeFGYnaGCaPiw" elementId="org.eclipse.egit.ui.RepositoriesView" toBeRendered="false" ref="_6qld0fhMEeeFGYnaGCaPiw"/>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_6qlbsfhMEeeFGYnaGCaPiw" containerData="8112" selectedElement="_6qlbu_hMEeeFGYnaGCaPiw">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_6qlbsvhMEeeFGYnaGCaPiw" containerData="6292" selectedElement="_6qlbs_hMEeeFGYnaGCaPiw" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_6qlbsfhMEeeFGYnaGCaPiw" containerData="8372" selectedElement="_6qlbu_hMEeeFGYnaGCaPiw">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_6qlbsvhMEeeFGYnaGCaPiw" containerData="7824" selectedElement="_6qlbs_hMEeeFGYnaGCaPiw" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_6qlbs_hMEeeFGYnaGCaPiw" elementId="org.eclipse.ui.editorss" containerData="8627" ref="_6qlc_vhMEeeFGYnaGCaPiw"/>
                 <children xsi:type="basic:PartSashContainer" xmi:id="_6qlbtPhMEeeFGYnaGCaPiw" containerData="1373" selectedElement="_6qlbt_hMEeeFGYnaGCaPiw">
                   <children xsi:type="basic:PartStack" xmi:id="_6qlbtfhMEeeFGYnaGCaPiw" elementId="org.eclipse.mylyn.tasks.ui.views.tasksMStack" containerData="2702" selectedElement="_6qlbtvhMEeeFGYnaGCaPiw">
@@ -105,7 +105,7 @@
                   </children>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_6qlbu_hMEeeFGYnaGCaPiw" elementId="bottom" containerData="3708" selectedElement="_6qlbwPhMEeeFGYnaGCaPiw">
+              <children xsi:type="basic:PartStack" xmi:id="_6qlbu_hMEeeFGYnaGCaPiw" elementId="bottom" containerData="2176" selectedElement="_6qlbwPhMEeeFGYnaGCaPiw">
                 <tags>newtablook</tags>
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_6qlbvPhMEeeFGYnaGCaPiw" elementId="org.eclipse.ui.views.ProblemView" ref="_6qldRPhMEeeFGYnaGCaPiw"/>
@@ -144,17 +144,19 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_6qlc_vhMEeeFGYnaGCaPiw" elementId="org.eclipse.ui.editorss" selectedElement="_6qlc__hMEeeFGYnaGCaPiw">
-      <children xsi:type="basic:PartStack" xmi:id="_6qlc__hMEeeFGYnaGCaPiw" elementId="PartStack@5d97caa4" selectedElement="_6qldCvhMEeeFGYnaGCaPiw">
+      <children xsi:type="basic:PartStack" xmi:id="_6qlc__hMEeeFGYnaGCaPiw" elementId="PartStack@5d97caa4" selectedElement="_6qldAPhMEeeFGYnaGCaPiw">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
         <tags>noFocus</tags>
         <children xsi:type="basic:Part" xmi:id="_6qldAPhMEeeFGYnaGCaPiw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Main.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Main.java&quot; partName=&quot;Main.java&quot; title=&quot;Main.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/Main.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/Main.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1762&quot; selectionTopPixel=&quot;999&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Main.java&quot; partName=&quot;Main.java&quot; title=&quot;Main.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/Main.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/Main.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1200&quot; selectionTopPixel=&quot;978&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
           <menus xsi:type="menu:PopupMenu" xmi:id="_6qldAfhMEeeFGYnaGCaPiw" elementId="#CompilationUnitEditorContext">
             <tags>menuContribution:popup</tags>
             <tags>popup:#CompilationUnitEditorContext</tags>
@@ -200,84 +202,6 @@
             <tags>popup:#AbstractTextEditorRulerContext</tags>
           </menus>
           <menus xsi:type="menu:PopupMenu" xmi:id="_6qldCfhMEeeFGYnaGCaPiw" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_6qldCvhMEeeFGYnaGCaPiw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ATPC.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ATPC.java&quot; partName=&quot;ATPC.java&quot; title=&quot;ATPC.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ATPC.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/generate/ATPC.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;599&quot; selectionTopPixel=&quot;216&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldC_hMEeeFGYnaGCaPiw" elementId="#CompilationUnitEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CompilationUnitEditorContext</tags>
-            <tags>popup:org.eclipse.jdt.ui.CompilationUnitEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldDPhMEeeFGYnaGCaPiw" elementId="#CompilationUnitRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CompilationUnitRulerContext</tags>
-            <tags>popup:org.eclipse.jdt.ui.CompilationUnitEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldDfhMEeeFGYnaGCaPiw" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldDvhMEeeFGYnaGCaPiw" elementId="#CompilationUnitEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CompilationUnitEditorContext</tags>
-            <tags>popup:org.eclipse.jdt.ui.CompilationUnitEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldD_hMEeeFGYnaGCaPiw" elementId="#CompilationUnitRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CompilationUnitRulerContext</tags>
-            <tags>popup:org.eclipse.jdt.ui.CompilationUnitEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldEPhMEeeFGYnaGCaPiw" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_6qldEfhMEeeFGYnaGCaPiw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="BenchMark.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BenchMark.java&quot; partName=&quot;BenchMark.java&quot; title=&quot;BenchMark.java&quot; tooltip=&quot;CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/BenchMark.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CUDA_LFF_Solver_AutoGenerateParallelCode/src/cn/nju/seg/atpc/main/BenchMark.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;218&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldEvhMEeeFGYnaGCaPiw" elementId="#CompilationUnitEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CompilationUnitEditorContext</tags>
-            <tags>popup:org.eclipse.jdt.ui.CompilationUnitEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldE_hMEeeFGYnaGCaPiw" elementId="#CompilationUnitRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CompilationUnitRulerContext</tags>
-            <tags>popup:org.eclipse.jdt.ui.CompilationUnitEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldFPhMEeeFGYnaGCaPiw" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldFfhMEeeFGYnaGCaPiw" elementId="#CompilationUnitEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CompilationUnitEditorContext</tags>
-            <tags>popup:org.eclipse.jdt.ui.CompilationUnitEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldFvhMEeeFGYnaGCaPiw" elementId="#CompilationUnitRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CompilationUnitRulerContext</tags>
-            <tags>popup:org.eclipse.jdt.ui.CompilationUnitEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_6qldF_hMEeeFGYnaGCaPiw" elementId="#OverviewRulerContext">
             <tags>menuContribution:popup</tags>
             <tags>popup:#OverviewRulerContext</tags>
           </menus>
@@ -359,7 +283,7 @@
       <tags>categoryTag:General</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_6qldRPhMEeeFGYnaGCaPiw" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;105&quot; org.eclipse.ui.ide.markerType=&quot;758&quot; org.eclipse.ui.ide.pathField=&quot;140&quot; org.eclipse.ui.ide.resourceField=&quot;105&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;989&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;expanded>&#xA;&lt;category IMemento.internal.id=&quot;Warnings (60 items)&quot;/>&#xA;&lt;/expanded>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;105&quot; org.eclipse.ui.ide.markerType=&quot;758&quot; org.eclipse.ui.ide.pathField=&quot;140&quot; org.eclipse.ui.ide.resourceField=&quot;105&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;989&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_6qldRfhMEeeFGYnaGCaPiw" elementId="org.eclipse.ui.views.ProblemView">
@@ -890,7 +814,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6qleF_hMEeeFGYnaGCaPiw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_fcK-8fkPEeeE3M1neKNh-w" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_6qnSq_hMEeeFGYnaGCaPiw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0TIcwwNBEeiA1pO_DDgF6w" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_6qnSq_hMEeeFGYnaGCaPiw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6qleJfhMEeeFGYnaGCaPiw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -914,7 +838,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6qmCwvhMEeeFGYnaGCaPiw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_fcOpUvkPEeeE3M1neKNh-w" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_6qnSXfhMEeeFGYnaGCaPiw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0TLgEgNBEeiA1pO_DDgF6w" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_6qnSXfhMEeeFGYnaGCaPiw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6qmCzfhMEeeFGYnaGCaPiw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

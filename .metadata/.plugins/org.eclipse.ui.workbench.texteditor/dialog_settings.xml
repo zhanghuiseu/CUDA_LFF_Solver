@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="291" key="DIALOG_WIDTH"/>
-		<item value="196" key="DIALOG_Y_ORIGIN"/>
-		<item value="1296" key="DIALOG_X_ORIGIN"/>
+		<item value="219" key="DIALOG_Y_ORIGIN"/>
 		<item value="432" key="DIALOG_HEIGHT"/>
+		<item value="1449" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="true" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="ParallelATG::isFullCovered" key="selection"/>
+		<item value="row" key="selection"/>
 		<list key="findhistory">
+			<item value="row"/>
+			<item value="col"/>
+			<item value="initRandomMatrix"/>
+			<item value="MaxTryParamSize"/>
 			<item value="ParallelATG::isFullCovered"/>
 			<item value="ParallelATG::collectZeros"/>
 			<item value="ParallelATG::calaPredictValueSize"/>
 			<item value="ParallelATG::calaPredictValueFromFinalInterval"/>
-			<item value="ParallelATG::calsCLFF"/>
-			<item value="ParallelATG::classificationForAllCase"/>
-			<item value="ParallelATG::synStream"/>
-			<item value="syn"/>
 		</list>
 		<list key="replacehistory">
 			<item value="ParallelATG::stream["/>

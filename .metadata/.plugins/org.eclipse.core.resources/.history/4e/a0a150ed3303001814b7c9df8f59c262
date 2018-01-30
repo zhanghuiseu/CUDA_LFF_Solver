@@ -1,0 +1,24 @@
+/*
+ * LFFData.cuh
+ *
+ *  Created on: Jan 27, 2018
+ *      Author: zy
+ */
+
+#ifndef LFFDATA_CUH_
+#define LFFDATA_CUH_
+
+
+class LFFData
+{
+public:
+
+	static void generateLFFData()
+	{
+
+
+	}
+
+};
+
+#endif /* LFFDATA_CUH_ */

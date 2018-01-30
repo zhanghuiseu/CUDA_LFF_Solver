@@ -232,8 +232,9 @@ src/cuda/ParallelATG.o : ../src/cuda/ParallelATG.cu \
     ../src/cuda/./../ErrorHandle/ErrorHandle.cuh \
     ../src/cuda/ExcuteConstraint.cuh \
     /usr/include/c++/5/climits \
-    ../src/cuda/./../model/Limit.h \
+    ../src/cuda/LFFData.cuh \
     ../src/cuda/./../solver/SolverParameter.h \
+    ../src/cuda/./../model/Limit.h \
     /usr/local/cuda-8.0/bin/..//include/thrust/host_vector.h \
     /usr/local/cuda-8.0/bin/..//include/thrust/detail/config.h \
     /usr/local/cuda-8.0/bin/..//include/thrust/detail/config/config.h \

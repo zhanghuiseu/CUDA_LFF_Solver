@@ -1,0 +1,114 @@
+**************** The Constraints Is As Following ****************
+( ( sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -4.67238, 14.8519, -1.51123, 0.545175, -2.09034 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  3.12129  isCovered： true
+
+SolverParameter::totalTime[0] = 0.225622
+SolverParameter::algorithmTime[0] = 0.225622
+SolverParameter::FunctionTime[0] = 2.23517e-07
+SolverParameter::totalFrequency[0] = 11
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -67.2137, 14.8519, -1.51123, 0.545175, -2.09034 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  5.20443  isCovered： true
+
+SolverParameter::totalTime[1] = 0.00044
+SolverParameter::algorithmTime[1] = 0.00044
+SolverParameter::FunctionTime[1] = 4.36557e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -67.2137, 14.8519, -1.51123, 0.545175, -2.09034 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  5.20443  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000538
+SolverParameter::algorithmTime[2] = 0.000537999
+SolverParameter::FunctionTime[2] = 5.82077e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -130.054, 14.8519, -1.51123, 0.545175, -2.09034 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  7.46039  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000452
+SolverParameter::algorithmTime[3] = 0.000452
+SolverParameter::FunctionTime[3] = 4.65661e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -130.054, 14.8519, -1.51123, 0.545175, -2.09034 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  7.46039  isCovered： true
+
+SolverParameter::totalTime[4] = 0.00038
+SolverParameter::algorithmTime[4] = 0.00038
+SolverParameter::FunctionTime[4] = 3.7835e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -192.708, 14.8519, -1.51123, 0.545175, -2.09034 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  23.5443  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000428
+SolverParameter::algorithmTime[5] = 0.000428
+SolverParameter::FunctionTime[5] = 4.36557e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -192.708, 14.8519, -1.51123, 0.545175, -2.09034 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+sinf(w*w)*cosf(x*w*v)-tanf(cosf(x*w*x))+sinf(w)>tanf(w-x)*cosf(sinf(w/v))-atanf(y+20+z)+asinf(y-15)  RuntimeValue:  23.5443  isCovered： true
+
+SolverParameter::totalTime[6] = 0.000958
+SolverParameter::algorithmTime[6] = 0.000957999
+SolverParameter::FunctionTime[6] = 9.8953e-10
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.0326883
+Best Time:	0.00038
+Worst Time:	0.225622
+Average Frequency:	2.42857
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 200
+MAX_NUM_OF_GENERATE_CYCLE = 5
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

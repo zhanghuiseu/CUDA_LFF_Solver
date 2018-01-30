@@ -1,0 +1,128 @@
+**************** The Constraints Is As Following ****************
+( ( abs( ( powf(10,4)*a*b-1 ) - ( 0 ) ) <= SolverParameter::floatAccuracy ) && ( abs( ( expf(-a)+expf(-b)-1.0001 ) - ( 0 ) ) <= SolverParameter::floatAccuracy ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 3.59066, 2.785e-05 ] 
+Best Covered is: 98.6641%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( powf(10,4)*a*b-1 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  -1.78814e-07  isCovered： true
+abs( ( expf(-a)+expf(-b)-1.0001 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  0.0274522  isCovered： false
+
+SolverParameter::totalTime[0] = 0.11359
+SolverParameter::algorithmTime[0] = 0.11359
+SolverParameter::FunctionTime[0] = 1.19209e-07
+SolverParameter::totalFrequency[0] = 12
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 2.66971e-05, 3.74573 ] 
+Best Covered is: 98.8524%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( powf(10,4)*a*b-1 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  3.57628e-07  isCovered： true
+abs( ( expf(-a)+expf(-b)-1.0001 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  0.0234918  isCovered： false
+
+SolverParameter::totalTime[1] = 0.056605
+SolverParameter::algorithmTime[1] = 0.0566049
+SolverParameter::FunctionTime[1] = 5.58794e-08
+SolverParameter::totalFrequency[1] = 12
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 4.28256, 2.33505e-05 ] 
+Best Covered is: 99.325%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( powf(10,4)*a*b-1 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  -5.96046e-08  isCovered： true
+abs( ( expf(-a)+expf(-b)-1.0001 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  0.0136839  isCovered： false
+
+SolverParameter::totalTime[2] = 0.048835
+SolverParameter::algorithmTime[2] = 0.048835
+SolverParameter::FunctionTime[2] = 4.47035e-08
+SolverParameter::totalFrequency[2] = 12
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 2.63632e-05, 3.79316 ] 
+Best Covered is: 98.9046%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( powf(10,4)*a*b-1 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  -4.76837e-07  isCovered： true
+abs( ( expf(-a)+expf(-b)-1.0001 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  0.0223979  isCovered： false
+
+SolverParameter::totalTime[3] = 0.035004
+SolverParameter::algorithmTime[3] = 0.035004
+SolverParameter::FunctionTime[3] = 3.72529e-08
+SolverParameter::totalFrequency[3] = 12
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 0.686149, 0.698811 ] 
+Best Covered is: 49.9811%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( powf(10,4)*a*b-1 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  4793.88  isCovered： false
+abs( ( expf(-a)+expf(-b)-1.0001 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  0.000587599  isCovered： false
+
+SolverParameter::totalTime[4] = 0.038222
+SolverParameter::algorithmTime[4] = 0.038222
+SolverParameter::FunctionTime[4] = 3.72529e-08
+SolverParameter::totalFrequency[4] = 12
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ 8.71299e-05, 1.14771 ] 
+Best Covered is: 87.96%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( powf(10,4)*a*b-1 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  8.34465e-07  isCovered： true
+abs( ( expf(-a)+expf(-b)-1.0001 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  0.317175  isCovered： false
+
+SolverParameter::totalTime[5] = 0.037247
+SolverParameter::algorithmTime[5] = 0.037247
+SolverParameter::FunctionTime[5] = 3.72529e-08
+SolverParameter::totalFrequency[5] = 12
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Sorry,No!!!!! Cannot Find Covered Input ！
+The Best Input Is: [ -0.437748, -0.000228442 ] 
+Best Covered is: 69.6129%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( powf(10,4)*a*b-1 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  2.38419e-07  isCovered： true
+abs( ( expf(-a)+expf(-b)-1.0001 ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  1.54934  isCovered： false
+
+SolverParameter::totalTime[6] = 0.058033
+SolverParameter::algorithmTime[6] = 0.0580329
+SolverParameter::FunctionTime[6] = 5.96046e-08
+SolverParameter::totalFrequency[6] = 12
+
+----------------------------statistical result----------------------------
+Average Time:	0.0553623
+Best Time:	0.035004
+Worst Time:	0.11359
+Average Frequency:	12
+Coverage Result:	[ false, false, false, false, false, false, false ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 60
+MAX_NUM_OF_GENERATE_CYCLE = 2
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+Cala Type: float
+

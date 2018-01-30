@@ -1,0 +1,113 @@
+**************** The Constraints Is As Following ****************
+( ( atan(x)>asin(x)*acos(x) ) )
+
+----------------------------run0----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.292846 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+atan(x)>asin(x)*acos(x)  RuntimeValue:  0.270293  isCovered： true
+
+SolverParameter::totalTime[0] = 0.071514
+SolverParameter::algorithmTime[0] = 0.0715139
+SolverParameter::FunctionTime[0] = 7.149e-08
+SolverParameter::totalFrequency[0] = 1
+
+----------------------------run1----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 0.724888 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+atan(x)>asin(x)*acos(x)  RuntimeValue:  0.0110335  isCovered： true
+
+SolverParameter::totalTime[1] = 0.000729
+SolverParameter::algorithmTime[1] = 0.000728999
+SolverParameter::FunctionTime[1] = 7.22e-10
+SolverParameter::totalFrequency[1] = 1
+
+----------------------------run2----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.0329331 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+atan(x)>asin(x)*acos(x)  RuntimeValue:  0.0199043  isCovered： true
+
+SolverParameter::totalTime[2] = 0.000771
+SolverParameter::algorithmTime[2] = 0.000770999
+SolverParameter::FunctionTime[2] = 7.56e-10
+SolverParameter::totalFrequency[2] = 1
+
+----------------------------run3----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.271172 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+atan(x)>asin(x)*acos(x)  RuntimeValue:  0.241964  isCovered： true
+
+SolverParameter::totalTime[3] = 0.000737
+SolverParameter::algorithmTime[3] = 0.000736999
+SolverParameter::FunctionTime[3] = 7.31e-10
+SolverParameter::totalFrequency[3] = 1
+
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.0478661 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+atan(x)>asin(x)*acos(x)  RuntimeValue:  0.02968  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000712
+SolverParameter::algorithmTime[4] = 0.000711999
+SolverParameter::FunctionTime[4] = 7.06e-10
+SolverParameter::totalFrequency[4] = 1
+
+----------------------------run5----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.612401 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+atan(x)>asin(x)*acos(x)  RuntimeValue:  0.92022  isCovered： true
+
+SolverParameter::totalTime[5] = 0.000802
+SolverParameter::algorithmTime[5] = 0.000801999
+SolverParameter::FunctionTime[5] = 7.95e-10
+SolverParameter::totalFrequency[5] = 1
+
+----------------------------run6----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ -0.657002 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+atan(x)>asin(x)*acos(x)  RuntimeValue:  1.05857  isCovered： true
+
+SolverParameter::totalTime[6] = 0.001331
+SolverParameter::algorithmTime[6] = 0.001331
+SolverParameter::FunctionTime[6] = 1.324e-09
+SolverParameter::totalFrequency[6] = 1
+
+----------------------------statistical result----------------------------
+Average Time:	0.0109423
+Best Time:	0.000712
+Worst Time:	0.071514
+Average Frequency:	1
+Coverage Result:	[ true, true, true, true, true, true, true ] 
+Parameter Setting: 
+MAX_NUM_OF_PREDICT_PARAM = 1500
+MAX_NUM_OF_GENERATE_CYCLE = 1
+PREDICT_BOUNDARY = 5
+Search Strategy: SEARCH_STRATEGY_ALL
+

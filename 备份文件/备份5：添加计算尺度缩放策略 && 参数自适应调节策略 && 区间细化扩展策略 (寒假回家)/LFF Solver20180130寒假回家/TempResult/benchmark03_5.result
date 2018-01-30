@@ -1,0 +1,15 @@
+----------------------------run4----------------------------
+Coverage Result Is As Following:
+Yes!!!!!   Find Covered Input: [ 3.62468, -2.05389 ] 
+Best Covered is: 100%
+
+析取范式以及运行结果如下： 
+析取范式的合取子式 0 : 
+abs( ( sinf(x)-cosf(y) ) - ( 0 ) ) <= SolverParameter::floatAccuracy  RuntimeValue:  9.23872e-07  isCovered： true
+
+SolverParameter::totalTime[4] = 0.000114
+SolverParameter::algorithmTime[4] = 0.000114
+SolverParameter::FunctionTime[4] = 1.16415e-10
+SolverParameter::totalFrequency[4] = 1
+Cala Type: float
+
